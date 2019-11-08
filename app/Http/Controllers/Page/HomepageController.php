@@ -162,4 +162,10 @@ class HomepageController extends Controller
             ]);
 
     }
+
+    public function detail($title){
+
+        return view('page.detail');
+
+    }
 }
