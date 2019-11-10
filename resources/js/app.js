@@ -11,7 +11,9 @@ window.Vue = require('vue');
 
 import Element from 'element-ui';
 import locale from "element-ui/src/locale/lang/es";
+import VueTelInput from "vue-tel-input"
 Vue.use(Element, {locale});
+Vue.use(VueTelInput);
 
 /**
  * The following block of code may be used to automatically register your

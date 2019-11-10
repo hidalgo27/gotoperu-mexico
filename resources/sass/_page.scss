@@ -1,4 +1,4 @@
-.homepage-video iframe {
+.homepage-video iframe,.homepage-video img {
     box-sizing: border-box;
     height: 56.25vw;
     left: 50%;
@@ -56,7 +56,7 @@
     position: absolute;
     width: 100%;
     margin: 0 auto;
-    background: hsla(0,0%,100%,.35);
+    background: hsla(0,0%,100%,.25);
     z-index: 3;
 }
 
@@ -95,7 +95,7 @@
         list-style: none;
         padding: 0;
         position: relative;
-        background: hsla(0,0%,100%,.25);
+        background: hsla(0,0%,100%,.1);
         //position: relative;
         /* IF .menu position=relative -> ul = container width, ELSE ul = 100% width */
         -webkit-box-sizing: border-box;
@@ -117,13 +117,20 @@
             border-bottom: 1px solid #cccccc;
             a {
                 text-decoration: none;
-                padding: 0.9em 3em;
+                padding: 0.7em 3em;
                 display: block;
                 color: white;
                 font-weight: 500;
+                font-size: 14px;
+                &:hover {
+                    color: #0d0d0d !important;
+                }
             }
             &:hover {
                 background: #f0f0f0;
+                a {
+                    color: #0d0d0d !important;
+                }
             }
             > ul {
                 display: none;
@@ -271,7 +278,9 @@ header {
     width: 100%;
     overflow: hidden;
 }
-
+.header-detail{
+    //height: 60vh;
+}
 header video {
     position: absolute;
     top: 50%;
@@ -299,7 +308,7 @@ header .overlay {
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 0.35;
+    opacity: 0.18;
     z-index: 1;
 }
 
@@ -734,4 +743,48 @@ header .overlay {
     text-align: center;
     pointer-events: none;
     color: #fff;
+}
+
+.tl-1 {
+    width: 80px;
+    height: 1px;
+    display: inline-block;
+    background: #eee;
+}
+.tl-2 {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin: 0 5px;
+    position: relative;
+    top: 5px;
+    //border: 1px solid #ba0027;
+    //border-radius: 50px;
+    //background: url("images/logo-andes-ave.png");
+}
+.tl-3 {
+    width: 80px;
+    height: 1px;
+    display: inline-block;
+    background: #eee;
+}
+.nav-fixed{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 2;
+}
+.list-group-detail{
+    margin-right: -3px;
+}
+.list-group-item-detail {
+    position: relative;
+    display: block;
+    padding: 8px !important;
+    margin-bottom: 10px !important;
+    background-color: transparent !important;
+    border: 1px solid rgb(88, 88, 88) !important;
+}
+.list-group-item-detail.active{
+    background-color: #007bff !important;
 }

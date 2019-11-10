@@ -31,6 +31,7 @@
         "portal-vue": "^2.1.6",
         "themify-icons": "^1.0.0",
         "venobox": "^1.8.6",
-        "vue-form-wizard": "^0.8.4"
+        "vue-form-wizard": "^0.8.4",
+        "vue-tel-input": "^4.0.0"
     }
 }

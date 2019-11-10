@@ -33,3 +33,10 @@ Route::get('/load/packages', [
     'uses' => 'Page\HomepageController@load',
     'as' => 'load_path',
 ]);
+
+
+//detail
+Route::get('/package/{titulo}', [
+    'uses' => 'Page\HomepageController@detail',
+    'as' => 'detail_path',
+]);

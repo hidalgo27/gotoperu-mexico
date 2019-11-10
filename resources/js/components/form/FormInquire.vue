@@ -126,7 +126,7 @@
                 <div class="row mb-3 align-items-center">
                     <div class="col-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
-                            <i data-feather="home" stroke-width="1"></i>
+                            <i data-feather="user" stroke-width="1"></i>
                         </div>
                     </div>
                     <div class="col px-3">
@@ -141,7 +141,7 @@
                 <div class="row mb-3 align-items-center">
                     <div class="col-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
-                            <i data-feather="home" stroke-width="1"></i>
+                            <i data-feather="mail" stroke-width="1"></i>
                         </div>
                     </div>
                     <div class="col px-3">
@@ -156,7 +156,7 @@
                 <div class="row mb-3 align-items-center">
                     <div class="col-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
-                            <i data-feather="home" stroke-width="1"></i>
+                            <i data-feather="calendar" stroke-width="1"></i>
                         </div>
                     </div>
                     <div class="col px-3">
@@ -171,37 +171,34 @@
                 <div class="row mb-3 align-items-center">
                     <div class="col-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
-                            <i data-feather="home" stroke-width="1"></i>
+                            <i data-feather="phone" stroke-width="1"></i>
                         </div>
                     </div>
                     <div class="col px-3">
-                            <el-input
-                                placeholder="Número de Teléfono"
-                                v-model="el_telefono"
-                                clearable>
-                            </el-input>
+                        <vue-tel-input v-model="value"></vue-tel-input>
                     </div>
                 </div>
 
                 <div class="row mb-3 align-items-center">
                     <div class="col-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
-                            <i data-feather="home" stroke-width="1"></i>
+                            <i data-feather="edit" stroke-width="1"></i>
                         </div>
                     </div>
                     <div class="col px-3">
                             <el-input
                                 type="textarea"
                                 :autosize="{ minRows: 2, maxRows: 4}"
-                                placeholder="Please input"
+                                placeholder="¿Tienes alguna duda o pregunta?"
                                 v-model="el_textarea">
                             </el-input>
+
                     </div>
                 </div>
             </div>
         </transition>
 
-        <div class="row my-5">
+        <div class="row mt-5">
             <div class="col text-right">
                 <button type="button" class="btn btn-g-yellow btn-lg text-white font-weight-bold" v-on:click="tap_form_show = !tap_form_show" v-if="tap_form_show === true">
                     Siguiente >>
@@ -214,12 +211,18 @@
                 </button>
             </div>
         </div>
+        <div class="row">
+            <div class="col text-right">
+                <a href="mailto:info@gotoperu.com.mx" class="btn btn-link font-weight-bold py-2 px-0">info@gotoperu.com.mx</a>
+            </div>
+        </div>
     </form>
 
 
 </template>
 
 <script>
+
     export default {
         data() {
             return {
@@ -293,7 +296,15 @@
                 ],
                 tap_form_show: true,
                 input: '',
+                el_nombre:'',
                 el_email:'',
+                el_fecha:'',
+                el_telefono: '',
+                el_textarea: '',
+                value1: '',
+                textarea2: '',
+                phone: '',
+                value:'',
 
                 pickerOptions: {
                     disabledDate(time) {
@@ -320,10 +331,8 @@
                         }
                     }]
                 },
-                value1: '',
-                textarea2: ''
             }
-        }
+        },
 
     }
 </script>
@@ -334,5 +343,32 @@
     }
     .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
         opacity: 0;
+    }
+    .vti__input{
+        -webkit-appearance: none;
+        background-color: #FFF;
+        background-image: none;
+        border-radius: 0 4px 4px 0 !important;
+        /*border: 1px solid #DCDFE6 !important;*/
+        box-sizing: border-box;
+        color: #606266;
+        display: inline-block;
+        font-size: inherit;
+        height: 40px;
+        line-height: 40px;
+        outline: 0;
+        padding: 0 15px;
+        transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+        width: 100%;
+    }
+    .vue-tel-input {
+        border-radius: 4px;
+        display: flex;
+        border: 1px solid #DCDFE6 !important;
+        text-align: left;
+    }
+    .vue-tel-input:focus-within {
+        box-shadow: none !important;
+        border-color: #66afe9 !important;
     }
 </style>
