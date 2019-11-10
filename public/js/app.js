@@ -4016,6 +4016,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['paquete_p', 'paquete_destinations', 'paquete_category'],
   data: function data() {
@@ -100490,7 +100491,7 @@ var render = function() {
     "div",
     { staticClass: "col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex mb-3" },
     [
-      _c("div", { staticClass: "card shadow-sm" }, [
+      _c("div", { staticClass: "card w-100 shadow-sm" }, [
         _c("div", { staticClass: "header-img-packages position-relative" }, [
           _c("a", { attrs: { href: "" } }, [
             _c("img", {
@@ -113862,8 +113863,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Hidalgo\proyectos\Homestead\code\viagens\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Hidalgo\proyectos\Homestead\code\viagens\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/hidalgoponce/web/sites/gotoperu-mexico/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/hidalgoponce/web/sites/gotoperu-mexico/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

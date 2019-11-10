@@ -1,8 +1,9 @@
 <template>
     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex mb-3">
-        <div class="card shadow-sm">
+        <div class="card w-100 shadow-sm">
             <div class="header-img-packages position-relative">
                 <a href=""><img class="card-img-top" :src="'/images/packages/'+paquete_p.imagen" alt=""></a>
+<!--                <a href=""><img class="card-img-top w-100" :src="paquete_p.imagen" alt=""></a>-->
                 <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
 
 <!--                        <span v-for="paquete_cat in paquete_category">-->
