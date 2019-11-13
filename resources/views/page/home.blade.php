@@ -448,4 +448,20 @@
             </div>
         </div>
     </section>
+
+    <section>
+        <div class="container-fluid">
+            <div class="row justify-content-center my-4">
+                <div class="col-2">
+                    <img src="{{asset('images/logo-andes-y.png')}}" alt="" class="w-100">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-7">
+                    <h5 class="font-weight-bold text-center">CONSULTA DE VIAJES</h5>
+                    <form-inquire></form-inquire>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection

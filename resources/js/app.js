@@ -35,6 +35,7 @@ Vue.component('categoria-package', require('./components/categoriaPackage').defa
 Vue.component('spinner', require('./components/Spinner').default);
 
 Vue.component('form-inquire', require('./components/form/FormInquire').default);
+Vue.component('form-inquire-detail', require('./components/form/FormInquireDetail').default);
 Vue.component('first-step', require('./components/form/FirstStep').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to

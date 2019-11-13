@@ -16,7 +16,7 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.scripts([
     'node_modules/venobox/venobox/venobox.min.js',
-    // 'node_modules/swiper/dist/js/swiper.min.js',
+    'node_modules/swiper/js/swiper.js',
     // 'node_modules/vanilla-lazyload/dist/lazyload.min.js',
     // 'resources/js/vendor/megamenu.js'
     'node_modules/feather-icons/dist/feather.js',
