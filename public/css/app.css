@@ -423,7 +423,7 @@ img.vbox-figlio{
   margin: 0;
   padding-bottom: 0;
   list-style: none;
-  width: 25%;
+  width: 50%;
   background: none;
   float: left;
 }
@@ -479,6 +479,10 @@ img.vbox-figlio{
 .menu > ul > li > ul.normal-sub > li a {
   border: 0;
   padding: 1em 0;
+}
+
+.list-group-item {
+  background: none !important;
 }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -750,6 +754,7 @@ header .overlay {
   width: 100%;
   left: 0;
   right: 0;
+  z-index: 1;
 }
 
 .position-absolute-bottom {

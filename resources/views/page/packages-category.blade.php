@@ -12,7 +12,7 @@
         <div class="container h-100">
             <div class="row d-flex h-100 text-center align-items-center">
                 <div class="col w-100 text-white mt-5">
-                    <h1 class="font-weight-lighter h2 mt-5">TOP PAQUETES EN LIMA</h1>
+                    <h1 class="font-weight-lighter h2 mt-5">LOS MEJORES DESTINOS EN PERÚ</h1>
                     <div>
                         <div class="tl-1"></div>
                         <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
@@ -41,10 +41,10 @@
     </header>
 
     <section class="mb-5" id="title_section">
-        <div class="container">
+        <div class="container-fluid px-0">
             <div class="row no-gutters align-items-center align-items-resumen">
                 <div class="col-6">
-                    <div class="px-5" id="box-resumen">
+                    <div class="p-5" id="box-resumen">
                         {{--                        <div class="exp-unica">--}}
                         {{--                            <div class="buton">--}}
                         {{--                                <div class="arrow">--}}
@@ -53,59 +53,25 @@
                         {{--                                <span>hola</span>--}}
                         {{--                            </div>--}}
                         {{--                        </div>--}}
-                        <h4>MACHUPICCHU EXPRESS</h4>
-                        <span class="font-weight-bold text-danger"><sup>desde</sup>$450usd</span>
+                        <h4>Clasic</h4>
                         <div class="line-subtitle"></div>
-                        <div class="row mt-3 justify-content-around">
-                            <div class="col-auto text-center">
-                                <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                    <small class="d-block font-weight-bold">Lima</small>
-                                </a>
-                            </div>
-                            <div class="col-auto text-center">
-                                <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/titicaca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                    <small class="d-block font-weight-bold">Cusco</small>
-                                </a>
-                            </div>
-                            <div class="col-auto text-center">
-                                <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                    <small class="d-block font-weight-bold">Cusco</small>
-                                </a>
-                            </div>
-                            <div class="col-auto text-center">
-                                <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                    <small class="d-block font-weight-bold">Machu picchu</small>
-                                </a>
-                            </div>
-                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis consequuntur dicta fugit illo in, inventore ipsum iusto officia quasi quo quod, similique tempore temporibus ullam voluptas voluptates, voluptatibus voluptatum.</p>
                         <div class="row mt-4">
-{{--                            <div class="col">--}}
-{{--                                5 días desde <sup>$</sup><span class="h2 text-danger">500</span><small>USD</small>--}}
-{{--                            </div>--}}
-                            <div class="col text-center">
-                                <a href="{{route('detail_path', 'hola')}}" class="btn btn-g-yellow text-white rounded-0" onclick="view_itinerary()">DETALLE DEL PAQUETE</a>
+                            <div class="col">
+{{--                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS DE LIMA</button>--}}
+                                <a href="{{route('category_show_path', 'show')}}" class="btn btn-g-green text-white rounded-0 float-right" onclick="view_itinerary()">VER PAQUETES</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
-                    <div class="swiper-container swiper-container-gallery position-relative">
+                    <div class="swiper-container swiper-container-gallery">
                         <div class="swiper-wrapper">
-                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}">
-                                <img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100">
-                            </a>
+                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}"><img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100"></a>
                             <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
-                        <div class="position-absolute-top text-danger bg-rgba-dark-3 p-2 text-center">
-                            <h5 class="text-white font-weight-bold">15 Days / 14 Nights</h5>
-{{--                            <span class="badge badge-danger">Classic</span>--}}
-                        </div>
                     </div>
                 </div>
             </div>
@@ -122,13 +88,13 @@
                 </div>
                 <div class="col-6">
                     <div class="p-5" id="box-resumen">
-                        <h4>Cusco</h4>
+                        <h4>Cultural</h4>
                         <div class="line-subtitle"></div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis consequuntur dicta fugit illo in, inventore ipsum iusto officia quasi quo quod, similique tempore temporibus ullam voluptas voluptates, voluptatibus voluptatum.</p>
                         <div class="row mt-4">
                             <div class="col">
-                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS DE LIMA</button>
-                                <a href="" class="btn btn-g-green text-white rounded-0 float-right" onclick="view_itinerary()">VER PAQUETES</a>
+{{--                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS DE LIMA</button>--}}
+                                <a href="{{route('category_show_path', 'show')}}" class="btn btn-g-green text-white rounded-0 float-right" onclick="view_itinerary()">VER PAQUETES</a>
                             </div>
                         </div>
                     </div>

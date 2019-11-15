@@ -163,9 +163,48 @@ class HomepageController extends Controller
 
     }
 
+    public function packages(){
+        return view('page.packages');
+    }
+
+
     public function detail($title){
 
         return view('page.detail');
 
+    }
+
+    public function destination(){
+
+        return view('page.destinations');
+
+    }
+
+    public function category(){
+
+        return view('page.packages-category');
+
+    }
+    public function category_show($url){
+
+        return view('page.packages-category-show');
+
+    }
+
+    public function destination_show($url){
+        return view('page.destinations-show');
+    }
+
+    public function sobre_nosotros(){
+        return view('page.about');
+    }
+    public function faq(){
+        return view('page.social');
+    }
+    public function testimonios(){
+        return view('page.dicas');
+    }
+    public function responsabilidad(){
+        return view('page.responsabilidad');
     }
 }

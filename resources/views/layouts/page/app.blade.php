@@ -15,6 +15,8 @@
     <link href="{{ asset('themify-icons/themify-icons.css') }}" rel="stylesheet">
 
     <meta name="csrf-token" content="{{ csrf_token()  }}">
+
+    <script type="text/javascript" src="https://widget.sirena.app/get?token=zdF9nfRDq1GYnzBarfuv3NTwoEBBmEga" async="true"></script>
 </head>
 <body data-spy="scroll" data-target="#navbar-scroll">
 <div id="app">
@@ -29,7 +31,7 @@
                     </div>
                 </div>
                 <div class="col-auto">
-                    <a href="{{route('home_path')}}"><img src="{{asset('images/logo-gotoperu-white.png')}}" width="190" alt="logo andesviagens" class="img-fluid"></a>
+                    <a href="{{route('home_path')}}"><img src="{{asset('images/logo-gotoperu-white.png')}}" width="250" alt="logo andesviagens" class="img-fluid"></a>
                 </div>
                 <div class="col-3 text-right">
                     <a href="" class="btn btn-inquire float-right ml-3 font-weight-bold px-4 text-white rounded-0">COTIZAR VIAJE</a>

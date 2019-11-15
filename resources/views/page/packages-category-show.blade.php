@@ -41,7 +41,7 @@
     </header>
 
     <section class="mb-5" id="title_section">
-        <div class="container">
+        <div class="container-fluid px-0">
             <div class="row no-gutters align-items-center align-items-resumen">
                 <div class="col-6">
                     <div class="px-5" id="box-resumen">
@@ -56,37 +56,12 @@
                         <h4>MACHUPICCHU EXPRESS</h4>
                         <span class="font-weight-bold text-danger"><sup>desde</sup>$450usd</span>
                         <div class="line-subtitle"></div>
-                        <div class="row mt-3 justify-content-around">
-                            <div class="col-auto text-center">
-                                <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                    <small class="d-block font-weight-bold">Lima</small>
-                                </a>
-                            </div>
-                            <div class="col-auto text-center">
-                                <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/titicaca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                    <small class="d-block font-weight-bold">Cusco</small>
-                                </a>
-                            </div>
-                            <div class="col-auto text-center">
-                                <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                    <small class="d-block font-weight-bold">Cusco</small>
-                                </a>
-                            </div>
-                            <div class="col-auto text-center">
-                                <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                    <small class="d-block font-weight-bold">Machu picchu</small>
-                                </a>
-                            </div>
-                        </div>
+                        <p>Si sentir la adrenalina es lo tuyo, este paquete es para ti. Desde los rapidos del Río Urubamba hasta la sensación de libertad y vertigo del Zipline o el derrape en el tour a Maras y Moray en cuatrimotos. En fin, este personalmente es uno de nuestros paquetes preferidos, por supuesto con los mejores especialistas en cada día y con la visita a una de las 7 maravillas del mundo moderno ¡MACHUPICCHU! </p>
                         <div class="row mt-4">
-{{--                            <div class="col">--}}
-{{--                                5 días desde <sup>$</sup><span class="h2 text-danger">500</span><small>USD</small>--}}
-{{--                            </div>--}}
-                            <div class="col text-center">
+                            {{--                            <div class="col">--}}
+                            {{--                                5 días desde <sup>$</sup><span class="h2 text-danger">500</span><small>USD</small>--}}
+                            {{--                            </div>--}}
+                            <div class="col">
                                 <a href="{{route('detail_path', 'hola')}}" class="btn btn-g-yellow text-white rounded-0" onclick="view_itinerary()">DETALLE DEL PAQUETE</a>
                             </div>
                         </div>
@@ -104,7 +79,7 @@
                         <div class="swiper-pagination"></div>
                         <div class="position-absolute-top text-danger bg-rgba-dark-3 p-2 text-center">
                             <h5 class="text-white font-weight-bold">15 Days / 14 Nights</h5>
-{{--                            <span class="badge badge-danger">Classic</span>--}}
+                            <span class="badge badge-danger">Classic</span>
                         </div>
                     </div>
                 </div>
@@ -212,3 +187,4 @@
 
     </script>
 @endpush
+

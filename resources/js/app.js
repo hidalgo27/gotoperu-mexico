@@ -28,7 +28,9 @@ Vue.use(VueTelInput);
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('search-package', require('./components/searchPackage.vue').default);
+Vue.component('search-package-page', require('./components/searchPackagesPage').default);
 Vue.component('search-list-package', require('./components/searchListPackage.vue').default);
+Vue.component('search-list-package-page', require('./components/searchListPackagePage').default);
 Vue.component('destino-package', require('./components/destinoPackage.vue').default);
 Vue.component('tiempo-package', require('./components/duracionPackage').default);
 Vue.component('categoria-package', require('./components/categoriaPackage').default);

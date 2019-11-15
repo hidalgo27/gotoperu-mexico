@@ -342,7 +342,7 @@
                                 </ul>
                                 <h5 class="titl-h5">Familia</h5>
                                 <p>Para grupo o familia</p>
-                                <a class="btn btn-g-yellow btn-sm" href="#">Ver viajes familiares o grupos</a>
+                                <a class="btn btn-g-yellow btn-sm" href="{{route('category_show_path', 'titulo')}}">Ver viajes familiares o grupos</a>
                             </div>
                         </div>
                     </div>
@@ -359,7 +359,7 @@
                                 </ul>
                                 <h5 class="titl-h5">Recomendados</h5>
                                 <p>Recomendados por nuestros viajeros</p>
-                                <a class="btn btn-g-yellow btn-sm" href="#">Ver viajes recomendados</a>
+                                <a class="btn btn-g-yellow btn-sm" href="{{route('category_show_path', 'titulo')}}">Ver viajes recomendados</a>
                             </div>
                         </div>
                     </div>
@@ -376,7 +376,7 @@
                                 </ul>
                                 <h5 class="titl-h5">Cultural</h5>
                                 <p>Explore la diversidad de culturas peruanas</p>
-                                <a class="btn btn-g-yellow btn-sm" href="#">Ver viajes culturales</a>
+                                <a class="btn btn-g-yellow btn-sm" href="{{route('category_show_path', 'titulo')}}">Ver viajes culturales</a>
                             </div>
                         </div>
                     </div>
@@ -402,7 +402,7 @@
                 <div class="col">
                     <div class="home-banner-destinations">
                         <figure class="cc-imagewrapper">
-                            <a href="/" class="text-center">
+                            <a href="{{route('destination_path')}}" class="text-center">
                                 <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" class="w-100">
                             </a>
                             <figcaption>
@@ -415,7 +415,7 @@
                 <div class="col">
                     <div class="home-banner-destinations">
                         <figure class="cc-imagewrapper">
-                            <a href="/" class="text-center">
+                            <a href="{{route('destination_path')}}" class="text-center">
                                 <img src="{{asset('images/destinations/titicaca.jpg')}}" alt="" class="w-100">
                             </a>
                             <figcaption>
@@ -428,7 +428,7 @@
                 <div class="col">
                     <div class="home-banner-destinations">
                         <figure class="cc-imagewrapper">
-                            <a href="/" class="text-center">
+                            <a href="{{route('destination_path')}}" class="text-center">
                                 <img src="{{asset('images/destinations/colca.jpg')}}" alt="" class="w-100">
                             </a>
                             <figcaption>

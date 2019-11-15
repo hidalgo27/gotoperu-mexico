@@ -157,7 +157,7 @@
                     margin: 0;
                     padding-bottom: 0;
                     list-style: none;
-                    width: 25%;
+                    width: 50%;
                     background: none;
                     float: left;
                     a {
@@ -212,6 +212,9 @@
     }
 }
 
+.list-group-item{
+    background: none !important;
+}
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
 Mobile style's
@@ -478,6 +481,7 @@ header .overlay {
     width: 100%;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 .position-absolute-bottom{
     position: absolute;
@@ -835,3 +839,64 @@ header .overlay {
     box-sizing: border-box;
     padding: 3rem;
 }
+//.exp-unica {
+//    width: 140px;
+//    height: 45px;
+//
+//    -webkit-background-size: cover;
+//    -moz-background-size: cover;
+//    background-size: cover;
+//    color: #e27113;
+//    text-align: right;
+//    position: absolute;
+//    top: 46px;
+//    right: 15px;
+//}
+//.buton {
+//    position: relative;
+//    background: transparent;
+//    width: 140px;
+//    height: 50px;
+//    border-top: 1px solid #e27113;
+//    border-bottom: 1px solid #e27113;
+//    border-right: 1px solid #e27113;
+//    text-align: left;
+//}
+//.arrow {
+//    border-left: 15px solid #e27113;
+//    border-top: 25px solid transparent;
+//    border-bottom: 25px solid transparent;
+//    width: 27px;
+//    height: 0;
+//    display: inline-block;
+//}
+//.arrow:after {
+//    content: "";
+//    border-left: 18px solid white;
+//    border-top: 30px solid rgba(255, 255, 255, 0);
+//    border-bottom: 30px solid rgba(255, 255, 255, 0);
+//    display: block;
+//    margin: -30px 0 0 -19px;
+//}
+//.exp-unica .icon-estrella {
+//    margin-top: -16px;
+//    padding-right: 5px!important;
+//}
+//
+//.exp-unica span {
+//    padding: 6px 10px 0 0!important;
+//}
+//
+//.exp-unica span {
+//    font-size: 16px;
+//    line-height: 19px;
+//    text-transform: uppercase;
+//    padding: 4px 10px 0 0;
+//}
+//.exp-unica img, .exp-unica span {
+//    display: block;
+//    float: right;
+//}
+//.icon-estrella:before {
+//    content: "\e912";
+//}
