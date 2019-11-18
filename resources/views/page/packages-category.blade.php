@@ -40,10 +40,28 @@
         </div>
     </header>
 
-    <section class="mb-5" id="title_section">
-        <div class="container-fluid px-0">
-            <div class="row no-gutters align-items-center align-items-resumen">
-                <div class="col-6">
+    <section class="py-4" id="title_section">
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col">
+                    <h1 class="font-weight-bold text-g-yellow text-center">DESTINOS EN <span class="text-g-green">PERÚ</span></h1>
+
+                    <p class="lead text-center">Le ofrecemos una experiencia de viaje auténtica y mágica en Perú, lo invitamos a explorar los numerosos paquetes de viaje totalmente personalizados que tenemos y que se adaptan a cada presupuesto. Permítanos planear su inolvidable viaje a nuestro majestuoso Machu Picchu y al resto de nuestra patria... ¡Perú!</p>
+                    <div class="alert alert-primary text-center rounded-0 m-0" role="alert">
+                        <h4>Trabajaremos de acuerdo con su agenda y sus intereses de viaje para construir juntos los planes de viaje más exclusivos.</h4>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-">
+        <div class="container">
+            <div class="row mb-4 no-gutters align-items-center align-items-resumen">
+                <div class="col-6 shadow-sm bg-white">
                     <div class="p-5" id="box-resumen">
                         {{--                        <div class="exp-unica">--}}
                         {{--                            <div class="buton">--}}
@@ -53,13 +71,13 @@
                         {{--                                <span>hola</span>--}}
                         {{--                            </div>--}}
                         {{--                        </div>--}}
-                        <h4>Clasic</h4>
+                        <h4>Lima</h4>
                         <div class="line-subtitle"></div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis consequuntur dicta fugit illo in, inventore ipsum iusto officia quasi quo quod, similique tempore temporibus ullam voluptas voluptates, voluptatibus voluptatum.</p>
                         <div class="row mt-4">
                             <div class="col">
-{{--                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS DE LIMA</button>--}}
-                                <a href="{{route('category_show_path', 'show')}}" class="btn btn-g-green text-white rounded-0 float-right" onclick="view_itinerary()">VER PAQUETES</a>
+                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS DE LIMA</button>
+                                <a href="{{route('destination_show_path', 'show')}}" class="btn btn-g-green text-white rounded-0 float-right" onclick="view_itinerary()">VER PAQUETES</a>
                             </div>
                         </div>
                     </div>
@@ -75,30 +93,37 @@
                     </div>
                 </div>
             </div>
-            <div class="row no-gutters align-items-center align-items-resumen">
+            <div class="row mb-4 no-gutters align-items-center align-items-resumen">
+                <div class="col-6 shadow-sm bg-white">
+                    <div class="p-5" id="box-resumen">
+                        {{--                        <div class="exp-unica">--}}
+                        {{--                            <div class="buton">--}}
+                        {{--                                <div class="arrow">--}}
+                        {{--                                    <span class="icon-estrella"></span>--}}
+                        {{--                                </div>--}}
+                        {{--                                <span>hola</span>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
+                        <h4>Lima</h4>
+                        <div class="line-subtitle"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis consequuntur dicta fugit illo in, inventore ipsum iusto officia quasi quo quod, similique tempore temporibus ullam voluptas voluptates, voluptatibus voluptatum.</p>
+                        <div class="row mt-4">
+                            <div class="col">
+                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS DE LIMA</button>
+                                <a href="{{route('destination_show_path', 'show')}}" class="btn btn-g-green text-white rounded-0 float-right" onclick="view_itinerary()">VER PAQUETES</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-6">
                     <div class="swiper-container swiper-container-gallery">
                         <div class="swiper-wrapper">
-
+                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}"><img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100"></a>
                             <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
                     </div>
-                </div>
-                <div class="col-6">
-                    <div class="p-5" id="box-resumen">
-                        <h4>Cultural</h4>
-                        <div class="line-subtitle"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis consequuntur dicta fugit illo in, inventore ipsum iusto officia quasi quo quod, similique tempore temporibus ullam voluptas voluptates, voluptatibus voluptatum.</p>
-                        <div class="row mt-4">
-                            <div class="col">
-{{--                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS DE LIMA</button>--}}
-                                <a href="{{route('category_show_path', 'show')}}" class="btn btn-g-green text-white rounded-0 float-right" onclick="view_itinerary()">VER PAQUETES</a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 

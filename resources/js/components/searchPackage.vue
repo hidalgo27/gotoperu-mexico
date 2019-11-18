@@ -67,6 +67,7 @@
 
                                 </div>
 
+                                <div class="row">
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-block btn-g-dark position-relative font-weight-bold" v-show="btnview">
                                             Buscar
@@ -75,6 +76,7 @@
                                             <i class="fas fa-circle-notch fa-spin" v-show="loading"></i>
                                         </div>
                                     </div>
+                                </div>
 
 
                             </div>
