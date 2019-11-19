@@ -8,14 +8,19 @@ class TPaquete extends Model
 {
     protected $table = "tpaquetes";
 
-    public function itinerario()
+    public function paquete_itinerario()
     {
-        return $this->hasMany(TItinerario::class, 'idpaquetes');
+        return $this->hasMany(TpaqueteItinerario::class, 'idpaquetes');
     }
 
     public function precio_paquetes()
     {
         return $this->hasMany(TPrecioPaquete::class, 'idpaquetes');
+    }
+
+    public function imagen_paquetes()
+    {
+        return $this->hasMany(TPaqueteImagen::class, 'idpaquetes');
     }
 
     public function paquetes_destinos()
@@ -26,6 +31,11 @@ class TPaquete extends Model
     public function paquetes_categoria()
     {
         return $this->hasMany(TPaqueteCategoria::class, 'idpaquetes');
+    }
+
+    public function paquetes_dificultad()
+    {
+        return $this->hasMany(TPaqueteDificultad::class, 'idpaquetes');
     }
 
     public function paquetes_incluye_iconos()

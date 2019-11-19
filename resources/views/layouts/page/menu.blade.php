@@ -1,6 +1,11 @@
 <div class="menu mt-4">
     <ul class="nav justify-content-center">
-        <li class="nav-item"><a href="{{route('packages_path')}}">PAQUETES DE VIAJE</a></li>
+        <li class="nav-item"><a href="{{route('packages_path')}}">PAQUETES DE VIAJE</a>
+{{--            <ul>--}}
+{{--                <li class="py-1"><a href="{{route('category_path')}}">Paquetes por Categorias</a></li>--}}
+{{--                <li><a href="{{route('destination_path')}}">Paquetes por Destinos</a></li>--}}
+{{--            </ul>--}}
+        </li>
 {{--        <li><a href="http://marioloncarek.com">PAQUETES DE VIAJES</a>--}}
 {{--            <ul>--}}
 {{--                <li><a href="http://marioloncarek.com">Categorias</a>--}}
@@ -57,7 +62,7 @@
 {{--                </li>--}}
 {{--            </ul>--}}
 {{--        </li>--}}
-        <li><a href="{{route('destination_path')}}">DESTINOS</a>
+        <li><a href="{{route('destination_path')}}">DESTINOS EN PERÚ</a>
 {{--            <ul>--}}
 {{--                <li><a href="http://marioloncarek.com">Today</a></li>--}}
 {{--                <li><a href="#">Calendar</a></li>--}}

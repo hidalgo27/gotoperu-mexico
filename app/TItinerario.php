@@ -8,13 +8,18 @@ class TItinerario extends Model
 {
     protected $table = "titinerario";
 
-    public function paquetes()
+    public function paquete_itinerario()
     {
-        return $this->belongsTo(TPaquete::class, 'idpaquetes');
+        return $this->hasMany(TpaqueteItinerario::class, 'iditinerario');
     }
 
     public function itinerario_imagen()
     {
         return $this->hasMany(TItinerarioImagen::class, 'iditinerario');
+    }
+
+    public function comentario()
+    {
+        return $this->hasMany(TComentario::class, 'iditinerario');
     }
 }

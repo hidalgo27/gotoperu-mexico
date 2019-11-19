@@ -4562,35 +4562,31 @@ __webpack_require__.r(__webpack_exports__);
     return {
       destinos: [{
         nombre: 'Arequipa',
-        value: '31'
+        value: '85'
       }, {
         nombre: 'Lima',
-        value: '27'
+        value: '84'
       }, {
         nombre: 'Cusco',
-        value: '34'
+        value: '80'
       }, {
         nombre: 'Machu Picchu',
-        value: '36'
+        value: '81'
       }, {
-        nombre: 'Camino inca',
-        value: '37'
+        nombre: 'Montaña 7 Colores',
+        value: '83'
       }],
       categorias: [{
-        nombre: 'Family',
-        value: '1',
+        nombre: 'Familia',
+        value: '17',
         category: ''
       }, {
-        nombre: 'Cultural',
-        value: '2',
+        nombre: 'Clásico',
+        value: '16',
         category: ''
       }, {
-        nombre: 'Luxury',
-        value: '3',
-        category: ''
-      }, {
-        nombre: 'Recommended',
-        value: '4',
+        nombre: 'Extenso',
+        value: '18',
         category: ''
       }],
       tiempos: [{
@@ -4689,9 +4685,10 @@ __webpack_require__.r(__webpack_exports__);
 
         _this2.paquetes = paquetesServidor; // this.paquetes.push(paquetesServidor);
         // console.log(this.destinations);
-      }); // console.log(this.destinosSeleccionados);
-
-      console.log(this.categoriasSeleccionados); // console.log(this.tiemposSeleccionados);
+      });
+      console.log(this.destinosSeleccionados);
+      console.log(this.categoriasSeleccionados);
+      console.log(this.tiemposSeleccionados);
     }
   }
 });
@@ -4836,35 +4833,31 @@ __webpack_require__.r(__webpack_exports__);
     return {
       destinos: [{
         nombre: 'Arequipa',
-        value: '31'
+        value: '85'
       }, {
         nombre: 'Lima',
-        value: '27'
+        value: '84'
       }, {
         nombre: 'Cusco',
-        value: '34'
+        value: '80'
       }, {
         nombre: 'Machu Picchu',
-        value: '36'
+        value: '81'
       }, {
-        nombre: 'Camino inca',
-        value: '37'
+        nombre: 'Montaña 7 Colores',
+        value: '83'
       }],
       categorias: [{
-        nombre: 'Family',
-        value: '1',
+        nombre: 'Familia',
+        value: '17',
         category: ''
       }, {
-        nombre: 'Cultural',
-        value: '2',
+        nombre: 'Clásico',
+        value: '16',
         category: ''
       }, {
-        nombre: 'Luxury',
-        value: '3',
-        category: ''
-      }, {
-        nombre: 'Recommended',
-        value: '4',
+        nombre: 'Extenso',
+        value: '18',
         category: ''
       }],
       tiempos: [{
@@ -101772,7 +101765,7 @@ var render = function() {
     [
       _c("div", { staticClass: "card w-100 shadow-sm" }, [
         _c("div", { staticClass: "header-img-packages position-relative" }, [
-          _c("a", { attrs: { href: "package/" + _vm.paquete_p.titulo } }, [
+          _c("a", { attrs: { href: "paquetes/" + _vm.paquete_p.url } }, [
             _c("img", {
               staticClass: "card-img-top",
               attrs: { src: _vm.paquete_p.imagen, alt: "" }
@@ -102257,9 +102250,9 @@ var staticRenderFns = [
         attrs: { id: "myTab", role: "tablist" }
       },
       [
-        _c("li", { staticClass: "nav-item" }, [
+        _c("li", { staticClass: "nav-item cursor-pinter" }, [
           _c(
-            "a",
+            "span",
             {
               staticClass: "nav-link font-weight-bold active",
               attrs: {
@@ -102275,9 +102268,9 @@ var staticRenderFns = [
           )
         ]),
         _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
+        _c("li", { staticClass: "nav-item cursor-pinter" }, [
           _c(
-            "a",
+            "span",
             {
               staticClass: "nav-link font-weight-bold",
               attrs: {
@@ -102293,9 +102286,9 @@ var staticRenderFns = [
           )
         ]),
         _vm._v(" "),
-        _c("li", { staticClass: "nav-item" }, [
+        _c("li", { staticClass: "nav-item cursor-pinter" }, [
           _c(
-            "a",
+            "span",
             {
               staticClass: "nav-link font-weight-bold",
               attrs: {
@@ -119112,8 +119105,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Hidalgo\proyectos\Homestead\code\viagens\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Hidalgo\proyectos\Homestead\code\viagens\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Hidalgo\Homestead\code\viagens\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Hidalgo\Homestead\code\viagens\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

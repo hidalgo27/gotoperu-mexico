@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Page;
 
+use App\TCategoria;
 use App\TDestino;
 use App\TPaquete;
 use App\TPaqueteCategoria;
 use App\TPaqueteDestino;
+use App\TPaqueteDificultad;
 use App\TTour;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -168,21 +170,25 @@ class HomepageController extends Controller
     }
 
 
-    public function detail($title){
+    public function detail($url){
 
-        return view('page.detail');
+        $paquete = TPaquete::where('url', $url)->get();
+        $dificultad = TPaqueteDificultad::all();
+        return view('page.detail', compact('paquete', 'dificultad'));
 
     }
 
     public function destination(){
 
-        return view('page.destinations');
+        $destino = TDestino::all()->sortBy('nombre');
+        return view('page.destinations', compact('destino'));
 
     }
 
     public function category(){
 
-        return view('page.packages-category');
+        $categoria = TCategoria::all()->sortBy('nombre');
+        return view('page.packages-category', compact('categoria'));
 
     }
     public function category_show($url){

@@ -1,5 +1,6 @@
 @extends('layouts.page.app')
     @section('content')
+        @foreach($paquete as $paquetes)
         <header class="header-detail">
             <div class="overlay"></div>
             {{--            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">--}}
@@ -12,7 +13,7 @@
             <div class="container h-100">
                 <div class="row d-flex h-100 text-center align-items-center">
                     <div class="col w-100 text-white mt-5">
-                        <h1 class="font-weight-lighter h2 mt-5">Caminho Pelo Salkantay</h1>
+                        <h1 class="font-weight-lighter h2 mt-5">{{$paquetes->titulo}}</h1>
                         <div>
                             <div class="tl-1"></div>
                             <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
@@ -61,16 +62,23 @@
                         <div class="col-8">
                             <div class="row">
                                 <div class="col">
-                                    <p class="m-0">Paquete donde podra disfrutar las maravillas de Cusco ciudad y su mistica detras de la conquista española, conocera un poco más acerca de lo que representaba el centro historico de Cusco para el imperio INCA y sus cambios a traves de la historia. Quedara sorprendido sobre como para la epoca el imperio INCA estaba muy adelantado en temas de ingienería, agricultura, astronomia, etc y por supuesto la magia que envuelve Machupicchu su descubrimiento, historia, curiosidades, etc. Ademas de tener la opción de elegir entre 2 increibles tours como lo son Montaña 7 Colores o Laguna Humantay, sinceramente con el equipo de GOTOPERÚ no logramos decidir cual es nuestro favorito, pero algo si puede tener seguro ambos le dejaran boquiabierta una vez llegue a la cima de esas montañas. ¡Perú los espera!</p>
+                                    <p class="m-0">{!! $paquetes->descripcion !!}</p>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <h6 class="font-weight-bold text-secondary mt-4"><span class="text-g-yellow">Categoría</span>: <mark>Recomendados Favoritos</mark></h6>
-                                    <p>Disfrute de lo mas importante de Cusco con los expertos, en cantidad de dias que se adaptan a su itinerario. Los esperamos!</p>
+                                    @foreach($paquetes->paquetes_categoria as $categoria)
+                                    <h6 class="font-weight-bold text-secondary mt-4"><span class="text-g-yellow">Categoría</span>: <mark>{{ucwords(strtolower($categoria->categoria->nombre))}}</mark></h6>
+                                    {!! $categoria->categoria->descripcion !!}
+                                    @endforeach
 
-                                    <h6 class="font-weight-bold text-secondary mt-4"><span class="text-g-yellow">Demanda física</span>: <mark>Baja</mark></h6>
-                                    <p>Físicamente poco exigente.</p>
+                                        @foreach($dificultad->where('idpaquetes', $paquetes->id) as $dificultades)
+                                    <h6 class="font-weight-bold text-secondary mt-4"><span class="text-g-yellow">Demanda física</span>: <mark>{{$dificultades->dificultad->nombre}}</mark></h6>
+                                    <p>{!! $dificultades->dificultad->descripcion !!}</p>
+                                        @endforeach
+
+
+
                                 </div>
                             </div>
 
@@ -154,6 +162,7 @@
 
             <div id="itinerario">
                 <div class="container-fluid px-0">
+                    @foreach($paquetes->paquete_itinerario as $itinerario)
                     <div class="row no-gutters align-items-center align-items-resumen">
                         <div class="col-6">
                             <div class="p-5" id="box-resumen">
@@ -199,7 +208,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row no-gutters align-items-center align-items-resumen">
+                    @endforeach
+                    <div class="row no-gutters align-items-center align-items-resumen d-none">
                         <div class="col-6">
                             <div class="swiper-container swiper-container-gallery">
                                 <div class="swiper-wrapper">
@@ -244,6 +254,7 @@
 
                         </div>
                     </div>
+
 
                 </div>
             </div>
@@ -329,17 +340,6 @@
             </div>
         </section>
 
-{{--        <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">--}}
-{{--            <h4 id="list-item-1">Item 1</h4>--}}
-{{--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur error eveniet ipsum perferendis quam quos saepe sit soluta! Explicabo facere molestiae quod recusandae voluptatem. Ad assumenda debitis nam natus nihil?</p>--}}
-{{--            <h4 id="list-item-2">Item 2</h4>--}}
-{{--            <p>...</p>--}}
-{{--            <h4 id="list-item-3">Item 3</h4>--}}
-{{--            <p>...</p>--}}
-{{--            <h4 id="list-item-4">Item 4</h4>--}}
-{{--            <p>...</p>--}}
-{{--            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquam architecto corporis dicta error facilis ipsam magni, mollitia necessitatibus odio quasi quo, repudiandae saepe sapiente sed. Cum qui sed veritatis!--}}
-{{--        </div>--}}
         <section id="consulte">
             <div class="container-fluid">
                 <div class="row justify-content-center my-4">
@@ -356,6 +356,7 @@
             </div>
         </section>
 
+        @endforeach
     @endsection
 
 @push('scripts')

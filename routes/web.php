@@ -43,7 +43,7 @@ Route::get('/packages/', [
 
 
 //detail
-Route::get('/package/{titulo}', [
+Route::get('/paquetes/{url}', [
     'uses' => 'Page\HomepageController@detail',
     'as' => 'detail_path',
 ]);

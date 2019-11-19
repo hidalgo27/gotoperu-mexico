@@ -128,34 +128,31 @@
             return {
                 destinos:[
                     {
-                        nombre: 'Arequipa', value: '31'
+                        nombre: 'Arequipa', value: '85'
                     },
                     {
-                        nombre: 'Lima', value: '27'
+                        nombre: 'Lima', value: '84'
                     },
                     {
-                        nombre: 'Cusco', value: '34'
+                        nombre: 'Cusco', value: '80'
                     },
                     {
-                        nombre: 'Machu Picchu', value: '36'
+                        nombre: 'Machu Picchu', value: '81'
                     },
                     {
-                        nombre: 'Camino inca', value: '37'
+                        nombre: 'Montaña 7 Colores', value: '83'
                     },
                 ],
                 categorias:[
                     {
-                        nombre: 'Family', value: '1', category: ''
+                        nombre: 'Familia', value: '17', category: ''
                     },
                     {
-                        nombre: 'Cultural', value: '2', category: ''
+                        nombre: 'Clásico', value: '16', category: ''
                     },
                     {
-                        nombre: 'Luxury', value: '3', category: ''
-                    },
-                    {
-                        nombre: 'Recommended', value: '4', category: ''
-                    },
+                        nombre: 'Extenso', value: '18', category: ''
+                    }
                 ],
                 tiempos:[
                     {

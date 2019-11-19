@@ -17,14 +17,14 @@
                                 <div class="row card-body">
                                         <div class="col">
                                             <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
-                                                <li class="nav-item">
-                                                    <a class="nav-link font-weight-bold active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Destinos</a>
+                                                <li class="nav-item cursor-pinter">
+                                                    <span class="nav-link font-weight-bold active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Destinos</span>
                                                 </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link font-weight-bold" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Dias</a>
+                                                <li class="nav-item cursor-pinter">
+                                                    <span class="nav-link font-weight-bold" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Dias</span>
                                                 </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link font-weight-bold" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Categorias</a>
+                                                <li class="nav-item cursor-pinter">
+                                                    <span class="nav-link font-weight-bold" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Categorias</span>
                                                 </li>
                                             </ul>
 
@@ -152,34 +152,31 @@
             return {
                 destinos:[
                     {
-                        nombre: 'Arequipa', value: '31'
+                        nombre: 'Arequipa', value: '85'
                     },
                     {
-                        nombre: 'Lima', value: '27'
+                        nombre: 'Lima', value: '84'
                     },
                     {
-                        nombre: 'Cusco', value: '34'
+                        nombre: 'Cusco', value: '80'
                     },
                     {
-                        nombre: 'Machu Picchu', value: '36'
+                        nombre: 'Machu Picchu', value: '81'
                     },
                     {
-                        nombre: 'Camino inca', value: '37'
+                        nombre: 'Montaña 7 Colores', value: '83'
                     },
                 ],
                 categorias:[
                     {
-                        nombre: 'Family', value: '1', category: ''
+                        nombre: 'Familia', value: '17', category: ''
                     },
                     {
-                        nombre: 'Cultural', value: '2', category: ''
+                        nombre: 'Clásico', value: '16', category: ''
                     },
                     {
-                        nombre: 'Luxury', value: '3', category: ''
-                    },
-                    {
-                        nombre: 'Recommended', value: '4', category: ''
-                    },
+                        nombre: 'Extenso', value: '18', category: ''
+                    }
                 ],
                 tiempos:[
                     {
@@ -273,9 +270,9 @@
                         // console.log(this.destinations);
                     });
 
-                // console.log(this.destinosSeleccionados);
+                console.log(this.destinosSeleccionados);
                 console.log(this.categoriasSeleccionados);
-                // console.log(this.tiemposSeleccionados);
+                console.log(this.tiemposSeleccionados);
 
             },
         },
