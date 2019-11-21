@@ -44,7 +44,7 @@
         <div class="container">
             <div class="row pt-4">
                 <div class="col">
-                    <h1 class="font-weight-bold text-g-yellow text-center">DESTINOS EN <span class="text-g-green">PERÚ</span></h1>
+                    <h2 class="font-weight-bold display-4 text-g-yellow text-center">Destinos en <span class="text-g-green">Perú</span></h2>
 
                     <p class="lead text-center">Le ofrecemos una experiencia de viaje auténtica y mágica en Perú, lo invitamos a explorar los numerosos paquetes de viaje totalmente personalizados que tenemos y que se adaptan a cada presupuesto. Permítanos planear su inolvidable viaje a nuestro majestuoso Machu Picchu y al resto de nuestra patria... ¡Perú!</p>
                     <div class="alert alert-primary text-center rounded-0 m-0" role="alert">
@@ -77,8 +77,8 @@
                         {!! $destinos->descripcion !!}
                         <div class="row mt-4">
                             <div class="col">
-                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS SOBRE {{mb_strtoupper($destinos->nombre)}}</button>
-                                <a href="{{route('destination_show_path', $destinos->url)}}" class="btn btn-g-green text-white rounded-0 float-right" onclick="view_itinerary()">VER PAQUETES</a>
+                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter">SABER MÁS SOBRE {{mb_strtoupper($destinos->nombre)}}</button>
+                                <a href="{{route('destination_show_path', $destinos->url)}}" class="btn btn-g-green text-white rounded-0 float-right">VER PAQUETES</a>
                             </div>
                         </div>
                     </div>

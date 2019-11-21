@@ -34,7 +34,7 @@
                     <a href="{{route('home_path')}}"><img src="{{asset('images/logo-gotoperu-white.png')}}" width="250" alt="logo andesviagens" class="img-fluid"></a>
                 </div>
                 <div class="col-3 text-right">
-                    <a href="" class="btn btn-inquire float-right ml-3 font-weight-bold px-4 text-white rounded-0">COTIZAR VIAJE</a>
+                    <a href="#consulte" class="btn btn-inquire float-right ml-3 font-weight-bold px-4 text-white rounded-0">COTIZAR VIAJE</a>
                 </div>
             </div>
         </div>

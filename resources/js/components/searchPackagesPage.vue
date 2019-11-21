@@ -105,7 +105,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col text-center">
-                                                    <button type="button" class="btn-lg btn btn-g-yellow text-white font-weight-bold">Diseñe su viaje</button>
+                                                    <a :href="'#consulte'" class="btn-lg btn btn-g-yellow text-white font-weight-bold">Diseñe su viaje</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -181,7 +181,7 @@
             }
         },
         created(){
-            axios.get('/load/packages').then(res=>{
+            axios.get('/load/packages-all').then(res=>{
                 this.paquetes = res.data;
             })
         },

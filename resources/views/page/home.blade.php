@@ -13,7 +13,7 @@
             <div class="row d-flex h-100 text-center align-items-center">
                 <div class="col w-100 text-white mt-5">
                     <h1 class="font-weight-lighter h2 mt-5">Top en Recomendaciones y Testimonios, sede central en Cusco</h1>
-                    <a href="#Inquire" class="btn btn-outline-g-yellow btn-lg h2 font-weight-normal mt-3">Diseña tu Viaje</a>
+                    <a href="#consulte" class="btn btn-outline-g-yellow btn-lg h2 font-weight-normal mt-3">Diseña tu Viaje</a>
                     {{--                        <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>--}}
                 </div>
             </div>
@@ -46,17 +46,17 @@
                 {{--                    </div>--}}
                 <div class="col text-center">
                     <h1 class="font-weight-bold display-4 text-g-yellow">Paquetes de <strong class="text-g-green">viajes en Perú</strong></h1>
-                    <p class="lead font-weight-normal text-muted">Somos <b>ANDESVIAGENS</b>, especialistas em viagens locais! Nossos guias, motoristas e representantes locais terão o prazer em compartilhar o melhor do nosso país em nossos mais de 12 anos de experiência criando viagens inesquecíveis para a terra dos Incas! Temos uma grande reputação, incluindo parceiros globais como Expedia, Travelocity e Tripadvisor, que também reconheceram nossos esforços citando-nos como os melhores especialistas locais.</p>
-                    <div class="row align-items-center">
-                        <div class="col-12 text-center">
-                            <h6 class="text-secondary">
-                                <img src="{{asset('images/logo-andes-bc.png')}}" alt="" width="120">
-                                <span class="mt-1">é a divisão de</span>
-                                <img src="{{asset('images/logo-gotoperu.png')}}" alt="" width="100">
-                            </h6>
+                    <p class="lead font-weight-normal text-muted">Expertos operadores de viajes locales. Nuestros guías, conductores y representantes estarán muy contentos en compartir lo mejor de nuestro Perú. Tenemos 10 años de experiencia diseñando viajes inolvidable a la tierra de los Incas! Incluyendo Socios Globales como Expedia, Travelocity, Tripadvisor, que nos reconocen como Operador Top en Perú. Cotize el dia de hoy un viaje inolvidable para conocer MachuPicchu !</p>
+{{--                    <div class="row align-items-center">--}}
+{{--                        <div class="col-12 text-center">--}}
+{{--                            <h6 class="text-secondary">--}}
+{{--                                <img src="{{asset('images/logo-andes-bc.png')}}" alt="" width="120">--}}
+{{--                                <span class="mt-1">é a divisão de</span>--}}
+{{--                                <img src="{{asset('images/logo-gotoperu.png')}}" alt="" width="100">--}}
+{{--                            </h6>--}}
 
-                        </div>
-                    </div>
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
@@ -126,7 +126,7 @@
                             <h3 class="title">Franklin</h3>
                             <span class="post">Guia Senior</span>
                             <ul class="social">
-                                <li><a href="#"><i class="fas fa-play"></i></a></li>
+                                <li><a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/kAHrfcy20bI"><i class="fas fa-play"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -138,19 +138,19 @@
                             <h3 class="title">Katy</h3>
                             <span class="post">Guia</span>
                             <ul class="social">
-                                <li><a href="#"><i class="fas fa-play"></i></a></li>
+                                <li><a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/586i_znr4VQ"><i class="fas fa-play"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="{{asset('images/team/mariana.jpg')}}">
+                        <img src="{{asset('images/team/daniel.jpg')}}">
                         <div class="box-content">
-                            <h3 class="title">Maria</h3>
+                            <h3 class="title">Daniel</h3>
                             <span class="post">Travel Advisor</span>
                             <ul class="social">
-                                <li><a href="#"><i class="fas fa-play"></i></a></li>
+                                <li><a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/HFJyuC_euRk"><i class="fas fa-play"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/I0PUQOoboPE">
+                    <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/iWqyeyUVruE">
                         <div class="position-relative">
                             <img src="{{asset('images/video-testimonial/1.jpg')}}" alt="" class="w-100">
                             <div class="position-absolute-bottom text-white p-3 icon-play">
@@ -212,7 +212,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/I0PUQOoboPE">
+                    <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/tbET_aKa0Zg">
                         <div class="position-relative">
                             <img src="{{asset('images/video-testimonial/2.jpg')}}" alt="" class="w-100">
                             <div class="position-absolute-bottom text-white p-3 icon-play">
@@ -222,7 +222,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/I0PUQOoboPE">
+                    <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/NSA_ij7rxuI">
                         <div class="position-relative">
                             <img src="{{asset('images/video-testimonial/3.jpg')}}" alt="" class="w-100">
                             <div class="position-absolute-bottom text-white p-3 icon-play">
@@ -313,11 +313,11 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
-                <div class="col text-center">
-                    <button type="button" class="btn-lg btn btn-primary text-white font-weight-bold">Más de nuestros testimonios</button>
-                </div>
-            </div>
+{{--            <div class="row mt-5">--}}
+{{--                <div class="col text-center">--}}
+{{--                    <button type="button" class="btn-lg btn btn-primary text-white font-weight-bold">Más de nuestros testimonios</button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
         </div>
     </section>
@@ -444,9 +444,9 @@
         </div>
     </section>
 
-    <section>
+    <section id="consulte" class="pt-5">
         <div class="container-fluid">
-            <div class="row justify-content-center my-4">
+            <div class="row justify-content-center">
                 <div class="col-2">
                     <img src="{{asset('images/logo-andes-y.png')}}" alt="" class="w-100">
                 </div>

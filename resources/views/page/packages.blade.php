@@ -12,7 +12,7 @@
         <div class="container h-100">
             <div class="row d-flex h-100 text-center align-items-center">
                 <div class="col w-100 text-white mt-5">
-                    <h1 class="font-weight-lighter h2 mt-5">PERU TRAVEL PACKAGES</h1>
+                    <h1 class="font-weight-lighter h2 mt-5">PAQUETES DE VIAJE A PERÚ</h1>
                     <div>
                         <div class="tl-1"></div>
                         <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
@@ -45,7 +45,7 @@
         <div class="container px-0">
             <div class="row my-5">
                 <div class="col text-center">
-                    <h1>Viajes a Perú PAQUETES DESTACADOS</h1>
+                    <h2 class="font-weight-bold display-4 text-g-yellow">Paquetes de Viaje <strong class="text-g-green">Destacados</strong></h2>
                     <p class="lead">Nuestros paquetes más populares En Perú, Estos paquetes pueden ser usados como referencia para personalizar tu viaje. En GOTOPERU Nos especializamos en la elaboración de experiencias personalizadas basadas en sus preferencias; invitamos a revisar estos programas para tener una idea de los destinos más importantes, por ejemplo, Machu Picchu, Lake Titicaca, Nazca y el Amazonas.</p>
                 </div>
             </div>

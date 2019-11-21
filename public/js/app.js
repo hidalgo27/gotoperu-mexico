@@ -4893,7 +4893,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    axios.get('/load/packages').then(function (res) {
+    axios.get('/load/packages-all').then(function (res) {
       _this.paquetes = res.data;
     });
   },
@@ -101851,7 +101851,7 @@ var render = function() {
   return _c("div", { staticClass: "col-12 col-sm-12 col-md-6 d-flex mb-3" }, [
     _c("div", { staticClass: "card w-100 shadow-sm" }, [
       _c("div", { staticClass: "header-img-packages position-relative" }, [
-        _c("a", { attrs: { href: "package/" + _vm.paquete_p.titulo } }, [
+        _c("a", { attrs: { href: "paquetes/" + _vm.paquete_p.url } }, [
           _c("img", {
             staticClass: "card-img-top",
             attrs: { src: _vm.paquete_p.imagen, alt: "" }
@@ -102217,7 +102217,36 @@ var render = function() {
                     ]
                   }),
                   _vm._v(" "),
-                  _vm._m(2)
+                  _c("div", { staticClass: "col-12" }, [
+                    _c("div", { staticClass: "mt-4 bg-white py-3" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "row align-items-center justify-content-center"
+                        },
+                        [
+                          _c("div", { staticClass: "col-8" }, [
+                            _vm._m(2),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "row" }, [
+                              _c("div", { staticClass: "col text-center" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass:
+                                      "btn-lg btn btn-g-yellow text-white font-weight-bold",
+                                    attrs: { href: "#consulte" }
+                                  },
+                                  [_vm._v("Diseñe su viaje")]
+                                )
+                              ])
+                            ])
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
                 ],
                 2
               )
@@ -102310,48 +102339,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12" }, [
-      _c("div", { staticClass: "mt-4 bg-white py-3" }, [
-        _c(
-          "div",
-          { staticClass: "row align-items-center justify-content-center" },
-          [
-            _c("div", { staticClass: "col-8" }, [
-              _c("div", { staticClass: "row align-items-center" }, [
-                _c("div", { staticClass: "col-3" }, [_c("hr")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col text-center" }, [
-                  _c("h4", { staticClass: "font-weight-bold" }, [
-                    _vm._v("¿No encuentras lo que buscas?")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "font-weight-nomal" }, [
-                    _vm._v(
-                      "No se preocupe, nosotros diseñamos un viaje par usted."
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-3" }, [_c("hr")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col text-center" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "btn-lg btn btn-g-yellow text-white font-weight-bold",
-                      attrs: { type: "button" }
-                    },
-                    [_vm._v("Diseñe su viaje")]
-                  )
-                ])
-              ])
-            ])
-          ]
-        )
-      ])
+    return _c("div", { staticClass: "row align-items-center" }, [
+      _c("div", { staticClass: "col-3" }, [_c("hr")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col text-center" }, [
+        _c("h4", { staticClass: "font-weight-bold" }, [
+          _vm._v("¿No encuentras lo que buscas?")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-weight-nomal" }, [
+          _vm._v("No se preocupe, nosotros diseñamos un viaje par usted.")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-3" }, [_c("hr")])
     ])
   }
 ]
@@ -102604,7 +102605,36 @@ var render = function() {
                     ]
                   }),
                   _vm._v(" "),
-                  _vm._m(1)
+                  _c("div", { staticClass: "col-12" }, [
+                    _c("div", { staticClass: "mt-4 bg-white py-3" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "row align-items-center justify-content-center"
+                        },
+                        [
+                          _c("div", { staticClass: "col-8" }, [
+                            _vm._m(1),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "row" }, [
+                              _c("div", { staticClass: "col text-center" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass:
+                                      "btn-lg btn btn-g-yellow text-white font-weight-bold",
+                                    attrs: { href: "#consulte" }
+                                  },
+                                  [_vm._v("Diseñe su viaje")]
+                                )
+                              ])
+                            ])
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
                 ],
                 2
               )
@@ -102630,48 +102660,20 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-12" }, [
-      _c("div", { staticClass: "mt-4 bg-white py-3" }, [
-        _c(
-          "div",
-          { staticClass: "row align-items-center justify-content-center" },
-          [
-            _c("div", { staticClass: "col-8" }, [
-              _c("div", { staticClass: "row align-items-center" }, [
-                _c("div", { staticClass: "col-3" }, [_c("hr")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col text-center" }, [
-                  _c("h4", { staticClass: "font-weight-bold" }, [
-                    _vm._v("¿No encuentras lo que buscas?")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "font-weight-nomal" }, [
-                    _vm._v(
-                      "No se preocupe, nosotros diseñamos un viaje par usted."
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-3" }, [_c("hr")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col text-center" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass:
-                        "btn-lg btn btn-g-yellow text-white font-weight-bold",
-                      attrs: { type: "button" }
-                    },
-                    [_vm._v("Diseñe su viaje")]
-                  )
-                ])
-              ])
-            ])
-          ]
-        )
-      ])
+    return _c("div", { staticClass: "row align-items-center" }, [
+      _c("div", { staticClass: "col-3" }, [_c("hr")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col text-center" }, [
+        _c("h4", { staticClass: "font-weight-bold" }, [
+          _vm._v("¿No encuentras lo que buscas?")
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-weight-nomal" }, [
+          _vm._v("No se preocupe, nosotros diseñamos un viaje par usted.")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-3" }, [_c("hr")])
     ])
   }
 ]

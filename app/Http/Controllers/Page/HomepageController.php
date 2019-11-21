@@ -170,6 +170,21 @@ class HomepageController extends Controller
 
     }
 
+    public function load_all(Request $request){
+        $paquetes = TPaquete::all();
+        $destinations = TPaqueteDestino::with('destinos')->get();
+        $category = TPaqueteCategoria ::with('categoria')->get();
+        return response()->json(
+            [
+                'all_package' => [
+                    'package' => $paquetes,
+                    'destinations' => $destinations,
+                    'category' => $category
+                ]
+            ]);
+
+    }
+
     public function packages(){
         return view('page.packages');
     }
