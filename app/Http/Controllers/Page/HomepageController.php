@@ -205,7 +205,7 @@ class HomepageController extends Controller
 
     public function destination(){
 
-        $destinos_id = TDestino::with('destino_imagen')->where('nombre', $ciudad)->get();
+//        $destinos_id = TDestino::with('destino_imagen')->where('nombre', $ciudad)->get();
 
         $destino = TDestino::all()->sortBy('nombre');
         return view('page.destinations', compact('destino'));
