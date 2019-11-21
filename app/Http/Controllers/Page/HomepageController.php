@@ -19,10 +19,13 @@ class HomepageController extends Controller
         $paquete = TPaquete::with('paquetes_destinos.destinos','paquetes_categoria.categoria', 'precio_paquetes')->get();
         $tours = TTour::with('tours_destinos.destinos')->get();
 
+        $categoria = TCategoria::all();
+
         return view('page.home',
             compact(
                 'paquete',
-                'tours'
+                'tours',
+                'categoria'
             ));
     }
 
@@ -174,7 +177,8 @@ class HomepageController extends Controller
 
         $paquete = TPaquete::where('url', $url)->get();
         $dificultad = TPaqueteDificultad::all();
-        return view('page.detail', compact('paquete', 'dificultad'));
+        $paquete_destinos = TPaqueteDestino::with('destinos')->get();
+        return view('page.detail', compact('paquete', 'dificultad', 'paquete_destinos'));
 
     }
 

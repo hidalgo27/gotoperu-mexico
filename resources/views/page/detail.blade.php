@@ -7,7 +7,9 @@
             {{--                <source src="{{asset('media/Secuencia 06.mp4')}}" type="video/mp4">--}}
             {{--            </video>--}}
             <div class="homepage-video">
-                <img src="{{asset('images/packages/slider/AV500-1.jpg')}}" alt="">
+                @foreach($paquetes->imagen_paquetes->take(1) as $imagen)
+                    <img src="{{$imagen->nombre}}" alt="{{$paquetes->titulo}}">
+                @endforeach
 
             </div>
             <div class="container h-100">
@@ -20,10 +22,10 @@
                             <div class="tl-3"></div>
                         </div>
                         <div class="mt-4">
-                            <a href="" class="text-white">Detalle</a> |
-                            <a href="" class="text-white">Itinerario</a> |
-                            <a href="" class="text-white">Precios</a> |
-                            <a href="" class="text-g-yellow font-weight-bold">Consulte Ahora</a>
+                            <a href="#detalle" class="text-white">Detalle</a> |
+                            <a href="#itinerario" class="text-white">Itinerario</a> |
+                            <a href="#precios" class="text-white">Precios</a> |
+                            <a href="#consulte" class="text-g-yellow font-weight-bold">Consulte Ahora</a>
                         </div>
 {{--                        <a href="#Inquire" class="btn btn-outline-g-yellow btn-lg h2 font-weight-normal mt-3">Diseña tu Viaje</a>--}}
                         {{--                        <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>--}}
@@ -86,15 +88,24 @@
                         <div class="col-4">
                             <div class="card">
                                 <div class="p-3">
+
                                     <b class="h1 text-secondary font-weight-bold">5 días</b>
                                     <div class="text-center mb-2">
-                                        <small class="text-secondary">Desde</small>
-                                        <b class="h1 text-center font-weight-bold text-danger"><sup>$</sup>500</b>
-                                        <small class="small text-secondary">USD</small>
+                                        @foreach($paquetes->precio_paquetes->where('estrellas', 2)->sortBy('estrellas') as $precio)
+                                            @if($precio->precio_d > 0)
+                                                <small class="text-secondary">Desde</small>
+                                                <b class="h1 text-center font-weight-bold text-danger"><sup>$</sup>{{$precio->precio_d}}</b>
+                                                <small class="small text-secondary">USD</small>
+                                            @else
+                                                <span class="text-danger">
+                                                    Inquire
+                                                </span>
+                                            @endif
+                                        @endforeach
                                     </div>
-                                    <p class="m-0 text-g-yellow"><b>Código: GTP500</b></p>
+                                    <p class="m-0 text-g-yellow"><b>Código: {{$paquetes->codigo}}</b></p>
                                 </div>
-                                <a  href="#book-now" class="btn btn-dark font-weight-bold">
+                                <a  href="#consulte" class="btn btn-dark font-weight-bold">
                                     Consulte Ahora
                                 </a>
                             </div>
@@ -162,98 +173,94 @@
 
             <div id="itinerario">
                 <div class="container-fluid px-0">
+                    @php $day = 1; @endphp
                     @foreach($paquetes->paquete_itinerario as $itinerario)
-                    <div class="row no-gutters align-items-center align-items-resumen">
-                        <div class="col-6">
-                            <div class="p-5" id="box-resumen">
-                                <h4>Dia 1</h4>
-                                <div class="line-subtitle"></div>
-                                <p><mark class="font-weight-bold">Llegada A Cusco/noche En Cusco.-</mark> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis consequuntur dicta fugit illo in, inventore ipsum iusto officia quasi quo quod, similique tempore temporibus ullam voluptas voluptates, voluptatibus voluptatum.</p>
-                                <button type="button" class="btn btn-link p-0 text-secondary font-weight-lighter" onclick="view_itinerary()">LEER MÁS</button>
-                            </div>
-                            <div class="invisible position-absolute-top" id="box-detail">
-                                <div class="swiper-container swiper-container-detail">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <h4>Scroll Container</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus, ex eu sagittis faucibus, ligula ipsum sagittis magna, et imperdiet dolor lectus eu libero. Vestibulum venenatis eget turpis sed faucibus. Maecenas in ullamcorper orci, eu ullamcorper sem. Etiam elit ante, luctus non ante sit amet, sodales vulputate odio. Aenean tristique nisl tellus, sit amet fringilla nisl volutpat cursus. Quisque dignissim lectus ac nunc consectetur mattis. Proin vel hendrerit ipsum, et lobortis dolor. Vestibulum convallis, nibh et tincidunt tristique, nisl risus facilisis lectus, ut interdum orci nisl ac nunc. Cras et aliquam felis. Quisque vel ipsum at elit sodales posuere eget non est. Fusce convallis vestibulum dolor non volutpat. Vivamus vestibulum quam ut ultricies pretium.</p>
-                                            <p>Suspendisse rhoncus fringilla nisl. Mauris eget lorem ac urna consectetur convallis non vel mi. Donec libero dolor, volutpat ut urna sit amet, aliquet molestie purus. Phasellus faucibus, leo vel scelerisque lobortis, ipsum leo sollicitudin metus, eget sagittis ante orci eu ipsum. Nulla ac mauris eu risus sagittis scelerisque iaculis bibendum mauris. Cras ut egestas orci. Cras odio risus, sagittis ut nunc vitae, aliquam consectetur purus. Vivamus ornare nunc vel tellus facilisis, quis dictum elit tincidunt. Donec accumsan nisi at laoreet sodales. Cras at ullamcorper massa. Maecenas at facilisis ex. Nam mollis dignissim purus id efficitur.</p>
-                                            <p>Curabitur eget aliquam erat. Curabitur a neque vitae purus volutpat elementum. Vivamus quis vestibulum leo, efficitur ullamcorper velit. Integer tincidunt finibus metus vel porta. Mauris sed mauris congue, pretium est nec, malesuada purus. Nulla hendrerit consectetur arcu et lacinia. Suspendisse augue justo, convallis eget arcu in, pretium tempor ligula. Nullam vulputate tincidunt est ut ullamcorper.</p>
-                                            <p>Curabitur sed sodales leo. Nulla facilisi. Etiam condimentum, nisi id tempor vulputate, nisi justo cursus justo, pellentesque condimentum diam arcu sit amet leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In placerat tellus a posuere vehicula. Donec diam massa, efficitur vitae mattis et, pretium in augue. Fusce iaculis mi quis ante venenatis, sit amet pellentesque orci aliquam. Vestibulum elementum posuere vehicula.</p>
-                                            <p>Sed tincidunt diam a massa pharetra faucibus. Praesent condimentum id arcu nec fringilla. Maecenas faucibus, ante et venenatis interdum, erat mi eleifend dui, at convallis nisl est nec arcu. Duis vitae arcu rhoncus, faucibus magna ut, tempus metus. Cras in nibh sed ipsum consequat rhoncus. Proin fringilla nulla ut augue tempor fermentum. Nunc hendrerit non nisi vitae finibus. Donec eget ornare libero. Aliquam auctor erat enim, a semper risus semper at. In ut dui in metus tincidunt euismod eget et lacus. Aenean et dictum urna, sed rhoncus lorem. Duis pharetra sagittis odio. Etiam a libero ut nisi feugiat tincidunt vel vitae turpis. Maecenas vel orci sit amet lorem hendrerit venenatis sollicitudin ut dui. Quisque rhoncus nibh in massa pretium scelerisque.</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus, ex eu sagittis faucibus, ligula ipsum sagittis magna, et imperdiet dolor lectus eu libero. Vestibulum venenatis eget turpis sed faucibus. Maecenas in ullamcorper orci, eu ullamcorper sem. Etiam elit ante, luctus non ante sit amet, sodales vulputate odio. Aenean tristique nisl tellus, sit amet fringilla nisl volutpat cursus. Quisque dignissim lectus ac nunc consectetur mattis. Proin vel hendrerit ipsum, et lobortis dolor. Vestibulum convallis, nibh et tincidunt tristique, nisl risus facilisis lectus, ut interdum orci nisl ac nunc. Cras et aliquam felis. Quisque vel ipsum at elit sodales posuere eget non est. Fusce convallis vestibulum dolor non volutpat. Vivamus vestibulum quam ut ultricies pretium.</p>
-                                            <p>Suspendisse rhoncus fringilla nisl. Mauris eget lorem ac urna consectetur convallis non vel mi. Donec libero dolor, volutpat ut urna sit amet, aliquet molestie purus. Phasellus faucibus, leo vel scelerisque lobortis, ipsum leo sollicitudin metus, eget sagittis ante orci eu ipsum. Nulla ac mauris eu risus sagittis scelerisque iaculis bibendum mauris. Cras ut egestas orci. Cras odio risus, sagittis ut nunc vitae, aliquam consectetur purus. Vivamus ornare nunc vel tellus facilisis, quis dictum elit tincidunt. Donec accumsan nisi at laoreet sodales. Cras at ullamcorper massa. Maecenas at facilisis ex. Nam mollis dignissim purus id efficitur.</p>
-                                            <p>Curabitur eget aliquam erat. Curabitur a neque vitae purus volutpat elementum. Vivamus quis vestibulum leo, efficitur ullamcorper velit. Integer tincidunt finibus metus vel porta. Mauris sed mauris congue, pretium est nec, malesuada purus. Nulla hendrerit consectetur arcu et lacinia. Suspendisse augue justo, convallis eget arcu in, pretium tempor ligula. Nullam vulputate tincidunt est ut ullamcorper.</p>
-                                            <p>Curabitur sed sodales leo. Nulla facilisi. Etiam condimentum, nisi id tempor vulputate, nisi justo cursus justo, pellentesque condimentum diam arcu sit amet leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In placerat tellus a posuere vehicula. Donec diam massa, efficitur vitae mattis et, pretium in augue. Fusce iaculis mi quis ante venenatis, sit amet pellentesque orci aliquam. Vestibulum elementum posuere vehicula.</p>
-                                            <p>Sed tincidunt diam a massa pharetra faucibus. Praesent condimentum id arcu nec fringilla. Maecenas faucibus, ante et venenatis interdum, erat mi eleifend dui, at convallis nisl est nec arcu. Duis vitae arcu rhoncus, faucibus magna ut, tempus metus. Cras in nibh sed ipsum consequat rhoncus. Proin fringilla nulla ut augue tempor fermentum. Nunc hendrerit non nisi vitae finibus. Donec eget ornare libero. Aliquam auctor erat enim, a semper risus semper at. In ut dui in metus tincidunt euismod eget et lacus. Aenean et dictum urna, sed rhoncus lorem. Duis pharetra sagittis odio. Etiam a libero ut nisi feugiat tincidunt vel vitae turpis. Maecenas vel orci sit amet lorem hendrerit venenatis sollicitudin ut dui. Quisque rhoncus nibh in massa pretium scelerisque.</p>
+                        @if( $day%2 == 0)
+                            <div class="row no-gutters align-items-center align-items-resumen" id="align-items-resumen-{{$itinerario->itinerarios->id}}">
+
+                                <div class="col-6">
+                                    <div class="swiper-container swiper-container-gallery">
+                                        <div class="swiper-wrapper">
+                                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}"><img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100"></a>
+                                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
+                                        </div>
+                                        <!-- Add Pagination -->
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <div class="p-5" id="box-resumen-{{$itinerario->itinerarios->id}}">
+                                        <h4>Dia {{$day}}</h4>
+                                        <div class="line-subtitle"></div>
+                                        <p><mark class="font-weight-bold">{{$itinerario->itinerarios->titulo}}.</mark></p>
+                                        {!! $itinerario->itinerarios->resumen !!}
+                                        <button type="button" class="btn btn-link p-0 text-secondary font-weight-lighter" onclick="view_itinerary({{$itinerario->itinerarios->id}})">LEER MÁS</button>
+                                    </div>
+                                    <div class="invisible position-absolute-top bg-white" id="box-detail-{{$itinerario->itinerarios->id}}">
+                                        <div class="swiper-container swiper-container-detail">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <h4>Dia {{$day}} <mark class="font-weight-bold">{{$itinerario->itinerarios->titulo}}.</mark></h4>
+                                                    <div class="line-subtitle"></div>
+                                                    {!! $itinerario->itinerarios->descripcion !!}
+                                                </div>
+                                            </div>
+                                            <!-- Add Scroll Bar -->
+                                            <div class="swiper-scrollbar"></div>
+                                            <div class="position-absolute-bottom text-center m-3">
+                                                <button type="button" class="btn btn-sm btn-dark shadow-sm" onclick="view_itinerary_resumen({{$itinerario->itinerarios->id}})">Ver Resumen</button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <!-- Add Scroll Bar -->
-                                    <div class="swiper-scrollbar"></div>
-                                    <div class="position-absolute-bottom text-center m-3">
-                                        <button type="button" class="btn btn-sm btn-dark shadow-sm" onclick="view_itinerary_resumen()">Ver Resumen</button>
+                                </div>
+
+                            </div>
+                        @else
+                            <div class="row no-gutters align-items-center align-items-resumen" id="align-items-resumen-{{$itinerario->itinerarios->id}}">
+                                <div class="col-6">
+                                    <div class="p-5" id="box-resumen-{{$itinerario->itinerarios->id}}">
+                                        <h4>Dia {{$day}}</h4>
+                                        <div class="line-subtitle"></div>
+                                        <p><mark class="font-weight-bold">{{$itinerario->itinerarios->titulo}}.</mark></p>
+                                        {!! $itinerario->itinerarios->resumen !!}
+                                        <button type="button" class="btn btn-link p-0 text-secondary font-weight-lighter" onclick="view_itinerary({{$itinerario->itinerarios->id}})">LEER MÁS</button>
+                                    </div>
+                                    <div class="invisible position-absolute-top bg-white" id="box-detail-{{$itinerario->itinerarios->id}}">
+                                        <div class="swiper-container swiper-container-detail">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <h4>Dia {{$day}} <mark class="font-weight-bold">{{$itinerario->itinerarios->titulo}}.</mark></h4>
+                                                    <div class="line-subtitle"></div>
+                                                    {!! $itinerario->itinerarios->descripcion !!}
+                                                </div>
+                                            </div>
+                                            <!-- Add Scroll Bar -->
+                                            <div class="swiper-scrollbar"></div>
+                                            <div class="position-absolute-bottom text-center m-3">
+                                                <button type="button" class="btn btn-sm btn-dark shadow-sm" onclick="view_itinerary_resumen({{$itinerario->itinerarios->id}})">Ver Resumen</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                        </div>
-                        <div class="col-6">
-                            <div class="swiper-container swiper-container-gallery">
-                                <div class="swiper-wrapper">
-                                    <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}"><img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100"></a>
-                                    <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
+                                <div class="col-6">
+                                    <div class="swiper-container swiper-container-gallery">
+                                        <div class="swiper-wrapper">
+                                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}"><img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100"></a>
+                                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
+                                        </div>
+                                        <!-- Add Pagination -->
+                                        <div class="swiper-pagination"></div>
+                                    </div>
                                 </div>
-                                <!-- Add Pagination -->
-                                <div class="swiper-pagination"></div>
+
+
+
                             </div>
-                        </div>
-                    </div>
+                        @endif
+                        @php $day++; @endphp
                     @endforeach
-                    <div class="row no-gutters align-items-center align-items-resumen d-none">
-                        <div class="col-6">
-                            <div class="swiper-container swiper-container-gallery">
-                                <div class="swiper-wrapper">
-                                    <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}"><img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100"></a>
-                                    <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
-                                </div>
-                                <!-- Add Pagination -->
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-5" id="box-resumen">
-                                <h4>Dia 2</h4>
-                                <div class="line-subtitle"></div>
-                                <p><mark class="font-weight-bold">Llegada A Cusco/noche En Cusco.-</mark> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis consequuntur dicta fugit illo in, inventore ipsum iusto officia quasi quo quod, similique tempore temporibus ullam voluptas voluptates, voluptatibus voluptatum.</p>
-                                <button type="button" class="btn btn-link p-0 text-secondary font-weight-lighter" onclick="view_itinerary()">LEER MÁS</button>
-                            </div>
-                            <div class="invisible position-absolute-top" id="box-detail">
-                                <div class="swiper-container swiper-container-detail">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <h4>Scroll Container</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus, ex eu sagittis faucibus, ligula ipsum sagittis magna, et imperdiet dolor lectus eu libero. Vestibulum venenatis eget turpis sed faucibus. Maecenas in ullamcorper orci, eu ullamcorper sem. Etiam elit ante, luctus non ante sit amet, sodales vulputate odio. Aenean tristique nisl tellus, sit amet fringilla nisl volutpat cursus. Quisque dignissim lectus ac nunc consectetur mattis. Proin vel hendrerit ipsum, et lobortis dolor. Vestibulum convallis, nibh et tincidunt tristique, nisl risus facilisis lectus, ut interdum orci nisl ac nunc. Cras et aliquam felis. Quisque vel ipsum at elit sodales posuere eget non est. Fusce convallis vestibulum dolor non volutpat. Vivamus vestibulum quam ut ultricies pretium.</p>
-                                            <p>Suspendisse rhoncus fringilla nisl. Mauris eget lorem ac urna consectetur convallis non vel mi. Donec libero dolor, volutpat ut urna sit amet, aliquet molestie purus. Phasellus faucibus, leo vel scelerisque lobortis, ipsum leo sollicitudin metus, eget sagittis ante orci eu ipsum. Nulla ac mauris eu risus sagittis scelerisque iaculis bibendum mauris. Cras ut egestas orci. Cras odio risus, sagittis ut nunc vitae, aliquam consectetur purus. Vivamus ornare nunc vel tellus facilisis, quis dictum elit tincidunt. Donec accumsan nisi at laoreet sodales. Cras at ullamcorper massa. Maecenas at facilisis ex. Nam mollis dignissim purus id efficitur.</p>
-                                            <p>Curabitur eget aliquam erat. Curabitur a neque vitae purus volutpat elementum. Vivamus quis vestibulum leo, efficitur ullamcorper velit. Integer tincidunt finibus metus vel porta. Mauris sed mauris congue, pretium est nec, malesuada purus. Nulla hendrerit consectetur arcu et lacinia. Suspendisse augue justo, convallis eget arcu in, pretium tempor ligula. Nullam vulputate tincidunt est ut ullamcorper.</p>
-                                            <p>Curabitur sed sodales leo. Nulla facilisi. Etiam condimentum, nisi id tempor vulputate, nisi justo cursus justo, pellentesque condimentum diam arcu sit amet leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In placerat tellus a posuere vehicula. Donec diam massa, efficitur vitae mattis et, pretium in augue. Fusce iaculis mi quis ante venenatis, sit amet pellentesque orci aliquam. Vestibulum elementum posuere vehicula.</p>
-                                            <p>Sed tincidunt diam a massa pharetra faucibus. Praesent condimentum id arcu nec fringilla. Maecenas faucibus, ante et venenatis interdum, erat mi eleifend dui, at convallis nisl est nec arcu. Duis vitae arcu rhoncus, faucibus magna ut, tempus metus. Cras in nibh sed ipsum consequat rhoncus. Proin fringilla nulla ut augue tempor fermentum. Nunc hendrerit non nisi vitae finibus. Donec eget ornare libero. Aliquam auctor erat enim, a semper risus semper at. In ut dui in metus tincidunt euismod eget et lacus. Aenean et dictum urna, sed rhoncus lorem. Duis pharetra sagittis odio. Etiam a libero ut nisi feugiat tincidunt vel vitae turpis. Maecenas vel orci sit amet lorem hendrerit venenatis sollicitudin ut dui. Quisque rhoncus nibh in massa pretium scelerisque.</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus, ex eu sagittis faucibus, ligula ipsum sagittis magna, et imperdiet dolor lectus eu libero. Vestibulum venenatis eget turpis sed faucibus. Maecenas in ullamcorper orci, eu ullamcorper sem. Etiam elit ante, luctus non ante sit amet, sodales vulputate odio. Aenean tristique nisl tellus, sit amet fringilla nisl volutpat cursus. Quisque dignissim lectus ac nunc consectetur mattis. Proin vel hendrerit ipsum, et lobortis dolor. Vestibulum convallis, nibh et tincidunt tristique, nisl risus facilisis lectus, ut interdum orci nisl ac nunc. Cras et aliquam felis. Quisque vel ipsum at elit sodales posuere eget non est. Fusce convallis vestibulum dolor non volutpat. Vivamus vestibulum quam ut ultricies pretium.</p>
-                                            <p>Suspendisse rhoncus fringilla nisl. Mauris eget lorem ac urna consectetur convallis non vel mi. Donec libero dolor, volutpat ut urna sit amet, aliquet molestie purus. Phasellus faucibus, leo vel scelerisque lobortis, ipsum leo sollicitudin metus, eget sagittis ante orci eu ipsum. Nulla ac mauris eu risus sagittis scelerisque iaculis bibendum mauris. Cras ut egestas orci. Cras odio risus, sagittis ut nunc vitae, aliquam consectetur purus. Vivamus ornare nunc vel tellus facilisis, quis dictum elit tincidunt. Donec accumsan nisi at laoreet sodales. Cras at ullamcorper massa. Maecenas at facilisis ex. Nam mollis dignissim purus id efficitur.</p>
-                                            <p>Curabitur eget aliquam erat. Curabitur a neque vitae purus volutpat elementum. Vivamus quis vestibulum leo, efficitur ullamcorper velit. Integer tincidunt finibus metus vel porta. Mauris sed mauris congue, pretium est nec, malesuada purus. Nulla hendrerit consectetur arcu et lacinia. Suspendisse augue justo, convallis eget arcu in, pretium tempor ligula. Nullam vulputate tincidunt est ut ullamcorper.</p>
-                                            <p>Curabitur sed sodales leo. Nulla facilisi. Etiam condimentum, nisi id tempor vulputate, nisi justo cursus justo, pellentesque condimentum diam arcu sit amet leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In placerat tellus a posuere vehicula. Donec diam massa, efficitur vitae mattis et, pretium in augue. Fusce iaculis mi quis ante venenatis, sit amet pellentesque orci aliquam. Vestibulum elementum posuere vehicula.</p>
-                                            <p>Sed tincidunt diam a massa pharetra faucibus. Praesent condimentum id arcu nec fringilla. Maecenas faucibus, ante et venenatis interdum, erat mi eleifend dui, at convallis nisl est nec arcu. Duis vitae arcu rhoncus, faucibus magna ut, tempus metus. Cras in nibh sed ipsum consequat rhoncus. Proin fringilla nulla ut augue tempor fermentum. Nunc hendrerit non nisi vitae finibus. Donec eget ornare libero. Aliquam auctor erat enim, a semper risus semper at. In ut dui in metus tincidunt euismod eget et lacus. Aenean et dictum urna, sed rhoncus lorem. Duis pharetra sagittis odio. Etiam a libero ut nisi feugiat tincidunt vel vitae turpis. Maecenas vel orci sit amet lorem hendrerit venenatis sollicitudin ut dui. Quisque rhoncus nibh in massa pretium scelerisque.</p>
-                                        </div>
-                                    </div>
-                                    <!-- Add Scroll Bar -->
-                                    <div class="swiper-scrollbar"></div>
-                                    <div class="position-absolute-bottom text-center m-3">
-                                        <button type="button" class="btn btn-sm btn-dark shadow-sm" onclick="view_itinerary_resumen()">Ver Resumen</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
 
 
                 </div>
@@ -265,30 +272,17 @@
                         <div class="offer-banner">
                             <div class="container">
                                 <div class="row mt-3 justify-content-around">
-                                    <div class="col-auto text-center">
-                                        <a href="" class="text-dark">
-                                            <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="80" height="80" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                            <small class="d-block font-weight-bold">Lima</small>
-                                        </a>
-                                    </div>
-                                    <div class="col-auto text-center">
-                                        <a href="" class="text-dark">
-                                            <img src="{{asset('images/destinations/titicaca.jpg')}}" alt="" width="80" height="80" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                            <small class="d-block font-weight-bold">Cusco</small>
-                                        </a>
-                                    </div>
-                                    <div class="col-auto text-center">
-                                        <a href="" class="text-dark">
-                                            <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" width="80" height="80" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                            <small class="d-block font-weight-bold">Cusco</small>
-                                        </a>
-                                    </div>
-                                    <div class="col-auto text-center">
-                                        <a href="" class="text-dark">
-                                            <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="80" height="80" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                            <small class="d-block font-weight-bold">Machu picchu</small>
-                                        </a>
-                                    </div>
+
+                                    @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                        <div class="col-auto text-center">
+                                            <a href="#" class="text-dark">
+                                                <img src="{{$paquete_destino->destinos->imagen}}" alt="" width="80" height="80" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($paquete_destino->destinos->nombre))}}">
+                                                <small class="d-block font-weight-bold">{{ucwords(strtolower($paquete_destino->destinos->nombre))}}</small>
+                                            </a>
+                                        </div>
+                                    @endforeach
+
+
                                 </div>
                             </div>
                         </div>
@@ -313,10 +307,13 @@
                                 </thead>
                                 <tbody>
                                     <tr class="text-center">
-                                        <td>$567<small>USD</small></td>
-                                        <td>$567<small>USD</small></td>
-                                        <td>$567<small>USD</small></td>
-                                        <td>$567<small>USD</small></td>
+                                        @foreach($paquetes->precio_paquetes->sortBy('estrellas') as $precio)
+                                            @if($precio->precio_d > 0)
+                                                <td>${{$precio->precio_d}}<small>USD</small></td>
+                                            @else
+                                                <td class="font-weight-bold text-danger">Inquire</td>
+                                            @endif
+                                        @endforeach
                                     </tr>
                                 </tbody>
                             </table>
@@ -383,22 +380,21 @@
             mousewheel: true,
         });
 
-        function view_itinerary() {
-            $('#box-resumen').addClass('d-none');
-            $('#box-detail').removeClass('invisible');
-            $('.align-items-resumen').removeClass('align-items-center');
+        function view_itinerary($id) {
+            $('#box-resumen-'+$id).addClass('d-none');
+            $('#box-detail-'+$id).removeClass('invisible');
+            $('#align-items-resumen-'+$id).removeClass('align-items-center');
             // $('#box-resumen').addClass('d-none');
             // $('#box-resumen').removeClass('d-block');
             // $('#box-detail').addClass('d-block');
             // $('#box-detail').removeClass('d-none');
             // $('.box-detail').show();
-            view_itinerary_resumen
         }
 
-        function view_itinerary_resumen() {
-            $('#box-resumen').removeClass('d-none');
-            $('#box-detail').addClass('invisible');
-            $('.align-items-resumen').addClass('align-items-center');
+        function view_itinerary_resumen($id) {
+            $('#box-resumen-'+$id).removeClass('d-none');
+            $('#box-detail-'+$id).addClass('invisible');
+            $('#align-items-resumen-'+$id).addClass('align-items-center');
         }
 
     </script>
