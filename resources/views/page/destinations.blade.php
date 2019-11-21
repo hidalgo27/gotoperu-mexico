@@ -61,8 +61,8 @@
     <section class="my-">
         <div class="container">
             @foreach($destino as $destinos)
-            <div class="row mb-4 no-gutters align-items-center align-items-resumen">
-                <div class="col-6 shadow-sm bg-white">
+            <div class="row mb-4 no-gutters align-items-center align-items-resumen shadow-sm bg-white">
+                <div class="col-6">
                     <div class="p-5" id="box-resumen">
                         {{--                        <div class="exp-unica">--}}
                         {{--                            <div class="buton">--}}
@@ -74,11 +74,11 @@
                         {{--                        </div>--}}
                         <h4>{{$destinos->nombre}}</h4>
                         <div class="line-subtitle"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis consequuntur dicta fugit illo in, inventore ipsum iusto officia quasi quo quod, similique tempore temporibus ullam voluptas voluptates, voluptatibus voluptatum.</p>
+                        {!! $destinos->descripcion !!}
                         <div class="row mt-4">
                             <div class="col">
-                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS DE LIMA</button>
-                                <a href="{{route('destination_show_path', 'show')}}" class="btn btn-g-green text-white rounded-0 float-right" onclick="view_itinerary()">VER PAQUETES</a>
+                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS SOBRE {{mb_strtoupper($destinos->nombre)}}</button>
+                                <a href="{{route('destination_show_path', $destinos->url)}}" class="btn btn-g-green text-white rounded-0 float-right" onclick="view_itinerary()">VER PAQUETES</a>
                             </div>
                         </div>
                     </div>
@@ -86,8 +86,9 @@
                 <div class="col-6">
                     <div class="swiper-container swiper-container-gallery">
                         <div class="swiper-wrapper">
-                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}"><img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100"></a>
-                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
+                            @foreach($destinos->destino_imagen as $imagen_destinos)
+                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen_destinos->nombre}}"><img src="{{$imagen_destinos->nombre}}" class="w-100"></a>
+                            @endforeach
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>

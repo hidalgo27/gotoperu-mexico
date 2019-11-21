@@ -1,5 +1,6 @@
 @extends('layouts.page.app')
 @section('content')
+    @foreach($destino as $destinos)
     <header class="header-detail">
         <div class="overlay"></div>
         {{--            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">--}}
@@ -12,7 +13,7 @@
         <div class="container h-100">
             <div class="row d-flex h-100 text-center align-items-center">
                 <div class="col w-100 text-white mt-5">
-                    <h1 class="font-weight-lighter h2 mt-5">DESTINOS EN CUSCO</h1>
+                    <h1 class="font-weight-lighter h2 mt-5">DESTINOS EN {{strtoupper($destinos->nombre)}}</h1>
                     <div>
                         <div class="tl-1"></div>
                         <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
@@ -40,7 +41,7 @@
         </div>
     </header>
 
-    <section class="bg-white py-5">
+    <section class="bg-white py-5" id="title_section">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-7 col-md-8 col-xl-9">
@@ -48,40 +49,66 @@
                         <div class="col-12 mb-4">
                             {{--<h3 class="text-g-yellow font-weight-bold">Tours</h3>--}}
 {{--                            <h1 class="text-secondary font-weight-bold">Cusco Tours</h1>--}}
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam beatae commodi dolorem, doloremque eos harum laboriosam maxime numquam quaerat quasi quidem quisquam, quos recusandae sunt totam vero voluptatem voluptatibus voluptatum.
+                            {{$destinos->resumen}}
                             <div class="alert alert-primary rounded-0 mt-4 text-center" role="alert">
                                 <h5 class="font-weight-normal">Operadores Locales en Perú: Los mejores guias de la región, encantadores hoteles, excursiones únicas, y amistosos representantes.
                                     #gotoperu #TuconexionconPeru</h5>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex mb-3">
-                            <div class="card w-100 shadow-sm">
-                                <div class="header-img-packages position-relative">
-                                    <a href="'package/'+paquete_p.titulo"><img class="card-img-top" src="{{asset('images/packages/AV100.jpg')}}" alt=""></a>
-                                    <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
-                                        <h5 class="text-white m-0">Titulo</h5>
-                                        <small class="text-white">Cusco, Machu Picchu.</small>
-                                    </div>
-                                </div>
-                                <!--            <div class="card-body">-->
 
-                                <!--                <span class="font-weight-normal text-secondary">-->
-                                <!--                    <i class="fa fa-map-marker-alt"></i>-->
+                        @foreach($paquetes_de as $paquetes_des)
+                            @if(isset($paquetes_des->destinos))
+                                @foreach($paquete->where('id',$paquetes_des->idpaquetes)->sortBy("duracion") as $paquetes)
 
-                                <!--                </span>-->
-                                <!--            </div>-->
-                                <div class="card-footer bg-white">
-                                    <div class="row align-items-center">
-                                        <div class="col">
-                                            <p class="font-weight-bold h5 m-0">6 Días</p>
-                                        </div>
-                                        <div class="col-auto">
-                                            <p class="font-weight-bold text-primary h5 m-0"><sup class="small"><small>desde</small></sup> $120<small>USD</small></p>
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex mb-3">
+                                        <div class="card w-100 shadow-sm">
+                                            <div class="header-img-packages position-relative">
+                                                <a href="{{$paquetes->url}}"><img class="card-img-top" src="{{$paquetes->imagen}}" alt=""></a>
+                                                <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
+                                                    <h5 class="text-white m-0">{{$paquetes->titulo}}</h5>
+                                                    <small class="text-white">
+                                                    @php
+                                                        $i = 1;
+                                                        $num_des = count($paquete_destinos->where('idpaquetes',$paquetes->id));
+                                                    @endphp
+                                                    @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                        {{ucwords(strtolower($paquete_destino->destinos->nombre))}}@if($i < $num_des),@else.@endif
+                                                        @php $i++; @endphp
+                                                    @endforeach
+                                                    </small>
+                                                </div>
+                                            </div>
+                                            <!--            <div class="card-body">-->
+
+                                            <!--                <span class="font-weight-normal text-secondary">-->
+                                            <!--                    <i class="fa fa-map-marker-alt"></i>-->
+
+                                            <!--                </span>-->
+                                            <!--            </div>-->
+                                            <div class="card-footer bg-white">
+                                                <div class="row align-items-center">
+                                                    <div class="col">
+                                                        <p class="font-weight-bold h5 m-0">{{$paquetes->duracion}} Días</p>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        @foreach($paquetes->precio_paquetes as $precio)
+                                                            @if($precio->estrellas == 2)
+                                                                @if($precio->precio_d > 0)
+                                                                    {{--                                                                <p class="text-info font-weight-bold m-0 h5"><small><sup>form $</sup></small>{{$precio->precio_d}}<small>USD</small></p>--}}
+                                                                    <p class="font-weight-bold text-primary h5 m-0"><sup class="small"><small>desde</small></sup> ${{$precio->precio_d}}<small>USD</small></p>
+                                                                @else
+                                                                    <span class="text-danger">Consulte</span>
+                                                                @endif
+                                                            @endif
+                                                        @endforeach
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                @endforeach
+                            @endif
+                        @endforeach
                     </div>
 
 {{--                    <div class="row pt-4" id="location">--}}
@@ -99,24 +126,31 @@
 {{--                    </div>--}}
 
 
-                        <div class="row pt-4" id="history">
+{{--                        <div class="row pt-4" id="historia">--}}
+{{--                            <div class="col-12">--}}
+{{--                                <h3 class="font-weight-bold">Historia</h3>--}}
+{{--                                <div class="line-subtitle"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-12">--}}
+{{--                                {!! $destinos->descripcion !!}--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+
+                        <div class="row pt-4" id="maps">
                             <div class="col-12">
-                                <h3 class="font-weight-bold">Historia</h3>
+                                <h3 class="font-weight-bold">Maps</h3>
                                 <div class="line-subtitle"></div>
                             </div>
                             <div class="col-12">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque blanditiis deleniti distinctio dolorem ducimus earum eius illo ipsam minus necessitatibus numquam odit omnis possimus quisquam quos sequi tempore, voluptate?
-                            </div>
-                        </div>
 
-                        <div class="row pt-4" id="geography">
-                            <div class="col-12">
-                                <h3 class="font-weight-bold">Geografia</h3>
-                                <div class="line-subtitle"></div>
-                            </div>
-                            <div class="col-12">
+                                @foreach($ubicacion->results as $ubicacions)
+                                    @foreach($ubicacions->geometry->location as  $ubicacion2)
+                                        @php $ubicacion3[] = $ubicacion2; @endphp
+                                    @endforeach
+                                @endforeach
 
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto consectetur consequuntur distinctio, nobis optio, pariatur provident quam quia soluta velit vitae, voluptatum? Ab accusamus aspernatur blanditiis laboriosam pariatur.
+
+                                <div id="map"></div>
 
                             </div>
                         </div>
@@ -152,7 +186,7 @@
 
 {{--                    </div>--}}
 
-                    <div class="row pt-5" id="current-weather">
+                    <div class="row pt-5" id="clima">
 
                         <div class="col-12">
                             <h3 class="font-weight-bold">Clima</h3>
@@ -171,14 +205,14 @@
                 </div>
                 <div class="col-12 col-sm-5 col-md-4 col-xl-3 d-none d-sm-block">
                     <div class="sticky-top">
-                        <nav id="menu" class="navbar navbar-light nav-goto-side w-100">
+                        <nav id="navbar-scroll" class="navbar navbar-light nav-goto-side w-100">
                             <nav class="nav nav-pills flex-column w-100">
                                 <a class="nav-link active text-capitalize" href="#tours">Cusco Tours</a>
-                                <a class="nav-link" href="#location">Localizacion</a>
+                                <a class="nav-link" href="#maps">Localizacion</a>
                                 {{--                                <a class="nav-link {{$h_resumen}}" href="#history">History</a>--}}
                                 {{--                                <a class="nav-link {{$h_resumen}}" href="#geography">Geography</a>--}}
-                                <a class="nav-link" href="#hotels">Hoteles</a>
-                                <a class="nav-link" href="#current-weather">Clima</a>
+{{--                                <a class="nav-link" href="#hotels">Hoteles</a>--}}
+                                <a class="nav-link" href="#clima">Clima</a>
                                 {{--<a class="nav-link" href="#photos">Photos</a>--}}
                             </nav>
                         </nav>
@@ -194,18 +228,12 @@
                         <div class="row mt-4">
                             <div class="col">
                                 <ul class="list-group list-group-flush">
-                                    <a href="" class="list-group-item font-weight-bold text-secondary">
-                                        <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                        <span class="pl-3">Lima</span>
+                                    @foreach($destinos_all as $destinos_alls)
+                                    <a href="{{$destinos_alls->url}}" class="list-group-item font-weight-bold text-secondary">
+                                        <img src="{{$destinos_alls->imagen}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{$destinos_alls->nombre}}">
+                                        <span class="pl-3">{{$destinos_alls->nombre}}</span>
                                     </a>
-                                    <a href="" class="list-group-item font-weight-bold text-secondary">
-                                        <img src="{{asset('images/destinations/titicaca.jpg')}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                        <span class="pl-3">Machu Picchu</span>
-                                    </a>
-                                    <a href="" class="list-group-item font-weight-bold text-secondary">
-                                        <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                        <span class="pl-3">Puno</span>
-                                    </a>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -328,6 +356,7 @@
     {{--            <p>...</p>--}}
     {{--            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquam architecto corporis dicta error facilis ipsam magni, mollitia necessitatibus odio quasi quo, repudiandae saepe sapiente sed. Cum qui sed veritatis!--}}
     {{--        </div>--}}
+    @endforeach
     <section id="consulte" class="pt-5">
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
@@ -390,20 +419,20 @@
         }
 
 
-        {{--function initMap() {--}}
-        {{--    var lat1 = parseFloat("{{$cusco3[0]}}");--}}
-        {{--    var lng1 = parseFloat("{{$cusco3[1]}}");--}}
-        {{--        --}}{{--alert (lng);--}}
-        {{--    var uluru = {lat: lat1, lng: lng1};--}}
-        {{--    var map = new google.maps.Map(document.getElementById('map'), {--}}
-        {{--        zoom: 6,--}}
-        {{--        center: uluru--}}
-        {{--    });--}}
-        {{--    var marker = new google.maps.Marker({--}}
-        {{--        position: uluru,--}}
-        {{--        map: map--}}
-        {{--    });--}}
-        {{--}--}}
+        function initMap() {
+            var lat1 = parseFloat("{{$ubicacion3[0]}}");
+            var lng1 = parseFloat("{{$ubicacion3[1]}}");
+
+            var uluru = {lat: lat1, lng: lng1};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 6,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
 
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
     </script>

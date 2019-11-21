@@ -31,6 +31,10 @@
     left: calc(50vw - 50vh * 2.4);
     }
 }
+#map {
+    height: 400px;
+    width: 100%;
+}
 
 
 .form-control-search::-webkit-input-placeholder {

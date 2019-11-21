@@ -333,7 +333,7 @@
                 @foreach($categoria as $categorias)
                     <div class="col">
                         <div class="transperent_block">
-                            <img src="{{asset('images/category/family.jpg')}}" class="img-responsive" alt="">
+                            <img src="{{$categorias->imagen}}" class="img-responsive" alt="">
                             <div class="black_hover_block">
                                 <div class="blur"></div>
                                 <div class="black_hover_block_text">
@@ -341,65 +341,65 @@
                                         <li>{{$categorias->nombre}}</li>
                                         <div class="clearfix"></div>
                                     </ul>
-                                    <h5 class="titl-h5">{{$categorias->familia}}</h5>
+                                    <h5 class="titl-h5">{{$categorias->nombre}}</h5>
                                     <p>{!! $categorias->descripcion !!}</p>
-                                    <a class="btn btn-g-yellow btn-sm" href="{{route('category_show_path', 'titulo')}}">Ver viajes familiares o grupos</a>
+                                    <a class="btn btn-g-yellow btn-sm" href="{{route('category_show_path', $categorias->url)}}">+ Paquetes de categoria {{$categorias->nombre}}</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 @endforeach
-                <div class="col">
-                    <div class="transperent_block">
-                        <img src="{{asset('images/category/family.jpg')}}" class="img-responsive" alt="">
-                        <div class="black_hover_block">
-                            <div class="blur"></div>
-                            <div class="black_hover_block_text">
-                                <ul class="text-center bg_black m-0 p-0">
-                                    <li>Familiares</li>
-                                    <div class="clearfix"></div>
-                                </ul>
-                                <h5 class="titl-h5">Familia</h5>
-                                <p>Para grupo o familia</p>
-                                <a class="btn btn-g-yellow btn-sm" href="{{route('category_show_path', 'titulo')}}">Ver viajes familiares o grupos</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="transperent_block ">
-                        <img src="{{asset('images/category/recommended.jpg')}}" class="img-responsive" alt="">
-                        <div class="black_hover_block">
-                            <div class="blur"></div>
-                            <div class="black_hover_block_text">
-                                <ul class="text-center bg_black m-0 p-0">
-                                    <li> Recomendados</li>
-                                    <div class="clearfix"></div>
-                                </ul>
-                                <h5 class="titl-h5">Recomendados</h5>
-                                <p>Recomendados por nuestros viajeros</p>
-                                <a class="btn btn-g-yellow btn-sm" href="{{route('category_show_path', 'titulo')}}">Ver viajes recomendados</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="transperent_block">
-                        <img src="{{asset('images/category/cultural.jpg')}}" class="img-responsive" alt="">
-                        <div class="black_hover_block">
-                            <div class="blur"></div>
-                            <div class="black_hover_block_text">
-                                <ul class="text-center bg_black m-0 p-0">
-                                    <li>Cultural</li>
-                                    <div class="clearfix"></div>
-                                </ul>
-                                <h5 class="titl-h5">Cultural</h5>
-                                <p>Explore la diversidad de culturas peruanas</p>
-                                <a class="btn btn-g-yellow btn-sm" href="{{route('category_show_path', 'titulo')}}">Ver viajes culturales</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{{--                <div class="col">--}}
+{{--                    <div class="transperent_block">--}}
+{{--                        <img src="{{asset('images/category/family.jpg')}}" class="img-responsive" alt="">--}}
+{{--                        <div class="black_hover_block">--}}
+{{--                            <div class="blur"></div>--}}
+{{--                            <div class="black_hover_block_text">--}}
+{{--                                <ul class="text-center bg_black m-0 p-0">--}}
+{{--                                    <li>Familiares</li>--}}
+{{--                                    <div class="clearfix"></div>--}}
+{{--                                </ul>--}}
+{{--                                <h5 class="titl-h5">Familia</h5>--}}
+{{--                                <p>Para grupo o familia</p>--}}
+{{--                                <a class="btn btn-g-yellow btn-sm" href="{{route('category_show_path', 'titulo')}}">Ver viajes familiares o grupos</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col">--}}
+{{--                    <div class="transperent_block ">--}}
+{{--                        <img src="{{asset('images/category/recommended.jpg')}}" class="img-responsive" alt="">--}}
+{{--                        <div class="black_hover_block">--}}
+{{--                            <div class="blur"></div>--}}
+{{--                            <div class="black_hover_block_text">--}}
+{{--                                <ul class="text-center bg_black m-0 p-0">--}}
+{{--                                    <li> Recomendados</li>--}}
+{{--                                    <div class="clearfix"></div>--}}
+{{--                                </ul>--}}
+{{--                                <h5 class="titl-h5">Recomendados</h5>--}}
+{{--                                <p>Recomendados por nuestros viajeros</p>--}}
+{{--                                <a class="btn btn-g-yellow btn-sm" href="{{route('category_show_path', 'titulo')}}">Ver viajes recomendados</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col">--}}
+{{--                    <div class="transperent_block">--}}
+{{--                        <img src="{{asset('images/category/cultural.jpg')}}" class="img-responsive" alt="">--}}
+{{--                        <div class="black_hover_block">--}}
+{{--                            <div class="blur"></div>--}}
+{{--                            <div class="black_hover_block_text">--}}
+{{--                                <ul class="text-center bg_black m-0 p-0">--}}
+{{--                                    <li>Cultural</li>--}}
+{{--                                    <div class="clearfix"></div>--}}
+{{--                                </ul>--}}
+{{--                                <h5 class="titl-h5">Cultural</h5>--}}
+{{--                                <p>Explore la diversidad de culturas peruanas</p>--}}
+{{--                                <a class="btn btn-g-yellow btn-sm" href="{{route('category_show_path', 'titulo')}}">Ver viajes culturales</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
             </div>
             <div class="row mt-5">
@@ -418,51 +418,27 @@
                 </div>
             </div>
             <div class="row">
+                @foreach($destino as $destinos)
                 <div class="col">
                     <div class="home-banner-destinations">
                         <figure class="cc-imagewrapper">
-                            <a href="{{route('destination_path')}}" class="text-center">
-                                <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" class="w-100">
+                            <a href="{{route('destination_show_path', $destinos->url)}}" class="text-center">
+                                <img src="{{$destinos->imagen}}" alt="" class="w-100">
                             </a>
                             <figcaption>
-                                <small class="d-block">Cusco</small>
-                                Machu Picchu
+                                <small class="d-block">{{$destinos->pais}}</small>
+                                {{$destinos->nombre}}
                             </figcaption>
                         </figure>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="home-banner-destinations">
-                        <figure class="cc-imagewrapper">
-                            <a href="{{route('destination_path')}}" class="text-center">
-                                <img src="{{asset('images/destinations/titicaca.jpg')}}" alt="" class="w-100">
-                            </a>
-                            <figcaption>
-                                <small class="d-block">Puno</small>
-                                Lago titicaca
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="home-banner-destinations">
-                        <figure class="cc-imagewrapper">
-                            <a href="{{route('destination_path')}}" class="text-center">
-                                <img src="{{asset('images/destinations/colca.jpg')}}" alt="" class="w-100">
-                            </a>
-                            <figcaption>
-                                <small class="d-block">Arequipa</small>
-                                Cañon del colca
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
+                @endforeach
 
             </div>
 
             <div class="row">
                 <div class="col text-center">
-                    <a href="" class="btn btn-lg btn-g-yellow font-weight-bold text-white my-4">Ver todos nuestros destinos en Perú</a>
+                    <a href="{{route('destination_path')}}" class="btn btn-lg btn-g-yellow font-weight-bold text-white my-4">Ver todos nuestros destinos en Perú</a>
                 </div>
             </div>
         </div>

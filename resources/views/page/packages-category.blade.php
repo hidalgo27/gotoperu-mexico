@@ -65,8 +65,8 @@
                 <div class="col-6">
                     <div class="swiper-container swiper-container-gallery">
                         <div class="swiper-wrapper">
-                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}"><img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100"></a>
-                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
+                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{$categorias->imagen_banner}}"><img src="{{$categorias->imagen_banner}}" class="w-100"></a>
+
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -84,11 +84,11 @@
                         {{--                        </div>--}}
                         <h4>{{$categorias->nombre}}</h4>
                         <div class="line-subtitle"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At blanditiis consequuntur dicta fugit illo in, inventore ipsum iusto officia quasi quo quod, similique tempore temporibus ullam voluptas voluptates, voluptatibus voluptatum.</p>
+                        {!! $categorias->descripcion !!}
                         <div class="row mt-4">
                             <div class="col">
-                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS DE LIMA</button>
-                                <a href="{{route('destination_show_path', 'show')}}" class="btn btn-g-green text-white rounded-0 float-right" onclick="view_itinerary()">VER PAQUETES</a>
+{{--                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter" onclick="view_itinerary()">SABER MÁS DE LIMA</button>--}}
+                                <a href="{{route('category_show_path', $categorias->url)}}" class="btn btn-g-green text-white rounded-0 float-right">VER PAQUETES</a>
                             </div>
                         </div>
                     </div>

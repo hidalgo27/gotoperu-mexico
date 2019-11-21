@@ -20,12 +20,14 @@ class HomepageController extends Controller
         $tours = TTour::with('tours_destinos.destinos')->get();
 
         $categoria = TCategoria::all();
+        $destino = TDestino::where('estado', 1)->get();
 
         return view('page.home',
             compact(
                 'paquete',
                 'tours',
-                'categoria'
+                'categoria',
+                'destino'
             ));
     }
 
@@ -182,13 +184,6 @@ class HomepageController extends Controller
 
     }
 
-    public function destination(){
-
-        $destino = TDestino::all()->sortBy('nombre');
-        return view('page.destinations', compact('destino'));
-
-    }
-
     public function category(){
 
         $categoria = TCategoria::all()->sortBy('nombre');
@@ -196,13 +191,44 @@ class HomepageController extends Controller
 
     }
     public function category_show($url){
+        $categoria = TCategoria::where('url', $url)->get();
 
-        return view('page.packages-category-show');
+        foreach ($categoria as $c_s) {
+            $categoria_all = TPaqueteCategoria::with('paquete', 'categoria')->where('idcategoria', $c_s->id)->get();
+        }
+
+        $all_category = TCategoria::all();
+
+        return view('page.packages-category-show', compact('categoria', 'categoria_all', 'all_category'));
 
     }
 
+    public function destination(){
+
+        $destinos_id = TDestino::with('destino_imagen')->where('nombre', $ciudad)->get();
+
+        $destino = TDestino::all()->sortBy('nombre');
+        return view('page.destinations', compact('destino'));
+
+    }
+
+
     public function destination_show($url){
-        return view('page.destinations-show');
+        $destino = TDestino::where('url', $url)->get();
+        $paquete = TPaquete::with('paquetes_destinos', 'precio_paquetes', 'paquetes_categoria.categoria')->get();
+        $paquetes_de = TPaqueteDestino::with(['destinos'=>function($query) use ($url) { $query->where('url', $url);}])->get();
+        $paquete_destinos = TPaqueteDestino::with('destinos')->get();
+
+        $destinos_all = TDestino::all();
+
+        $ubicacion = \GoogleMaps::load('geocoding')
+            ->setParam (['address' =>''.$url.''])
+            ->get();
+        $ubicacion = json_decode($ubicacion);
+
+//        dd($ubicacion);
+
+        return view('page.destinations-show', compact('paquetes_de', 'destino', 'paquete', 'paquete_destinos', 'ubicacion', 'destinos_all'));
     }
 
     public function sobre_nosotros(){

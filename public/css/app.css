@@ -269,6 +269,11 @@ img.vbox-figlio{
   }
 }
 
+#map {
+  height: 400px;
+  width: 100%;
+}
+
 .form-control-search::-webkit-input-placeholder {
   color: white !important;
 }

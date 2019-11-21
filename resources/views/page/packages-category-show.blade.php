@@ -1,5 +1,6 @@
 @extends('layouts.page.app')
 @section('content')
+    @foreach($categoria as $categorias)
     <header class="header-detail">
         <div class="overlay"></div>
         {{--            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">--}}
@@ -12,7 +13,7 @@
         <div class="container h-100">
             <div class="row d-flex h-100 text-center align-items-center">
                 <div class="col w-100 text-white mt-5">
-                    <h1 class="font-weight-lighter h2 mt-5">DESTINOS EN CUSCO</h1>
+                    <h1 class="font-weight-lighter h2 mt-5">PAQUETES DE VIAJE: {{mb_strtoupper($categorias->nombre)}}</h1>
                     <div>
                         <div class="tl-1"></div>
                         <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
@@ -40,48 +41,67 @@
         </div>
     </header>
 
-    <section class="bg-white py-5">
+    <section class="bg-white py-5" id="title_section">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-7 col-md-8 col-xl-9">
-                    <div class="row" id="tours">
+                    <div class="row" id="paquetes">
                         <div class="col-12 mb-4">
                             {{--<h3 class="text-g-yellow font-weight-bold">Tours</h3>--}}
                             {{--                            <h1 class="text-secondary font-weight-bold">Cusco Tours</h1>--}}
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam beatae commodi dolorem, doloremque eos harum laboriosam maxime numquam quaerat quasi quidem quisquam, quos recusandae sunt totam vero voluptatem voluptatibus voluptatum.
+                            {!! $categorias->descripcion !!}
                             <div class="alert alert-primary rounded-0 mt-4 text-center" role="alert">
                                 <h5 class="font-weight-normal">Operadores Locales en Perú: Los mejores guias de la región, encantadores hoteles, excursiones únicas, y amistosos representantes.
                                     #gotoperu #TuconexionconPeru</h5>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex mb-3">
-                            <div class="card w-100 shadow-sm">
-                                <div class="header-img-packages position-relative">
-                                    <a href="'package/'+paquete_p.titulo"><img class="card-img-top" src="{{asset('images/packages/AV100.jpg')}}" alt=""></a>
-                                    <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
-                                        <h5 class="text-white m-0">Titulo</h5>
-                                        <small class="text-white">Cusco, Machu Picchu.</small>
+
+                        @foreach($categoria_all as $category)
+
+                            @if (isset($category->categoria))
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex mb-3">
+                                    <div class="card w-100 shadow-sm">
+                                        <div class="header-img-packages position-relative">
+                                            <a href="{{$category->paquete->url}}"><img class="card-img-top" src="{{$category->paquete->imagen}}" alt=""></a>
+                                            <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
+                                                <h5 class="text-white m-0">{{$category->paquete->titulo}}</h5>
+{{--                                                <small class="text-white">Cusco, Machu Picchu.</small>--}}
+                                            </div>
+                                            <div class="position-absolute-top p-2 text-center">
+                                                <span class="small font-weight-bold badge badge-danger shadow">{{$category->categoria->nombre}}</span>
+                                            </div>
+                                        </div>
+                                        <!--            <div class="card-body">-->
+
+                                        <!--                <span class="font-weight-normal text-secondary">-->
+                                        <!--                    <i class="fa fa-map-marker-alt"></i>-->
+
+                                        <!--                </span>-->
+                                        <!--            </div>-->
+                                        <div class="card-footer bg-white">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <p class="font-weight-bold h5 m-0">{{$category->duracion}} Días</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    @foreach($category->paquete->precio_paquetes as $precio)
+                                                        @if($precio->estrellas == 2)
+                                                            @if($precio->precio_d > 0)
+                                                                {{--                                                                <p class="text-info font-weight-bold m-0 h5"><small><sup>form $</sup></small>{{$precio->precio_d}}<small>USD</small></p>--}}
+                                                                <p class="font-weight-bold text-primary h5 m-0"><sup class="small"><small>desde</small></sup> ${{$precio->precio_d}}<small>USD</small></p>
+                                                            @else
+                                                                <span class="text-danger">Pregunte</span>
+                                                            @endif
+                                                        @endif
+                                                    @endforeach
+
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <!--            <div class="card-body">-->
-
-                                <!--                <span class="font-weight-normal text-secondary">-->
-                                <!--                    <i class="fa fa-map-marker-alt"></i>-->
-
-                                <!--                </span>-->
-                                <!--            </div>-->
-                                <div class="card-footer bg-white">
-                                    <div class="row align-items-center">
-                                        <div class="col">
-                                            <p class="font-weight-bold h5 m-0">6 Días</p>
-                                        </div>
-                                        <div class="col-auto">
-                                            <p class="font-weight-bold text-primary h5 m-0"><sup class="small"><small>desde</small></sup> $120<small>USD</small></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            @endif
+                        @endforeach
                     </div>
 
                     {{--                    <div class="row pt-4" id="location">--}}
@@ -131,7 +151,7 @@
 
                     {{--                    </div>--}}
 
-                    <div class="row pt-5" id="current-weather">
+                    <div class="row pt-5" id="clima">
 
                         <div class="col-12">
                             <h3 class="font-weight-bold">Clima</h3>
@@ -150,14 +170,14 @@
                 </div>
                 <div class="col-12 col-sm-5 col-md-4 col-xl-3 d-none d-sm-block">
                     <div class="sticky-top">
-                        <nav id="menu" class="navbar navbar-light p-0 mb-3 nav-goto-side w-100">
+                        <nav id="navbar-scroll" class="navbar navbar-light p-0 mb-3 nav-goto-side w-100">
                             <nav class="nav nav-pills flex-column w-100">
-                                <a class="nav-link active rounded-0 text-capitalize" href="#tours">Paquetes Clasicos</a>
+                                <a class="nav-link active rounded-0 text-capitalize" href="#paquetes">Paquetes Clasicos</a>
 {{--                                <a class="nav-link" href="#location">Localizacion</a>--}}
-                                <a class="nav-link" href="#history">Testimonios</a>
+{{--                                <a class="nav-link" href="#history">Testimonios</a>--}}
                                 {{--                                <a class="nav-link {{$h_resumen}}" href="#geography">Geography</a>--}}
-                                <a class="nav-link" href="#hotels">Tips de viaje</a>
-                                <a class="nav-link" href="#current-weather">Clima actual en Cusco</a>
+{{--                                <a class="nav-link" href="#hotels">Tips de viaje</a>--}}
+                                <a class="nav-link" href="#clima">Clima actual en Cusco</a>
                                 {{--<a class="nav-link" href="#photos">Photos</a>--}}
                             </nav>
                         </nav>
@@ -173,18 +193,12 @@
                         <div class="row mt-4">
                             <div class="col">
                                 <ul class="list-group list-group-flush">
-                                    <a href="" class="list-group-item font-weight-bold text-secondary">
-                                        <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                        <span class="pl-3">Clasico</span>
+                                    @foreach($all_category as $all_categorys)
+                                    <a href="{{route('category_show_path', $all_categorys->url)}}" class="list-group-item font-weight-bold text-secondary">
+                                        <img src="{{$all_categorys->imagen}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{$all_categorys->nombre}}">
+                                        <span class="pl-3">{{$all_categorys->nombre}}</span>
                                     </a>
-                                    <a href="" class="list-group-item font-weight-bold text-secondary">
-                                        <img src="{{asset('images/destinations/titicaca.jpg')}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                        <span class="pl-3">Cultural</span>
-                                    </a>
-                                    <a href="" class="list-group-item font-weight-bold text-secondary">
-                                        <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
-                                        <span class="pl-3">Familiar</span>
-                                    </a>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -307,6 +321,7 @@
     {{--            <p>...</p>--}}
     {{--            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquam architecto corporis dicta error facilis ipsam magni, mollitia necessitatibus odio quasi quo, repudiandae saepe sapiente sed. Cum qui sed veritatis!--}}
     {{--        </div>--}}
+    @endforeach
     <section id="consulte" class="pt-5">
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
