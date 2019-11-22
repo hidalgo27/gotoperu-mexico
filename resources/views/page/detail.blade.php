@@ -280,7 +280,7 @@
 
                                     @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
                                         <div class="col-auto text-center">
-                                            <a href="#" class="text-dark">
+                                            <a href="{{route('destination_show_path', $paquete_destino->destinos->url)}}" class="text-dark">
                                                 <img src="{{$paquete_destino->destinos->imagen}}" alt="" width="80" height="80" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($paquete_destino->destinos->nombre))}}">
                                                 <small class="d-block font-weight-bold">{{ucwords(strtolower($paquete_destino->destinos->nombre))}}</small>
                                             </a>
