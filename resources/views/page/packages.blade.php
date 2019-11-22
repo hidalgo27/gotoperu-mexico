@@ -6,8 +6,7 @@
         {{--                <source src="{{asset('media/Secuencia 06.mp4')}}" type="video/mp4">--}}
         {{--            </video>--}}
         <div class="homepage-video">
-            <img src="{{asset('images/packages/slider/AV500-1.jpg')}}" alt="">
-
+            <img src="{{asset('images/packages/slider/AV612-1.jpg')}}" alt="">
         </div>
         <div class="container h-100">
             <div class="row d-flex h-100 text-center align-items-center">

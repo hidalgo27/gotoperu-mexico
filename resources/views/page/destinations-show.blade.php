@@ -7,7 +7,9 @@
         {{--                <source src="{{asset('media/Secuencia 06.mp4')}}" type="video/mp4">--}}
         {{--            </video>--}}
         <div class="homepage-video">
-            <img src="{{asset('images/packages/slider/AV500-1.jpg')}}" alt="">
+            @foreach($destinos->destino_imagen->take(1) as $imagen)
+            <img src="{{$imagen->nombre}}" alt="">
+            @endforeach
 
         </div>
         <div class="container h-100">
