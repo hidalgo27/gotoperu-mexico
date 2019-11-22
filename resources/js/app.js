@@ -37,6 +37,10 @@ Vue.component('categoria-package', require('./components/categoriaPackage').defa
 Vue.component('spinner', require('./components/Spinner').default);
 
 Vue.component('form-inquire', require('./components/form/FormInquire').default);
+Vue.component('destino-form', require('./components/form/destinoForm').default);
+Vue.component('categoria-form', require('./components/form/categoriaForm').default);
+Vue.component('numero-pasajeros-form', require('./components/form/numeroPasajerosForm').default);
+Vue.component('duracion-form', require('./components/form/duracionForm').default);
 Vue.component('form-inquire-detail', require('./components/form/FormInquireDetail').default);
 Vue.component('first-step', require('./components/form/FirstStep').default);
 /**

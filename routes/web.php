@@ -39,6 +39,17 @@ Route::get('/load/packages-all', [
     'as' => 'load_all_path',
 ]);
 
+Route::post('/formulario-diseno', [
+    'uses' => 'Page\HomepageController@formulario_diseno',
+    'as' => 'formulario_diseno_path',
+]);
+
+Route::post('/formulario-detail', [
+    'uses' => 'Page\HomepageController@formulario_detail',
+    'as' => 'formulario_detail_path',
+]);
+
+
 
 //package
 Route::get('/packages/', [

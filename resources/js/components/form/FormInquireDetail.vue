@@ -1,5 +1,5 @@
 <template>
-    <form>
+    <form @submit.prevent="agregar">
 
         <div v-show="tap_form_show">
 
@@ -18,18 +18,13 @@
                 </div>
                 <div class="col px-3">
                     <div class="row mt-2">
-                        <div class="col-3 text-center form-search checkbox" v-for="cat_hotel in category_hotel">
-                            <input type="checkbox" v-bind:id="cat_hotel.nombre">
-                            <label class="font-weight-bold w-100 d-block"  v-bind:for="cat_hotel.nombre">
-                                {{ cat_hotel.nombre }}
-                                <small class="d-block star-form text-secondary font-weight-bold">{{ cat_hotel.estrellas }} <span class="">estrellas</span></small>
-                            </label>
-                        </div>
+                        <template v-for="categoriaForm in category_hotel">
+                            <categoria-form v-bind:categoriaForm="categoriaForm" v-bind:categoriasSeleccionadosForm="categoriasSeleccionadosForm" v-on:checked="selectCategoryForm"></categoria-form>
+                        </template>
+
                     </div>
                 </div>
             </div>
-
-
 
             <div class="row mt-4">
                 <div class="col text-center">
@@ -45,12 +40,12 @@
                 </div>
                 <div class="col px-3">
                     <div class="row mt-2 no-gutters">
-                        <div class="col-auto text-center pr-1 form-search checkbox" v-for="traveller_form in travellers_form">
-                            <input type="checkbox" v-bind:id="'t_'+traveller_form.value">
-                            <label class="font-weight-bold w-100 d-block"  v-bind:for="'t_'+traveller_form.value">
-                                {{ traveller_form.value }} <i data-feather="user" stroke-width="1"></i>
-                            </label>
-                        </div>
+
+                        <template v-for="numeroPasajerosForm in travellers_form">
+                            <numero-pasajeros-form v-bind:numeroPasajerosForm="numeroPasajerosForm" v-bind:pasajerosSeleccionadosForm="pasajerosSeleccionadosForm" v-on:checked="selectNumeroPasajerosForm"></numero-pasajeros-form>
+                        </template>
+
+
                         <div class="col-2">
                             <div class="input-group input-group-sm">
                                 <input type="text" class="form-control font-weight-bold" placeholder="Especifica">
@@ -75,12 +70,11 @@
                 </div>
                 <div class="col px-3">
                     <div class="row mt-2 no-gutters">
-                        <div class="col-auto text-center pr-1 form-search checkbox" v-for="duration_form in durations_form">
-                            <input type="checkbox" v-bind:id="'d_'+duration_form.duration">
-                            <label class="font-weight-bold w-100 d-block"  v-bind:for="'d_'+duration_form.duration">
-                                {{ duration_form.duration }}
-                            </label>
-                        </div>
+
+                        <template v-for="duracionForm in durations_form">
+                            <duracion-form v-bind:duracionForm="duracionForm" v-bind:duracionSeleccionadosForm="duracionSeleccionadosForm" v-on:checked="selectDuracionForm"></duracion-form>
+                        </template>
+
                         <div class="col-2">
                             <div class="input-group input-group-sm">
                                 <input type="text" class="form-control font-weight-bold" placeholder="Especifica">
@@ -132,11 +126,11 @@
                         </div>
                     </div>
                     <div class="col px-3">
-                            <el-date-picker
-                                v-model="el_fecha"
-                                type="date"
-                                placeholder="Fecha de viaje">
-                            </el-date-picker>
+                        <el-date-picker
+                            v-model="el_fecha"
+                            type="date"
+                            placeholder="Fecha de viaje">
+                        </el-date-picker>
                     </div>
                 </div>
 
@@ -147,7 +141,7 @@
                         </div>
                     </div>
                     <div class="col px-3">
-                        <vue-tel-input v-model="value"></vue-tel-input>
+                        <vue-tel-input v-model="el_telefono"></vue-tel-input>
                     </div>
                 </div>
 
@@ -158,12 +152,12 @@
                         </div>
                     </div>
                     <div class="col px-3">
-                            <el-input
-                                type="textarea"
-                                :autosize="{ minRows: 2, maxRows: 4}"
-                                placeholder="¿Tienes alguna duda o pregunta?"
-                                v-model="el_textarea">
-                            </el-input>
+                        <el-input
+                            type="textarea"
+                            :autosize="{ minRows: 2, maxRows: 4}"
+                            placeholder="¿Tienes alguna duda o pregunta?"
+                            v-model="el_textarea">
+                        </el-input>
 
                     </div>
                 </div>
@@ -178,9 +172,14 @@
                 <button type="button" class="btn btn-secondary btn mx-3 text-white font-weight-normal" v-on:click="tap_form_show = !tap_form_show" v-else>
                     < Atrás
                 </button>
-                <button type="submit" class="btn btn-success btn-lg text-white font-weight-bold" v-if="tap_form_show === false">
+                <button type="submit" class="btn btn-success btn-lg text-white font-weight-bold" v-if="tap_form_show === false" v-show="btnviewdesign">
                     Enviar
                 </button>
+
+                <div class="text-center fa-2x">
+                    <i class="fas fa-circle-notch fa-spin" v-show="loadingdesign"></i>
+                </div>
+
             </div>
         </div>
         <div class="row">
@@ -196,8 +195,10 @@
 <script>
 
     export default {
+        props: ['paquetesId'],
         data() {
             return {
+                datos: [],
                 category_hotel:[
                     {
                         nombre: 'Economico', estrellas: '2', value: '1'
@@ -214,19 +215,19 @@
                 ],
                 travellers_form:[
                     {
-                        nombre: 'Arequipa', value: '1'
+                        nombre: 'Machu Picchu', value: '1'
                     },
                     {
-                        nombre: 'Lima', value: '2'
+                        nombre: 'Cusco', value: '2'
                     },
                     {
-                        nombre: 'Cusco', value: '3'
+                        nombre: 'Lima', value: '3'
                     },
                     {
-                        nombre: 'Machu Picchu', value: '4'
+                        nombre: 'Montaña 7 colores', value: '4'
                     },
                     {
-                        nombre: 'Camino inca', value: '5'
+                        nombre: 'Lago Titicaca', value: '5'
                     }
                 ],
                 durations_form:[
@@ -247,16 +248,12 @@
                     }
                 ],
                 tap_form_show: true,
-                input: '',
+
                 el_nombre:'',
                 el_email:'',
                 el_fecha:'',
                 el_telefono: '',
                 el_textarea: '',
-                value1: '',
-                textarea2: '',
-                phone: '',
-                value:'',
 
                 pickerOptions: {
                     disabledDate(time) {
@@ -283,8 +280,81 @@
                         }
                     }]
                 },
+
+                categoriasSeleccionadosForm: [],
+                pasajerosSeleccionadosForm: [],
+                duracionSeleccionadosForm: [],
+                loadingdesign: false,
+                btnviewdesign: true
             }
         },
+        methods: {
+            selectCategoryForm: function (categoriaForm, checked) {
+                if (checked){
+                    this.categoriasSeleccionadosForm.push(categoriaForm);
+                    console.log(categoriaForm);
+                }else{
+                    let index = this.categoriasSeleccionadosForm.indexOf(categoriaForm);
+                    this.$delete(this.categoriasSeleccionadosForm, index);
+                    console.log(index);
+                }
+
+            },
+            selectNumeroPasajerosForm: function (pasajerosForm, checked) {
+                if (checked){
+                    this.pasajerosSeleccionadosForm.push(pasajerosForm);
+                    console.log(pasajerosForm);
+                }else{
+                    let index = this.pasajerosSeleccionadosForm.indexOf(pasajerosForm);
+                    this.$delete(this.pasajerosSeleccionadosForm, index);
+                    console.log(index);
+                }
+            },
+            selectDuracionForm: function (duracionForm, checked) {
+                if (checked){
+                    this.duracionSeleccionadosForm.push(duracionForm);
+                    console.log(duracionForm);
+                }else{
+                    let index = this.duracionSeleccionadosForm.indexOf(duracionForm);
+                    this.$delete(this.duracionSeleccionadosForm, index);
+                    console.log(index);
+                }
+                // console.log(this.duracionSeleccionadosForm);
+            },
+
+            agregar(){
+                if(this.el_nombre.trim() === '' || this.el_email.trim() === ''){
+                    alert('Por favor complete "Nombre" o "Email"');
+                    return;
+                }
+
+                let obj = {
+                    paquete_id: this.paquetesId,
+                    category_d: this.categoriasSeleccionadosForm,
+                    pasajeros_d: this.pasajerosSeleccionadosForm,
+                    duracion_d: this.duracionSeleccionadosForm,
+                    tap_form_show: this.tap_form_show,
+
+                    el_nombre: this.el_nombre,
+                    el_email: this.el_email,
+                    el_fecha: this.el_fecha,
+                    el_telefono: this.el_telefono,
+                    el_textarea: this.el_textarea,
+                };
+
+                const self = this;
+                this.loadingdesign = true;
+                this.btnviewdesign = false;
+                axios.post('/formulario-detail', obj)
+                    .then((res) =>{
+                        self.loadingdesign = false;
+                        this.btnviewdesign = true;
+                        const datoServidor = res.data;
+                        this.datos.push(datoServidor);
+                        console.log(datoServidor);
+                    })
+            }
+        }
 
     }
 </script>

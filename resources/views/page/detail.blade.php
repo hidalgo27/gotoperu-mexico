@@ -117,7 +117,7 @@
                                     </div>
                                     <div class="col">
                                         <h6 class="font-weight-bold text-secondary">Consulte ahora por Whatsapp</h6>
-                                        <a href="https://api.whatsapp.com/send?phone=5117059774" class="text-secondary h4 font-weight-bold stretched-link">+51 1 7059774</a>
+                                        <a href="https://api.whatsapp.com/send?phone=5117064514" target="_blank" class="text-secondary h4 font-weight-bold stretched-link">+51 1 7059774</a>
                                     </div>
                                 </div>
 {{--                                <h5 class="font-weight-bold text-secondary">Tour highligh</h5>--}}
@@ -143,22 +143,25 @@
                     <div class="offer-banner">
                         <div class="container">
                             <div class="row align-items-center">
-                                <div class="col-4 text-center">
-                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/beach-category.png" class="attachment-full size-full" alt="o" />
-                                    <h4>Tours</h4>
-{{--                                    <p class="mkdf-pcli-count">4 destinations</p>--}}
+                                <div class="col text-center">
+                                    <h2>{{$paquetes->titulo}}</h2>
                                 </div>
-                                <div class="col-4 text-center">
-                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/dog-category.png" class="attachment-full size-full" alt="o" />
-                                    <h4>Beaches</h4>
+{{--                                <div class="col-4 text-center">--}}
+{{--                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/beach-category.png" class="attachment-full size-full" alt="o" />--}}
+{{--                                    <h4>Tours</h4>--}}
 {{--                                    <p class="mkdf-pcli-count">4 destinations</p>--}}
-                                </div>
+{{--                                </div>--}}
+{{--                                <div class="col-4 text-center">--}}
+{{--                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/dog-category.png" class="attachment-full size-full" alt="o" />--}}
+{{--                                    <h4>Beaches</h4>--}}
+{{--                                    <p class="mkdf-pcli-count">4 destinations</p>--}}
+{{--                                </div>--}}
 
-                                <div class="col-4 text-center">
-                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/restorant-category.png" class="attachment-full size-full" alt="o" />
-                                    <h4>Restaurants</h4>
+{{--                                <div class="col-4 text-center">--}}
+{{--                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/restorant-category.png" class="attachment-full size-full" alt="o" />--}}
+{{--                                    <h4>Restaurants</h4>--}}
 {{--                                    <p class="mkdf-pcli-count">4 destinations</p>--}}
-                                </div>
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>
@@ -181,8 +184,9 @@
                                 <div class="col-6">
                                     <div class="swiper-container swiper-container-gallery">
                                         <div class="swiper-wrapper">
-                                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}"><img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100"></a>
-                                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
+                                            @foreach($itinerario->itinerarios->itinerario_imagen as $imagen)
+                                                <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen->nombre}}"><img src="{{$imagen->nombre}}" class="w-100"></a>
+                                            @endforeach
                                         </div>
                                         <!-- Add Pagination -->
                                         <div class="swiper-pagination"></div>
@@ -247,8 +251,9 @@
                                 <div class="col-6">
                                     <div class="swiper-container swiper-container-gallery">
                                         <div class="swiper-wrapper">
-                                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}"><img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100"></a>
-                                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
+                                            @foreach($itinerario->itinerarios->itinerario_imagen as $imagen)
+                                                <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen->nombre}}"><img src="{{$imagen->nombre}}" class="w-100"></a>
+                                            @endforeach
                                         </div>
                                         <!-- Add Pagination -->
                                         <div class="swiper-pagination"></div>
@@ -347,7 +352,7 @@
                 <div class="row justify-content-center">
                     <div class="col-7">
                         <h5 class="font-weight-bold text-center">CONSULTA DE VIAJES</h5>
-                        <form-inquire-detail></form-inquire-detail>
+                        <form-inquire-detail :paquetes-id="{{$paquetes->id}}"></form-inquire-detail>
                     </div>
                 </div>
             </div>

@@ -145,7 +145,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="{{asset('images/team/daniel.jpg')}}">
+                        <img src="{{asset('images/team/mariana.jpg')}}">
                         <div class="box-content">
                             <h3 class="title">Daniel</h3>
                             <span class="post">Travel Advisor</span>
