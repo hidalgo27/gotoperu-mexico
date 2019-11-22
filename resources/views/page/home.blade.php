@@ -407,6 +407,11 @@
                     <p class="lead font-weight-bold text-muted">No importa el tipo de aventura que estés buscando, GOTOPERU tiene un viaje para ti. ¿Esperamos su llama? ¿Quieres un viaje de senderismo por el Camino Inca? ¡Llámenos!, ¿Qué tal un ceviche en Lima? ¡Llámenos!, ¿Qué tal un viaje para usted, sus hijos, la abuela y el abuelo? ¡Llámenos!</p>
                 </div>
             </div>
+            <div class="row">
+                <div class="col text-center">
+                    <a href="{{route('category_path')}}" class="btn btn-lg btn-g-green font-weight-bold text-white mt-4">Más categorías de Paquetes</a>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -61,7 +61,7 @@
     <section class="my-">
         <div class="container">
             @foreach($categoria as $categorias)
-            <div class="row mb-4 no-gutters align-items-center align-items-resumen">
+            <div class="row mb-4 no-gutters align-items-center align-items-resumen shadow-sm bg-white">
                 <div class="col-6">
                     <div class="swiper-container swiper-container-gallery">
                         <div class="swiper-wrapper">
@@ -72,7 +72,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="col-6 shadow-sm bg-white">
+                <div class="col-6">
                     <div class="p-5" id="box-resumen">
                         {{--                        <div class="exp-unica">--}}
                         {{--                            <div class="buton">--}}
