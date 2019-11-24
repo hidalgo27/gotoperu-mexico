@@ -17,6 +17,17 @@
     <meta name="csrf-token" content="{{ csrf_token()  }}">
 
     <script type="text/javascript" src="https://widget.sirena.app/get?token=zdF9nfRDq1GYnzBarfuv3NTwoEBBmEga" async="true"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KK52HEG2LE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KK52HEG2LE');
+    </script>
+    
 </head>
 <body data-spy="scroll" data-target="#navbar-scroll">
 <div id="app">
