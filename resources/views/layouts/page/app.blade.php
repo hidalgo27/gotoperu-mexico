@@ -18,15 +18,27 @@
 
     <script type="text/javascript" src="https://widget.sirena.app/get?token=zdF9nfRDq1GYnzBarfuv3NTwoEBBmEga" async="true"></script>
 
+{{--    <!-- Global site tag (gtag.js) - Google Analytics -->--}}
+{{--    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KK52HEG2LE"></script>--}}
+{{--    <script>--}}
+{{--        window.dataLayer = window.dataLayer || [];--}}
+{{--        function gtag(){dataLayer.push(arguments);}--}}
+{{--        gtag('js', new Date());--}}
+
+{{--        gtag('config', 'G-KK52HEG2LE');--}}
+{{--    </script>--}}
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KK52HEG2LE"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153176828-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-KK52HEG2LE');
+        gtag('config', 'UA-153176828-1');
     </script>
+
+
 </head>
 <body data-spy="scroll" data-target="#navbar-scroll">
 <div id="app">
