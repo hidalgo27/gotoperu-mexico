@@ -27,8 +27,6 @@
 
         gtag('config', 'G-KK52HEG2LE');
     </script>
-    <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/d1b447b4-892c-4562-a6dc-536d0eb23944-loader.js" ></script>
-
 </head>
 <body data-spy="scroll" data-target="#navbar-scroll">
 <div id="app">
@@ -69,6 +67,7 @@
 <script src="{{ asset('js/plugins.js') }}"></script>
 <script src="https://apps.elfsight.com/p/platform.js"></script>
 <script src="https://player.vimeo.com/api/player.js"></script>
+<script src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/d1b447b4-892c-4562-a6dc-536d0eb23944-loader.js" ></script>
 @stack('scripts')
 <script>
     feather.replace();
