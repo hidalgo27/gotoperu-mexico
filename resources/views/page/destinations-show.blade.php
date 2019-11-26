@@ -8,7 +8,7 @@
         {{--            </video>--}}
         <div class="homepage-video">
             @foreach($destinos->destino_imagen->take(1) as $imagen)
-            <img src="{{$imagen->nombre}}" alt="">
+            <img src="{{$imagen->nombre}}" alt="{{$destinos->nombre}}">
             @endforeach
 
         </div>

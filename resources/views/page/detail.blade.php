@@ -89,7 +89,7 @@
                             <div class="card">
                                 <div class="p-3">
 
-                                    <b class="h1 text-secondary font-weight-bold">5 días</b>
+                                    <b class="h1 text-secondary font-weight-bold">{{$paquetes->duracion}} días</b>
                                     <div class="text-center mb-2">
                                         @foreach($paquetes->precio_paquetes->where('estrellas', 2)->sortBy('estrellas') as $precio)
                                             @if($precio->precio_d > 0)
