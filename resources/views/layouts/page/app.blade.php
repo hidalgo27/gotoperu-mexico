@@ -17,6 +17,28 @@
     <meta name="csrf-token" content="{{ csrf_token()  }}">
 
     <script type="text/javascript" src="https://widget.sirena.app/get?token=zdF9nfRDq1GYnzBarfuv3NTwoEBBmEga" async="true"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KK52HEG2LE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KK52HEG2LE');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153176828-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-153176828-1');
+    </script>
+
+
 </head>
 <body data-spy="scroll" data-target="#navbar-scroll">
 <div id="app">
@@ -57,6 +79,7 @@
 <script src="{{ asset('js/plugins.js') }}"></script>
 <script src="https://apps.elfsight.com/p/platform.js"></script>
 <script src="https://player.vimeo.com/api/player.js"></script>
+<script src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/d1b447b4-892c-4562-a6dc-536d0eb23944-loader.js" ></script>
 @stack('scripts')
 <script>
     feather.replace();
@@ -120,8 +143,15 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf1RN8KKGNdS-iEarIgXpaqa-khw7EmZI&callback=initMap">
-</script>
+    <!-- begin olark code -->
+    <script type="text/javascript" async> ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
+        /* custom configuration goes here (www.olark.com/documentation) */
+        olark.identify('7508-290-10-8562');</script>
+    <!-- end olark code -->
+
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf1RN8KKGNdS-iEarIgXpaqa-khw7EmZI&callback=initMap">
+    </script>
 </body>
 </html>
