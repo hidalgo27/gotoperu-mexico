@@ -4597,6 +4597,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['paquete_p', 'paquete_destinations', 'paquete_category'],
   data: function data() {
@@ -4623,6 +4632,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 __webpack_require__.r(__webpack_exports__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -102171,7 +102189,45 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _vm._m(0)
+            _c(
+              "div",
+              { staticClass: "col-auto" },
+              [
+                _vm._l(_vm.paquete_p.precio_paquetes, function(precio) {
+                  return [
+                    precio.estrellas === 2
+                      ? [
+                          precio.precio_d > 0
+                            ? [
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass:
+                                      "font-weight-bold text-primary h5 m-0"
+                                  },
+                                  [
+                                    _vm._m(0, true),
+                                    _vm._v(" $" + _vm._s(precio.precio_d)),
+                                    _c("small", [_vm._v("USD")])
+                                  ]
+                                )
+                              ]
+                            : [
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass: "text-danger font-weight-bold"
+                                  },
+                                  [_vm._v("Consulte")]
+                                )
+                              ]
+                        ]
+                      : _vm._e()
+                  ]
+                })
+              ],
+              2
+            )
           ])
         ])
       ])
@@ -102183,13 +102239,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-auto" }, [
-      _c("p", { staticClass: "font-weight-bold text-primary h5 m-0" }, [
-        _c("sup", { staticClass: "small" }, [_c("small", [_vm._v("desde")])]),
-        _vm._v(" $120"),
-        _c("small", [_vm._v("USD")])
-      ])
-    ])
+    return _c("sup", { staticClass: "small" }, [_c("small", [_vm._v("desde")])])
   }
 ]
 render._withStripped = true
@@ -102255,7 +102305,43 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _vm._m(0)
+          _c(
+            "div",
+            { staticClass: "col-auto" },
+            [
+              _vm._l(_vm.paquete_p.precio_paquetes, function(precio) {
+                return [
+                  precio.estrellas === 2
+                    ? [
+                        precio.precio_d > 0
+                          ? [
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "font-weight-bold text-primary h5 m-0"
+                                },
+                                [
+                                  _vm._m(0, true),
+                                  _vm._v(" $" + _vm._s(precio.precio_d)),
+                                  _c("small", [_vm._v("USD")])
+                                ]
+                              )
+                            ]
+                          : [
+                              _c(
+                                "span",
+                                { staticClass: "text-danger font-weight-bold" },
+                                [_vm._v("Consulte")]
+                              )
+                            ]
+                      ]
+                    : _vm._e()
+                ]
+              })
+            ],
+            2
+          )
         ])
       ])
     ])
@@ -102266,13 +102352,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-auto" }, [
-      _c("p", { staticClass: "font-weight-bold text-primary h5 m-0" }, [
-        _c("sup", { staticClass: "small" }, [_c("small", [_vm._v("desde")])]),
-        _vm._v(" $120"),
-        _c("small", [_vm._v("USD")])
-      ])
-    ])
+    return _c("sup", { staticClass: "small" }, [_c("small", [_vm._v("desde")])])
   }
 ]
 render._withStripped = true
@@ -119752,8 +119832,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/hidalgoponce/web/sites/gotoperu-mexico/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/hidalgoponce/web/sites/gotoperu-mexico/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Hidalgo\Homestead\code\viagens\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Hidalgo\Homestead\code\viagens\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

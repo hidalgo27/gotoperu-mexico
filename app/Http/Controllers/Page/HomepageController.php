@@ -72,6 +72,7 @@ class HomepageController extends Controller
 
         if ($var AND $var2 == 0 AND $var3 == 0){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 'paquetes_destinos'
                 =>function ($query) use ($nombre2) {
                     $query->whereIn('iddestinos', $nombre2);
@@ -80,6 +81,7 @@ class HomepageController extends Controller
 
         if ($var == 0 AND $var2 AND $var3 == 0){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 "paquetes_categoria"=>function ($query) use ($category_arr) {
                     $query->whereIn('idcategoria', $category_arr);
                 }
@@ -96,6 +98,7 @@ class HomepageController extends Controller
 
         if ($var AND $var2 AND $var3 == 0){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 "paquetes_categoria"=>function ($query) use ($category_arr) {
                     $query->where('idcategoria', $category_arr);
                 },
@@ -107,6 +110,7 @@ class HomepageController extends Controller
 
         if ($var AND $var2 == 0 AND $var3){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 'paquetes_destinos'
                 =>function ($query) use ($nombre2) {
                     $query->whereIn('iddestinos', $nombre2);
@@ -115,6 +119,7 @@ class HomepageController extends Controller
 
         if ($var == 0 AND $var2 AND $var3){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 "paquetes_categoria"=>function ($query) use ($category_arr) {
                     $query->where('idcategoria', $category_arr);
                 }])->whereBetween('duracion', [$duration1, $duration2])->get();
@@ -122,6 +127,7 @@ class HomepageController extends Controller
 
         if ($var AND $var2 AND $var3){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 "paquetes_categoria"=>function ($query) use ($category_arr) {
                     $query->where('idcategoria', $category_arr);
                 },
@@ -157,7 +163,7 @@ class HomepageController extends Controller
 //        $nota->save();
     }
     public function load(Request $request){
-        $paquetes = TPaquete::where('estado',1)->get();
+        $paquetes = TPaquete::with('precio_paquetes')->where('estado',1)->get();
         $destinations = TPaqueteDestino::with('destinos')->get();
         $category = TPaqueteCategoria ::with('categoria')->get();
         return response()->json(
@@ -172,7 +178,7 @@ class HomepageController extends Controller
     }
 
     public function load_all(Request $request){
-        $paquetes = TPaquete::all();
+        $paquetes = TPaquete::with('precio_paquetes')->get();
         $destinations = TPaqueteDestino::with('destinos')->get();
         $category = TPaqueteCategoria ::with('categoria')->get();
         return response()->json(
