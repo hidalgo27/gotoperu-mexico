@@ -48,11 +48,11 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-4">
                     <ul class="accordion-social m-0">
-{{--                        <li class="item">--}}
-{{--                            <div class="py-2 mt-1">--}}
-{{--                                <i class="fas small fa-phone-alt text-white"></i>--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
+                        <li class="d-inline-block">
+                            <div class="social-links">
+                                <a href=""><i class="fas small fa-phone-square text-white fa-1x"></i> <i class="fas fa-long-arrow-alt-right"></i> </a>
+                            </div>
+                        </li>
                         <li class="item">
                             <div class="social-links">
                                 <a href=""> <img src="{{asset('images/icons/mx.svg')}}" alt="" width="40" class="w-"> </a>
