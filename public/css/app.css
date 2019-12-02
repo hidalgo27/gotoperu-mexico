@@ -1232,6 +1232,67 @@ header .overlay {
   padding: 3rem;
 }
 
+.accordion-social {
+  display: block;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.item {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  font-size: 17px;
+  -moz-transition: all 0.4s ease-in-out 0.1s;
+  -o-transition: all 0.4s ease-in-out 0.1s;
+  -webkit-transition: all 0.4s ease-in-out;
+  -webkit-transition-delay: 0.1s;
+  transition: all 0.4s ease-in-out 0.1s;
+}
+
+.item:hover {
+  width: 230px;
+}
+
+.social-links {
+  display: block;
+}
+
+.social-links a {
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+  float: left;
+}
+
+.item .social-info {
+  position: relative;
+  width: 200px;
+}
+
+.item .social-info a {
+  text-decoration: none;
+}
+
+.item .social-info a {
+  font-size: 16px;
+  margin: 0;
+  padding: 12px 0;
+  color: #fff;
+  display: flex;
+  text-align: left;
+}
+
+i.icono {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+}
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

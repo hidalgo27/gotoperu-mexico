@@ -907,3 +907,63 @@ header .overlay {
 //.icon-estrella:before {
 //    content: "\e912";
 //}
+
+.accordion-social {
+    display: block;
+    list-style-type: none;
+    overflow: hidden;
+    //height: 50px;
+}
+.item {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    font-size: 17px;
+    -moz-transition: all .4s ease-in-out .1s;
+    -o-transition: all .4s ease-in-out .1s;
+    -webkit-transition: all .4s ease-in-out;
+    -webkit-transition-delay: .1s;
+    transition: all .4s ease-in-out .1s;
+}
+.item:hover {
+    width: 230px;
+}
+.social-links {
+    display: block;
+}
+.social-links a {
+    color: #fff;
+    display: inline-block;
+    //font-size: 22px;
+    padding: 10px;
+    float: left;
+}
+.item .social-info {
+    position: relative;
+    //width: 180px;
+    //margin-left: 50px;
+    //height: 50px;
+    //padding: 10px 0;
+    width: 200px;
+}
+.item .social-info a {
+    text-decoration: none;
+}
+.item .social-info a {
+    font-size: 16px;
+    margin: 0;
+    padding: 12px 0;
+    color: #fff;
+    display: flex;
+    text-align: left;
+}
+i.icono {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    //background-image: url(//auqui.travel/wp-content/themes/auqui-theme/assets/css/../images/social-iconos.png);
+    background-repeat: no-repeat;
+}
