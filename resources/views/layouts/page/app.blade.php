@@ -45,18 +45,17 @@
 
     <div class="menu-container">
         <div class="container mt-3">
-            <div class="position-absolute-top">
-            <div class="row justify-content-end no-gutters">
-                <div class="col-6 text-right">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-4">
                     <ul class="accordion-social m-0">
-                        <li class="item">
-                            <div class="py-2 mt-1">
-                                <i class="fas fa-phone-alt text-white"> Tel:</i>
-                            </div>
-                        </li>
+{{--                        <li class="item">--}}
+{{--                            <div class="py-2 mt-1">--}}
+{{--                                <i class="fas small fa-phone-alt text-white"></i>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
                         <li class="item">
                             <div class="social-links">
-                                <a href=""> <img src="{{asset('images/icons/mx.svg')}}" alt="" width="30" class="w-"> </a>
+                                <a href=""> <img src="{{asset('images/icons/mx.svg')}}" alt="" width="40" class="w-"> </a>
                             </div>
                             <div class="social-info">
                                 <a href="tel:+523341625836">+52 (33) 41625836</a>
@@ -64,22 +63,17 @@
                         </li>
                         <li class="item">
                             <div class="social-links">
-                                <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="" width="30" class="w-"> </a>
+                                <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="" width="40" class="w-"> </a>
                             </div>
                             <div class="social-info">
                                 <a href="tel:5117059774">+51 (1) 7059774</a>
                             </div>
                         </li>
                     </ul>
-                </div>
-            </div>
-            </div>
-            <div class="row justify-content-between align-items-center">
-                <div class="col-4">
-                    <div class="form-group m-0 has-search">
-                        <span class="fa fa-search form-control-feedback"></span>
-                        <input type="text" class="form-control form-control-search shadow-none border-0 text-white" placeholder="BUSCAR">
-                    </div>
+{{--                    <div class="form-group m-0 has-search">--}}
+{{--                        <span class="fa fa-search form-control-feedback"></span>--}}
+{{--                        <input type="text" class="form-control form-control-search shadow-none border-0 text-white" placeholder="BUSCAR">--}}
+{{--                    </div>--}}
                 </div>
                 <div class="col-auto">
                     <a href="{{route('home_path')}}"><img src="{{asset('images/logo-gotoperu-white.png')}}" width="250" alt="logo andesviagens" class="img-fluid"></a>

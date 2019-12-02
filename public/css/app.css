@@ -1241,7 +1241,6 @@ header .overlay {
 .item {
   display: inline-block;
   width: 50px;
-  height: 50px;
   overflow: hidden;
   position: relative;
   margin: 0;
@@ -1254,7 +1253,7 @@ header .overlay {
 }
 
 .item:hover {
-  width: 230px;
+  width: 190px;
 }
 
 .social-links {
