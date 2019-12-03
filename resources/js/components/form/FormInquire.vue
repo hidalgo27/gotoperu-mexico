@@ -1,6 +1,8 @@
 <template>
+
     <form @submit.prevent="agregar">
 
+        <div v-if="formshow">
         <div v-show="tap_form_show">
 
             <div class="row mt-5">
@@ -13,7 +15,7 @@
             <div class="row align-items-center no-gutters border">
                 <div class="col-2 text-center rounded-left bg-secondary">
                     <div class="py-4 text-white">
-                        <i data-feather="home" stroke-width="1"></i>
+                        <i class="fas fa-home"></i>
                     </div>
                 </div>
                 <div class="col px-3">
@@ -21,7 +23,6 @@
                         <template v-for="categoriaForm in category_hotel">
                             <categoria-form v-bind:categoriaForm="categoriaForm" v-bind:categoriasSeleccionadosForm="categoriasSeleccionadosForm" v-on:checked="selectCategoryForm"></categoria-form>
                         </template>
-
                     </div>
                 </div>
             </div>
@@ -36,7 +37,7 @@
             <div class="row align-items-center no-gutters border">
                 <div class="col-2 text-center rounded-left bg-secondary">
                     <div class="py-5 text-white">
-                        <i data-feather="map-pin" stroke-width="1"></i>
+                        <i class="fas fa-map-marked-alt"></i>
                     </div>
                 </div>
                 <div class="col px-3">
@@ -62,7 +63,7 @@
             <div class="row align-items-center no-gutters border">
                 <div class="col-2 text-center rounded-left bg-secondary">
                     <div class="py-4 text-white">
-                        <i data-feather="users" stroke-width="1"></i>
+                        <i class="fas fa-users"></i>
                     </div>
                 </div>
                 <div class="col px-3">
@@ -92,7 +93,7 @@
             <div class="row align-items-center no-gutters border">
                 <div class="col-2 text-center rounded-left bg-secondary">
                     <div class="py-4 text-white">
-                        <i data-feather="clock" stroke-width="1"></i>
+                        <i class="far fa-clock"></i>
                     </div>
                 </div>
                 <div class="col px-3">
@@ -119,7 +120,7 @@
                 <div class="row mb-3 align-items-center">
                     <div class="col-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
-                            <i data-feather="user" stroke-width="1"></i>
+                            <i class="far fa-user"></i>
                         </div>
                     </div>
                     <div class="col px-3">
@@ -134,7 +135,7 @@
                 <div class="row mb-3 align-items-center">
                     <div class="col-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
-                            <i data-feather="mail" stroke-width="1"></i>
+                            <i class="far fa-envelope"></i>
                         </div>
                     </div>
                     <div class="col px-3">
@@ -149,7 +150,7 @@
                 <div class="row mb-3 align-items-center">
                     <div class="col-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
-                            <i data-feather="calendar" stroke-width="1"></i>
+                            <i class="far fa-calendar"></i>
                         </div>
                     </div>
                     <div class="col px-3">
@@ -164,7 +165,7 @@
                 <div class="row mb-3 align-items-center">
                     <div class="col-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
-                            <i data-feather="phone" stroke-width="1"></i>
+                            <i class="fas fa-phone-alt"></i>
                         </div>
                     </div>
                     <div class="col px-3">
@@ -175,7 +176,7 @@
                 <div class="row mb-3 align-items-center">
                     <div class="col-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
-                            <i data-feather="edit" stroke-width="1"></i>
+                            <i class="far fa-edit"></i>
                         </div>
                     </div>
                     <div class="col px-3">
@@ -202,20 +203,40 @@
                 <button type="submit" class="btn btn-success btn-lg text-white font-weight-bold" v-if="tap_form_show === false" v-show="btnviewdesign">
                     Enviar
                 </button>
-
-                <div class="text-center fa-2x">
-                    <i class="fas fa-circle-notch fa-spin" v-show="loadingdesign"></i>
-                </div>
+                <transition name="fade">
+                    <button type="submit" class="btn btn-dark btn-lg text-white font-weight-bold" v-show="loadingdesign">
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                    </button>
+                </transition>
 
             </div>
+        </div>
         </div>
         <div class="row">
             <div class="col text-right">
                 <a href="mailto:info@gotoperu.com.mx" class="btn btn-link font-weight-bold py-2 px-0">info@gotoperu.com.mx</a>
             </div>
         </div>
+        <div class="row mt-4" v-if="!formshow">
+            <div class="col">
+                <div class="alert alert-success">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <hr>
+                        </div>
+                        <div class="col text-center">
+                            <h4 class="font-weight-bold">Gracias por contactar con nosotros</h4>
+                            <p class="font-weight-nomal">Un representante de GOTOPERU se comunicará con usted a la brevedad.</p>
+                            <button type="button" class="btn btn-primary" @click="updateComponent">Enviar Nuevo <i data-feather="rotate-ccw" class="text-white" stroke-width="1"></i></button>
+                        </div>
+                        <div class="col-3">
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
-
 
 </template>
 
@@ -333,7 +354,8 @@
                 duracionSeleccionadosForm: [],
 
                 loadingdesign: false,
-                btnviewdesign: true
+                btnviewdesign: true,
+                formshow: true
             }
         },
         methods: {
@@ -402,14 +424,37 @@
                 const self = this;
                 this.loadingdesign = true;
                 this.btnviewdesign = false;
+                this.tap_form_show = false;
+                this.formshow = true;
                 axios.post('/formulario-diseno', obj)
                     .then((res) =>{
                         self.loadingdesign = false;
                         this.btnviewdesign = true;
+                        this.tap_form_show = true;
+                        this.formshow = false;
                         const datoServidor = res.data;
                         this.datos.push(datoServidor);
                         console.log(datoServidor);
+                        // this.$forceUpdate();
+                        // console.log(this.categoriasSeleccionadosForm);
+
                     })
+            },
+            updateComponent(){
+                // this.$forceUpdate();
+                this.formshow = true;
+                this.categoriasSeleccionadosForm = [];
+                this.destinosSeleccionadosForm = [];
+                this.pasajerosSeleccionadosForm = [];
+                this.duracionSeleccionadosForm = [];
+                this.el_nombre = '';
+                this.el_email = '';
+                this.el_fecha = '';
+                this.el_telefono = '';
+                this.el_textarea = '';
+                console.log(this.categoriasSeleccionadosForm);
+                // console.log('test');
+
             }
         }
 
