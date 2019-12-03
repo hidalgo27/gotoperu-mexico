@@ -47,29 +47,31 @@
         <div class="container mt-3">
             <div class="row justify-content-between align-items-center">
                 <div class="col-4">
-                    <ul class="accordion-social m-0">
-                        <li class="d-inline-block">
-                            <div class="social-links">
-                                <a href=""><i class="fas small fa-phone-square text-white fa-1x"></i> <i class="fas fa-long-arrow-alt-right"></i> </a>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="social-links">
-                                <a href=""> <img src="{{asset('images/icons/mx.svg')}}" alt="" width="40" class="w-"> </a>
-                            </div>
-                            <div class="social-info">
-                                <a href="tel:+523341625836">+52 (33) 41625836</a>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="social-links">
-                                <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="" width="40" class="w-"> </a>
-                            </div>
-                            <div class="social-info">
-                                <a href="tel:5117059774">+51 (1) 7059774</a>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i data-feather="phone-call" class="text-white" stroke-width="1"></i></i>
+                        </div>
+                        <div class="col">
+                            <ul class="accordion-social p-0 m-0">
+                                <li class="item">
+                                    <div class="social-links">
+                                        <a href=""> <img src="{{asset('images/icons/mx.svg')}}" alt="" width="40" class="w-"> </a>
+                                    </div>
+                                    <div class="social-info">
+                                        <a href="tel:+523341625836">+52 (33) 41625836</a>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="social-links">
+                                        <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="" width="40" class="w-"> </a>
+                                    </div>
+                                    <div class="social-info">
+                                        <a href="tel:5117059774">+51 (1) 7059774</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 {{--                    <div class="form-group m-0 has-search">--}}
 {{--                        <span class="fa fa-search form-control-feedback"></span>--}}
 {{--                        <input type="text" class="form-control form-control-search shadow-none border-0 text-white" placeholder="BUSCAR">--}}
