@@ -345,7 +345,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-center my-4">
                     <div class="col-2">
-                        <img src="{{asset('images/logo-andes-y.png')}}" alt="" class="w-100">
+                        <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
                     </div>
                 </div>
                 <div class="row justify-content-center">

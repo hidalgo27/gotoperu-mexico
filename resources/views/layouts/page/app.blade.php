@@ -120,16 +120,16 @@
                         <div class="line-subtitle"></div>
                         <div class="row justify-content-start">
                             <div class="col-auto text-center">
-                                <a href="" class="mx-2">
+                                <a href="https://www.facebook.com/GOTOPERUcom/" target="_blank" class="mx-2">
                                     <i data-feather="facebook" class="text-white" stroke-width="1"></i>
                                 </a>
-                                <a href="" class="mx-2">
+                                <a href="https://twitter.com/GOTOPERUCOM" target="_blank" class="mx-2">
                                     <i data-feather="twitter" class="text-white" stroke-width="1"></i>
                                 </a>
-                                <a href="" class="mx-2">
+                                <a href="https://www.youtube.com/channel/UCWjJ10j-_BfNTDnmjBug8Ng" target="_blank" class="mx-2">
                                     <i data-feather="youtube" class="text-white" stroke-width="1"></i>
                                 </a>
-                                <a href="" class="mx-2">
+                                <a href="https://www.instagram.com/go.to.peru/" target="_blank" class="mx-2">
                                     <i data-feather="instagram" class="text-white" stroke-width="1"></i>
                                 </a>
                             </div>
