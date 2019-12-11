@@ -114,7 +114,7 @@
                         <div class="col-12">
                             <div class="mt-4 bg-white py-3">
                                 <div class="row align-items-center justify-content-center">
-                                    <div class="col-8">
+                                    <div class="col-12 col-md-8">
                                         <div class="row align-items-center">
                                             <div class="col-3">
                                                 <hr>

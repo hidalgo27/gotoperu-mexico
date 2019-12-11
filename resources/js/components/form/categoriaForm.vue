@@ -1,5 +1,5 @@
 <template>
-    <div class="col-3 text-center form-search checkbox">
+    <div class="col-auto text-center form-search checkbox">
         <input type="checkbox" v-bind:value="categoriaForm.categoriasSeleccionadosForm" v-bind:id="categoriaForm.nombre"  @change="onchangeCategoryForm">
         <label class="font-weight-bold w-100 d-block"  v-bind:for="categoriaForm.nombre">
             {{ categoriaForm.nombre }}

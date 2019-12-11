@@ -46,7 +46,7 @@
     <div class="menu-container">
         <div class="container mt-3">
             <div class="row justify-content-between align-items-center">
-                <div class="col-4">
+                <div class="col-4 d-none d-sm-inline">
                     <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                             <i data-feather="phone-call" class="text-white" stroke-width="1"></i>
@@ -77,10 +77,10 @@
 {{--                        <input type="text" class="form-control form-control-search shadow-none border-0 text-white" placeholder="BUSCAR">--}}
 {{--                    </div>--}}
                 </div>
-                <div class="col-auto">
+                <div class="col-auto mx-auto">
                     <a href="{{route('home_path')}}"><img src="{{asset('images/logo-gotoperu-white.png')}}" width="250" alt="logo andesviagens" class="img-fluid"></a>
                 </div>
-                <div class="col-4 text-right">
+                <div class="col-4 d-none d-sm-inline text-right">
                     <a href="#consulte" class="btn btn-inquire float-right ml-3 font-weight-bold px-4 text-white rounded-0">COTIZAR VIAJE</a>
 {{--                    <img src="{{asset('images/icons/mx.svg')}}" alt="" width="30" class="w-"> +52 (33) 41625836 |--}}
 {{--                    <img src="{{asset('images/icons/mx.svg')}}" alt="" width="30" class="w-"> +52 (33) 41625836--}}
@@ -205,7 +205,7 @@
             $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
             //Checks if drodown menu's li elements have anothere level (ul), if not the dropdown is shown as regular dropdown, not a mega menu (thanks Luka Kladaric)
 
-            $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\">Navigation</a>");
+            $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile text-white\">Menu</a>");
 
             //Adds menu-mobile class (for mobile toggle menu) before the normal menu
             //Mobile menu is hidden if width is more then 959px, but normal menu is displayed
@@ -238,11 +238,11 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
-    <!-- begin olark code -->
-    <script type="text/javascript" async> ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
-        /* custom configuration goes here (www.olark.com/documentation) */
-        olark.identify('7508-290-10-8562');</script>
-    <!-- end olark code -->
+{{--    <!-- begin olark code -->--}}
+{{--    <script type="text/javascript" async> ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");--}}
+{{--        /* custom configuration goes here (www.olark.com/documentation) */--}}
+{{--        olark.identify('7508-290-10-8562');</script>--}}
+{{--    <!-- end olark code -->--}}
 
 
     <script async defer

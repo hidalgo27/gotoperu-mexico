@@ -89,8 +89,9 @@
 
         <transition name="fade">
             <div v-show="!tap_form_show">
+                <div class="container">
                 <div class="row mb-3 align-items-center">
-                    <div class="col-1 text-center rounded bg-secondary">
+                    <div class="col-2 col-md-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
                             <i class="far fa-user"></i>
                         </div>
@@ -105,7 +106,7 @@
                 </div>
 
                 <div class="row mb-3 align-items-center">
-                    <div class="col-1 text-center rounded bg-secondary">
+                    <div class="col-2 col-md-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
                             <i class="far fa-envelope"></i>
                         </div>
@@ -120,7 +121,7 @@
                 </div>
 
                 <div class="row mb-3 align-items-center">
-                    <div class="col-1 text-center rounded bg-secondary">
+                    <div class="col-2 col-md-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
                             <i class="far fa-calendar"></i>
                         </div>
@@ -135,7 +136,7 @@
                 </div>
 
                 <div class="row mb-3 align-items-center">
-                    <div class="col-1 text-center rounded bg-secondary">
+                    <div class="col-2 col-md-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
                             <i class="fas fa-phone-alt"></i>
                         </div>
@@ -146,7 +147,7 @@
                 </div>
 
                 <div class="row mb-3 align-items-center">
-                    <div class="col-1 text-center rounded bg-secondary">
+                    <div class="col-2 col-md-1 text-center rounded bg-secondary">
                         <div class="py-4 text-white">
                             <i class="far fa-edit"></i>
                         </div>
@@ -160,6 +161,7 @@
                         </el-input>
 
                     </div>
+                </div>
                 </div>
             </div>
         </transition>
