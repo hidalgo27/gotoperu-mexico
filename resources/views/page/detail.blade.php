@@ -280,24 +280,9 @@
                                         <div class="line-subtitle"></div>
                                         <p><mark class="font-weight-bold">{{$itinerario->itinerarios->titulo}}.</mark></p>
                                         {!! $itinerario->itinerarios->resumen !!}
-                                        <button type="button" class="btn btn-link p-0 text-secondary font-weight-lighter" onclick="view_itinerary({{$itinerario->itinerarios->id}})">LEER MÁS</button>
+{{--                                        <button type="button" class="btn btn-link p-0 text-secondary font-weight-lighter" onclick="view_itinerary({{$itinerario->itinerarios->id}})">LEER MÁS</button>--}}
                                     </div>
-                                    <div class="invisible position-absolute-top bg-white" id="box-detail-{{$itinerario->itinerarios->id}}">
-                                        <div class="swiper-container swiper-container-detail">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <h4>Dia {{$day}} <mark class="font-weight-bold">{{$itinerario->itinerarios->titulo}}.</mark></h4>
-                                                    <div class="line-subtitle"></div>
-                                                    {!! $itinerario->itinerarios->descripcion !!}
-                                                </div>
-                                            </div>
-                                            <!-- Add Scroll Bar -->
-                                            <div class="swiper-scrollbar"></div>
-                                            <div class="position-absolute-bottom text-center m-3">
-                                                <button type="button" class="btn btn-sm btn-dark shadow-sm" onclick="view_itinerary_resumen({{$itinerario->itinerarios->id}})">Ver Resumen</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="swiper-container swiper-container-gallery">
