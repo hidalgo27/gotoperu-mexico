@@ -325,7 +325,7 @@
     <section id="consulte" class="pt-5">
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
-                <div class="col-6 col-md-7">
+                <div class="col-6 col-md-2">
                     <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
                 </div>
             </div>
