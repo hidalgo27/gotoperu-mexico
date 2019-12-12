@@ -346,8 +346,10 @@
                 <div class="container">
                     <div class="row mt-5">
                         <div class="col">
+
                             <h6 class="font-weight-bold text-secondary mt-4"><span class="text-g-yellow">Precios:</span></h6>
                             <p>Los precios estan basados en doble acomodación.</p>
+                            <div class="table-responsive">
                             <table class="table table-borderless border">
                                 <thead class="thead-dark">
                                     <tr class="text-center">
@@ -369,6 +371,7 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            </div>
                             <div class="alert alert-primary">
                                 <p class="m-0">*Si tiene algún hotel en especifico con gusto lo prepararemos una cotización personalizada.</p>
                             </div>
