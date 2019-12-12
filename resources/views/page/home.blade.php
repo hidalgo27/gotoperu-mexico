@@ -145,12 +145,12 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="{{asset('images/team/mariana.jpg')}}">
+                        <img src="{{asset('images/team/da.jpg')}}">
                         <div class="box-content">
-                            <h3 class="title">Mariana</h3>
+                            <h3 class="title">Daniel</h3>
                             <span class="post">Travel Advisor</span>
                             <ul class="social">
-                                <li><a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="#"><i class="fas fa-play"></i></a></li>
+                                <li><a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=cUWsovwPDpY"><i class="fas fa-play"></i></a></li>
                             </ul>
                         </div>
                     </div>
