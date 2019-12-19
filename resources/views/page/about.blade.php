@@ -56,7 +56,49 @@
         </div>
     </section>
 
-    <section class="py-3 bg-white">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="font-weight-bold">Conoce a nuestro equipo</h2>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <img src="{{asset('images/team/katy.jpg')}}" alt="" class="rounded-circle w-100">
+                        </div>
+                        <div class="col">
+                            <p class="font-weight-bold text-g-yellow m-0">Doe Jhon</p>
+                            <p class="font-weight-bold small text-secondary">Jefe de Proyectos</p>
+                            <div class="line-subtitle"></div>
+                            <p class="small">Accusantium illo numquam porro quae quisquam repudiandae suscipit.</p>
+                            <hr>
+                            <small>proyectos@gotoperu.com.mx</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <img src="{{asset('images/team/katy.jpg')}}" alt="" class="rounded-circle w-100">
+                        </div>
+                        <div class="col">
+                            <p class="font-weight-bold text-g-yellow m-0">Doe Jhon</p>
+                            <p class="font-weight-bold small text-secondary">Jefe de Proyectos</p>
+                            <div class="line-subtitle"></div>
+                            <p class="small">Accusantium illo numquam porro quae quisquam repudiandae suscipit.</p>
+                            <hr>
+                            <small>proyectos@gotoperu.com.mx</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-3 bg-white d-none">
         <div class="container">
 
             <div class="row no-gutters align-items-center bg-light">
