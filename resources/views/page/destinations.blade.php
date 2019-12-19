@@ -62,7 +62,7 @@
         <div class="container">
             @foreach($destino as $destinos)
             <div class="row mb-4 no-gutters align-items-center align-items-resumen shadow-sm bg-white">
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="p-5" id="box-resumen">
                         {{--                        <div class="exp-unica">--}}
                         {{--                            <div class="buton">--}}
@@ -77,13 +77,13 @@
                         {!! $destinos->descripcion !!}
                         <div class="row mt-4">
                             <div class="col">
-                                <button type="button" class="btn btn-link p-0 text-secondary float-left font-weight-lighter">SABER MÁS SOBRE {{mb_strtoupper($destinos->nombre)}}</button>
-                                <a href="{{route('destination_show_path', $destinos->url)}}" class="btn btn-g-green text-white rounded-0 float-right">VER PAQUETES</a>
+                                <button type="button" class="btn btn-link p-0 text-secondary d-none d-md-inline float-left font-weight-lighter">SABER MÁS SOBRE {{mb_strtoupper($destinos->nombre)}}</button>
+                                <a href="{{route('destination_show_path', $destinos->url)}}" class="btn btn-g-green text-white rounded-0 float-md-right">VER PAQUETES</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="swiper-container swiper-container-gallery">
                         <div class="swiper-wrapper">
                             @foreach($destinos->destino_imagen as $imagen_destinos)
@@ -113,12 +113,12 @@
     <section id="consulte" class="pt-5">
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
-                <div class="col-2">
-                    <img src="{{asset('images/logo-andes-y.png')}}" alt="" class="w-100">
+                <div class="col-6 col-md-2">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-7">
+                <div class="col-12 col-md-7">
                     <h5 class="font-weight-bold text-center">CONSULTA DE VIAJES</h5>
                     <form-inquire></form-inquire>
                 </div>

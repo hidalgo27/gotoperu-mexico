@@ -62,7 +62,7 @@
         <div class="container">
             @foreach($categoria as $categorias)
             <div class="row mb-4 no-gutters align-items-center align-items-resumen shadow-sm bg-white">
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="swiper-container swiper-container-gallery">
                         <div class="swiper-wrapper">
                             <a class="venobox swiper-slide" data-gall="myGallery" href="{{$categorias->imagen_banner}}"><img src="{{$categorias->imagen_banner}}" class="w-100"></a>
@@ -72,7 +72,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="p-5" id="box-resumen">
                         {{--                        <div class="exp-unica">--}}
                         {{--                            <div class="buton">--}}
@@ -113,12 +113,12 @@
     <section id="consulte" class="pt-5">
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
-                <div class="col-2">
-                    <img src="{{asset('images/logo-andes-y.png')}}" alt="" class="w-100">
+                <div class="col-6 col-md-2">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-7">
+                <div class="col-12 col-md-7">
                     <h5 class="font-weight-bold text-center">CONSULTA DE VIAJES</h5>
                     <form-inquire></form-inquire>
                 </div>

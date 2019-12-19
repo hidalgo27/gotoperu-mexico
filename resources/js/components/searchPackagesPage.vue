@@ -4,7 +4,7 @@
             <form @submit.prevent="filterPackage">
             <div class="row">
 
-                <div class="col-4 mb-3">
+                <div class="d-none d-md-block col-md-4 mb-3">
 
                     <div class="card sticky-top bg-secundary border-g-yellow border-right-0 shadow-sm">
                         <div class="arrow-left"></div>
@@ -56,7 +56,7 @@
                     </div>
 
                 </div>
-                <div class="col-8">
+                <div class="col-12 col-md-8">
 
                         <div class="row">
                             <template v-for="paquete in paquetes">

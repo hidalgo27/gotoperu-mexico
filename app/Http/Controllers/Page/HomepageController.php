@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Page;
 
 use App\TCategoria;
 use App\TDestino;
+use App\TInquire;
 use App\TPaquete;
 use App\TPaqueteCategoria;
 use App\TPaqueteDestino;
@@ -72,6 +73,7 @@ class HomepageController extends Controller
 
         if ($var AND $var2 == 0 AND $var3 == 0){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 'paquetes_destinos'
                 =>function ($query) use ($nombre2) {
                     $query->whereIn('iddestinos', $nombre2);
@@ -80,6 +82,7 @@ class HomepageController extends Controller
 
         if ($var == 0 AND $var2 AND $var3 == 0){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 "paquetes_categoria"=>function ($query) use ($category_arr) {
                     $query->whereIn('idcategoria', $category_arr);
                 }
@@ -96,6 +99,7 @@ class HomepageController extends Controller
 
         if ($var AND $var2 AND $var3 == 0){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 "paquetes_categoria"=>function ($query) use ($category_arr) {
                     $query->where('idcategoria', $category_arr);
                 },
@@ -107,6 +111,7 @@ class HomepageController extends Controller
 
         if ($var AND $var2 == 0 AND $var3){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 'paquetes_destinos'
                 =>function ($query) use ($nombre2) {
                     $query->whereIn('iddestinos', $nombre2);
@@ -115,6 +120,7 @@ class HomepageController extends Controller
 
         if ($var == 0 AND $var2 AND $var3){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 "paquetes_categoria"=>function ($query) use ($category_arr) {
                     $query->where('idcategoria', $category_arr);
                 }])->whereBetween('duracion', [$duration1, $duration2])->get();
@@ -122,6 +128,7 @@ class HomepageController extends Controller
 
         if ($var AND $var2 AND $var3){
             $paquetes = TPaquete::with([
+                'precio_paquetes',
                 "paquetes_categoria"=>function ($query) use ($category_arr) {
                     $query->where('idcategoria', $category_arr);
                 },
@@ -157,7 +164,7 @@ class HomepageController extends Controller
 //        $nota->save();
     }
     public function load(Request $request){
-        $paquetes = TPaquete::where('estado',1)->get();
+        $paquetes = TPaquete::with('precio_paquetes')->where('estado',1)->get();
         $destinations = TPaqueteDestino::with('destinos')->get();
         $category = TPaqueteCategoria ::with('categoria')->get();
         return response()->json(
@@ -172,7 +179,7 @@ class HomepageController extends Controller
     }
 
     public function load_all(Request $request){
-        $paquetes = TPaquete::all();
+        $paquetes = TPaquete::with('precio_paquetes')->get();
         $destinations = TPaqueteDestino::with('destinos')->get();
         $category = TPaqueteCategoria ::with('categoria')->get();
         return response()->json(
@@ -252,38 +259,51 @@ class HomepageController extends Controller
             $comentario = $request->el_textarea;
         }
 
+        $inquire = new TInquire();
+        $inquire->hotel = $category_all;
+        $inquire->destinos = $destination_all;
+        $inquire->pasajeros = $travellers_all;
+        $inquire->duracion = $duration_all;
+        $inquire->nombre = $nombre;
+        $inquire->email = $email;
+        $inquire->fecha = $fecha;
+        $inquire->telefono = $telefono;
+        $inquire->comentario = $comentario;
+//        $inquire->save();
 
-        try {
-            Mail::send(['html' => 'notifications.page.client-form-design'], ['nombre' => $nombre], function ($messaje) use ($email, $nombre) {
-                $messaje->to($email, $nombre)
-                    ->subject('GotoPeru')
-                    /*->attach('ruta')*/
-                    ->from('info@gotoperu.com.mx', 'GotoPeru');
-            });
-            Mail::send(['html' => 'notifications.page.admin-form-contact'], [
-                'category_all' => $category_all,
-                'destination_all' => $destination_all,
-                'travellers_all' => $travellers_all,
-                'duration_all' => $duration_all,
+        if ($inquire->save()){
+            try {
+                Mail::send(['html' => 'notifications.page.client-form-design'], ['nombre' => $nombre], function ($messaje) use ($email, $nombre) {
+                    $messaje->to($email, $nombre)
+                        ->subject('GotoPeru')
+                        /*->attach('ruta')*/
+                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                });
+                Mail::send(['html' => 'notifications.page.admin-form-contact'], [
+                    'category_all' => $category_all,
+                    'destination_all' => $destination_all,
+                    'travellers_all' => $travellers_all,
+                    'duration_all' => $duration_all,
 
-                'nombre' => $nombre,
-                'email' => $email,
-                'fecha' => $fecha,
-                'telefono' => $telefono,
-                'comentario' => $comentario,
+                    'nombre' => $nombre,
+                    'email' => $email,
+                    'fecha' => $fecha,
+                    'telefono' => $telefono,
+                    'comentario' => $comentario,
 
-            ], function ($messaje) use ($from) {
-                $messaje->to($from, 'GotoPeru')
-                    ->subject('GotoPeru')
+                ], function ($messaje) use ($from) {
+                    $messaje->to($from, 'GotoPeru')
+                        ->subject('GotoPeru')
 //                    ->cc($from2, 'GotoPeru')
-                    /*->attach('ruta')*/
-                    ->from('info@gotoperu.com.mx', 'GotoPeru');
-            });
+                        /*->attach('ruta')*/
+                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                });
 
-            return 'Thank you.';
-        }
-        catch (Exception $e){
-            return $e;
+                return 'Thank you.';
+            }
+            catch (Exception $e){
+                return $e;
+            }
         }
 
     }
@@ -351,40 +371,50 @@ class HomepageController extends Controller
             $comentario = $request->el_textarea;
         }
 
+        $inquire = new TInquire();
+        $inquire->hotel = $category_all;
+        $inquire->pasajeros = $travellers_all;
+        $inquire->duracion = $duration_all;
+        $inquire->nombre = $nombre;
+        $inquire->email = $email;
+        $inquire->fecha = $fecha;
+        $inquire->telefono = $telefono;
+        $inquire->comentario = $comentario;
 
-        try {
-            Mail::send(['html' => 'notifications.page.client-form-design'], ['nombre' => $nombre], function ($messaje) use ($email, $nombre) {
-                $messaje->to($email, $nombre)
-                    ->subject('GotoPeru')
-                    /*->attach('ruta')*/
-                    ->from('info@gotoperu.com.mx', 'GotoPeru');
-            });
-            Mail::send(['html' => 'notifications.page.admin-form-contact-detail'], [
-                'category_all' => $category_all,
-                'travellers_all' => $travellers_all,
-                'duration_all' => $duration_all,
+        if ($inquire->save()){
+            try {
+                Mail::send(['html' => 'notifications.page.client-form-design'], ['nombre' => $nombre], function ($messaje) use ($email, $nombre) {
+                    $messaje->to($email, $nombre)
+                        ->subject('GotoPeru')
+                        /*->attach('ruta')*/
+                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                });
+                Mail::send(['html' => 'notifications.page.admin-form-contact-detail'], [
+                    'category_all' => $category_all,
+                    'travellers_all' => $travellers_all,
+                    'duration_all' => $duration_all,
 
-                'titulo_p' => $titulo_package,
-                'nombre' => $nombre,
-                'email' => $email,
-                'fecha' => $fecha,
-                'telefono' => $telefono,
-                'comentario' => $comentario,
+                    'titulo_p' => $titulo_package,
+                    'nombre' => $nombre,
+                    'email' => $email,
+                    'fecha' => $fecha,
+                    'telefono' => $telefono,
+                    'comentario' => $comentario,
 
-            ], function ($messaje) use ($from) {
-                $messaje->to($from, 'GotoPeru')
-                    ->subject('GotoPeru')
+                ], function ($messaje) use ($from) {
+                    $messaje->to($from, 'GotoPeru')
+                        ->subject('GotoPeru')
 //                    ->cc($from2, 'GotoPeru')
-                    /*->attach('ruta')*/
-                    ->from('info@gotoperu.com.mx', 'GotoPeru');
-            });
+                        /*->attach('ruta')*/
+                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                });
 
-            return 'Thank you.';
+                return 'Thank you.';
+            }
+            catch (Exception $e){
+                return $e;
+            }
         }
-        catch (Exception $e){
-            return $e;
-        }
-
     }
 
     public function packages(){

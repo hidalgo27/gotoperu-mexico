@@ -46,17 +46,44 @@
     <div class="menu-container">
         <div class="container mt-3">
             <div class="row justify-content-between align-items-center">
-                <div class="col-3">
-                    <div class="form-group m-0 has-search">
-                        <span class="fa fa-search form-control-feedback"></span>
-                        <input type="text" class="form-control form-control-search shadow-none border-0 text-white" placeholder="BUSCAR">
+                <div class="col-4 d-none d-sm-inline">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <i data-feather="phone-call" class="text-white" stroke-width="1"></i>
+                        </div>
+                        <div class="col">
+                            <ul class="accordion-social p-0 m-0">
+                                <li class="item">
+                                    <div class="social-links">
+                                        <a href=""> <img src="{{asset('images/icons/mx.svg')}}" alt="" width="40" class="w-"> </a>
+                                    </div>
+                                    <div class="social-info">
+                                        <a href="tel:+523341625836">+52 (33) 41625836</a>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="social-links">
+                                        <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="" width="40" class="w-"> </a>
+                                    </div>
+                                    <div class="social-info">
+                                        <a href="tel:5117059774">+51 (1) 7059774</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+{{--                    <div class="form-group m-0 has-search">--}}
+{{--                        <span class="fa fa-search form-control-feedback"></span>--}}
+{{--                        <input type="text" class="form-control form-control-search shadow-none border-0 text-white" placeholder="BUSCAR">--}}
+{{--                    </div>--}}
                 </div>
-                <div class="col-auto">
+                <div class="col-auto mx-auto">
                     <a href="{{route('home_path')}}"><img src="{{asset('images/logo-gotoperu-white.png')}}" width="250" alt="logo andesviagens" class="img-fluid"></a>
                 </div>
-                <div class="col-3 text-right">
+                <div class="col-4 d-none d-sm-inline text-right">
                     <a href="#consulte" class="btn btn-inquire float-right ml-3 font-weight-bold px-4 text-white rounded-0">COTIZAR VIAJE</a>
+{{--                    <img src="{{asset('images/icons/mx.svg')}}" alt="" width="30" class="w-"> +52 (33) 41625836 |--}}
+{{--                    <img src="{{asset('images/icons/mx.svg')}}" alt="" width="30" class="w-"> +52 (33) 41625836--}}
                 </div>
             </div>
         </div>
@@ -69,8 +96,76 @@
 
     @yield('content')
 
-    <footer>
+    <footer class="position-relative">
         <img src="{{asset('images/footer.jpg')}}" alt="" class="w-100">
+        <div class="bg-g-dark footer-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h6 class="text-white font-weight-bold">PERÚ</h6>
+                        <div class="line-subtitle"></div>
+                        <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Av. El Sol 449, Oficina 301.</p>
+                        <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Cusco Centro Historico</p>
+                        <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Ciudad del Cusco</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="text-white font-weight-bold">MÉXICO</h6>
+                        <div class="line-subtitle"></div>
+                        <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Avenida Rio Churubusco 601</p>
+                        <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Xoco</p>
+                        <p class="m-0 text-g-yellow"><i data-feather="chevron-right" class="text-white" stroke-width="1"></i> Coyoacán, Ciudad de México 03330</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="text-white font-weight-bold">Compartir en:</h6>
+                        <div class="line-subtitle"></div>
+                        <div class="row justify-content-start">
+                            <div class="col-auto text-center">
+                                <a href="https://www.facebook.com/GOTOPERUcom/" target="_blank" class="mx-2">
+                                    <i data-feather="facebook" class="text-white" stroke-width="1"></i>
+                                </a>
+                                <a href="https://twitter.com/GOTOPERUCOM" target="_blank" class="mx-2">
+                                    <i data-feather="twitter" class="text-white" stroke-width="1"></i>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCWjJ10j-_BfNTDnmjBug8Ng" target="_blank" class="mx-2">
+                                    <i data-feather="youtube" class="text-white" stroke-width="1"></i>
+                                </a>
+                                <a href="https://www.instagram.com/go.to.peru/" target="_blank" class="mx-2">
+                                    <i data-feather="instagram" class="text-white" stroke-width="1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center my-5">
+                    <div class="tl-1"></div>
+                    <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
+                    <div class="tl-3"></div>
+                </div>
+                <div class="row mb-4 text-center">
+                    <div class="col">
+                        <a href="" class="text-white">Nosotros</a>
+                    </div>
+                    <div class="col">
+                        <a href="" class="text-white">Contáctanos</a>
+                    </div>
+                    <div class="col">
+                        <a href="" class="text-white">Políticas del Sitio</a>
+                    </div>
+                    <div class="col">
+                        <a href="" class="text-white">Aviso de Privacidad</a>
+                    </div>
+                    <div class="col">
+                        <a href="" class="text-white">Agentes de Viaje</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col text-center">
+                        <small class="text-white">Grupo GOTOPERU 2007 - 2019. Todos los derechos reservados.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </div>
@@ -110,7 +205,7 @@
             $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
             //Checks if drodown menu's li elements have anothere level (ul), if not the dropdown is shown as regular dropdown, not a mega menu (thanks Luka Kladaric)
 
-            $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\">Navigation</a>");
+            $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile text-white\">Menu</a>");
 
             //Adds menu-mobile class (for mobile toggle menu) before the normal menu
             //Mobile menu is hidden if width is more then 959px, but normal menu is displayed

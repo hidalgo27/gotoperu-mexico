@@ -8,7 +8,7 @@
         {{--            </video>--}}
         <div class="homepage-video">
             @foreach($destinos->destino_imagen->take(1) as $imagen)
-            <img src="{{$imagen->nombre}}" alt="">
+            <img src="{{$imagen->nombre}}" alt="{{$destinos->nombre}}">
             @endforeach
 
         </div>
@@ -362,12 +362,12 @@
     <section id="consulte" class="pt-5">
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
-                <div class="col-2">
-                    <img src="{{asset('images/logo-andes-y.png')}}" alt="" class="w-100">
+                <div class="col-6 col-md-2">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-7">
+                <div class="col-12 col-md-7">
                     <h5 class="font-weight-bold text-center">CONSULTA DE VIAJES</h5>
                     <form-inquire></form-inquire>
                 </div>

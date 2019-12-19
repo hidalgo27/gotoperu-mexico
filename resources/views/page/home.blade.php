@@ -21,16 +21,16 @@
         <div class="position-absolute-bottom p-2">
             <div class="row justify-content-center">
                 <div class="col-auto text-center">
-                    <a href="" class="mx-2">
+                    <a href="https://www.facebook.com/GOTOPERUcom/" target="_blank" class="mx-2">
                         <i data-feather="facebook" class="text-white" stroke-width="1"></i>
                     </a>
-                    <a href="" class="mx-2">
+                    <a href="https://twitter.com/GOTOPERUCOM" target="_blank" class="mx-2">
                         <i data-feather="twitter" class="text-white" stroke-width="1"></i>
                     </a>
-                    <a href="" class="mx-2">
+                    <a href="https://www.youtube.com/channel/UCWjJ10j-_BfNTDnmjBug8Ng" target="_blank" class="mx-2">
                         <i data-feather="youtube" class="text-white" stroke-width="1"></i>
                     </a>
-                    <a href="" class="mx-2">
+                    <a href="https://www.instagram.com/go.to.peru/" target="_blank" class="mx-2">
                         <i data-feather="instagram" class="text-white" stroke-width="1"></i>
                     </a>
                 </div>
@@ -145,12 +145,12 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="{{asset('images/team/mariana.jpg')}}">
+                        <img src="{{asset('images/team/da.jpg')}}">
                         <div class="box-content">
                             <h3 class="title">Daniel</h3>
                             <span class="post">Travel Advisor</span>
                             <ul class="social">
-                                <li><a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/HFJyuC_euRk"><i class="fas fa-play"></i></a></li>
+                                <li><a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=cUWsovwPDpY"><i class="fas fa-play"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -168,8 +168,8 @@
     <section class="position-relative mt-5">
         <div class="offer-banner">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col">
+                <div class="row align-items-center pt-5 pt-md-0">
+                    <div class="col-12 col-md-6">
                         <h2 class="h5">NOSOTROS SOMOS</h2>
                         <h4 class="font-weight-bold h1">GOTOPERU</h4>
                         <p>El compromiso de GOTOPERU es ofrecer una experiencia personalizada y de calidad que cumpla las expectativas de nuestros clientes . El modelo de Gestión de GOTOPERU está basado en la mejora continua y sus principales actuaciones son: Difundir las riquezas de nuestro país el Peru, sus costumbres, gastronomía, su patrimonio natural y cultural, ayudando a fomentar un turismo sostenible.</p>
@@ -185,7 +185,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-md-6">
                         <img src="{{asset('images/gotoperu-banner-rgba.png')}}" alt="" class="w-100">
                     </div>
                 </div>
@@ -201,7 +201,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col">
+                <div class="col-12 mb-4 mb-md-0 col-md">
                     <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/iWqyeyUVruE">
                         <div class="position-relative">
                             <img src="{{asset('images/video-testimonial/1.jpg')}}" alt="" class="w-100">
@@ -211,7 +211,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col">
+                <div class="col-12 mb-4 mb-md-0 col-md">
                     <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/tbET_aKa0Zg">
                         <div class="position-relative">
                             <img src="{{asset('images/video-testimonial/2.jpg')}}" alt="" class="w-100">
@@ -221,7 +221,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col">
+                <div class="col-12 mb-4 mb-md-0 col-md">
                     <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/NSA_ij7rxuI">
                         <div class="position-relative">
                             <img src="{{asset('images/video-testimonial/3.jpg')}}" alt="" class="w-100">
@@ -238,7 +238,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-6 mb-3 col-sm-4 mb-md-0 col-md-4 text-center">
                     <div class="row justify-content-center">
                         <div class="col-6">
@@ -331,7 +331,7 @@
             </div>
             <div class="row">
                 @foreach($categoria as $categorias)
-                    <div class="col">
+                    <div class="col-12 col-md-4">
                         <div class="transperent_block">
                             <img src="{{$categorias->imagen}}" class="img-responsive" alt="">
                             <div class="black_hover_block">
@@ -424,7 +424,7 @@
             </div>
             <div class="row">
                 @foreach($destino as $destinos)
-                <div class="col">
+                <div class="col-12 col-md-4">
                     <div class="home-banner-destinations">
                         <figure class="cc-imagewrapper">
                             <a href="{{route('destination_show_path', $destinos->url)}}" class="text-center">
@@ -452,12 +452,12 @@
     <section id="consulte" class="pt-5">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-2">
-                    <img src="{{asset('images/logo-andes-y.png')}}" alt="" class="w-100">
+                <div class="col-6 col-md-2">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-7">
+                <div class="col-12 col-md-7">
                     <h5 class="font-weight-bold text-center">CONSULTA DE VIAJES</h5>
                     <form-inquire></form-inquire>
                 </div>
