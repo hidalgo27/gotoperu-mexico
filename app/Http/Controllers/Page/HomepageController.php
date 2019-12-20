@@ -9,6 +9,7 @@ use App\TPaquete;
 use App\TPaqueteCategoria;
 use App\TPaqueteDestino;
 use App\TPaqueteDificultad;
+use App\TTeam;
 use App\TTour;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -479,7 +480,9 @@ class HomepageController extends Controller
     }
 
     public function sobre_nosotros(){
-        return view('page.about');
+        $team = TTeam::all();
+
+        return view('page.about', compact('team'));
     }
     public function faq(){
         return view('page.social');
