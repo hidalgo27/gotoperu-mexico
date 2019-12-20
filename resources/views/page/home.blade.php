@@ -181,7 +181,7 @@
                         </ul>
                         <div class="row mt-4">
                             <div class="col text-center">
-                                <a href="" class="btn font-weight-bold btn-dark">Vea más sonbre nuestro equipo</a>
+                                <a href="{{route('sobre_nosotros_path')}}" class="btn font-weight-bold btn-dark">Vea más sonbre nuestro equipo</a>
                             </div>
                         </div>
                     </div>
