@@ -269,7 +269,7 @@
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6987988.js"></script>
     <!-- End of HubSpot Embed Code -->
     <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"fa3bd9ea0b7c6d934efc75509","lid":"6f367adb75","uniqueMethods":true}) })</script>
-    <script type="text/javascript" src="https://widget.sirena.app/get?token=zdF9nfRDq1GYnzBarfuv3NTwoEBBmEga" async="true"></script>
+{{--    <script type="text/javascript" src="https://widget.sirena.app/get?token=zdF9nfRDq1GYnzBarfuv3NTwoEBBmEga" async="true"></script>--}}
 
 </body>
 </html>
