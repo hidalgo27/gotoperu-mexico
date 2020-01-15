@@ -449,6 +449,21 @@
         </div>
     </section>
 
+{{--    <section>--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col">--}}
+{{--                    <form action="https://api.rd.services/platform/contacts/{identifier}:{value}" method="post">--}}
+{{--                        @csrf--}}
+{{--                        <input type="text" name="email" placeholder="email">--}}
+{{--                        <input type="text" name="nombre" placeholder="nombre">--}}
+{{--                        <input type="submit" value="enviar">--}}
+{{--                    </form>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
+
     <section id="consulte" class="pt-5">
         <div class="container-fluid">
             <div class="row justify-content-center">

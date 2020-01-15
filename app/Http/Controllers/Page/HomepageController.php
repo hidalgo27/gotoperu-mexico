@@ -493,4 +493,15 @@ class HomepageController extends Controller
     public function responsabilidad(){
         return view('page.responsabilidad');
     }
+
+    public function callback(Request $request){
+        return $request;
+    }
+
+    public function rdstation(Request $request){
+
+        $email = $request->input('email');
+        $nombre = $request->input('nombre');
+        return "hola";
+    }
 }

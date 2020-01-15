@@ -16,8 +16,6 @@
 
     <meta name="csrf-token" content="{{ csrf_token()  }}">
 
-    <script type="text/javascript" src="https://widget.sirena.app/get?token=zdF9nfRDq1GYnzBarfuv3NTwoEBBmEga" async="true"></script>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KK52HEG2LE"></script>
     <script>
@@ -174,7 +172,7 @@
 <script src="{{ asset('js/plugins.js') }}"></script>
 <script src="https://apps.elfsight.com/p/platform.js"></script>
 <script src="https://player.vimeo.com/api/player.js"></script>
-<script src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/d1b447b4-892c-4562-a6dc-536d0eb23944-loader.js" ></script>
+{{--<script src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/d1b447b4-892c-4562-a6dc-536d0eb23944-loader.js" ></script>--}}
 @stack('scripts')
 <script>
     feather.replace();
@@ -249,6 +247,12 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf1RN8KKGNdS-iEarIgXpaqa-khw7EmZI&callback=initMap">
     </script>
 
-<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"fa3bd9ea0b7c6d934efc75509","lid":"6f367adb75","uniqueMethods":true}) })</script>
+
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6987988.js"></script>
+    <!-- End of HubSpot Embed Code -->
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"fa3bd9ea0b7c6d934efc75509","lid":"6f367adb75","uniqueMethods":true}) })</script>
+    <script type="text/javascript" src="https://widget.sirena.app/get?token=zdF9nfRDq1GYnzBarfuv3NTwoEBBmEga" async="true"></script>
+
 </body>
 </html>

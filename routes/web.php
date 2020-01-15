@@ -108,3 +108,15 @@ Route::get('/responsabilidad-social', [
     'uses' => 'Page\HomepageController@responsabilidad',
     'as' => 'responsabilidad_path',
 ]);
+
+//auth/callback
+Route::get('/auth/callback', [
+    'uses' => 'Page\HomepageController@callback',
+    'as' => 'callback_path',
+]);
+
+
+Route::post('/rdstation/{title}', [
+    'uses' => 'Page\HomepageController@rdstation',
+    'as' => 'rdstation_path',
+]);
