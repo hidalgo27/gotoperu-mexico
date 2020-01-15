@@ -91,8 +91,23 @@
 
 
 
-
     @yield('content')
+
+    <div id="redes">
+        <div class="container-fluid">
+            <div class="row justify-content-end">
+                <div class="col-auto">
+                    <div class="bg-dark rounded px-3 mx-3 shadow clearfix float-right">
+                        <a href="https://api.whatsapp.com/send?phone=5117059774" target="_blank" class="font-weight-bold text-white stretched-link">
+                            +51 17059774
+                            <img src="{{asset('images/icons/whatsapp-i.png')}}" class="py-1" alt="logo whatsapp" width="50" data-toggle="tooltip" data-placement="top" title="Perú">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <footer class="position-relative">
         <img src="{{asset('images/footer.jpg')}}" alt="" class="w-100">
@@ -234,7 +249,9 @@
         });
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
-        })
+        });
+
+
     </script>
     <!-- begin olark code -->
     <script type="text/javascript" async> ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");

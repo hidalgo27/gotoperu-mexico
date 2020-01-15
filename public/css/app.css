@@ -1306,6 +1306,18 @@ i.icono {
   margin-top: -62px;
 }
 
+#redes {
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 1021;
+}
+
+#redes {
+  bottom: 10% !important;
+  right: -9px;
+}
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

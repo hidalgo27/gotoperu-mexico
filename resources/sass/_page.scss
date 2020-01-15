@@ -980,3 +980,19 @@ i.icono {
 .footer-info{
     margin-top: -62px;
 }
+
+#redes{
+    //margin: 0 auto;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    //padding: 30px 10px 30px 10px;
+    //background: #00bdff;
+    //color: white;
+    //text-align: center;
+    z-index: 1021;
+}
+#redes{
+    bottom: 10% !important;
+    right: -9px;
+}
