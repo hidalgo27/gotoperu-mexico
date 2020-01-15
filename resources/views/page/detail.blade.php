@@ -116,7 +116,7 @@
                                     </div>
                                     <div class="col">
                                         <h6 class="font-weight-bold text-secondary">Consulte ahora por Whatsapp</h6>
-                                        <a href="https://api.whatsapp.com/send?phone=5117064514" target="_blank" class="text-secondary h4 font-weight-bold stretched-link">+51 1 7059774</a>
+                                        <a href="https://api.whatsapp.com/send?phone=5117059774" target="_blank" class="text-secondary h4 font-weight-bold stretched-link">+51 1 7059774</a>
                                     </div>
                                 </div>
 {{--                                <h5 class="font-weight-bold text-secondary">Tour highligh</h5>--}}
@@ -282,7 +282,7 @@
                                         {!! $itinerario->itinerarios->resumen !!}
 {{--                                        <button type="button" class="btn btn-link p-0 text-secondary font-weight-lighter" onclick="view_itinerary({{$itinerario->itinerarios->id}})">LEER MÁS</button>--}}
                                     </div>
-                                   
+
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="swiper-container swiper-container-gallery">
