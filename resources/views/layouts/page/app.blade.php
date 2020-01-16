@@ -91,8 +91,23 @@
 
 
 
-
     @yield('content')
+
+    <div id="redes">
+        <div class="container-fluid">
+            <div class="row justify-content-end">
+                <div class="col-auto">
+                    <div class="bg-dark rounded px-3 mx-3 shadow clearfix float-right">
+                        <a href="https://api.whatsapp.com/send?phone=5117059774" target="_blank" class="font-weight-bold text-white stretched-link">
+                            Escríbenos por WhatsApp
+                            <img src="{{asset('images/icons/whatsapp-i.png')}}" class="py-1" alt="logo whatsapp" width="50" data-toggle="tooltip" data-placement="top" title="Perú">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <footer class="position-relative">
         <img src="{{asset('images/footer.jpg')}}" alt="" class="w-100">
@@ -234,7 +249,9 @@
         });
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
-        })
+        });
+
+
     </script>
     <!-- begin olark code -->
     <script type="text/javascript" async> ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
@@ -252,7 +269,7 @@
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6987988.js"></script>
     <!-- End of HubSpot Embed Code -->
 {{--    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"fa3bd9ea0b7c6d934efc75509","lid":"6f367adb75","uniqueMethods":true}) })</script>--}}
-    <script type="text/javascript" src="https://widget.sirena.app/get?token=zdF9nfRDq1GYnzBarfuv3NTwoEBBmEga" async="true"></script>
+{{--    <script type="text/javascript" src="https://widget.sirena.app/get?token=zdF9nfRDq1GYnzBarfuv3NTwoEBBmEga" async="true"></script>--}}
 
 </body>
 </html>
