@@ -13,7 +13,7 @@
             <div class="row d-flex h-100 text-center align-items-center">
                 <div class="col w-100 text-white mt-5">
                 <div class="row">
-                                <div class="col text-right">
+                                <div class="col text-center">
                                                            <a href="https://www.gotoperu.com.pe/pdf/coronavirus-gotoperu.pdf" target="_blank" style="color: #59d8d8" class="h4 font-weight-bold">Update Covid-19</a>
                                                                    </div>
                                                                            </div>
