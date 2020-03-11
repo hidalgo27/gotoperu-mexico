@@ -86,14 +86,14 @@
             </div>
         </div>
         @include('layouts.page.menu')
+
+    </div>
+
 <div class="row">
                                 <div class="col text-right">
                                                            <a href="{{asset('pdf/coronavirus-gotoperu.pdf')}}" target="_blank" style="color: #59d8d8" class="h4 font-weight-bold">Update Covid-19</a>
                                                                    </div>
                                                                            </div>
-    </div>
-
-
 
     @yield('content')
 
