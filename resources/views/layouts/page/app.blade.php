@@ -86,7 +86,7 @@
             </div>
         </div>
         @include('layouts.page.menu')
-        
+
     </div>
 
     @yield('content')
@@ -96,7 +96,7 @@
             <div class="row justify-content-end">
                 <div class="col-auto">
                     <div class="bg-dark rounded px-3 mx-3 shadow clearfix float-right">
-                        <a href="https://api.whatsapp.com/send?phone=5117059774" target="_blank" class="font-weight-bold text-white stretched-link">
+                        <a href="https://api.whatsapp.com/send?phone=51993806530" target="_blank" class="font-weight-bold text-white stretched-link">
                             Escríbenos por WhatsApp
                             <img src="{{asset('images/icons/whatsapp-i.png')}}" class="py-1" alt="logo whatsapp" width="50" data-toggle="tooltip" data-placement="top" title="Perú">
                         </a>
