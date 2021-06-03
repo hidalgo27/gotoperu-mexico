@@ -10,11 +10,11 @@
     <title>Paquetes de Viaje a Perú | Perú Tours</title>
     <link href="{{asset('icons/favicon.ico')}}" rel="icon" type="image/x-icon">
     <!-- Styles -->
+    <link href="{{ asset('css/block.css') }}" rel="stylesheet">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     {{--    <link href="{{ asset('css/ionicons.min.css') }}" rel="stylesheet">--}}
     <link href="{{ asset('themify-icons/themify-icons.css') }}" rel="stylesheet">
 
-    <meta name="csrf-token" content="{{ csrf_token()  }}">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KK52HEG2LE"></script>

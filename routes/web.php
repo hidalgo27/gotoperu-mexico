@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -119,4 +118,23 @@ Route::get('/auth/callback', [
 Route::post('/rdstation/{title}', [
     'uses' => 'Page\HomepageController@rdstation',
     'as' => 'rdstation_path',
+]);
+
+//BLOG
+//Route::post('/blog/buscar','Page\HomepageController@buscar')->name('buscar');
+Route::post('/blog/buscar', [
+    'uses' => 'Page\HomepageController@buscar',
+    'as' => 'buscar_path',
+]);
+Route::get('/blog', [
+    'uses' => 'Page\HomepageController@blog',
+    'as' => 'blog_path',
+]);
+Route::get('/blog/{url}', [
+    'uses' => 'Page\HomepageController@blog_detail',
+    'as' => 'blog_detail',
+]);
+Route::get('/blog/categoria/{cat}', [
+    'uses' => 'Page\HomepageController@blog_categoria',
+    'as' => 'blog_categoria',
 ]);
