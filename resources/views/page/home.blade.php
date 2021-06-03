@@ -453,7 +453,81 @@
             </div>
         </div>
     </section>
-
+    
+    <section >
+        <div class="container">
+                <div class="row pb-4">
+                    <div class="col text-center">
+                        <h2 class="font-weight-bold text-g-green pb-2">Nuestro blog</h2>
+                        <p class="lead font-weight-bold text-muted">Entérate de las últimas noticias e información de Cusco y Perú</p>
+                    </div>
+                </div>
+            <div class="row blog">
+                @foreach ($posts as $post)
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <a class="img-card" href="/blog/{{$post['url']}}">
+                                <div  id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        @foreach ($post['imagenes'] as $photo)
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}"></li>
+                                        @endforeach
+                                    </ol>                              
+                                    <div class="carousel-inner" role="listbox">
+                                        @foreach ($post['imagenes'] as $photo)
+                                            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                                <img class="d-block img-fluid" src="http://127.0.0.1:8080/storage/post/{{$photo['nombre']}}" alt="{{$post['titulo']}}">                                           
+                                                <div class="tag bg-success text-center text-white">
+                                                    <p class="m-2">{{$post['categoria']['nombre']}}</p>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                    <a class="carousel-control-prev" data-target="#carouselExampleControls" role="button" data-slide="prev">
+                                        <span><i class="carousel-control-prev-icon fa-3x" aria-hidden="true"></i></span>
+                                        <span class="sr-only">Anterior</span>
+                                    </a>
+                                    <a class="carousel-control-next" data-target="#carouselExampleControls" role="button" data-slide="next">
+                                        <span><i class="carousel-control-next-icon fa-3x" aria-hidden="true"></i></span>
+                                        <span class="sr-only">Siguiente</span>
+                                    </a>
+                                </div>    
+                            </a>
+                            <div class="p-3">
+                                <h4 class="card-title">
+                                    <a href="/blog/{{$post['url']}}" class="text-g-yellow">
+                                        {{$post['titulo']}}
+                                    </a>
+                                </h4>
+                                <div class="row text-secondary small">
+                                    <div class="col">
+                                        <i class="fa fa-user pr-2 text-primary"></i>{{$post['user']['name']}}
+                                    </div>
+                                    <div class="col">
+                                        <i class="fa fa-calendar pr-2 text-primary"></i>{{date('d/m/Y', strtotime($post['updated_at']))}}
+                                    </div>
+                                </div>
+                                <div class="text-justify pt-3">
+                                    {!!Str::limit($post['detalle'], 150,$end='...')!!}
+                                </div>
+                            </div>
+                            <div class="card-read-more text-center">
+                                <a class="btn btn-outline-g-green font-weight-bold btn-sm m-2" href="/blog/{{$post['url']}}">
+                                    Leer mas
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <a href="/blog" class="btn btn-lg btn-g-green font-weight-bold text-white mt-4">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 {{--    <section>--}}
 {{--        <div class="container">--}}
 {{--            <div class="row">--}}
