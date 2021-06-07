@@ -16,13 +16,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Response;
 //use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Collection;
 class HomepageController extends Controller
 {
-    protected $urlGeneral="http://127.0.0.1:8080";
+    protected $urlGeneral="https://blog.gotoperu.com.mx";
     public function index(){
         $paquete = TPaquete::with('paquetes_destinos.destinos','paquetes_categoria.categoria', 'precio_paquetes')->get();
         $tours = TTour::with('tours_destinos.destinos')->get();
@@ -34,6 +35,7 @@ class HomepageController extends Controller
         //$posts=$res->json();
         $client = new Client;
         $posts=$this->consulta_posts_recientes($client);
+
         return view('page.home',
             compact(
                 'paquete',
@@ -549,8 +551,8 @@ class HomepageController extends Controller
         $postsRelacionados = $this->consulta_posts_relacionados($url,$client);
         return view('page.blogDetail', compact('post','categorias','recentPosts','postsRelacionados'));
     }
-    public function buscar(){
-        return "hola";
+    public function buscar(Request $request){
+        return 'hello';
     }
     public function consulta_categoria($client){
         $request2 = $client->get($this->urlGeneral.'/api/v1/categorias-post');
@@ -588,5 +590,5 @@ class HomepageController extends Controller
         $post = json_decode($response, true);
         return $post;
     }
-        
+
 }

@@ -120,6 +120,7 @@ Route::post('/rdstation/{title}', [
     'as' => 'rdstation_path',
 ]);
 
+
 //BLOG
 //Route::post('/blog/buscar','Page\HomepageController@buscar')->name('buscar');
 Route::post('/blog/buscar', [

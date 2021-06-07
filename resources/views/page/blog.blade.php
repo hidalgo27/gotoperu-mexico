@@ -39,24 +39,39 @@
         </div>
     </div>
 </header>
+<section class="bg-white">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col d-none d-sm-block small font-weight-bold">
+                <ol class="breadcrumb bg-white px-0 py-2 m-0">
+
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+
+
+                    <li class="breadcrumb-item active">Blog</li>
+
+
+                </ol>
+
+
+            </div>
+        </div>
+    </div>
+</section>
 <section id="title_section" class="bg-white py-5">
     <div class="container">
         <div class="row">
-            <div class="col">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item"><a href="/blog">Blog</a></li>
-                    </ol>
-                </nav>
+            <div class="col text-center">
+                <h2 class="font-weight-bold display-4 text-g-yellow">Descubre <strong class="text-g-green">Perú</strong></h2>
+                <p class="lead">Descubre todas las noticias, recomendaciones, lugares turísticos e información útil que necesitas saber viajar.</p>
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-lg-8 col-md-12 mr-5">
-                <div class="alert alert-primary text-center mb-5">
-                    <p class="font-weight-bold lead text-muted">Descubre todas las noticias, recomendaciones, lugares turísticos e información útil que necesitas saber viajar.</p>
-                </div>
-                <hr class="bg-danger">
+{{--                <div class="alert alert-primary text-center mb-5">--}}
+{{--                    <p class="font-weight-bold lead text-muted">Descubre todas las noticias, recomendaciones, lugares turísticos e información útil que necesitas saber viajar.</p>--}}
+{{--                </div>--}}
+                <hr class="mb-4">
                 @foreach ($data as $post)
                     <div class="row py-4">
                         <div class="col-12 pb-2">
@@ -66,13 +81,13 @@
                         </div>
                         <div class="col-md-5">
                             <a href="/blog/{{$post['url']}}">
-                                <div  id="carouselExampleControls" class="carousel slide" data-ride="carousel">                         
+                                <div  id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner" role="listbox">
                                         @foreach ($post['imagenes'] as $photo)
                                             <div class="carousel-item blog {{ $loop->first ? 'active' : '' }}">
-                                                <img class="text-center align-self-center img-fluid" src="http://127.0.0.1:8080/storage/post/{{$photo['nombre']}}" alt="{{$post['titulo']}}" loading="lazy">                                           
-                                                <div class="tag bg-success text-center text-white">
-                                                    <p class="m-2">{{$post['categoria']['nombre']}}</p>
+                                                <img class="text-center align-self-center w-100" src="https://blog.gotoperu.com.mx/storage/post/{{$photo['nombre']}}" alt="{{$post['titulo']}}" loading="lazy">
+                                                <div class="tag bg-rgba-dark-3 text-center text-white">
+                                                    <p class="m-2 font-weight-bold">{{$post['categoria']['nombre']}}</p>
                                                 </div>
                                             </div>
                                         @endforeach
@@ -85,24 +100,27 @@
                                             <span class="sr-only">Siguiente</span>
                                         </a>
                                     </div>
-                                </div>  
+                                </div>
                             </a>
                         </div>
                         <div class="col-md-7">
-                            <div class="row text-primary text-center">
-                                <div class="col-4">
-                                    <i class="fa fa-user pr-2"></i>{{$post['user']['name']}}
-                                </div>
-                                <div class="col-4">
-                                    <i class="fa fa-calendar pr-2"></i>{{date('d/m/Y', strtotime($post['updated_at']))}}
-                                </div>
-                                <div class="col-4">
-                                    <i class="fa fa-tags pr-2"></i>{{$post['categoria']['nombre']}}
-                                </div>
-                            </div>
+{{--                            <div class="row text-primary text-center">--}}
+{{--                                <div class="col-4">--}}
+{{--                                    <i class="fa fa-user pr-2"></i>{{$post['user']['name']}}--}}
+{{--                                </div>--}}
+{{--                                <div class="col-4">--}}
+{{--                                    <i class="fa fa-calendar pr-2"></i>{{date('d/m/Y', strtotime($post['updated_at']))}}--}}
+{{--                                </div>--}}
+{{--                                <div class="col-4">--}}
+{{--                                    <i class="fa fa-tags pr-2"></i>{{$post['categoria']['nombre']}}--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+                            <span><i class="fa fa-user pr-2 text-g-dark-light small"></i><small class="text-g-dark-light">{{$post['user']['name']}}</small></span>
+                            <span class="mx-4"><i class="fa fa-calendar pr-2 text-g-dark-light small"></i><small class="text-g-dark-light">{{date('d/m/Y', strtotime($post['updated_at']))}}</small></span>
+                            <span><i class="fa fa-tags pr-2 text-g-dark-light small"></i><small class="text-g-dark-light">{{$post['categoria']['nombre']}}</small></span>
                             <p class="text-justify">
                                 {!!Str::limit($post['detalle'],250,$end='...')!!}
-                            </p>                 
+                            </p>
                         </div>
                         <div class="col-12 text-center">
                             <a class="btn btn-outline-g-yellow font-weight-bold btn-sm m-2" href="/blog/{{$post['url']}}">
@@ -110,8 +128,8 @@
                             </a>
                         </div>
                     </div>
-                    <hr class="bg-danger">
-                @endforeach 
+                    <hr class="mb-4">
+                @endforeach
                 <div class="d-flex px-3 pt-4">
                     <div class="mx-auto">
                         {{ $data->links() }}
@@ -119,86 +137,81 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-12 p-0 m-0">
-                <hr class="hr-warning mt-0">
-                <div class="row">
-                    <div class="col">
-                        <p class="h4 text-g-yellow font-weight-bold pb-2">Buscar</p>                    
-                        <form method="POST" action='{{route('buscar_path')}}' >
-                            @csrf
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="buscar" placeholder="Buscar en el blog">
-                                <span class="input-group-btn">   
-                                    <button class="btn btn-g-green" type="submit"><i class="fa fa-search"></i></button>
-                                </span>                                
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <hr class="hr-warning">
+{{--                <hr class="hr-warning mt-0">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col">--}}
+{{--                        <p class="h4 text-g-yellow font-weight-bold pb-2">Buscar</p>--}}
+{{--                        <form method="POST" action='{{route('buscar_path')}}' >--}}
+{{--                            @csrf--}}
+{{--                            <div class="input-group">--}}
+{{--                                <input type="text" class="form-control" name="buscar" placeholder="Buscar en el blog">--}}
+{{--                                <span class="input-group-btn">--}}
+{{--                                    <button class="btn btn-g-green" type="submit"><i class="fa fa-search"></i></button>--}}
+{{--                                </span>--}}
+{{--                            </div>--}}
+{{--                        </form>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <hr class="hr-warning">--}}
                 <div class="row">
                     <div class="col">
                         <p class="h4 pb-3 text-g-yellow font-weight-bold">Categorías</p>
                         @foreach ($categorias as $categoria)
-                        <a href="/blog/categoria/{{$categoria[0]}}">
-                            <ol class="list-group list-group-numbered">
-                                <li class="list-group-item d-flex justify-content-between align-items-start">                            
-                                    <div class="ms-2 me-auto text-capitalize h6">
-                                        <i class="fa fa-tags mr-2 text-g-dark-light fa"></i>{{$categoria[0]}}
-                                    </div>
-                                    <span class="badge badge-g-green rounded-pill px-3 h6">{{$categoria[1]}}</span>                                   
-                                </li>
-                            </ol>
-                        </a>
+                            <a href="/blog/categoria/{{$categoria[0]}}">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto text-capitalize">
+                                            <i class="fa fa-tags mr-2 text-g-dark-light fa h6"></i>{{$categoria[0]}}
+                                        </div>
+                                        <span class="badge badge-g-green rounded-pill px-3 h6">{{$categoria[1]}}</span>
+                                    </li>
+                                </ul>
+                            </a>
                         @endforeach
                     </div>
                 </div>
-                <hr class="hr-warning">
+                <hr class="mb-4">
                 <div class="row">
                     <div class="col">
                         <p class="h4 pb-3 text-g-yellow font-weight-bold">Artículos más recientes</p>
                         <div class="row pl-3">
-                            @foreach ($recentPosts as $post)                       
-                                <div  class="list-group-item list-group-item-action flex-column p-0 pt-3 pb-3">
-                                    <a href="/blog/{{$post['url']}}">
-                                        <div class="col pr-2 w-100">
-                                            <img src="http://127.0.0.1:8080/storage/post/{{$post['imagen_miniatura']}}" alt="{{$post['titulo']}}" class="img-fluid float-left miniatura" loading="lazy">
-                                        </div>
-                                    </a>
+                            @foreach ($recentPosts as $post)
+                                <div class="row no-gutters mb-4">
+                                    <div  class="col-auto">
+                                        <a href="/blog/{{$post['url']}}">
+                                            <img src="https://blog.gotoperu.com.mx/storage/post/{{$post['imagen_miniatura']}}" alt="{{$post['titulo']}}" class="img-fluid float-left miniatura" loading="lazy">
+                                        </a>
+                                    </div>
                                     <div class="col pl-2">
                                         <a href="/blog/{{$post['url']}}">
-                                            <h6 class="mb-1 text-g-green font-weight-bold">{{$post['titulo']}}</h6>
+                                            <h6 class="mb-1 small text-g-dark-light font-weight-bold">{{$post['titulo']}}</h6>
                                         </a>
                                         <small class="text-primary"><i class="fa fa-calendar pr-2"></i>{{date('d/m/Y', strtotime($post['updated_at']))}}</small>
                                     </div>
                                 </div>
-                                
+
                             @endforeach
                         </div>
                     </div>
                 </div>
-                <hr class="hr-warning">
-                <div class="row">
-                    <div class="col">
-                        <p class="h4 pb-3 text-g-yellow font-weight-bold">Síguenos en</p>
-                        <div class="row pl-3">
-                            <div class="col">
-                                <a class="btn"  href="https://www.facebook.com/GOTOPERUcom/" role="button">
-                                    <i class="fab fa-facebook-f fa-2x"></i>
-                                </a>
-                                <a class="btn" href="https://twitter.com/GOTOPERUCOM" role="button">
-                                    <i class="fab fa-twitter fa-2x"></i>
-                                </a>
-                                <a class="btn"  href="https://www.youtube.com/channel/UCWjJ10j-_BfNTDnmjBug8Ng" role="button">
-                                    <i class="fab fa-youtube fa-2x"></i>
-                                </a>
-                                <a class="btn" href="https://www.instagram.com/go.to.peru/" role="button">
-                                    <i class="fab fa-instagram fa-2x"></i>
-                                </a>
-                            </div>
-                        </div>
+                <hr class="mb-4">
+                <div class="row justify-content-center">
+                    <div class="col-auto text-center mb-2">
+                        <a href="https://www.facebook.com/GOTOPERUcom/" target="_blank" class="mx-2">
+                            <i data-feather="facebook" class="text-g-dark" stroke-width="1"></i>
+                        </a>
+                        <a href="https://twitter.com/GOTOPERUCOM" target="_blank" class="mx-2">
+                            <i data-feather="twitter" class="text-g-dark" stroke-width="1"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCWjJ10j-_BfNTDnmjBug8Ng" target="_blank" class="mx-2">
+                            <i data-feather="youtube" class="text-g-dark" stroke-width="1"></i>
+                        </a>
+                        <a href="https://www.instagram.com/go.to.peru/" target="_blank" class="mx-2">
+                            <i data-feather="instagram" class="text-g-dark" stroke-width="1"></i>
+                        </a>
                     </div>
                 </div>
-                <hr class="hr-warning">
+                <hr class="mb-4">
             </div>
         </div>
     </div>

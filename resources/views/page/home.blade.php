@@ -198,7 +198,7 @@
         </div>
     </section>
 
-    <section class="py-5 bg-white">
+    <section class="py-5">
         <div class="container">
             <div class="row py-4">
                 <div class="col text-center">
@@ -327,7 +327,7 @@
         </div>
     </section>
 
-    <section class="my-5">
+    <section class="py-5 bg-white">
         <div class="container">
             <div class="row pb-4">
                 <div class="col text-center">
@@ -420,7 +420,7 @@
         </div>
     </section>
 
-    <section class="my-5 py-5 bg-white">
+    <section class="py-5">
         <div class="container">
             <div class="row pb-4">
                 <div class="col text-center">
@@ -453,8 +453,8 @@
             </div>
         </div>
     </section>
-    
-    <section >
+
+    <section class="py-5 bg-white">
         <div class="container">
                 <div class="row pb-4">
                     <div class="col text-center">
@@ -462,23 +462,24 @@
                         <p class="lead font-weight-bold text-muted">Entérate de las últimas noticias e información de Cusco y Perú</p>
                     </div>
                 </div>
-            <div class="row blog">
+            <div class="row blog card-deck">
                 @foreach ($posts as $post)
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-4 d-flex">
                         <div class="card">
+                            <div class="card-img-top">
                             <a class="img-card" href="/blog/{{$post['url']}}">
                                 <div  id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <ol class="carousel-indicators">
                                         @foreach ($post['imagenes'] as $photo)
                                             <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}"></li>
                                         @endforeach
-                                    </ol>                              
+                                    </ol>
                                     <div class="carousel-inner" role="listbox">
                                         @foreach ($post['imagenes'] as $photo)
                                             <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                                                <img class="d-block img-fluid" src="http://127.0.0.1:8080/storage/post/{{$photo['nombre']}}" alt="{{$post['titulo']}}">                                           
-                                                <div class="tag bg-success text-center text-white">
-                                                    <p class="m-2">{{$post['categoria']['nombre']}}</p>
+                                                <img class="d-block img-fluid" src="https://blog.gotoperu.com.mx/storage/post/{{$photo['nombre']}}" alt="{{$post['titulo']}}">
+                                                <div class="tag bg-rgba-dark-3 text-center text-white">
+                                                    <p class="m-2 font-weight-bold">{{$post['categoria']['nombre']}}</p>
                                                 </div>
                                             </div>
                                         @endforeach
@@ -491,14 +492,15 @@
                                         <span><i class="carousel-control-next-icon fa-3x" aria-hidden="true"></i></span>
                                         <span class="sr-only">Siguiente</span>
                                     </a>
-                                </div>    
+                                </div>
                             </a>
-                            <div class="p-3">
-                                <h4 class="card-title">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">
                                     <a href="/blog/{{$post['url']}}" class="text-g-yellow">
                                         {{$post['titulo']}}
                                     </a>
-                                </h4>
+                                </h5>
                                 <div class="row text-secondary small">
                                     <div class="col">
                                         <i class="fa fa-user pr-2 text-primary"></i>{{$post['user']['name']}}
@@ -507,14 +509,16 @@
                                         <i class="fa fa-calendar pr-2 text-primary"></i>{{date('d/m/Y', strtotime($post['updated_at']))}}
                                     </div>
                                 </div>
-                                <div class="text-justify pt-3">
-                                    {!!Str::limit($post['detalle'], 150,$end='...')!!}
-                                </div>
+{{--                                <div class="text-justify pt-3">--}}
+{{--                                    {!!Str::limit($post['detalle'], 150,$end='...')!!}--}}
+{{--                                </div>--}}
                             </div>
-                            <div class="card-read-more text-center">
-                                <a class="btn btn-outline-g-green font-weight-bold btn-sm m-2" href="/blog/{{$post['url']}}">
-                                    Leer mas
-                                </a>
+                            <div class="card-footer">
+
+                                    <a class="btn btn-outline-g-green font-weight-bold btn-sm m-2" href="/blog/{{$post['url']}}">
+                                        Leer más
+                                    </a>
+
                             </div>
                         </div>
                     </div>
@@ -527,7 +531,7 @@
             </div>
         </div>
     </section>
-    
+
 {{--    <section>--}}
 {{--        <div class="container">--}}
 {{--            <div class="row">--}}
