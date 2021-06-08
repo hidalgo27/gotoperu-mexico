@@ -52,20 +52,20 @@
                         </div>
                         <div class="col">
                             <ul class="accordion-social p-0 m-0">
-                                <li class="item">
-                                    <div class="social-links">
-                                        <a href=""> <img src="{{asset('images/icons/mx.svg')}}" alt="" width="40" class="w-"> </a>
-                                    </div>
-                                    <div class="social-info">
-                                        <a href="tel:+523341625836">+52 (33) 41625836</a>
-                                    </div>
-                                </li>
+{{--                                <li class="item">--}}
+{{--                                    <div class="social-links">--}}
+{{--                                        <a href=""> <img src="{{asset('images/icons/mx.svg')}}" alt="" width="40" class="w-"> </a>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="social-info">--}}
+{{--                                        <a href="tel:+523341625836">+52 (33) 41625836</a>--}}
+{{--                                    </div>--}}
+{{--                                </li>--}}
                                 <li class="item">
                                     <div class="social-links">
                                         <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="" width="40" class="w-"> </a>
                                     </div>
                                     <div class="social-info">
-                                        <a href="tel:5117059774">+51 (1) 7059774</a>
+                                        <a href="tel:51986223877">+51 986 223877</a>
                                     </div>
                                 </li>
                             </ul>
