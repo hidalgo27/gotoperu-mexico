@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -97,7 +97,7 @@
             <div class="row justify-content-end">
                 <div class="col-auto">
                     <div class="bg-dark rounded px-3 mx-3 shadow clearfix float-right">
-                        <a href="https://api.whatsapp.com/send?phone=51993806530" target="_blank" class="font-weight-bold text-white stretched-link">
+                        <a href="https://api.whatsapp.com/send?phone=51986223877" target="_blank" class="font-weight-bold text-white stretched-link">
                             Escríbenos por WhatsApp
                             <img src="{{asset('images/icons/whatsapp-i.png')}}" class="py-1" alt="logo whatsapp" width="50" data-toggle="tooltip" data-placement="top" title="Perú">
                         </a>
