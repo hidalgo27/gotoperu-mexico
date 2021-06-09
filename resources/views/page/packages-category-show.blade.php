@@ -7,7 +7,7 @@
         {{--                <source src="{{asset('media/Secuencia 06.mp4')}}" type="video/mp4">--}}
         {{--            </video>--}}
         <div class="homepage-video">
-            <img src="{{asset('images/packages/slider/AV500-1.jpg')}}" alt="">
+            <img src="{{asset('images/packages/slider/AV500-1.jpg')}}" alt="" loading="lazy">
 
         </div>
         <div class="container h-100">
@@ -16,7 +16,7 @@
                     <h1 class="font-weight-lighter h2 mt-5">PAQUETES DE VIAJE: {{mb_strtoupper($categorias->nombre)}}</h1>
                     <div>
                         <div class="tl-1"></div>
-                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
+                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100" loading="lazy"></div>
                         <div class="tl-3"></div>
                     </div>
                     {{--                    <div class="mt-4">--}}
@@ -62,7 +62,7 @@
                                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex mb-3">
                                     <div class="card w-100 shadow-sm">
                                         <div class="header-img-packages position-relative">
-                                            <a href="{{$category->paquete->url}}"><img class="card-img-top" src="{{$category->paquete->imagen}}" alt=""></a>
+                                            <a href="{{$category->paquete->url}}"><img class="card-img-top" src="{{$category->paquete->imagen}}" alt="" loading="lazy"></a>
                                             <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
                                                 <h5 class="text-white m-0">{{$category->paquete->titulo}}</h5>
 {{--                                                <small class="text-white">Cusco, Machu Picchu.</small>--}}
@@ -129,7 +129,7 @@
                     {{--                            <div class="col-6 d-flex my-3">--}}
                     {{--                                <div class="row">--}}
                     {{--                                    <div class="col-auto d-none d-sm-block">--}}
-                    {{--                                        <img src="" alt="hotel cusco" class=" rounded-circle" width="50" height="50">--}}
+                    {{--                                        <img src="" alt="hotel cusco" class=" rounded-circle" width="50" height="50" loading="lazy">--}}
                     {{--                                    </div>--}}
                     {{--                                    <div class="col">--}}
                     {{--                                        <a href="#" class="h5 align-middle">Cusco</a>--}}
@@ -186,7 +186,7 @@
 
                         <div>
                             <div class="tl-1"></div>
-                            <div class="tl-2"><img src="{{asset('images/logo-ave-grey.png')}}" alt="" class="w-100"></div>
+                            <div class="tl-2"><img src="{{asset('images/logo-ave-grey.png')}}" alt="" class="w-100" loading="lazy"></div>
                             <div class="tl-3"></div>
                         </div>
 
@@ -195,7 +195,7 @@
                                 <ul class="list-group list-group-flush">
                                     @foreach($all_category as $all_categorys)
                                     <a href="{{route('category_show_path', $all_categorys->url)}}" class="list-group-item font-weight-bold text-secondary">
-                                        <img src="{{$all_categorys->imagen}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{$all_categorys->nombre}}">
+                                        <img src="{{$all_categorys->imagen}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{$all_categorys->nombre}}" loading="lazy">
                                         <span class="pl-3">{{$all_categorys->nombre}}</span>
                                     </a>
                                     @endforeach
@@ -230,25 +230,25 @@
                         <div class="row mt-3 justify-content-around">
                             <div class="col-auto text-center">
                                 <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
+                                    <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima" loading="lazy">
                                     <small class="d-block font-weight-bold">Lima</small>
                                 </a>
                             </div>
                             <div class="col-auto text-center">
                                 <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/titicaca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
+                                    <img src="{{asset('images/destinations/titicaca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima" loading="lazy">
                                     <small class="d-block font-weight-bold">Cusco</small>
                                 </a>
                             </div>
                             <div class="col-auto text-center">
                                 <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
+                                    <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima" loading="lazy">
                                     <small class="d-block font-weight-bold">Cusco</small>
                                 </a>
                             </div>
                             <div class="col-auto text-center">
                                 <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
+                                    <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima" loading="lazy">
                                     <small class="d-block font-weight-bold">Machu picchu</small>
                                 </a>
                             </div>
@@ -267,9 +267,9 @@
                     <div class="swiper-container swiper-container-gallery position-relative">
                         <div class="swiper-wrapper">
                             <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}">
-                                <img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100">
+                                <img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100" loading="lazy">
                             </a>
-                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
+                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100" loading="lazy"></a>
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -285,7 +285,7 @@
                     <div class="swiper-container swiper-container-gallery">
                         <div class="swiper-wrapper">
 
-                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
+                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100" loading="lazy"></a>
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -326,7 +326,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
                 <div class="col-6 col-md-2">
-                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100" loading="lazy">
                 </div>
             </div>
             <div class="row justify-content-center">

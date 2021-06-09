@@ -11,10 +11,10 @@
                 <source  src="{{asset('media/video6.ogv')}}" type="video/ogg" />
             </video>
 
-            <img src="{{asset('images/logos/logo-expedia2.png')}}" alt="" class="header-expedia">
+            <img src="{{asset('images/logos/logo-expedia2.png')}}" alt="" class="header-expedia" loading="lazy">
         </div>
         <div class="position-absolute bottom-n-1">
-            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid">
+            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid" loading="lazy">
         </div>
 
         <div class="content-header">
@@ -180,7 +180,7 @@
                     <div class="row">
                         <div class="col-12 col-sm-7 d-none d-sm-block">
                             @foreach($paquete_iti as $paquete_i)
-                            <img src="{{asset('images/packages/'.$paquete_i->codigo.'.jpg')}}" alt="{{ucwords(strtolower($title))}}" class="img-fluid w-100 rounded">
+                            <img src="{{asset('images/packages/'.$paquete_i->codigo.'.jpg')}}" alt="{{ucwords(strtolower($title))}}" class="img-fluid w-100 rounded" loading="lazy">
                             @endforeach
                         </div>
                         <div class="col-12 col-sm">
@@ -212,7 +212,7 @@
                             <h5 class="my-2">Destinos:</h5>
                             @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
                                 {{--<p class="font-weight-bold text-secondary"><i class="fa fa-check"></i> {{ucwords(strtolower($paquete_destino->destinos->nombre))}}</p>--}}
-                                <a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($paquete_destino->destinos->nombre)))}}"><img src="{{asset('images/destinations/destinations/'.str_replace(' ','-', strtolower($paquete_destino->destinos->nombre)).'.jpg')}}" alt="" width="60" height="60" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($paquete_destino->destinos->nombre))}}"></a>
+                                <a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($paquete_destino->destinos->nombre)))}}"><img src="{{asset('images/destinations/destinations/'.str_replace(' ','-', strtolower($paquete_destino->destinos->nombre)).'.jpg')}}" alt="" width="60" height="60" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($paquete_destino->destinos->nombre))}}" loading="lazy"></a>
                             @endforeach
                         </div>
                     </div>

@@ -87,14 +87,14 @@
                     <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-5">
                         <div class="card">
                             <a class="venobox position-relative" data-gall="myGallery" href="{{$teams->imagen_portada}}">
-                                <img src="{{$teams->imagen_portada}}" alt="image alt" class="card-img-top">
+                                <img src="{{$teams->imagen_portada}}" alt="image alt" class="card-img-top" loading="lazy">
                                 <span class="position-absolute-top text-white">
                                     <i data-feather="image" stroke-width="1"></i>
                                 </span>
                             </a>
                             <div class="card-body text-center">
                                 <a class="venobox position-relative" href="{{$teams->imagen_perfil}}">
-                                    <img src="{{$teams->imagen_perfil}}" alt="image alt" class="avatar rounded-circle">
+                                    <img src="{{$teams->imagen_perfil}}" alt="image alt" class="avatar rounded-circle" loading="lazy">
                                     <span class="position-absolute-bottom text-white">
                                         <i data-feather="image" stroke-width="2"></i>
                                     </span>
@@ -131,7 +131,7 @@
                         </ul>
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="{{asset('images/gotoperu-banner-rgba.png')}}" alt="" class="w-100">
+                        <img src="{{asset('images/gotoperu-banner-rgba.png')}}" alt="" class="w-100" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -173,14 +173,14 @@
 
 
                 <div class="col-12 col-md">
-                    <img src="{{asset('images/about/about-l.jpg')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/about/about-l.jpg')}}" alt="" class="img-fluid" loading="lazy">
                 </div>
             </div>
             <div class="row w-100 no-gutters align-items-center bg-dark">
                 <div class="col text-white text-center">
                     <div class="row justify-content-center">
                         <div class="col-2 my-3">
-                            <img src="{{asset('images/logo-goto-b.png')}}" alt="" class="img-fluid">
+                            <img src="{{asset('images/logo-goto-b.png')}}" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <div class="col-12">
@@ -200,13 +200,13 @@
                 </div>
 
                 <div class="col-12 col-md-auto">
-                    <img src="{{asset('images/about/about-j.jpg')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/about/about-j.jpg')}}" alt="" class="img-fluid" loading="lazy">
                 </div>
             </div>
 
             <div class="row no-gutters">
                 <div class="col">
-                    <img src="{{asset('images/about/about-n.jpg')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/about/about-n.jpg')}}" alt="" class="img-fluid" loading="lazy">
                 </div>
             </div>
 
@@ -215,7 +215,7 @@
                 <div class="col text-white text-justify">
                     <div class="row justify-content-center">
                         <div class="col-3 mb-4">
-                            <img src="{{asset('images/logo-goto-b.png')}}" alt="" class="img-fluid">
+                            <img src="{{asset('images/logo-goto-b.png')}}" alt="" class="img-fluid" loading="lazy">
                         </div>
                     </div>
                     <div class="col">
@@ -227,7 +227,7 @@
             <div class="row my-4">
                 <div class="col-12 col-sm my-3">
                     <div class="card text-white">
-                        <img class="card-img-top" src="{{asset('images/about/about-o.jpg')}}" alt="Card image cap">
+                        <img class="card-img-top" src="{{asset('images/about/about-o.jpg')}}" alt="Card image cap" loading="lazy">
                         <div class="card-body text-center bg-dark">
                             <p class="card-text"><span class="h4">PAUL CATANO</span> <small class="d-block">Director & Fundador</small></p>
                         </div>
@@ -235,7 +235,7 @@
                 </div>
                 <div class="col-12 col-sm my-3">
                     <div class="card bg-light">
-                        <img class="card-img-top" src="{{asset('images/about/about-u.jpg')}}" alt="Card image cap">
+                        <img class="card-img-top" src="{{asset('images/about/about-u.jpg')}}" alt="Card image cap" loading="lazy">
                         <div class="card-body text-center">
                             <p class="card-text"><span class="h4">MARTIN CATANO</span> <small class="d-block">Director General</small></p>
                         </div>

@@ -11,10 +11,10 @@
                 <source  src="{{asset('media/video6.ogv')}}" type="video/ogg" />
             </video>
 
-            <img src="{{asset('images/logos/logo-expedia2.png')}}" alt="" class="header-expedia">
+            <img src="{{asset('images/logos/logo-expedia2.png')}}" alt="" class="header-expedia" loading="lazy">
         </div>
         <div class="position-absolute bottom-n-1">
-            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid">
+            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid" loading="lazy">
         </div>
 
         <div class="content-header">
@@ -61,7 +61,7 @@
                 <div class="col-12 col-sm">
                     <div class="row">
                         <div class="col-12 col-sm d-none d-sm-block">
-                            <img src="{{asset('images/machu-picchu.jpg')}}" alt="" class="img-fluid w-100 rounded">
+                            <img src="{{asset('images/machu-picchu.jpg')}}" alt="" class="img-fluid w-100 rounded" loading="lazy">
                         </div>
 
                     </div>

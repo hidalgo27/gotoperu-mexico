@@ -54,7 +54,7 @@
                             <ul class="accordion-social p-0 m-0">
 {{--                                <li class="item">--}}
 {{--                                    <div class="social-links">--}}
-{{--                                        <a href=""> <img src="{{asset('images/icons/mx.svg')}}" alt="" width="40" class="w-"> </a>--}}
+{{--                                        <a href=""> <img src="{{asset('images/icons/mx.svg')}}" alt="" width="40" class="w-" loading="lazy"> </a>--}}
 {{--                                    </div>--}}
 {{--                                    <div class="social-info">--}}
 {{--                                        <a href="tel:+523341625836">+52 (33) 41625836</a>--}}
@@ -62,7 +62,7 @@
 {{--                                </li>--}}
                                 <li class="item">
                                     <div class="social-links">
-                                        <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="" width="40" class="w-"> </a>
+                                        <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="" width="40" class="w-" loading="lazy"> </a>
                                     </div>
                                     <div class="social-info">
                                         <a href="tel:51986223877">+51 986 223877</a>
@@ -77,12 +77,12 @@
 {{--                    </div>--}}
                 </div>
                 <div class="col-auto mx-auto">
-                    <a href="{{route('home_path')}}"><img src="{{asset('images/logo-gotoperu-white.png')}}" width="250" alt="logo andesviagens" class="img-fluid"></a>
+                    <a href="{{route('home_path')}}"><img src="{{asset('images/logo-gotoperu-white.png')}}" width="250" alt="logo andesviagens" class="img-fluid" loading="lazy"></a>
                 </div>
                 <div class="col-4 d-none d-sm-inline text-right">
                     <a href="#consulte" class="btn btn-inquire float-right ml-3 font-weight-bold px-4 text-white rounded-0">COTIZAR VIAJE</a>
-{{--                    <img src="{{asset('images/icons/mx.svg')}}" alt="" width="30" class="w-"> +52 (33) 41625836 |--}}
-{{--                    <img src="{{asset('images/icons/mx.svg')}}" alt="" width="30" class="w-"> +52 (33) 41625836--}}
+{{--                    <img src="{{asset('images/icons/mx.svg')}}" alt="" width="30" class="w-" loading="lazy"> +52 (33) 41625836 |--}}
+{{--                    <img src="{{asset('images/icons/mx.svg')}}" alt="" width="30" class="w-" loading="lazy"> +52 (33) 41625836--}}
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
                     <div class="bg-dark rounded px-3 mx-3 shadow clearfix float-right">
                         <a href="https://api.whatsapp.com/send?phone=51986223877" target="_blank" class="font-weight-bold text-white stretched-link">
                             Escríbenos por WhatsApp
-                            <img src="{{asset('images/icons/whatsapp-i.png')}}" class="py-1" alt="logo whatsapp" width="50" data-toggle="tooltip" data-placement="top" title="Perú">
+                            <img src="{{asset('images/icons/whatsapp-i.png')}}" class="py-1" alt="logo whatsapp" width="50" data-toggle="tooltip" data-placement="top" title="Perú" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
 
 
     <footer class="position-relative">
-        <img src="{{asset('images/footer.jpg')}}" alt="" class="w-100">
+        <img src="{{asset('images/footer.jpg')}}" alt="" class="w-100" loading="lazy">
         <div class="bg-g-dark footer-info">
             <div class="container">
                 <div class="row">
@@ -150,7 +150,7 @@
                 </div>
                 <div class="text-center my-5">
                     <div class="tl-1"></div>
-                    <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
+                    <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100" loading="lazy"></div>
                     <div class="tl-3"></div>
                 </div>
                 <div class="row mb-4 text-center">

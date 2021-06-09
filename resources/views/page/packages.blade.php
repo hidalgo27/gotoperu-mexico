@@ -6,7 +6,7 @@
         {{--                <source src="{{asset('media/Secuencia 06.mp4')}}" type="video/mp4">--}}
         {{--            </video>--}}
         <div class="homepage-video">
-            <img src="{{asset('images/packages/slider/AV612-1.jpg')}}" alt="">
+            <img src="{{asset('images/packages/slider/AV612-1.jpg')}}" alt="" loading="lazy">
         </div>
         <div class="container h-100">
             <div class="row d-flex h-100 text-center align-items-center">
@@ -14,7 +14,7 @@
                     <h1 class="font-weight-lighter h2 mt-5">PAQUETES DE VIAJE A PERÚ</h1>
                     <div>
                         <div class="tl-1"></div>
-                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
+                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100" loading="lazy"></div>
                         <div class="tl-3"></div>
                     </div>
                     {{--                    <div class="mt-4">--}}
@@ -53,7 +53,7 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex mb-3">
                     <div class="card w-100 shadow-sm">
                         <div class="header-img-packages position-relative">
-                            <a href="'package/'+paquete_p.titulo"><img class="card-img-top" src="{{asset('images/packages/AV400.jpg')}}" alt=""></a>
+                            <a href="'package/'+paquete_p.titulo"><img class="card-img-top" src="{{asset('images/packages/AV400.jpg')}}" alt="" loading="lazy"></a>
                             <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
 
                                 <h5 class="text-white m-0">Cuso Clasico</h5>
@@ -77,7 +77,7 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex mb-3">
                     <div class="card w-100 shadow-sm">
                         <div class="header-img-packages position-relative">
-                            <a href="'package/'+paquete_p.titulo"><img class="card-img-top" src="{{asset('images/packages/AV400.jpg')}}" alt=""></a>
+                            <a href="'package/'+paquete_p.titulo"><img class="card-img-top" src="{{asset('images/packages/AV400.jpg')}}" alt="" loading="lazy"></a>
                             <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
 
                                 <h5 class="text-white m-0">Cuso Clasico</h5>
@@ -101,7 +101,7 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex mb-3">
                     <div class="card w-100 shadow-sm">
                         <div class="header-img-packages position-relative">
-                            <a href="'package/'+paquete_p.titulo"><img class="card-img-top" src="{{asset('images/packages/AV400.jpg')}}" alt=""></a>
+                            <a href="'package/'+paquete_p.titulo"><img class="card-img-top" src="{{asset('images/packages/AV400.jpg')}}" alt="" loading="lazy"></a>
                             <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
 
                                 <h5 class="text-white m-0">Cuso Clasico</h5>
@@ -125,7 +125,7 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 d-flex mb-3">
                     <div class="card w-100 shadow-sm">
                         <div class="header-img-packages position-relative">
-                            <a href="'package/'+paquete_p.titulo"><img class="card-img-top" src="{{asset('images/packages/AV400.jpg')}}" alt=""></a>
+                            <a href="'package/'+paquete_p.titulo"><img class="card-img-top" src="{{asset('images/packages/AV400.jpg')}}" alt="" loading="lazy"></a>
                             <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
 
                                 <h5 class="text-white m-0">Cuso Clasico</h5>
@@ -153,9 +153,9 @@
 {{--                            <div class="swiper-container swiper-container-gallery position-relative">--}}
 {{--                                <div class="swiper-wrapper">--}}
 {{--                                    <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}">--}}
-{{--                                        <img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100">--}}
+{{--                                        <img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100" loading="lazy">--}}
 {{--                                    </a>--}}
-{{--                                    <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>--}}
+{{--                                    <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100" loading="lazy"></a>--}}
 {{--                                </div>--}}
 {{--                                <!-- Add Pagination -->--}}
 {{--                                <div class="swiper-pagination"></div>--}}
@@ -206,9 +206,9 @@
 {{--                            <div class="swiper-container swiper-container-gallery position-relative">--}}
 {{--                                <div class="swiper-wrapper">--}}
 {{--                                    <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}">--}}
-{{--                                        <img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100">--}}
+{{--                                        <img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100" loading="lazy">--}}
 {{--                                    </a>--}}
-{{--                                    <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>--}}
+{{--                                    <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100" loading="lazy"></a>--}}
 {{--                                </div>--}}
 {{--                                <!-- Add Pagination -->--}}
 {{--                                <div class="swiper-pagination"></div>--}}
@@ -269,7 +269,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
                 <div class="col-6 col-md-2">
-                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100" loading="lazy">
                 </div>
             </div>
             <div class="row justify-content-center">

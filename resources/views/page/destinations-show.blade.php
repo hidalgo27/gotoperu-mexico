@@ -8,7 +8,7 @@
         {{--            </video>--}}
         <div class="homepage-video">
             @foreach($destinos->destino_imagen->take(1) as $imagen)
-            <img src="{{$imagen->nombre}}" alt="{{$destinos->nombre}}">
+            <img src="{{$imagen->nombre}}" alt="{{$destinos->nombre}}" loading="lazy">
             @endforeach
 
         </div>
@@ -18,7 +18,7 @@
                     <h1 class="font-weight-lighter h2 mt-5">DESTINOS EN {{strtoupper($destinos->nombre)}}</h1>
                     <div>
                         <div class="tl-1"></div>
-                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
+                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100" loading="lazy"></div>
                         <div class="tl-3"></div>
                     </div>
                     {{--                    <div class="mt-4">--}}
@@ -65,7 +65,7 @@
                                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex mb-3">
                                         <div class="card w-100 shadow-sm">
                                             <div class="header-img-packages position-relative">
-                                                <a href="{{route('detail_path', $paquetes->url)}}"><img class="card-img-top" src="{{$paquetes->imagen}}" alt=""></a>
+                                                <a href="{{route('detail_path', $paquetes->url)}}"><img class="card-img-top" src="{{$paquetes->imagen}}" alt="" loading="lazy"></a>
                                                 <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
                                                     <h5 class="text-white m-0">{{$paquetes->titulo}}</h5>
                                                     <small class="text-white">
@@ -223,7 +223,7 @@
 
                         <div>
                             <div class="tl-1"></div>
-                            <div class="tl-2"><img src="{{asset('images/logo-ave-grey.png')}}" alt="" class="w-100"></div>
+                            <div class="tl-2"><img src="{{asset('images/logo-ave-grey.png')}}" alt="" class="w-100" loading="lazy"></div>
                             <div class="tl-3"></div>
                         </div>
 
@@ -232,7 +232,7 @@
                                 <ul class="list-group list-group-flush">
                                     @foreach($destinos_all as $destinos_alls)
                                     <a href="{{$destinos_alls->url}}" class="list-group-item font-weight-bold text-secondary">
-                                        <img src="{{$destinos_alls->imagen}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{$destinos_alls->nombre}}">
+                                        <img src="{{$destinos_alls->imagen}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{$destinos_alls->nombre}}" loading="lazy">
                                         <span class="pl-3">{{$destinos_alls->nombre}}</span>
                                     </a>
                                     @endforeach
@@ -267,19 +267,19 @@
                         <div class="row mt-3 justify-content-around">
                             <div class="col-auto text-center">
                                 <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
+                                    <img src="{{asset('images/destinations/colca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima" loading="lazy">
                                     <small class="d-block font-weight-bold">Lima</small>
                                 </a>
                             </div>
                             <div class="col-auto text-center">
                                 <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/titicaca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
+                                    <img src="{{asset('images/destinations/titicaca.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima" loading="lazy">
                                     <small class="d-block font-weight-bold">Cusco</small>
                                 </a>
                             </div>
                             <div class="col-auto text-center">
                                 <a href="" class="text-dark">
-                                    <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima">
+                                    <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" width="50" height="50" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="lima" loading="lazy">
                                     <small class="d-block font-weight-bold">Cusco</small>
                                 </a>
                             </div>
@@ -304,9 +304,9 @@
                     <div class="swiper-container swiper-container-gallery position-relative">
                         <div class="swiper-wrapper">
                             <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/15681356773571.2.jpg')}}">
-                                <img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100">
+                                <img src="{{asset('images/itinerary/15681356773571.2.jpg')}}" class="w-100" loading="lazy">
                             </a>
-                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
+                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100" loading="lazy"></a>
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -322,7 +322,7 @@
                     <div class="swiper-container swiper-container-gallery">
                         <div class="swiper-wrapper">
 
-                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100"></a>
+                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{asset('images/itinerary/1571243284484Humantay lake.png')}}"><img src="{{asset('images/itinerary/1571243284484Humantay lake.png')}}" class="w-100" loading="lazy"></a>
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -363,7 +363,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
                 <div class="col-6 col-md-2">
-                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100" loading="lazy">
                 </div>
             </div>
             <div class="row justify-content-center">

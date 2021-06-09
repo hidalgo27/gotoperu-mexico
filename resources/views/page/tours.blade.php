@@ -3,10 +3,10 @@
     <header class="header-video-default position-relative">
         @include('layouts.page.menu')
         <div id="overlay" class="overlay-img">
-            <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" id="hero-vid">
+            <img src="{{asset('images/destinations/machu-picchu.jpg')}}" alt="" id="hero-vid" loading="lazy">
         </div>
         <div class="position-absolute bottom-n-1">
-            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid">
+            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid" loading="lazy">
         </div>
 
         <div class="content-header">

@@ -3,10 +3,10 @@
     <header class="header-video-default position-relative">
         @include('layouts.page.menu')
         <div id="overlay" class="overlay-img">
-            <img src="{{asset('images/destinations/puno.jpg')}}" alt="" id="hero-vid">
+            <img src="{{asset('images/destinations/puno.jpg')}}" alt="" id="hero-vid" loading="lazy">
         </div>
         <div class="position-absolute bottom-n-1">
-            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid">
+            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid" loading="lazy">
         </div>
 
         <div class="content-header">
@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="col-12 mt-3 mb-5 sticky-top text-center bg-white">
                     @foreach($destinos->where('estado', 1)->sortBy('nombre') as $destino)
-                        <a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}"><img src="{{asset('images/destinations/destinations/'.str_replace(' ','-', strtolower($destino->nombre)).'.jpg')}}" alt="" width="60" height="60" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($destino->nombre))}}"></a>
+                        <a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}"><img src="{{asset('images/destinations/destinations/'.str_replace(' ','-', strtolower($destino->nombre)).'.jpg')}}" alt="" width="60" height="60" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($destino->nombre))}}" loading="lazy"></a>
                     @endforeach
                 </div>
 
@@ -73,7 +73,7 @@
                         {{--@foreach($destinos->where('region', 'sur')->sortBy('nombre')->take(4) as $destino)--}}
                             {{--<a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}" class="list-group-item list-group-item-action">--}}
                                 {{--<div class="media">--}}
-                                    {{--<img src="{{asset('images/destinations/destinations/'.str_replace(' ','-', strtolower($destino->nombre)).'')}}.jpg" alt="" width="60" height="60" class="rounded-circle align-self-center mr-3" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($destino->nombre))}}">--}}
+                                    {{--<img src="{{asset('images/destinations/destinations/'.str_replace(' ','-', strtolower($destino->nombre)).'')}}.jpg" alt="" width="60" height="60" class="rounded-circle align-self-center mr-3" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($destino->nombre))}}" loading="lazy">--}}
                                     {{--<div class="media-body">--}}
                                         {{--<h5 class="mt-0">{{ucwords(strtolower($destino->nombre))}}</h5>--}}
                                         {{--<p class="text-success">Región {{ucwords(strtolower($destino->region))}} del Perú</p>--}}
@@ -87,7 +87,7 @@
                         {{--@foreach($destinos->where('region', 'centro')->sortBy('nombre')->take(4) as $destino)--}}
                             {{--<a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}" class="list-group-item list-group-item-action">--}}
                                 {{--<div class="media">--}}
-                                    {{--<img src="{{asset('images/destinations/destinations/'.str_replace(' ','-', strtolower($destino->nombre)).'')}}.jpg" alt="" width="60" height="60" class="rounded-circle align-self-center mr-3" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($destino->nombre))}}">--}}
+                                    {{--<img src="{{asset('images/destinations/destinations/'.str_replace(' ','-', strtolower($destino->nombre)).'')}}.jpg" alt="" width="60" height="60" class="rounded-circle align-self-center mr-3" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($destino->nombre))}}" loading="lazy">--}}
                                     {{--<div class="media-body">--}}
                                         {{--<h5 class="mt-0">{{ucwords(strtolower($destino->nombre))}}</h5>--}}
                                         {{--<p class="text-danger">Región {{ucwords(strtolower($destino->region))}} del Perú</p>--}}
@@ -101,7 +101,7 @@
                         {{--@foreach($destinos->where('region', 'norte')->sortBy('nombre')->take(4) as $destino)--}}
                             {{--<a href="{{route('destinations_show_path', str_replace(' ', '-', strtolower($destino->nombre)))}}" class="list-group-item list-group-item-action">--}}
                                 {{--<div class="media">--}}
-                                    {{--<img src="{{asset('images/destinations/destinations/'.str_replace(' ','-', strtolower($destino->nombre)).'')}}.jpg" alt="" width="60" height="60" class="rounded-circle align-self-center mr-3" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($destino->nombre))}}">--}}
+                                    {{--<img src="{{asset('images/destinations/destinations/'.str_replace(' ','-', strtolower($destino->nombre)).'')}}.jpg" alt="" width="60" height="60" class="rounded-circle align-self-center mr-3" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($destino->nombre))}}" loading="lazy">--}}
                                     {{--<div class="media-body">--}}
                                         {{--<h5 class="mt-0">{{ucwords(strtolower($destino->nombre))}}</h5>--}}
                                         {{--<p class="text-info">Región {{ucwords(strtolower($destino->region))}} del Perú</p>--}}
