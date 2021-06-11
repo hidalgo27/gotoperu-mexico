@@ -159,7 +159,7 @@
                             <h3 class="title">Daniel</h3>
                             <span class="post">Travel Advisor</span>
                             <ul class="social">
-                                <li><a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=cUWsovwPDpY"><i class="fas fa-play"></i></a></li>
+                                <li><a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/HFJyuC_euRk"><i class="fas fa-play"></i></a></li>
                             </ul>
                         </div>
                     </div>

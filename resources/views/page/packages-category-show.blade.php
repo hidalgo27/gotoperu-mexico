@@ -62,7 +62,7 @@
                                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex mb-3">
                                     <div class="card w-100 shadow-sm">
                                         <div class="header-img-packages position-relative">
-                                            <a href="{{$category->paquete->url}}"><img class="card-img-top" src="{{$category->paquete->imagen}}" alt="" loading="lazy"></a>
+                                            <a href="/paquetes/{{$category->paquete->url}}"><img class="card-img-top" src="{{$category->paquete->imagen}}" alt=""></a>
                                             <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
                                                 <h5 class="text-white m-0">{{$category->paquete->titulo}}</h5>
 {{--                                                <small class="text-white">Cusco, Machu Picchu.</small>--}}
