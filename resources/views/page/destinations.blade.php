@@ -6,7 +6,7 @@
         {{--                <source src="{{asset('media/Secuencia 06.mp4')}}" type="video/mp4">--}}
         {{--            </video>--}}
         <div class="homepage-video">
-            <img src="{{asset('images/packages/slider/AV1000-2.jpg')}}" alt="">
+            <img src="{{asset('images/packages/slider/AV1000-2.jpg')}}" alt="" loading="lazy">
 
         </div>
         <div class="container h-100">
@@ -15,7 +15,7 @@
                     <h1 class="font-weight-lighter h2 mt-5">LOS MEJORES DESTINOS EN PERÚ</h1>
                     <div>
                         <div class="tl-1"></div>
-                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
+                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100" loading="lazy"></div>
                         <div class="tl-3"></div>
                     </div>
 {{--                    <div class="mt-4">--}}
@@ -87,7 +87,7 @@
                     <div class="swiper-container swiper-container-gallery">
                         <div class="swiper-wrapper">
                             @foreach($destinos->destino_imagen as $imagen_destinos)
-                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen_destinos->nombre}}"><img src="{{$imagen_destinos->nombre}}" class="w-100"></a>
+                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen_destinos->nombre}}"><img src="{{$imagen_destinos->nombre}}" class="w-100" loading="lazy"></a>
                             @endforeach
                         </div>
                         <!-- Add Pagination -->
@@ -114,7 +114,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
                 <div class="col-6 col-md-2">
-                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100" loading="lazy">
                 </div>
             </div>
             <div class="row justify-content-center">

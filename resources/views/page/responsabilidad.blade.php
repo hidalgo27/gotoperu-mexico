@@ -7,7 +7,7 @@
         {{--                <source src="{{asset('media/Secuencia 06.mp4')}}" type="video/mp4">--}}
         {{--            </video>--}}
         <div class="homepage-video">
-            <img src="{{asset('images/social.jpg')}}" alt="">
+            <img src="{{asset('images/social.jpg')}}" alt="" loading="lazy">
 
         </div>
         <div class="container h-100">
@@ -16,7 +16,7 @@
                     <h1 class="font-weight-lighter h2 mt-5">RESPONSABILIDAD SOCIAL</h1>
                     <div>
                         <div class="tl-1"></div>
-                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
+                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100" loading="lazy"></div>
                         <div class="tl-3"></div>
                     </div>
                     {{--                    <div class="mt-4">--}}
@@ -73,22 +73,22 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="{{asset('images/social/care2.jpg')}}" alt="" class="w-100 rounded">
+                    <img src="{{asset('images/social/care2.jpg')}}" alt="" class="w-100 rounded" loading="lazy">
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col">
-                    <img src="{{asset('images/social/care1.jpg')}}" alt="" class="w-100 rounded">
+                    <img src="{{asset('images/social/care1.jpg')}}" alt="" class="w-100 rounded" loading="lazy">
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col">
-                    <img src="{{asset('images/social/care3.jpg')}}" alt="" class="w-100 rounded">
+                    <img src="{{asset('images/social/care3.jpg')}}" alt="" class="w-100 rounded" loading="lazy">
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col">
-                    <img src="{{asset('images/social/care4.jpg')}}" alt="" class="w-100 rounded">
+                    <img src="{{asset('images/social/care4.jpg')}}" alt="" class="w-100 rounded" loading="lazy">
                 </div>
             </div>
         </div>

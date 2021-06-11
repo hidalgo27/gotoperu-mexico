@@ -6,7 +6,7 @@
         {{--                <source src="{{asset('media/Secuencia 06.mp4')}}" type="video/mp4">--}}
         {{--            </video>--}}
         <div class="homepage-video">
-            <img src="{{asset('images/packages/slider/AV612-1.jpg')}}" alt="">
+            <img src="{{asset('images/packages/slider/AV612-1.jpg')}}" alt="" loading="lazy">
         </div>
         <div class="container h-100">
             <div class="row d-flex h-100 text-center align-items-center">
@@ -14,7 +14,7 @@
                     <h1 class="font-weight-lighter h2 mt-5">PAQUETES DE VIAJE A PERÚ</h1>
                     <div>
                         <div class="tl-1"></div>
-                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
+                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100" loading="lazy"></div>
                         <div class="tl-3"></div>
                     </div>
                     {{--                    <div class="mt-4">--}}
@@ -49,7 +49,6 @@
                 </div>
             </div>
             <search-package-page></search-package-page>
-
         </div>
     </section>
 
@@ -57,7 +56,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
                 <div class="col-6 col-md-2">
-                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100" loading="lazy">
                 </div>
             </div>
             <div class="row justify-content-center">

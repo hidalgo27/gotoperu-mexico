@@ -15,7 +15,7 @@
                 <h1 class="font-weight-lighter h2 mt-5">BLOG DETALLES</h1>
                 <div>
                     <div class="tl-1"></div>
-                    <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
+                    <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100" loading="lazy"></div>
                     <div class="tl-3"></div>
                 </div>
 {{--                    <div class="mt-4">--}}

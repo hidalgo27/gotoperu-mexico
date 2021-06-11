@@ -4,10 +4,10 @@
     <header class="header-video-default position-relative">
         @include('layouts.page.menu')
         <div id="overlay" class="overlay-img">
-            <img src="{{asset('images/social.jpg')}}" alt="" id="hero-vid">
+            <img src="{{asset('images/social.jpg')}}" alt="" id="hero-vid" loading="lazy">
         </div>
         <div class="position-absolute bottom-n-1">
-            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid">
+            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid" loading="lazy">
         </div>
 
         <div class="content-header">
@@ -68,22 +68,22 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <img src="{{asset('images/social/care2.jpg')}}" alt="" class="w-100 rounded">
+                    <img src="{{asset('images/social/care2.jpg')}}" alt="" class="w-100 rounded" loading="lazy">
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col">
-                    <img src="{{asset('images/social/care1.jpg')}}" alt="" class="w-100 rounded">
+                    <img src="{{asset('images/social/care1.jpg')}}" alt="" class="w-100 rounded" loading="lazy">
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col">
-                    <img src="{{asset('images/social/care3.jpg')}}" alt="" class="w-100 rounded">
+                    <img src="{{asset('images/social/care3.jpg')}}" alt="" class="w-100 rounded" loading="lazy">
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col">
-                    <img src="{{asset('images/social/care4.jpg')}}" alt="" class="w-100 rounded">
+                    <img src="{{asset('images/social/care4.jpg')}}" alt="" class="w-100 rounded" loading="lazy">
                 </div>
             </div>
         </div>

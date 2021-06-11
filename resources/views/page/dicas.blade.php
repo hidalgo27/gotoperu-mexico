@@ -3,10 +3,10 @@
     <header class="header-video-default position-relative">
         @include('layouts.page.menu')
         <div id="overlay" class="overlay-img">
-            <img src="{{asset('images/faq.jpg')}}" alt="" id="hero-vid">
+            <img src="{{asset('images/faq.jpg')}}" alt="" id="hero-vid" loading="lazy">
         </div>
         <div class="position-absolute bottom-n-1">
-            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid">
+            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid" loading="lazy">
         </div>
 
         <div class="content-header">
@@ -65,12 +65,12 @@
                     <p>R: Fato é que não tem como fugir das escadas e das subidas. Então cuide-se principalmente nos 2 primeiros dias! Não abuse dos cigarros e nem das bebidas alcoólicas. Não exagere na alimentação e faça tudo devagar mesmo</p>
                 </div>
                 <div class="col-4 d-none d-sm-inline">
-                    <img src="{{asset('images/icons/faq/1-icon.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/icons/faq/1-icon.png')}}" alt="" class="img-fluid" loading="lazy">
                 </div>
             </div>
             <div class="row my-4">
                 <div class="col-4 d-none d-sm-inline">
-                    <img src="{{asset('images/icons/faq/2-icon.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/icons/faq/2-icon.png')}}" alt="" class="img-fluid" loading="lazy">
                 </div>
                 <div class="col">
                     <span   class="display-1 font-montserrat text-info">2</span>
@@ -86,12 +86,12 @@
                     <p>Segurança. O melhor e mais seguro, é ainda no Brasil, antes de viajar já estar combinado com um translado do Aeroporto ou da rodoviária para seu Hotel. Ao trocar dinheiro, seja discreto, evite que as pessoas na rua saibam onde você o guardou.Não descuide de sua carteira ou bolsa, principalmente em mercados e estação de trem. Não economize em pegar táxis (que são bem mais baratos que no Brasil).</p>
                 </div>
                 <div class="col-4 d-none d-sm-inline">
-                    <img src="{{asset('images/icons/faq/3-icon.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/icons/faq/3-icon.png')}}" alt="" class="img-fluid" loading="lazy">
                 </div>
             </div>
             <div class="row my-4">
                 <div class="col-4 d-none d-sm-inline">
-                    <img src="{{asset('images/icons/faq/4-icon.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/icons/faq/4-icon.png')}}" alt="" class="img-fluid" loading="lazy">
                 </div>
                 <div class="col">
                     <span   class="display-1 font-montserrat text-info">4</span>
@@ -107,12 +107,12 @@
                     <p>Provavelmente terá vontade de ir para muitas, mas o importante na hora de dedicir é saber o foco: história, cultura, gastronomia, festas; facilitando na definição do seu roteiro. Vale a pena que por onde passe, seja sem pressa, para curtir cada detalhe. E com certeza o país merece mais de uma visita.</p>
                 </div>
                 <div class="col-4 d-none d-sm-inline">
-                    <img src="{{asset('images/icons/faq/5-icon.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/icons/faq/5-icon.png')}}" alt="" class="img-fluid" loading="lazy">
                 </div>
             </div>
             <div class="row my-4">
                 <div class="col-4 d-none d-sm-inline">
-                    <img src="{{asset('images/icons/faq/6-icon.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/icons/faq/6-icon.png')}}" alt="" class="img-fluid" loading="lazy">
                 </div>
                 <div class="col">
                     <span   class="display-1 font-montserrat text-info">6</span>
@@ -128,12 +128,12 @@
                     <p>A cada ano, milhares de viajeiros chegam a este enigmático lugar através de diversos meios, como por exemplo por trem ou caminhadas. Partindo de Cusco (a antiga capital inca), em alguns casos atravessando os picos das montanhas escarpadas e em outros casos o lindo vale e claro as ruínas de Ollantaytambo entre outros.</p>
                 </div>
                 <div class="col-4 d-none d-sm-inline">
-                    <img src="{{asset('images/icons/faq/7-icon.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/icons/faq/7-icon.png')}}" alt="" class="img-fluid" loading="lazy">
                 </div>
             </div>
             <div class="row my-4">
                 {{--<div class="col">--}}
-                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid">--}}
+                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid" loading="lazy">--}}
                 {{--</div>--}}
                 <div class="col">
                     <span   class="display-1 font-montserrat text-info">8</span>
@@ -181,12 +181,12 @@
                     </ul>
                 </div>
                 {{--<div class="col">--}}
-                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/Clientes/01-new-standard.jpg" alt="">--}}
+                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/Clientes/01-new-standard.jpg" alt="" loading="lazy">--}}
                 {{--</div>--}}
             </div>
             <div class="row my-4">
                 {{--<div class="col">--}}
-                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid">--}}
+                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid" loading="lazy">--}}
                 {{--</div>--}}
                 <div class="col">
                     <span   class="display-1 font-montserrat text-info">10</span>
@@ -209,12 +209,12 @@
                     <p>Para quem vai à Machu Picchu e volta no mesmo dia para Cusco, recomendamos levar uma pequena bolsa ou mochila com artigos necessários para o tour, como garrafas de água, biscoitos, protetor solar, óculos de sol, capa de chuva ou casacos impermeáveis .</p>
                 </div>
                 {{--<div class="col">--}}
-                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/Clientes/01-new-standard.jpg" alt="">--}}
+                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/Clientes/01-new-standard.jpg" alt="" loading="lazy">--}}
                 {{--</div>--}}
             </div>
             <div class="row my-4">
                 {{--<div class="col">--}}
-                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid">--}}
+                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid" loading="lazy">--}}
                 {{--</div>--}}
                 <div class="col">
                     <span   class="display-1 font-montserrat text-info">12</span>
@@ -246,12 +246,12 @@
                     <p>O Governo Peruano e o Ministério da Cultura são os organismos encarregados da regulamentação do ingresso a Machu Picchu. Todas as agências de viagens estão sujeitas a estes regulamentos e disposições estabelecidas por esses orgãos.</p>
                 </div>
                 {{--<div class="col">--}}
-                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/Clientes/01-new-standard.jpg" alt="">--}}
+                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/Clientes/01-new-standard.jpg" alt="" loading="lazy">--}}
                 {{--</div>--}}
             </div>
             <div class="row my-4">
                 {{--<div class="col">--}}
-                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid">--}}
+                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid" loading="lazy">--}}
                 {{--</div>--}}
                 <div class="col">
                     <span   class="display-1 font-montserrat text-info">14</span>
@@ -266,12 +266,12 @@
                     <p>A visita de Machu Picchu e Huayna Picchu debe-se fazer no mesmo dia, devendo considerar os horários de trem e os dias que permanecerá em Águas Calientes antes de realizar a compra. O ingresso a Huayna Picchu do primeiro grupo é às 7:00 / 08:00 hrs e do segundo grupo às 10:00/11:00 hrs. Lembre-se que o ingresso a Huayna Picchu se encontra dentro da mesma cidade.</p>
                 </div>
                 {{--<div class="col">--}}
-                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/Clientes/01-new-standard.jpg" alt="">--}}
+                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/Clientes/01-new-standard.jpg" alt="" loading="lazy">--}}
                 {{--</div>--}}
             </div>
             <div class="row my-4">
                 {{--<div class="col">--}}
-                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid">--}}
+                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid" loading="lazy">--}}
                 {{--</div>--}}
                 <div class="col">
                     <span   class="display-1 font-montserrat text-info">16</span>
@@ -286,12 +286,12 @@
                     <p>Sim, é indispensável levar os documentos com os quais foi feita a reserva, tanto para trens como para a entrada a Machu Picchu. Se não está com os documentos não poderá ingressar a Machu Picchu.</p>
                 </div>
                 {{--<div class="col">--}}
-                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/Clientes/01-new-standard.jpg" alt="">--}}
+                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/Clientes/01-new-standard.jpg" alt="" loading="lazy">--}}
                 {{--</div>--}}
             </div>
             <div class="row my-4">
                 {{--<div class="col">--}}
-                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid">--}}
+                {{--<img src="http://www.travelcompositor.com/wp-content/uploads/2016/05/02-experience-1024x682.jpg" alt="" class="img-fluid" loading="lazy">--}}
                 {{--</div>--}}
                 <div class="col">
                     <span   class="display-1 font-montserrat text-info">18</span>

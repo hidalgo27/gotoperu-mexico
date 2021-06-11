@@ -3,10 +3,10 @@
     <header class="header-video-default position-relative">
         @include('layouts.page.menu')
         <div id="overlay" class="overlay-img">
-            <img src="{{asset('images/hotels.jpg')}}" alt="" id="hero-vid">
+            <img src="{{asset('images/hotels.jpg')}}" alt="" id="hero-vid" loading="lazy">
         </div>
         <div class="position-absolute bottom-n-1">
-            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid">
+            <img src="{{asset('images/pce.png')}}" alt="" class="img-fluid" loading="lazy">
         </div>
 
         <div class="content-header">
@@ -38,7 +38,7 @@
             {{--@foreach($hoteles as $hotel)--}}
                 {{--<div class="row pb-5">--}}
                     {{--<div class="col-12 col-md-3">--}}
-                        {{--<img src="{{$hotel->imagen}}" alt="" class="w-100 rounded">--}}
+                        {{--<img src="{{$hotel->imagen}}" alt="" class="w-100 rounded" loading="lazy">--}}
                     {{--</div>--}}
                     {{--<div class="col">--}}
                         {{--<h3>{{$hotel->nombre}}</h3>--}}
@@ -81,7 +81,7 @@
                             <div class="col-4 d-flex my-2">
                                 <div class="row">
                                     <div class="col-auto d-none d-sm-block">
-                                    <img src="{{$hoteles_destino->hotel->imagen}}" alt="" class=" rounded-circle" width="50" height="50">
+                                    <img src="{{$hoteles_destino->hotel->imagen}}" alt="" class=" rounded-circle" width="50" height="50" loading="lazy">
                                     </div>
                                     <div class="col">
                                         <a href="{{$hoteles_destino->hotel->url}}" class="text-secondary align-middle"><i class="fas fa-h-square"></i> {{ucwords(strtolower($hoteles_destino->hotel->nombre))}}</a>

@@ -87,14 +87,14 @@
                     <div class="col-12 col-sm-8 col-md-6 col-lg-4 mb-5">
                         <div class="card">
                             <a class="venobox position-relative" data-gall="myGallery" href="{{$teams->imagen_portada}}">
-                                <img src="{{$teams->imagen_portada}}" alt="image alt" class="card-img-top">
+                                <img src="{{$teams->imagen_portada}}" alt="image alt" class="card-img-top" loading="lazy">
                                 <span class="position-absolute-top text-white">
                                     <i data-feather="image" stroke-width="1"></i>
                                 </span>
                             </a>
                             <div class="card-body text-center">
                                 <a class="venobox position-relative" href="{{$teams->imagen_perfil}}">
-                                    <img src="{{$teams->imagen_perfil}}" alt="image alt" class="avatar rounded-circle">
+                                    <img src="{{$teams->imagen_perfil}}" alt="image alt" class="avatar rounded-circle" loading="lazy">
                                     <span class="position-absolute-bottom text-white">
                                         <i data-feather="image" stroke-width="2"></i>
                                     </span>
@@ -131,7 +131,7 @@
                         </ul>
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="{{asset('images/gotoperu-banner-rgba.png')}}" alt="" class="w-100">
+                        <img src="{{asset('images/gotoperu-banner-rgba.png')}}" alt="" class="w-100" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -154,4 +154,5 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
+
 @stop

@@ -8,7 +8,7 @@
             {{--            </video>--}}
             <div class="homepage-video">
                 @foreach($paquetes->imagen_paquetes->take(1) as $imagen)
-                    <img src="{{$imagen->nombre}}" alt="{{$paquetes->titulo}}">
+                    <img src="{{$imagen->nombre}}" alt="{{$paquetes->titulo}}" loading="lazy">
                 @endforeach
 
             </div>
@@ -18,7 +18,7 @@
                         <h1 class="font-weight-lighter h2 mt-5">{{$paquetes->titulo}}</h1>
                         <div>
                             <div class="tl-1"></div>
-                            <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100"></div>
+                            <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100" loading="lazy"></div>
                             <div class="tl-3"></div>
                         </div>
                         <div class="mt-4">
@@ -112,7 +112,7 @@
                             <div class="mt-5 bg-white p-3 text-center rounded shadow-sm">
                                 <div class="row align-items-center no-gutters">
                                     <div class="col-3">
-                                        <img src="{{asset('images/icons/whatsapp-i.png')}}" alt="" class="w-100">
+                                        <img src="{{asset('images/icons/whatsapp-i.png')}}" alt="" class="w-100" loading="lazy">
                                     </div>
                                     <div class="col">
                                         <h6 class="font-weight-bold text-secondary">Consulte ahora por Whatsapp</h6>
@@ -134,7 +134,7 @@
             </div>
 {{--            <div class="text-center py-5 bg-white">--}}
 {{--                <div class="tl-1"></div>--}}
-{{--                <div class="tl-2"><img src="{{asset('images/logo-ave-grey.png')}}" alt="" class="w-100"></div>--}}
+{{--                <div class="tl-2"><img src="{{asset('images/logo-ave-grey.png')}}" alt="" class="w-100" loading="lazy"></div>--}}
 {{--                <div class="tl-3"></div>--}}
 {{--            </div>--}}
             <div id="incluye">
@@ -146,18 +146,18 @@
                                     <h2>{{$paquetes->titulo}}</h2>
                                 </div>
 {{--                                <div class="col-4 text-center">--}}
-{{--                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/beach-category.png" class="attachment-full size-full" alt="o" />--}}
+{{--                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/beach-category.png" class="attachment-full size-full" alt="o" loading="lazy"/>--}}
 {{--                                    <h4>Tours</h4>--}}
 {{--                                    <p class="mkdf-pcli-count">4 destinations</p>--}}
 {{--                                </div>--}}
 {{--                                <div class="col-4 text-center">--}}
-{{--                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/dog-category.png" class="attachment-full size-full" alt="o" />--}}
+{{--                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/dog-category.png" class="attachment-full size-full" alt="o" loading="lazy" />--}}
 {{--                                    <h4>Beaches</h4>--}}
 {{--                                    <p class="mkdf-pcli-count">4 destinations</p>--}}
 {{--                                </div>--}}
 
 {{--                                <div class="col-4 text-center">--}}
-{{--                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/restorant-category.png" class="attachment-full size-full" alt="o" />--}}
+{{--                                    <img width="110" height="75" src="https://backpacktraveler.mikado-themes.com/wp-content/uploads/2018/09/restorant-category.png" class="attachment-full size-full" alt="o" loading="lazy"/>--}}
 {{--                                    <h4>Restaurants</h4>--}}
 {{--                                    <p class="mkdf-pcli-count">4 destinations</p>--}}
 {{--                                </div>--}}
@@ -169,7 +169,7 @@
 
 {{--            <div class="text-center py-5 bg-white">--}}
 {{--                <div class="tl-1"></div>--}}
-{{--                <div class="tl-2"><img src="{{asset('images/logo-ave-grey.png')}}" alt="" class="w-100"></div>--}}
+{{--                <div class="tl-2"><img src="{{asset('images/logo-ave-grey.png')}}" alt="" class="w-100" loading="lazy"></div>--}}
 {{--                <div class="tl-3"></div>--}}
 {{--            </div>--}}
 
@@ -184,7 +184,7 @@
                                     <div class="swiper-container swiper-container-gallery">
                                         <div class="swiper-wrapper">
                                             @foreach($itinerario->itinerarios->itinerario_imagen as $imagen)
-                                                <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen->nombre}}"><img src="{{$imagen->nombre}}" class="w-100"></a>
+                                                <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen->nombre}}"><img src="{{$imagen->nombre}}" class="w-100" loading="lazy"></a>
                                             @endforeach
                                         </div>
                                         <!-- Add Pagination -->
@@ -251,7 +251,7 @@
                                     <div class="swiper-container swiper-container-gallery">
                                         <div class="swiper-wrapper">
                                             @foreach($itinerario->itinerarios->itinerario_imagen as $imagen)
-                                                <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen->nombre}}"><img src="{{$imagen->nombre}}" class="w-100"></a>
+                                                <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen->nombre}}"><img src="{{$imagen->nombre}}" class="w-100" loading="lazy"></a>
                                             @endforeach
                                         </div>
                                         <!-- Add Pagination -->
@@ -288,7 +288,7 @@
                                     <div class="swiper-container swiper-container-gallery">
                                         <div class="swiper-wrapper">
                                             @foreach($itinerario->itinerarios->itinerario_imagen as $imagen)
-                                                <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen->nombre}}"><img src="{{$imagen->nombre}}" class="w-100"></a>
+                                                <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen->nombre}}"><img src="{{$imagen->nombre}}" class="w-100" loading="lazy"></a>
                                             @endforeach
                                         </div>
                                         <!-- Add Pagination -->
@@ -313,7 +313,7 @@
                                     @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
                                         <div class="col-auto text-center">
                                             <a href="{{route('destination_show_path', $paquete_destino->destinos->url)}}" class="text-dark">
-                                                <img src="{{$paquete_destino->destinos->imagen}}" alt="" width="80" height="80" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($paquete_destino->destinos->nombre))}}">
+                                                <img src="{{$paquete_destino->destinos->imagen}}" alt="" width="80" height="80" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{ucwords(strtolower($paquete_destino->destinos->nombre))}}" loading="lazy">
                                                 <small class="d-block font-weight-bold">{{ucwords(strtolower($paquete_destino->destinos->nombre))}}</small>
                                             </a>
                                         </div>
@@ -381,7 +381,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-center my-4">
                     <div class="col-6 col-md-2">
-                        <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
+                        <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100" loading="lazy">
                     </div>
                 </div>
                 <div class="row justify-content-center">

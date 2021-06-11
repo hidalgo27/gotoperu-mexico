@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row align-items-center">
                 {{--                    <div class="col d-none d-md-inline">--}}
-                {{--                        <img src="{{asset('images/about.jpg')}}" alt="" class="w-100 rounded img-lazy">--}}
+                {{--                        <img src="{{asset('images/about.jpg')}}" alt="" class="w-100 rounded img-lazy" loading="lazy">--}}
                 {{--                    </div>--}}
                 <div class="col text-center">
                     <h1 class="font-weight-bold display-4 text-g-yellow">Paquetes de <strong class="text-g-green">viajes en Perú</strong></h1>
@@ -55,9 +55,9 @@
 {{--                    <div class="row align-items-center">--}}
 {{--                        <div class="col-12 text-center">--}}
 {{--                            <h6 class="text-secondary">--}}
-{{--                                <img src="{{asset('images/logo-andes-bc.png')}}" alt="" width="120">--}}
+{{--                                <img src="{{asset('images/logo-andes-bc.png')}}" alt="" width="120" loading="lazy">--}}
 {{--                                <span class="mt-1">é a divisão de</span>--}}
-{{--                                <img src="{{asset('images/logo-gotoperu.png')}}" alt="" width="100">--}}
+{{--                                <img src="{{asset('images/logo-gotoperu.png')}}" alt="" width="100" loading="lazy">--}}
 {{--                            </h6>--}}
 
 {{--                        </div>--}}
@@ -126,7 +126,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="{{asset('images/team/franklin.jpg')}}">
+                        <img src="{{asset('images/team/franklin.jpg')}}" loading="lazy">
                         <div class="box-content">
                             <h3 class="title">Franklin</h3>
                             <span class="post">Guia Senior</span>
@@ -138,7 +138,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="{{asset('images/team/katy.jpg')}}">
+                        <img src="{{asset('images/team/katy.jpg')}}" loading="lazy">
                         <div class="box-content">
                             <h3 class="title">Katy</h3>
                             <span class="post">Guia</span>
@@ -150,7 +150,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="{{asset('images/team/da.jpg')}}">
+                        <img src="{{asset('images/team/da.jpg')}}" loading="lazy">
                         <div class="box-content">
                             <h3 class="title">Daniel</h3>
                             <span class="post">Travel Advisor</span>
@@ -191,7 +191,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="{{asset('images/gotoperu-banner-rgba.png')}}" alt="" class="w-100">
+                        <img src="{{asset('images/gotoperu-banner-rgba.png')}}" alt="" class="w-100" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -209,7 +209,7 @@
                 <div class="col-12 mb-4 mb-md-0 col-md">
                     <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/iWqyeyUVruE">
                         <div class="position-relative">
-                            <img src="{{asset('images/video-testimonial/1.jpg')}}" alt="" class="w-100">
+                            <img src="{{asset('images/video-testimonial/1.jpg')}}" alt="" class="w-100" loading="lazy">
                             <div class="position-absolute-bottom text-white p-3 icon-play">
                                 <i class="fas fa-play fa-2x"></i>
                             </div>
@@ -219,7 +219,7 @@
                 <div class="col-12 mb-4 mb-md-0 col-md">
                     <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/tbET_aKa0Zg">
                         <div class="position-relative">
-                            <img src="{{asset('images/video-testimonial/2.jpg')}}" alt="" class="w-100">
+                            <img src="{{asset('images/video-testimonial/2.jpg')}}" alt="" class="w-100" loading="lazy">
                             <div class="position-absolute-bottom text-white p-3 icon-play">
                                 <i class="fas fa-play fa-2x"></i>
                             </div>
@@ -229,7 +229,7 @@
                 <div class="col-12 mb-4 mb-md-0 col-md">
                     <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/NSA_ij7rxuI">
                         <div class="position-relative">
-                            <img src="{{asset('images/video-testimonial/3.jpg')}}" alt="" class="w-100">
+                            <img src="{{asset('images/video-testimonial/3.jpg')}}" alt="" class="w-100" loading="lazy">
                             <div class="position-absolute-bottom text-white p-3 icon-play">
                                 <i class="fas fa-play fa-2x"></i>
                             </div>
@@ -248,7 +248,7 @@
                     <div class="row justify-content-center">
                         <div class="col-6">
                             <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d15202262-Reviews-Gotoperu-Cusco_Cusco_Region.html" target="_blank">
-                                <img src="{{asset('images/icons/tripadvisor.png')}}" alt="" class="w-100">
+                                <img src="{{asset('images/icons/tripadvisor.png')}}" alt="" class="w-100" loading="lazy">
                             </a>
                         </div>
                     </div>
@@ -269,7 +269,7 @@
                     <div class="row justify-content-center">
                         <div class="col-6">
                             <a href="https://www.yelp.com/biz/gotoperu-washington?osq=gotoperu.com" target="_blank">
-                                <img src="{{asset('images/icons/yelp.png')}}" alt="" class="w-100">
+                                <img src="{{asset('images/icons/yelp.png')}}" alt="" class="w-100" loading="lazy">
                             </a>
                         </div>
                     </div>
@@ -290,7 +290,7 @@
                     <div class="row justify-content-center">
                         <div class="col-6">
                             <a href="https://www.trustpilot.com/review/gotoperu.com" target="_blank">
-                                <img src="{{asset('images/icons/trust.png')}}" alt="" class="w-100">
+                                <img src="{{asset('images/icons/trust.png')}}" alt="" class="w-100" loading="lazy">
                             </a>
                         </div>
                     </div>
@@ -338,7 +338,7 @@
                 @foreach($categoria as $categorias)
                     <div class="col-12 col-md-4">
                         <div class="transperent_block">
-                            <img src="{{$categorias->imagen}}" class="img-responsive" alt="">
+                            <img src="{{$categorias->imagen}}" class="img-responsive" alt="" loading="lazy">
                             <div class="black_hover_block">
                                 <div class="blur"></div>
                                 <div class="black_hover_block_text">
@@ -356,7 +356,7 @@
                 @endforeach
 {{--                <div class="col">--}}
 {{--                    <div class="transperent_block">--}}
-{{--                        <img src="{{asset('images/category/family.jpg')}}" class="img-responsive" alt="">--}}
+{{--                        <img src="{{asset('images/category/family.jpg')}}" class="img-responsive" alt="" loading="lazy">--}}
 {{--                        <div class="black_hover_block">--}}
 {{--                            <div class="blur"></div>--}}
 {{--                            <div class="black_hover_block_text">--}}
@@ -373,7 +373,7 @@
 {{--                </div>--}}
 {{--                <div class="col">--}}
 {{--                    <div class="transperent_block ">--}}
-{{--                        <img src="{{asset('images/category/recommended.jpg')}}" class="img-responsive" alt="">--}}
+{{--                        <img src="{{asset('images/category/recommended.jpg')}}" class="img-responsive" alt="" loading="lazy">--}}
 {{--                        <div class="black_hover_block">--}}
 {{--                            <div class="blur"></div>--}}
 {{--                            <div class="black_hover_block_text">--}}
@@ -390,7 +390,7 @@
 {{--                </div>--}}
 {{--                <div class="col">--}}
 {{--                    <div class="transperent_block">--}}
-{{--                        <img src="{{asset('images/category/cultural.jpg')}}" class="img-responsive" alt="">--}}
+{{--                        <img src="{{asset('images/category/cultural.jpg')}}" class="img-responsive" alt="" loading="lazy">--}}
 {{--                        <div class="black_hover_block">--}}
 {{--                            <div class="blur"></div>--}}
 {{--                            <div class="black_hover_block_text">--}}
@@ -433,7 +433,7 @@
                     <div class="home-banner-destinations">
                         <figure class="cc-imagewrapper">
                             <a href="{{route('destination_show_path', $destinos->url)}}" class="text-center">
-                                <img src="{{$destinos->imagen}}" alt="" class="w-100">
+                                <img src="{{$destinos->imagen}}" alt="" class="w-100" loading="lazy">
                             </a>
                             <figcaption>
                                 <small class="d-block">{{$destinos->pais}}</small>
@@ -477,7 +477,7 @@
                                     <div class="carousel-inner" role="listbox">
                                         @foreach ($post['imagenes'] as $photo)
                                             <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                                                <img class="d-block img-fluid" src="https://blog.gotoperu.com.mx/storage/post/{{$photo['nombre']}}" alt="{{$post['titulo']}}">
+                                                <img class="d-block img-fluid" src="https://blog.gotoperu.com.mx/storage/post/{{$photo['nombre']}}" alt="{{$post['titulo']}}" loading="lazy">
                                                 <div class="tag bg-rgba-dark-3 text-center text-white">
                                                     <p class="m-2 font-weight-bold">{{$post['categoria']['nombre']}}</p>
                                                 </div>
@@ -551,7 +551,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-6 col-md-2">
-                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100" loading="lazy">
                 </div>
             </div>
             <div class="row justify-content-center">
