@@ -1,4 +1,8 @@
 @extends('layouts.page.app')
+@section('title')
+    <title>Blog</title>
+    <meta name="description" content=""/>
+@endsection
 @section('content')
 <header class="header-detail">
     <div class="overlay"></div>

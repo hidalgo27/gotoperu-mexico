@@ -1,4 +1,8 @@
 @extends('layouts.page.app')
+@section('title')
+    <title></title>
+    <meta name="description" content=""/>
+@endsection
 @section('content')
     @foreach($destino as $destinos)
     <header class="header-detail">

@@ -1,4 +1,7 @@
 @extends('layouts.page.app')
+@section('metas')
+    <title>Peru</title>
+@endsection
 @section('content')
     <header class="header-detail">
         <div class="overlay"></div>

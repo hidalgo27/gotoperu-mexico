@@ -1,4 +1,8 @@
 @extends('layouts.page.app')
+@section('title')
+    <title>{{$post[0]['titulo']}}</title>
+    <meta name="description" content=""/>
+@endsection
 @section('content')
 <header class="header-detail">
     <div class="overlay"></div>
