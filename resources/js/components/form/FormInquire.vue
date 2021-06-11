@@ -253,7 +253,7 @@
                         nombre: 'Economico', estrellas: '2', value: '1'
                     },
                     {
-                        nombre: 'Turismo', estrellas: '3', value: '2'
+                        nombre: 'Turista', estrellas: '3', value: '2'
                     },
                     {
                         nombre: 'Superior', estrellas: '4', value: '3'
