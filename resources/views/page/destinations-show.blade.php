@@ -378,7 +378,10 @@
 @endsection
 
 @push('scripts')
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf1RN8KKGNdS-iEarIgXpaqa-khw7EmZI&callback=initMap"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf1RN8KKGNdS-iEarIgXpaqa-khw7EmZI&callback=initMap">
+    </script>
+    
     <script>
         var swiper = new Swiper('.swiper-container-gallery', {
             spaceBetween: 30,
