@@ -8,7 +8,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Title y meta descripcion-->
     @yield('title')
-	
     <link href="{{asset('icons/favicon.ico')}}" rel="icon" type="image/x-icon">
     <!-- Styles -->
     <link href="{{ asset('css/block.css') }}" rel="stylesheet">

@@ -1,6 +1,7 @@
 @extends('layouts.page.app')
-@section('metas')
-    <title>Peru</title>
+@section('title')
+    <title></title>
+    <meta name="description" content=""/>
 @endsection
 @section('content')
     <header class="header-detail">

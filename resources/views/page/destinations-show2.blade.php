@@ -1,8 +1,4 @@
 @extends('layouts.page.default')
-@section('title')
-    <title></title>
-    <meta name="description" content=""/>
-@endsection
 @section('content')
     <header class="header-video-default position-relative">
         @include('layouts.page.menu')

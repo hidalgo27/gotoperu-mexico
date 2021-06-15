@@ -540,7 +540,7 @@ class HomepageController extends Controller
         $recentPosts=$this->consulta_posts_recientes($client);
         //
         $a=collect($posts);
-        $data = $this->paginate($a);
+        $data = $this->paginate($a)->setPath(request()->url());;
         return view('page.blog',compact('posts','categorias','recentPosts','data'));
     }
     public function blog_detail($url){
