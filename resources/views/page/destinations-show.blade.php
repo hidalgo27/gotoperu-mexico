@@ -200,7 +200,7 @@
 
                         <div class="row pt-4" id="maps">
                             <div class="col-12">
-                                <h3 class="font-weight-bold text-g-green">Maps</h3>
+                                <h3 class="font-weight-bold text-g-green">Ubicación</h3>
                                 <div class="line-subtitle"></div>
                             </div>
                             <div class="col-12">
