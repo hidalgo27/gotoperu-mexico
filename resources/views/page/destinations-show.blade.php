@@ -148,15 +148,15 @@
                         </div>
                     </div>
 
-                    <div class="row pt-4" id="geografia">
-                        <div class="col-12">
-                            <h3 class="font-weight-bold text-g-green">Geografia</h3>
-                            <div class="line-subtitle"></div>
-                        </div>
-                        <div class="col-12">
-                            {!! $destinos->geografia !!}
-                        </div>
-                    </div>
+{{--                    <div class="row pt-4" id="geografia">--}}
+{{--                        <div class="col-12">--}}
+{{--                            <h3 class="font-weight-bold text-g-green">Geografia</h3>--}}
+{{--                            <div class="line-subtitle"></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-12">--}}
+{{--                            {!! $destinos->geografia !!}--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
                     <div class="row pt-4" id="atracciones">
                         <div class="col-12">
@@ -272,7 +272,7 @@
                                 <a class="nav-link active text-capitalize" href="#tours">Cusco Tours</a>
                                 <a class="nav-link" href="#historia">Historia de {{$destinos->nombre}}</a>
                                 <a class="nav-link" href="#como_llegar">Como Llegar a {{$destinos->nombre}}</a>
-                                <a class="nav-link" href="#geografia">Geografía</a>
+{{--                                <a class="nav-link" href="#geografia">Geografía</a>--}}
                                 <a class="nav-link" href="#atracciones">Lugares para Conocer en {{$destinos->nombre}}</a>
                                 <a class="nav-link" href="#entretenimiento">Entretenimiento en la ciudad de {{$destinos->nombre}}</a>
                                 <a class="nav-link" href="#gastronomia">Gastronomía en {{$destinos->nombre}}</a>
