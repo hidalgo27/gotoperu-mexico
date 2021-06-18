@@ -1,6 +1,6 @@
 @extends('layouts.page.app')
 @section('title')
-    <title></title>
+    <title>Destinos</title>
     <meta name="description" content=""/>
 @endsection
 @section('content')
@@ -78,7 +78,7 @@
                         {{--                        </div>--}}
                         <h4>{{$destinos->nombre}}</h4>
                         <div class="line-subtitle"></div>
-                        {!! $destinos->descripcion !!}
+                        {!! $destinos->resumen !!}
                         <div class="row mt-4">
                             <div class="col">
                                 <button type="button" class="btn btn-link p-0 text-secondary d-none d-md-inline float-left font-weight-lighter">SABER MÁS SOBRE {{mb_strtoupper($destinos->nombre)}}</button>

@@ -1,6 +1,6 @@
 @extends('layouts.page.app')
 @section('title')
-    <title></title>
+    <title>Paquetes de viaje</title>
     <meta name="description" content=""/>
 @endsection
 @section('content')

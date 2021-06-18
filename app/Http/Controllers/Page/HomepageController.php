@@ -436,11 +436,10 @@ class HomepageController extends Controller
 
 
     public function detail($url){
-
         $paquete = TPaquete::where('url', $url)->get();
         $dificultad = TPaqueteDificultad::all();
         $paquete_destinos = TPaqueteDestino::with('destinos')->get();
-        return view('page.detail', compact('paquete', 'dificultad', 'paquete_destinos'));
+        return view('page.detail', compact('paquete', 'dificultad', 'paquete_destinos','url'));
 
     }
 

@@ -1,7 +1,7 @@
 @extends('layouts.page.app')
 @section('title')
-    <title></title>
-    <meta name="description" content=""/>
+    <title>{{$destino->first()->nombre}}</title>
+    <meta name="description" content="{{$destino->first()->resumen}}"/>
 @endsection
 @section('content')
     @foreach($destino as $destinos)
@@ -54,67 +54,135 @@
                     <div class="row" id="tours">
                         <div class="col-12 mb-4">
                             {{--<h3 class="text-g-yellow font-weight-bold">Tours</h3>--}}
-{{--                            <h1 class="text-secondary font-weight-bold">Cusco Tours</h1>--}}
-                            {{$destinos->resumen}}
+{{--                            <h1 class="text-secondary font-weight-bold">Cusco Tours</h1>--}}                        
                             <div class="alert alert-primary rounded-0 mt-4 text-center" role="alert">
                                 <h5 class="font-weight-normal">Operadores Locales en Perú: Los mejores guias de la región, encantadores hoteles, excursiones únicas, y amistosos representantes.
                                     #gotoperu #TuconexionconPeru</h5>
                             </div>
-                        </div>
-
-                        @foreach($paquetes_de as $paquetes_des)
-                            @if(isset($paquetes_des->destinos))
-                                @foreach($paquete->where('id',$paquetes_des->idpaquetes)->sortBy("duracion") as $paquetes)
-
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex mb-3">
-                                        <div class="card w-100 shadow-sm">
-                                            <div class="header-img-packages position-relative">
-                                                <a href="{{route('detail_path', $paquetes->url)}}"><img class="card-img-top" src="{{$paquetes->imagen}}" alt="" loading="lazy"></a>
-                                                <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
-                                                    <h5 class="text-white m-0">{{$paquetes->titulo}}</h5>
-                                                    <small class="text-white">
-                                                    @php
-                                                        $i = 1;
-                                                        $num_des = count($paquete_destinos->where('idpaquetes',$paquetes->id));
-                                                    @endphp
-                                                    @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
-                                                        {{ucwords(strtolower($paquete_destino->destinos->nombre))}}@if($i < $num_des),@else.@endif
-                                                        @php $i++; @endphp
-                                                    @endforeach
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <!--            <div class="card-body">-->
-
-                                            <!--                <span class="font-weight-normal text-secondary">-->
-                                            <!--                    <i class="fa fa-map-marker-alt"></i>-->
-
-                                            <!--                </span>-->
-                                            <!--            </div>-->
-                                            <div class="card-footer bg-white">
-                                                <div class="row align-items-center">
-                                                    <div class="col">
-                                                        <p class="font-weight-bold h5 m-0">{{$paquetes->duracion}} Días</p>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        @foreach($paquetes->precio_paquetes as $precio)
-                                                            @if($precio->estrellas == 2)
-                                                                @if($precio->precio_d > 0)
-                                                                    {{--                                                                <p class="text-info font-weight-bold m-0 h5"><small><sup>form $</sup></small>{{$precio->precio_d}}<small>USD</small></p>--}}
-                                                                    <p class="font-weight-bold text-primary h5 m-0"><sup class="small"><small>desde</small></sup> ${{$precio->precio_d}}<small>USD</small></p>
-                                                                @else
-                                                                    <span class="text-danger">Consulte</span>
-                                                                @endif
-                                                            @endif
+                            <div class="pt-4">
+                                <h3 class="text-g-green h4 font-weight-bold">Paquetes que incluyen a {{$destinos->nombre}}</h3>
+                                <div class="line-subtitle"></div>
+                                <div id="carouselExampleCaptions" class="carousel slide slider shadow rounded" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        @foreach($paquetes_de as $paquetes_des)
+                                            @if(isset($paquetes_des->destinos))
+                                                @if(($loop->index%2)==0)
+                                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex mb-3 mx-auto">
+                                                        @foreach($paquete->where('id',$paquetes_des->idpaquetes)->sortBy("duracion") as $paquetes)
+                                                            <div class="card w-100 shadow-sm">
+                                                                <div class="header-img-packages position-relative">
+                                                                    <a href="{{route('detail_path', $paquetes->url)}}"><img class="card-img-top" src="{{$paquetes->imagen}}" alt="" loading="lazy"></a>
+                                                                    <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
+                                                                        <h5 class="text-white m-0">{{$paquetes->titulo}}</h5>
+                                                                        <small class="text-white">
+                                                                        @php
+                                                                            $i = 1;
+                                                                            $num_des = count($paquete_destinos->where('idpaquetes',$paquetes->id));
+                                                                        @endphp
+                                                                        @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                                            {{ucwords(strtolower($paquete_destino->destinos->nombre))}}@if($i < $num_des),@else.@endif
+                                                                            @php $i++; @endphp
+                                                                        @endforeach
+                                                                        </small>
+                                                                    </div>
+                                                                </div>
+                                                                <!--            <div class="card-body">-->
+            
+                                                                <!--                <span class="font-weight-normal text-secondary">-->
+                                                                <!--                    <i class="fa fa-map-marker-alt"></i>-->
+            
+                                                                <!--                </span>-->
+                                                                <!--            </div>-->
+                                                                <div class="card-footer bg-white">
+                                                                    <div class="row align-items-center">
+                                                                        <div class="col">
+                                                                            <p class="font-weight-bold h5 m-0">{{$paquetes->duracion}} Días</p>
+                                                                        </div>
+                                                                        <div class="col-auto">
+                                                                            @foreach($paquetes->precio_paquetes as $precio)
+                                                                                @if($precio->estrellas == 2)
+                                                                                    @if($precio->precio_d > 0)
+                                                                                        {{--                                                                <p class="text-info font-weight-bold m-0 h5"><small><sup>form $</sup></small>{{$precio->precio_d}}<small>USD</small></p>--}}
+                                                                                        <p class="font-weight-bold text-primary h5 m-0"><sup class="small"><small>desde</small></sup> ${{$precio->precio_d}}<small>USD</small></p>
+                                                                                    @else
+                                                                                        <span class="text-danger">Consulte</span>
+                                                                                    @endif
+                                                                                @endif
+                                                                            @endforeach
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         @endforeach
                                                     </div>
+                                                    @if(!($loop->last))
+                                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex mb-3 mx-auto">
+                                                        @foreach($paquete->where('id',$paquetes_de[$loop->index+1]->idpaquetes)->sortBy("duracion") as $paquetes)
+                                                            <div class="card w-100 shadow-sm">
+                                                                <div class="header-img-packages position-relative">
+                                                                    <a href="{{route('detail_path', $paquetes->url)}}"><img class="card-img-top" src="{{$paquetes->imagen}}" alt="" loading="lazy"></a>
+                                                                    <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
+                                                                        <h5 class="text-white m-0">{{$paquetes->titulo}}</h5>
+                                                                        <small class="text-white">
+                                                                        @php
+                                                                            $i = 1;
+                                                                            $num_des = count($paquete_destinos->where('idpaquetes',$paquetes->id));
+                                                                        @endphp
+                                                                        @foreach($paquete_destinos->where('idpaquetes',$paquetes->id) as $paquete_destino)
+                                                                            {{ucwords(strtolower($paquete_destino->destinos->nombre))}}@if($i < $num_des),@else.@endif
+                                                                            @php $i++; @endphp
+                                                                        @endforeach
+                                                                        </small>
+                                                                    </div>
+                                                                </div>
+                                                                <!--            <div class="card-body">-->
+            
+                                                                <!--                <span class="font-weight-normal text-secondary">-->
+                                                                <!--                    <i class="fa fa-map-marker-alt"></i>-->
+            
+                                                                <!--                </span>-->
+                                                                <!--            </div>-->
+                                                                <div class="card-footer bg-white">
+                                                                    <div class="row align-items-center">
+                                                                        <div class="col">
+                                                                            <p class="font-weight-bold h5 m-0">{{$paquetes->duracion}} Días</p>
+                                                                        </div>
+                                                                        <div class="col-auto">
+                                                                            @foreach($paquetes->precio_paquetes as $precio)
+                                                                                @if($precio->estrellas == 2)
+                                                                                    @if($precio->precio_d > 0)
+                                                                                        {{--                                                                <p class="text-info font-weight-bold m-0 h5"><small><sup>form $</sup></small>{{$precio->precio_d}}<small>USD</small></p>--}}
+                                                                                        <p class="font-weight-bold text-primary h5 m-0"><sup class="small"><small>desde</small></sup> ${{$precio->precio_d}}<small>USD</small></p>
+                                                                                    @else
+                                                                                        <span class="text-danger">Consulte</span>
+                                                                                    @endif
+                                                                                @endif
+                                                                            @endforeach
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
+                                                    </div>
+                                                    @endif
                                                 </div>
-                                            </div>
-                                        </div>
+                                                @endif
+                                            @endif
+                                        @endforeach
                                     </div>
-                                @endforeach
-                            @endif
-                        @endforeach
+                                    <a class="carousel-control-prev" data-target="#carouselExampleCaptions" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Anterior</span>
+                                    </a>
+                                    <a class="carousel-control-next"  data-target="#carouselExampleCaptions" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Siguiente</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
 
 {{--                    <div class="row pt-4" id="location">--}}
@@ -142,22 +210,66 @@
 {{--                            </div>--}}
 {{--                        </div>--}}
 
-                        <div class="row pt-4" id="maps">
+                        <hr>
+                        <div class="row pt-4" id="informacion">
                             <div class="col-12">
-                                <h3 class="font-weight-bold">Maps</h3>
+                                <h3 class="font-weight-bold h4 text-g-green">Descripción</h3>
                                 <div class="line-subtitle"></div>
+                                {!!$destinos->descripcion!!}
                             </div>
                             <div class="col-12">
-
+                                <h3 class="font-weight-bold h4 text-g-green">Historia</h3>
+                                <div class="line-subtitle"></div>
+                                {!!$destinos->historia!!}
+                            </div>
+                            <div class="col-12">
+                                <h3 class="font-weight-bold h4 text-g-green">¿Cómo llegar?</h3>
+                                <div class="line-subtitle"></div>
+                                {!!$destinos->donde_ir!!}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row pt-4" id="atractivos">
+                            <div class="col-12">
+                                <h3 class="font-weight-bold h4 text-g-green">Atractivos turísticos</h3>
+                                <div class="line-subtitle"></div>
+                                {!!$destinos->atracciones!!}
+                            </div>
+                            <div class="col-12">
+                                <h3 class="font-weight-bold h4 text-g-green">Entretenimiento</h3>
+                                <div class="line-subtitle"></div>
+                                {!!$destinos->entretenimiento!!}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row pt-4" id="tradiciones">
+                            <div class="col-12">
+                                <h3 class="font-weight-bold h4 text-g-green">Festividades</h3>
+                                <div class="line-subtitle"></div>
+                                {!!$destinos->fiestas!!}
+                            </div>
+                            <div class="col-12">
+                                <h3 class="font-weight-bold h4 text-g-green">Gastronomía</h3>
+                                <div class="line-subtitle"></div>
+                                {!!$destinos->gastronomia!!}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row pt-4" id="geografia">
+                            <div class="col-12">
+                                <h3 class="font-weight-bold h4 text-g-green">Ubicación geográfica</h3>
+                                <div class="line-subtitle"></div>
                                 @foreach($ubicacion->results as $ubicacions)
                                     @foreach($ubicacions->geometry->location as  $ubicacion2)
                                         @php $ubicacion3[] = $ubicacion2; @endphp
                                     @endforeach
                                 @endforeach
-
-
                                 <div id="map"></div>
-
+                            </div>
+                            <div class="col-12">
+                                <h3 class="font-weight-bold h4 text-g-green">Clima</h3>
+                                <div class="line-subtitle"></div>
+                                <a class="weatherwidget-io" href="https://forecast7.com/en/n13d53n71d97/cusco/?unit=us" data-label_1="CUSCO" data-label_2="WEATHER" data-theme="original" >Cusco</a>
                             </div>
                         </div>
 
@@ -192,33 +304,21 @@
 
 {{--                    </div>--}}
 
-                    <div class="row pt-5" id="clima">
-
-                        <div class="col-12">
-                            <h3 class="font-weight-bold">Clima</h3>
-                            <div class="line-subtitle"></div>
-                        </div>
-                        <div class="col-12">
-                            <a class="weatherwidget-io" href="https://forecast7.com/en/n13d53n71d97/cusco/?unit=us" data-label_1="CUSCO" data-label_2="WEATHER" data-theme="original" >Cusco</a>
-                        </div>
-
-                    </div>
-
-                    <div class="row" id="photos">
-
-                    </div>
-
+                    <hr>
                 </div>
                 <div class="col-12 col-sm-5 col-md-4 col-xl-3 d-none d-sm-block">
                     <div class="sticky-top">
                         <nav id="navbar-scroll" class="navbar navbar-light nav-goto-side w-100">
                             <nav class="nav nav-pills flex-column w-100">
-                                <a class="nav-link active text-capitalize" href="#tours">Cusco Tours</a>
-                                <a class="nav-link" href="#maps">Localizacion</a>
+                                <a class="nav-link active text-capitalize" href="#tours">{{$destinos->nombre}} Tours</a>
+                                <a class="nav-link" href="#informacion">Información General</a>
+                                <a class="nav-link" href="#atractivos">Atractivos y aventuras turísticas</a>
+                                <a class="nav-link" href="#tradiciones">Tradiciones y costumbres</a>
+                                <a class="nav-link" href="#geografia">Geografía</a>
+                                <a class="nav-link" href="#fotos">Galería de fotos</a>
                                 {{--                                <a class="nav-link {{$h_resumen}}" href="#history">History</a>--}}
                                 {{--                                <a class="nav-link {{$h_resumen}}" href="#geography">Geography</a>--}}
 {{--                                <a class="nav-link" href="#hotels">Hoteles</a>--}}
-                                <a class="nav-link" href="#clima">Clima</a>
                                 {{--<a class="nav-link" href="#photos">Photos</a>--}}
                             </nav>
                         </nav>
