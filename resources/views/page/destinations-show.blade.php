@@ -130,7 +130,7 @@
 
                         <div class="row pt-4" id="historia">
                             <div class="col-12">
-                                <h3 class="font-weight-bold">Historia de {{$destinos->nombre}}</h3>
+                                <h3 class="font-weight-bold text-g-green">Historia de {{$destinos->nombre}}</h3>
                                 <div class="line-subtitle"></div>
                             </div>
                             <div class="col-12">
@@ -140,7 +140,7 @@
 
                     <div class="row pt-4" id="como_llegar">
                         <div class="col-12">
-                            <h3 class="font-weight-bold">Como Llegar a {{$destinos->nombre}}</h3>
+                            <h3 class="font-weight-bold text-g-green">Como Llegar a {{$destinos->nombre}}</h3>
                             <div class="line-subtitle"></div>
                         </div>
                         <div class="col-12">
@@ -150,7 +150,7 @@
 
                     <div class="row pt-4" id="geografia">
                         <div class="col-12">
-                            <h3 class="font-weight-bold">Geografia</h3>
+                            <h3 class="font-weight-bold text-g-green">Geografia</h3>
                             <div class="line-subtitle"></div>
                         </div>
                         <div class="col-12">
@@ -160,7 +160,7 @@
 
                     <div class="row pt-4" id="atracciones">
                         <div class="col-12">
-                            <h3 class="font-weight-bold">Lugares para Conocer en {{$destinos->nombre}}</h3>
+                            <h3 class="font-weight-bold text-g-green">Lugares para Conocer en {{$destinos->nombre}}</h3>
                             <div class="line-subtitle"></div>
                         </div>
                         <div class="col-12">
@@ -170,7 +170,7 @@
 
                     <div class="row pt-4" id="entretenimiento">
                         <div class="col-12">
-                            <h3 class="font-weight-bold">Entretenimiento en la ciudad de {{$destinos->nombre}}</h3>
+                            <h3 class="font-weight-bold text-g-green">Entretenimiento en la ciudad de {{$destinos->nombre}}</h3>
                             <div class="line-subtitle"></div>
                         </div>
                         <div class="col-12">
@@ -180,7 +180,7 @@
 
                     <div class="row pt-4" id="gastronomia">
                         <div class="col-12">
-                            <h3 class="font-weight-bold">Gastronomía en {{$destinos->nombre}}</h3>
+                            <h3 class="font-weight-bold text-g-green">Gastronomía en {{$destinos->nombre}}</h3>
                             <div class="line-subtitle"></div>
                         </div>
                         <div class="col-12">
@@ -190,7 +190,7 @@
 
                     <div class="row pt-4" id="festividades">
                         <div class="col-12">
-                            <h3 class="font-weight-bold">Festividades en {{$destinos->nombre}}</h3>
+                            <h3 class="font-weight-bold text-g-green">Festividades en {{$destinos->nombre}}</h3>
                             <div class="line-subtitle"></div>
                         </div>
                         <div class="col-12">
@@ -200,7 +200,7 @@
 
                         <div class="row pt-4" id="maps">
                             <div class="col-12">
-                                <h3 class="font-weight-bold">Maps</h3>
+                                <h3 class="font-weight-bold text-g-green">Maps</h3>
                                 <div class="line-subtitle"></div>
                             </div>
                             <div class="col-12">
@@ -220,7 +220,7 @@
 {{--                    <div class="row pt-5" id="hotels">--}}
 
 {{--                        <div class="col-12">--}}
-{{--                            <h3 class="font-weight-bold">Hoteles</h3>--}}
+{{--                            <h3 class="font-weight-bold text-g-green">Hoteles</h3>--}}
 {{--                            <div class="line-subtitle"></div>--}}
 {{--                        </div>--}}
 {{--                            <div class="col-6 d-flex my-3">--}}
@@ -251,7 +251,7 @@
                     <div class="row pt-5" id="clima">
 
                         <div class="col-12">
-                            <h3 class="font-weight-bold">Clima</h3>
+                            <h3 class="font-weight-bold text-g-green">Clima</h3>
                             <div class="line-subtitle"></div>
                         </div>
                         <div class="col-12">
