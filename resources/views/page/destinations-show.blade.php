@@ -51,7 +51,7 @@
                         <div class="col-12 mb-4">
                             {{--<h3 class="text-g-yellow font-weight-bold">Tours</h3>--}}
 {{--                            <h1 class="text-secondary font-weight-bold">Cusco Tours</h1>--}}
-                            {{$destinos->resumen}}
+                            {!! $destinos->descripcion !!}
                             <div class="alert alert-primary rounded-0 mt-4 text-center" role="alert">
                                 <h5 class="font-weight-normal">Operadores Locales en Perú: Los mejores guias de la región, encantadores hoteles, excursiones únicas, y amistosos representantes.
                                     #gotoperu #TuconexionconPeru</h5>
