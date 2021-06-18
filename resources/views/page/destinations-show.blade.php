@@ -128,15 +128,75 @@
 {{--                    </div>--}}
 
 
-{{--                        <div class="row pt-4" id="historia">--}}
-{{--                            <div class="col-12">--}}
-{{--                                <h3 class="font-weight-bold">Historia</h3>--}}
-{{--                                <div class="line-subtitle"></div>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-12">--}}
-{{--                                {!! $destinos->descripcion !!}--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        <div class="row pt-4" id="historia">
+                            <div class="col-12">
+                                <h3 class="font-weight-bold">Historia de {{$destinos->nombre}}</h3>
+                                <div class="line-subtitle"></div>
+                            </div>
+                            <div class="col-12">
+                                {!! $destinos->historia !!}
+                            </div>
+                        </div>
+
+                    <div class="row pt-4" id="como_llegar">
+                        <div class="col-12">
+                            <h3 class="font-weight-bold">Como Llegar a {{$destinos->nombre}}</h3>
+                            <div class="line-subtitle"></div>
+                        </div>
+                        <div class="col-12">
+                            {!! $destinos->donde_ir !!}
+                        </div>
+                    </div>
+
+                    <div class="row pt-4" id="geografia">
+                        <div class="col-12">
+                            <h3 class="font-weight-bold">Geografia</h3>
+                            <div class="line-subtitle"></div>
+                        </div>
+                        <div class="col-12">
+                            {!! $destinos->geografia !!}
+                        </div>
+                    </div>
+
+                    <div class="row pt-4" id="atracciones">
+                        <div class="col-12">
+                            <h3 class="font-weight-bold">Lugares para Conocer en {{$destinos->nombre}}</h3>
+                            <div class="line-subtitle"></div>
+                        </div>
+                        <div class="col-12">
+                            {!! $destinos->atracciones !!}
+                        </div>
+                    </div>
+
+                    <div class="row pt-4" id="entretenimiento">
+                        <div class="col-12">
+                            <h3 class="font-weight-bold">Entretenimiento en la ciudad de {{$destinos->nombre}}</h3>
+                            <div class="line-subtitle"></div>
+                        </div>
+                        <div class="col-12">
+                            {!! $destinos->entretenimiento !!}
+                        </div>
+                    </div>
+
+                    <div class="row pt-4" id="gastronomia">
+                        <div class="col-12">
+                            <h3 class="font-weight-bold">Gastronomía en {{$destinos->nombre}}</h3>
+                            <div class="line-subtitle"></div>
+                        </div>
+                        <div class="col-12">
+                            {!! $destinos->gastronomia !!}
+                        </div>
+                    </div>
+
+                    <div class="row pt-4" id="festividades">
+                        <div class="col-12">
+                            <h3 class="font-weight-bold">Festividades en {{$destinos->nombre}}</h3>
+                            <div class="line-subtitle"></div>
+                        </div>
+                        <div class="col-12">
+                            {!! $destinos->fiestas !!}
+                        </div>
+                    </div>
 
                         <div class="row pt-4" id="maps">
                             <div class="col-12">
@@ -210,10 +270,14 @@
                         <nav id="navbar-scroll" class="navbar navbar-light nav-goto-side w-100">
                             <nav class="nav nav-pills flex-column w-100">
                                 <a class="nav-link active text-capitalize" href="#tours">Cusco Tours</a>
-                                <a class="nav-link" href="#maps">Localizacion</a>
-                                {{--                                <a class="nav-link {{$h_resumen}}" href="#history">History</a>--}}
-                                {{--                                <a class="nav-link {{$h_resumen}}" href="#geography">Geography</a>--}}
-{{--                                <a class="nav-link" href="#hotels">Hoteles</a>--}}
+                                <a class="nav-link" href="#historia">Historia de {{$destinos->nombre}}</a>
+                                <a class="nav-link" href="#como_llegar">Como Llegar a {{$destinos->nombre}}</a>
+                                <a class="nav-link" href="#geografia">Geografía</a>
+                                <a class="nav-link" href="#atracciones">Lugares para Conocer en {{$destinos->nombre}}</a>
+                                <a class="nav-link" href="#entretenimiento">Entretenimiento en la ciudad de {{$destinos->nombre}}</a>
+                                <a class="nav-link" href="#gastronomia">Gastronomía en {{$destinos->nombre}}</a>
+                                <a class="nav-link" href="#festividades">Festividades en {{$destinos->nombre}}</a>
+                                <a class="nav-link" href="#maps">Ubicación</a>
                                 <a class="nav-link" href="#clima">Clima</a>
                                 {{--<a class="nav-link" href="#photos">Photos</a>--}}
                             </nav>
