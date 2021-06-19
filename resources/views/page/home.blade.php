@@ -1,7 +1,7 @@
 @extends('layouts.page.app')
 @section('title')
-    <title>Viajes a Perú 2021 y Tours Todo Incluido a Machu Picchu</title>
-    <meta name="description" content="Encuentra Tu Paquete Turístico Todo Incluido y Reserva Tu Próximo Viaje en Perú 2021/2022 Desde México ¡ Reservas Online GoTo Perú !"/>
+    <title>Paquetes de Viajes y Tour a Machu Picchu en Perú 2021</title>
+    <meta name="description" content="¡Reserva! Viajes y Paquetes Turísticos a Machu Picchu, Nuestros Expertos Operadores de Tours el Ayudaran a Planificar los Mejores Paquetes y Destinos en Perú"/>
 @endsection
 @section('content')
     <header>

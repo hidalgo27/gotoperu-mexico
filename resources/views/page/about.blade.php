@@ -1,7 +1,6 @@
 @extends('layouts.page.app')
 @section('title')
     <title>Nosotros</title>
-    <meta name="description" content=""/>
 @endsection
 @section('content')
 

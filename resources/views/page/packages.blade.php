@@ -1,7 +1,7 @@
 @extends('layouts.page.app')
 @section('title')
-    <title>Paquetes de viaje</title>
-    <meta name="description" content=""/>
+    <title>Paquetes Turísticos a Machu Picchu 2021/2022 | Go To Perú</title>
+    <meta name="description" content="Elige los Mejores Paquetes Turísticos a Machu Picchu, Montañas de Colores y Paquetes de Viaje Para Parejas. Encuentra tu Paquete Turístico en ¡Cusco 2021!⛱"/>
 @endsection
 @section('content')
     <header class="header-detail">

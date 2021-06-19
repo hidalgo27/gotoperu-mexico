@@ -1,7 +1,7 @@
 @extends('layouts.page.app')
 @section('title')
-    <title>Destinos</title>
-    <meta name="description" content=""/>
+    <title>Tours, Destinos Turísticos en Perú 2021/2022 | GoToPeru</title>
+    <meta name="description" content="Tours destacados y Los mejores Destinos en Perú. ¡GotoPeru! Realiza Operaciones Turísticas en los  Atractivos mas Icónicos del Perú."/>
 @endsection
 @section('content')
     <header class="header-detail">
@@ -78,10 +78,10 @@
                         {{--                        </div>--}}
                         <h4>{{$destinos->nombre}}</h4>
                         <div class="line-subtitle"></div>
-                        {!! $destinos->resumen !!}
+                        {!! $destinos->descripcion !!}
                         <div class="row mt-4">
                             <div class="col">
-                                <button type="button" class="btn btn-link p-0 text-secondary d-none d-md-inline float-left font-weight-lighter">SABER MÁS SOBRE {{mb_strtoupper($destinos->nombre)}}</button>
+                                <a href="{{route('destination_show_path', $destinos->url)}}/#historia" class="btn btn-link p-0 text-secondary d-none d-md-inline float-left font-weight-lighter">SABER MÁS SOBRE {{mb_strtoupper($destinos->nombre)}}</a>
                                 <a href="{{route('destination_show_path', $destinos->url)}}" class="btn btn-g-green text-white rounded-0 float-md-right">VER PAQUETES</a>
                             </div>
                         </div>

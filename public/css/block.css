@@ -75,7 +75,7 @@
   background-image: linear-gradient(to right top, #7f8429, #998f24, #b79920, #d7a11f, #f9a825);
 }
 
-.conta {
+.conta-place {
   display: flex;
   width: 100%;
   padding: 1% 0.5%;
@@ -100,11 +100,12 @@
 }
 
 .box > span {
-  font-size: 2.2vh;
+  font-size: 12px;
   display: block;
   text-align: center;
   height: 10vh;
-  line-height: 2.6;
+  line-height: 1.5;
+  margin:5% 5%;
 }
 .box:hover { flex: 1 1 50%; }
 .box:hover > img {
