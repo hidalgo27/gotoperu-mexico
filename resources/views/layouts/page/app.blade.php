@@ -6,6 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="google-site-verification" content="RKqlAT_PUqYYY0MkFZc-h48BgcRpUvekk7ZGAojEjHA" />
     <!-- Title y meta descripcion-->
     @yield('title')
     <link href="{{asset('icons/favicon.ico')}}" rel="icon" type="image/x-icon">
