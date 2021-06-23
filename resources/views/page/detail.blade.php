@@ -1,7 +1,4 @@
 @extends('layouts.page.app')
-@section('title')
-    <title>{{$paquete->first()->titulo}}</title>
-@endsection
     @section('content')
         @foreach($paquete as $paquetes)
         <header class="header-detail">

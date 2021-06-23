@@ -1,8 +1,4 @@
 @extends('layouts.page.app')
-@section('title')
-    <title>Paquetes de Viajes y Tour a Machu Picchu en Perú 2021</title>
-    <meta name="description" content="¡Reserva! Viajes y Paquetes Turísticos a Machu Picchu, Nuestros Expertos Operadores de Tours el Ayudaran a Planificar los Mejores Paquetes y Destinos en Perú"/>
-@endsection
 @section('content')
     <header>
         <div class="overlay"></div>
@@ -21,7 +17,7 @@
                         <a href="{{asset('doc/PROMPERU-INFORMA-PER-31MAY21.pdf')}}" target="_blank" style="color: #59d8d8" class="h4 font-weight-bold">Update Covid-19</a>
                     </div>
                 </div>
-                    <h1 class="font-weight-lighter h2 mt-5">Top en Recomendaciones y Testimonios, sede central en Cusco</h1>
+                    <h1 class="font-weight-lighter h2 mt-5">Top Paquetes Turísticos y los Mejores Viajes a Machu Picchu en Perú</h1>
                     <a href="#consulte" class="btn btn-outline-g-yellow btn-lg h2 font-weight-normal mt-3">Diseña tu Viaje</a>
                     {{--                        <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>--}}
                 </div>
@@ -54,8 +50,8 @@
                 {{--                        <img src="{{asset('images/about.jpg')}}" alt="" class="w-100 rounded img-lazy" loading="lazy">--}}
                 {{--                    </div>--}}
                 <div class="col text-center">
-                    <h1 class="font-weight-bold display-4 text-g-yellow">Paquetes de <strong class="text-g-green">viajes en Perú</strong></h1>
-                    <p class="lead font-weight-normal text-muted">Expertos operadores de viajes locales. Nuestros guías, conductores y representantes estarán muy contentos en compartir lo mejor de nuestro Perú. Tenemos 10 años de experiencia diseñando viajes inolvidable a la tierra de los Incas! Incluyendo Socios Globales como Expedia, Travelocity, Tripadvisor, que nos reconocen como Operador Top en Perú. Cotize el dia de hoy un viaje inolvidable para conocer MachuPicchu !</p>
+                    <h2 class="font-weight-bold display-4 text-g-yellow">Estilo de viajes y<br><strong class="text-g-green"> Paquetes Turísticos 2021</strong></h2>
+                    <p class="lead font-weight-normal text-muted">Expertos operadores en los destinos más representativos en el sur del Perú, diseñamos viajes y paquetes turísticos en Cusco, Machu Picchu en grupos, y en parajes para dos personas y servicios todo incluido. En GotoPeru compartimos lo mejor de nuestra herencia ¡nuestra cultura!, realiza tu próximo viaje de aventura para conocer la emblemática ciudadela de Machu Picchu.</p>
 {{--                    <div class="row align-items-center">--}}
 {{--                        <div class="col-12 text-center">--}}
 {{--                            <h6 class="text-secondary">--}}

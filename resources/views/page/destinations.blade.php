@@ -1,8 +1,4 @@
 @extends('layouts.page.app')
-@section('title')
-    <title>Tours, Destinos Turísticos en Perú 2021/2022 | GoToPeru</title>
-    <meta name="description" content="Tours destacados y Los mejores Destinos en Perú. ¡GotoPeru! Realiza Operaciones Turísticas en los  Atractivos mas Icónicos del Perú."/>
-@endsection
 @section('content')
     <header class="header-detail">
         <div class="overlay"></div>

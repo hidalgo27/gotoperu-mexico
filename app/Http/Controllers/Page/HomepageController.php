@@ -11,10 +11,12 @@ use App\TPaqueteDestino;
 use App\TPaqueteDificultad;
 use App\TTeam;
 use App\TTour;
+use App\TSeo;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Response;
+use Artesaos\SEOTools\Facades\SEOMeta;
 //use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
@@ -25,6 +27,12 @@ class HomepageController extends Controller
 {
     protected $urlGeneral="https://blog.gotoperu.com.mx";
     public function index(){
+        //SEO
+        SEOMeta::setTitle('Paquetes de Viajes y Tour a Machu Picchu en Perú 2021');
+        SEOMeta::setDescription('¡Reserva! Viajes y Paquetes Turísticos a Machu Picchu, Nuestros Expertos Operadores de Tours el Ayudaran a Planificar los Mejores Paquetes y Destinos en Perú');
+        SEOMeta::setCanonical('https://gotoperu.com.mx/');
+
+
         $paquete = TPaquete::with('paquetes_destinos.destinos','paquetes_categoria.categoria', 'precio_paquetes')->get();
         $tours = TTour::with('tours_destinos.destinos')->get();
 
@@ -431,6 +439,9 @@ class HomepageController extends Controller
     }
 
     public function packages(){
+        SEOMeta::setTitle('Paquetes Turísticos a Machu Picchu 2021/2022 | Go To Perú');
+        SEOMeta::setDescription('Elige los Mejores Paquetes Turísticos a Machu Picchu, Montañas de Colores y Paquetes de Viaje Para Parejas. Encuentra tu Paquete Turístico en ¡Cusco 2021!⛱');
+        SEOMeta::setCanonical('https://gotoperu.com.mx/packages');
         return view('page.packages');
     }
 
@@ -439,8 +450,14 @@ class HomepageController extends Controller
         $paquete = TPaquete::where('url', $url)->get();
         $dificultad = TPaqueteDificultad::all();
         $paquete_destinos = TPaqueteDestino::with('destinos')->get();
-        return view('page.detail', compact('paquete', 'dificultad', 'paquete_destinos','url'));
+        //seo
+        $seo=TSeo::where('estado','1')->where('id_t',$paquete->first()->id)->get();
+        //seo etiquetas
+        SEOMeta::setTitle($paquete->first()->titulo);
+        SEOMeta::setDescription("");
+        SEOMeta::setCanonical("https://gotoperu.com.mx/paquetes/".$url);
 
+        return view('page.detail', compact('paquete', 'dificultad', 'paquete_destinos','url'));
     }
 
     public function category(){
@@ -463,9 +480,12 @@ class HomepageController extends Controller
     }
 
     public function destination(){
-
-//        $destinos_id = TDestino::with('destino_imagen')->where('nombre', $ciudad)->get();
-
+        //$destinos_id = TDestino::with('destino_imagen')->where('nombre', $ciudad)->get();
+        //seo
+        SEOMeta::setTitle('Tours, Destinos Turísticos en Perú 2021/2022 | GoToPeru');
+        SEOMeta::setDescription('Tours destacados y Los mejores Destinos en Perú. ¡GotoPeru! Realiza Operaciones Turísticas en los  Atractivos mas Icónicos del Perú.');
+        SEOMeta::setCanonical('https://gotoperu.com.mx/destination');
+        
         $destino = TDestino::all()->sortBy('nombre');
         return view('page.destinations', compact('destino'));
 
@@ -487,11 +507,22 @@ class HomepageController extends Controller
 
 //        dd($ubicacion);
 
+        //seo
+        $seo=TSeo::where('estado','2')->where('id_t',$destino->first()->id)->get();
+        //seo etiquetas
+        SEOMeta::setTitle($destino->first()->nombre);
+        SEOMeta::setDescription("");
+        SEOMeta::setCanonical("https://gotoperu.com.mx/destination/".$url);
+
         return view('page.destinations-show', compact('paquetes_de', 'destino', 'paquete', 'paquete_destinos', 'ubicacion', 'destinos_all'));
     }
 
     public function sobre_nosotros(){
         $team = TTeam::all();
+        //seo
+        SEOMeta::setTitle("Agencia de Viajes y Turismo a Machu Picchu Desde México | GoToPeru");
+        SEOMeta::setDescription("En GoToPeru⛱ Somos una Agencia de Viajes y Especialistas en Paquetes Turísticos en Perú.");
+        SEOMeta::setCanonical("https://gotoperu.com.mx/sobre-nosotros");
 
         return view('page.about', compact('team'));
     }
@@ -502,6 +533,11 @@ class HomepageController extends Controller
         return view('page.dicas');
     }
     public function responsabilidad(){
+        //seo
+        SEOMeta::setTitle("Responsabilidad Social | GotoPeru 2021/2022");
+        SEOMeta::setDescription("En GotoPeru estamos Comprometidos con la Responsabilidad Social y Parte de Nuestra Actividad Turística nos Identifica Con Nuestra Gente en Cusco y Peru.");
+        SEOMeta::setCanonical("https://gotoperu.com.mx/responsabilidad-social");
+
         return view('page.responsabilidad');
     }
 
@@ -524,6 +560,12 @@ class HomepageController extends Controller
         //
         $collection=collect($posts);
         $data = $this->paginate($collection)->setPath(request()->url());
+
+        //seo
+        SEOMeta::setTitle("Blog");
+        SEOMeta::setDescription("");
+        SEOMeta::setCanonical("https://gotoperu.com.mx/blog");
+
         return view('page.blog',compact('posts','categorias','recentPosts','data'));
     }
     public function paginate($items, $perPage = 5, $page =null, $options = [])
@@ -539,7 +581,13 @@ class HomepageController extends Controller
         $recentPosts=$this->consulta_posts_recientes($client);
         //
         $a=collect($posts);
-        $data = $this->paginate($a)->setPath(request()->url());;
+        $data = $this->paginate($a)->setPath(request()->url());
+
+        //seo
+        SEOMeta::setTitle($categoria);
+        SEOMeta::setDescription("");
+        SEOMeta::setCanonical("https://gotoperu.com.mx/blog/categoria/".$categoria);
+
         return view('page.blog',compact('posts','categorias','recentPosts','data'));
     }
     public function blog_detail($url){
@@ -548,6 +596,11 @@ class HomepageController extends Controller
         $categorias=$this->consulta_categoria($client);
         $recentPosts=$this->consulta_posts_recientes($client);
         $postsRelacionados = $this->consulta_posts_relacionados($url,$client);
+
+        SEOMeta::setTitle($post[0]['titulo']);
+        SEOMeta::setDescription("");
+        SEOMeta::setCanonical("https://gotoperu.com.mx/blog/".$url);
+
         return view('page.blogDetail', compact('post','categorias','recentPosts','postsRelacionados'));
     }
     public function buscar(Request $request){

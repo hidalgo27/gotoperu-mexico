@@ -1,7 +1,4 @@
 @extends('layouts.page.app')
-@section('title')
-    <title>{{$destino->first()->nombre}}</title>
-@endsection
 @section('content')
     @foreach($destino as $destinos)
     <header class="header-detail">

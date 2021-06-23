@@ -1,7 +1,4 @@
 @extends('layouts.page.app')
-@section('title')
-    <title>Nosotros</title>
-@endsection
 @section('content')
 
     <header>

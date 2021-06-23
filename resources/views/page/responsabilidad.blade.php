@@ -1,7 +1,4 @@
 @extends('layouts.page.app')
-@section('title')
-    <title>Responsabilidad Social</title>
-@endsection
 @section('content')
 
     <header class="header-detail">
