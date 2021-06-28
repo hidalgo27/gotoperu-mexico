@@ -427,24 +427,69 @@
                     <h2 class="font-weight-bold">Destinos recomendados</h2>
                 </div>
             </div>
-            <div class="row">
-                @foreach($destino as $destinos)
-                <div class="col-12 col-md-4">
-                    <div class="home-banner-destinations">
-                        <figure class="cc-imagewrapper">
-                            <a href="{{route('destination_show_path', $destinos->url)}}" class="text-center">
-                                <img src="{{$destinos->imagen}}" alt="" class="w-100" loading="lazy">
-                            </a>
-                            <figcaption>
-                                <small class="d-block">{{$destinos->pais}}</small>
-                                {{$destinos->nombre}}
-                            </figcaption>
-                        </figure>
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach($destino as $destinos)
+                            @if(($loop->index%3)==0)
+                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <div class="home-banner-destinations">
+                                                <figure class="cc-imagewrapper">
+                                                    <a href="{{route('destination_show_path', $destinos->url)}}" class="text-center">
+                                                        <img src="{{$destinos->imagen}}" alt="" class="w-100" loading="lazy">
+                                                    </a>
+                                                    <figcaption>
+                                                        <small class="d-block">{{$destinos->pais}}</small>
+                                                        {{$destinos->nombre}}
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        @if(($loop->index+1) < $loop->count)
+                                        <div class="col-12 col-md-4">
+                                            <div class="home-banner-destinations">
+                                                <figure class="cc-imagewrapper">
+                                                    <a href="{{route('destination_show_path', $destino[$loop->index+1]->url)}}" class="text-center">
+                                                        <img src="{{$destino[$loop->index+1]->imagen}}" alt="" class="w-100" loading="lazy">
+                                                    </a>
+                                                    <figcaption>
+                                                        <small class="d-block">{{$destino[$loop->index+1]->pais}}</small>
+                                                        {{$destino[$loop->index+1]->nombre}}
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        @endif
+                                        @if(($loop->index+2) < $loop->count)
+                                        <div class="col-12 col-md-4">
+                                            <div class="home-banner-destinations">
+                                                <figure class="cc-imagewrapper">
+                                                    <a href="{{route('destination_show_path', $destino[$loop->index+2]->url)}}" class="text-center">
+                                                        <img src="{{$destino[$loop->index+2]->imagen}}" alt="" class="w-100" loading="lazy">
+                                                    </a>
+                                                    <figcaption>
+                                                        <small class="d-block">{{$destino[$loop->index+2]->pais}}</small>
+                                                        {{$destino[$loop->index+2]->nombre}}
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        @endif
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
+                    <a class="carousel-control-prev" data-target="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <i class="fas fa-arrow-left fa-2x text-g-yellow" aria-hidden="true"></i>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next"  data-target="#carouselExampleCaptions" role="button" data-slide="next">
+                            <i class="fas fa-arrow-right fa-2x text-g-yellow" aria-hidden="true"></i>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
                 </div>
-                @endforeach
-
-            </div>
 
             <div class="row">
                 <div class="col text-center">

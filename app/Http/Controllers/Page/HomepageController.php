@@ -17,6 +17,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Response;
 use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
 //use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
@@ -452,6 +453,7 @@ class HomepageController extends Controller
         $paquete_destinos = TPaqueteDestino::with('destinos')->get();
         //seo
         $seo=TSeo::where('estado','1')->where('id_t',$paquete->first()->id)->get();
+        //$seo->first()->titulo $seo->first()->descripcion $seo->first()->url
         //seo etiquetas
         SEOMeta::setTitle($paquete->first()->titulo);
         SEOMeta::setDescription("");
