@@ -66,14 +66,27 @@
             </div>
         </div>
     </section>
-
     <search-package></search-package>
-
-    <section class="position-relative my-5">
+    <section class="position-relative">
+        <div class="offer-banner">
+            <div class="">
+                <div class="row align-items-center pt-md-0 pb-5">
+                    <div class="col-12 col-md-6 px-5">
+                        <h3 class=" display-4 pb-5 px-5 text-g-green font-weight-bold">Paquetes a Machu Picchu, Cusco</h3>
+                        <p class="px-5 lead font-weight-normal">Disfruta de la ciudad perdida de los Incas, con nuestros paquetes turísticos a Machu Picchu y tour en Cusco, Le aseguramos atractivos turísticos de ensueño único en el Mundo y para muchos viajeros uno de los mejores destinos únicos en Perú.</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="{{asset('images/Paquetes-turisticos-a-Machu-Picchu.png')}}" alt="" class="w-100" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="position-relative mb-5">
         <div class="offer py-5">
             <div class="container">
                 <div class="col text-center">
-                    <h2 class="h1 font-weight-bold text-white">Porque escoger Gotoperu</h2>
+                    <h3 class="h1 font-weight-bold text-white">Porque escoger Gotoperu</h3>
                 </div>
                 <div class="row mt-5">
                     <div class="col-6 mb-3 col-sm-4 mb-md-0 col-md-2 text-center">
@@ -119,7 +132,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <h2 class="font-weight-bold">Conoce a nuestros epecialiastas en viajes</h2>
+                    <h3 class="font-weight-bold">Conoce a nuestros epecialiastas en viajes</h3>
                     <p class="lead font-weight-normal">Nuestro equipo está integrado por expertos profesionales en cada área, desde un experto team de consejeros de viajes hasta los mejores guías locales en cada destino que operamos, lo que garantiza un conocimiento total de los destinos que conforman nuestra programación; deseando transmitir esos conocimientos a todos aquellos posibles viajeros, que confían en nosotros esos importantes momentos de sus vidas: como son sus viajes. ¡Bienvenidos al mágico e histórico Perú!</p>
                 </div>
             </div>
@@ -175,7 +188,7 @@
             <div class="container">
                 <div class="row align-items-center pt-5 pt-md-0">
                     <div class="col-12 col-md-6">
-                        <h2 class="h5">NOSOTROS SOMOS</h2>
+                        <h3 class="h5">NOSOTROS SOMOS</h3>
                         <h4 class="font-weight-bold h1">GOTOPERU</h4>
                         <p>El compromiso de GOTOPERU es ofrecer una experiencia personalizada y de calidad que cumpla las expectativas de nuestros clientes . El modelo de Gestión de GOTOPERU está basado en la mejora continua y sus principales actuaciones son: Difundir las riquezas de nuestro país el Peru, sus costumbres, gastronomía, su patrimonio natural y cultural, ayudando a fomentar un turismo sostenible.</p>
                         <ul class="pl-3">
@@ -202,7 +215,7 @@
         <div class="container">
             <div class="row py-4">
                 <div class="col text-center">
-                    <h2 class="font-weight-bold display-5 text-g-green">Testimonios de nuestros pasajeros</h2>
+                    <h3 class="font-weight-bold display-5 text-g-green">Testimonios de nuestros pasajeros</h3>
                 </div>
             </div>
             <div class="row">
@@ -331,7 +344,7 @@
         <div class="container">
             <div class="row pb-4">
                 <div class="col text-center">
-                    <h2 class="font-weight-bold">¿Buscas un estilo de viaje?</h2>
+                    <h3 class="font-weight-bold">¿Buscas un estilo de viaje?</h3>
                 </div>
             </div>
             <div class="row">
@@ -503,7 +516,7 @@
         <div class="container">
                 <div class="row pb-4">
                     <div class="col text-center">
-                        <h2 class="font-weight-bold text-g-green pb-2">Nuestro blog</h2>
+                        <h3 class="h2 font-weight-bold text-g-green pb-2">Nuestro blog</h3>
                         <p class="lead font-weight-bold text-muted">Entérate de las últimas noticias e información de Cusco y Perú</p>
                     </div>
                 </div>
