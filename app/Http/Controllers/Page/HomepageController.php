@@ -453,12 +453,16 @@ class HomepageController extends Controller
         $paquete_destinos = TPaqueteDestino::with('destinos')->get();
         //seo
         $seo=TSeo::where('estado','1')->where('id_t',$paquete->first()->id)->get();
-        //$seo->first()->titulo $seo->first()->descripcion $seo->first()->url
         //seo etiquetas
-        SEOMeta::setTitle($paquete->first()->titulo);
-        SEOMeta::setDescription("");
-        SEOMeta::setCanonical("https://gotoperu.com.mx/paquetes/".$url);
-
+        if($seo->count()>0){
+            SEOMeta::setTitle($seo->first()->titulo);
+            SEOMeta::setDescription($seo->first()->descripcion);
+            SEOMeta::setCanonical($seo->first()->url);
+        }else{
+            SEOMeta::setTitle($paquete->first()->titulo);
+            SEOMeta::setDescription("");
+            SEOMeta::setCanonical("https://gotoperu.com.mx/paquetes/".$url);
+        }
         return view('page.detail', compact('paquete', 'dificultad', 'paquete_destinos','url'));
     }
 
@@ -512,9 +516,15 @@ class HomepageController extends Controller
         //seo
         $seo=TSeo::where('estado','2')->where('id_t',$destino->first()->id)->get();
         //seo etiquetas
-        SEOMeta::setTitle($destino->first()->nombre);
-        SEOMeta::setDescription("");
-        SEOMeta::setCanonical("https://gotoperu.com.mx/destination/".$url);
+        if($seo->count()>0){
+            SEOMeta::setTitle($seo->first()->titulo);
+            SEOMeta::setDescription($seo->first()->descripcion);
+            SEOMeta::setCanonical($seo->first()->url);
+        }else{
+            SEOMeta::setTitle($destino->first()->nombre);
+            SEOMeta::setDescription("");
+            SEOMeta::setCanonical("https://gotoperu.com.mx/destination/".$url);
+        }
 
         return view('page.destinations-show', compact('paquetes_de', 'destino', 'paquete', 'paquete_destinos', 'ubicacion', 'destinos_all'));
     }
