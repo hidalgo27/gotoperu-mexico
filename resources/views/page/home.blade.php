@@ -50,7 +50,7 @@
                 {{--                        <img src="{{asset('images/about.jpg')}}" alt="" class="w-100 rounded img-lazy" loading="lazy">--}}
                 {{--                    </div>--}}
                 <div class="col text-center">
-                    <h2 class="font-weight-bold display-4 text-g-yellow">Estilo de viajes y<br><strong class="text-g-green"> Paquetes Turísticos 2021</strong></h2>
+                    <h2 class="font-weight-bold display-4 text-g-yellow">Estilo de viajes y<br><strong class="text-g-green"> Paquetes a Machu Picchu 2021</strong></h2>
                     <p class="lead font-weight-normal text-muted">Expertos operadores en los destinos más representativos en el sur del Perú, diseñamos viajes y paquetes turísticos en Cusco, Machu Picchu en grupos, y en parajes para dos personas y servicios todo incluido. En GotoPeru compartimos lo mejor de nuestra herencia ¡nuestra cultura!, realiza tu próximo viaje de aventura para conocer la emblemática ciudadela de Machu Picchu.</p>
 {{--                    <div class="row align-items-center">--}}
 {{--                        <div class="col-12 text-center">--}}
@@ -70,10 +70,10 @@
     <section class="position-relative">
         <div class="offer-banner">
             <div class=" container-fluid">
-            <div class="row align-items-center pt-md-0 pb-5">
-                <div class="col-12 col-md-6 px-5">
-                    <h3 class=" display-4 pb-5 px-5 text-g-green font-weight-bold">Paquetes a Machu Picchu, Cusco</h3>
-                    <p class="px-5 lead font-weight-bold text-muted">Disfruta de la ciudad perdida de los Incas, con nuestros paquetes turísticos a Machu Picchu y tour en Cusco, Le aseguramos atractivos turísticos de ensueño único en el Mundo y para muchos viajeros uno de los mejores destinos únicos en Perú.</p>
+            <div class="row align-items-center py-5">
+                <div class="col-12 col-md-6 px-lg-5 px-2">
+                    <h3 class=" display-4 pb-4 px-lg-4 px-1 text-g-green font-weight-bold text-center">Paquetes a <span class=" text-g-yellow">Machu Picchu</span>, Cusco</h3>
+                    <p class="px-lg-5 px-2 lead font-weight-bold text-muted">Disfruta de la ciudad perdida de los Incas, con nuestros paquetes turísticos a Machu Picchu y tour en Cusco, Le aseguramos atractivos turísticos de ensueño único en el Mundo y para muchos viajeros uno de los mejores destinos únicos en Perú.</p>
                 </div>
                 <div class="col-12 col-md-6">
                     <img src="{{asset('images/Paquetes-turisticos-a-Machu-Picchu.png')}}" alt="" class="w-100" loading="lazy">
@@ -133,7 +133,7 @@
             <div class="row">
                 <div class="col text-center">
                     <h3 class="font-weight-bold">Conoce a nuestros epecialiastas en viajes</h3>
-                    <p class="lead font-weight-normal">Nuestro equipo está integrado por expertos profesionales en cada área, desde un experto team de consejeros de viajes hasta los mejores guías locales en cada destino que operamos, lo que garantiza un conocimiento total de los destinos que conforman nuestra programación; deseando transmitir esos conocimientos a todos aquellos posibles viajeros, que confían en nosotros esos importantes momentos de sus vidas: como son sus viajes. ¡Bienvenidos al mágico e histórico Perú!</p>
+                    <p class="lead font-weight-normal">Nuestro equipo está integrado por expertos profesionales en cada área de Goto Peru agencia de viajes, desde un experto team de consejeros de viajes hasta los mejores guías locales en cada destino que operamos en tus próximas vacaciones en perú, lo que garantiza un conocimiento total de los destinos que conforman nuestra programación; deseando transmitir esos conocimientos a todos aquellos posibles viajeros, que confían en nosotros esos importantes momentos de sus vidas: como son sus viajes. ¡Bienvenidos al mágico e histórico Perú!</p>
                 </div>
             </div>
             <div class="row">
@@ -515,9 +515,9 @@
         <div class="offer">
             <div class=" container-fluid">
                 <div class="row align-items-center pt-md-0">
-                    <div class="col-12 col-md-6 px-5">
-                        <h3 class=" display-4 pb-5 px-5 text-g-yellow font-weight-bolder">Paquetes de viajes a Montaña de Colores</h3>
-                        <p class="px-5 lead font-weight-bold text-white">Conoce los atractivos turísticos en Cusco y disfruta diferentes excursiones en grupos, privado o en familia con paquetes de viaje a Montaña 7 Colores, tour a Machu Picchu y más.</p>
+                    <div class="col-12 col-md-6 px-lg-5 px-2">
+                        <h3 class=" display-4 pb-lg-5 pb-2 px-lg-5 px-1 text-g-yellow font-weight-bolder">Paquetes de viajes a Montaña de Colores</h3>
+                        <p class="px-lg-5 px-2 lead font-weight-bold text-white">Conoce los atractivos turísticos en Cusco y disfruta diferentes excursiones en grupos, privado o en familia con paquetes de viaje a Montaña 7 Colores, tour a Machu Picchu y más.</p>
                     </div>
                     <div class="col-12 col-md-6">
                         <img src="{{asset('images/montaña-7-colores.jpg')}}" alt="" class="w-100" loading="lazy">
@@ -527,9 +527,9 @@
                     <div class="col-12 col-md-6">
                         <img src="{{asset('images/destinos y paquetes en peru.jpg')}}" alt="" class="w-100" loading="lazy">
                     </div>
-                    <div class="col-12 col-md-6 px-5">
-                        <h3 class=" display-4 pb-5 px-5 text-g-yellow font-weight-bolder">Perú, Paquetes turisticos 2022</h3>
-                        <p class="px-5 lead font-weight-bold text-white">Paquetes turisticos en Peru y descubre con nosotros las ciudades emblemáticas del país, Lima, Arequipa, Ica, Puno y Cusco, todos los destinos ideales para tus próximas vacaciones en Perú con un sin fin de actividades para realizar en cada lugar</p>
+                    <div class="col-12 col-md-6 px-lg-5 px-2">
+                        <h3 class="display-4 pb-lg-5 pb-2 px-lg-5 px-1 text-g-yellow font-weight-bolder">Perú, Paquetes turisticos 2022</h3>
+                        <p class="px-lg-5 px-2 lead font-weight-bold text-white">Paquetes turisticos en Peru y descubre con nosotros las ciudades emblemáticas del país, Lima, Arequipa, Ica, Puno y Cusco, todos los destinos ideales para tus próximas vacaciones en Perú con un sin fin de actividades para realizar en cada lugar</p>
                     </div>
                 </div>
             </div>

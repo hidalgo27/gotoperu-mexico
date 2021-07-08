@@ -44,7 +44,7 @@
         <div class="container">
             <div class="row my-5">
                 <div class="col text-center">
-                    <h2 class="font-weight-bold display-4 text-g-yellow">Paquetes de Viaje <strong class="text-g-green">Destacados</strong></h2>
+                    <h2 class="font-weight-bold display-4 text-g-yellow">Paquetes Turísticos Destacados <strong class="text-g-green">a Machu Picchu</strong></h2>
                     <p class="lead">Nuestros paquetes más populares En Perú, Estos paquetes pueden ser usados como referencia para personalizar tu viaje. En GOTOPERU Nos especializamos en la elaboración de experiencias personalizadas basadas en sus preferencias; invitamos a revisar estos programas para tener una idea de los destinos más importantes, por ejemplo, Machu Picchu, Lake Titicaca, Nazca y el Amazonas.</p>
                 </div>
             </div>
