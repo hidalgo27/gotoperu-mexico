@@ -33,6 +33,11 @@ class HomepageController extends Controller
         SEOMeta::setDescription('¡Reserva! Viajes y Paquetes Turísticos a Machu Picchu, Nuestros Expertos Operadores de Tours el Ayudaran a Planificar los Mejores Paquetes y Destinos en Perú');
         SEOMeta::setCanonical('https://gotoperu.com.mx/');
 
+        OpenGraph::setDescription('¡Reserva! Viajes y Paquetes Turísticos a Machu Picchu, Nuestros Expertos Operadores de Tours el Ayudaran a Planificar los Mejores Paquetes y Destinos en Perú');
+        OpenGraph::setTitle('Paquetes de Viajes y Tour a Machu Picchu en Perú 2021');
+        OpenGraph::setUrl('https://gotoperu.com.mx/');
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage('http://gotoperu.com.mx/images/destinos-y-paquetes-en-peru.jpg' , ['height' => 741, 'width' => 810]);
 
         $paquete = TPaquete::with('paquetes_destinos.destinos','paquetes_categoria.categoria', 'precio_paquetes')->get();
         $tours = TTour::with('tours_destinos.destinos')->get();
@@ -443,6 +448,13 @@ class HomepageController extends Controller
         SEOMeta::setTitle('Paquetes Turísticos a Machu Picchu 2021/2022 | Go To Perú');
         SEOMeta::setDescription('Elige los Mejores Paquetes Turísticos a Machu Picchu, Montañas de Colores y Paquetes de Viaje Para Parejas. Encuentra tu Paquete Turístico en ¡Cusco 2021!⛱');
         SEOMeta::setCanonical('https://gotoperu.com.mx/packages');
+
+        OpenGraph::setDescription('Elige los Mejores Paquetes Turísticos a Machu Picchu, Montañas de Colores y Paquetes de Viaje Para Parejas. Encuentra tu Paquete Turístico en ¡Cusco 2021!⛱');
+        OpenGraph::setTitle('Paquetes Turísticos a Machu Picchu 2021/2022 - Go To Perú');
+        OpenGraph::setUrl('https://gotoperu.com.mx/packages');
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage('http://gotoperu.com.mx/images/destinos-y-paquetes-en-peru.jpg' , ['height' => 741, 'width' => 810]);
+
         return view('page.packages');
     }
 
@@ -458,10 +470,23 @@ class HomepageController extends Controller
             SEOMeta::setTitle($seo->first()->titulo);
             SEOMeta::setDescription($seo->first()->descripcion);
             SEOMeta::setCanonical($seo->first()->url);
+
+            OpenGraph::setDescription($seo->first()->descripcion);
+            OpenGraph::setTitle($seo->first()->titulo);
+            OpenGraph::setUrl($seo->first()->url);
+            OpenGraph::addProperty('type', $seo->first()->tipo);
+            OpenGraph::addImage($seo->first()->imagen, ['height' => $seo->first()->imagen_height, 'width' => $seo->first()->imagen_width]);
         }else{
             SEOMeta::setTitle($paquete->first()->titulo);
             SEOMeta::setDescription("");
             SEOMeta::setCanonical("https://gotoperu.com.mx/paquetes/".$url);
+
+            OpenGraph::setDescription("");
+            OpenGraph::setTitle($paquete->first()->titulo);
+            OpenGraph::setUrl("https://gotoperu.com.mx/paquetes/".$url);
+            OpenGraph::addProperty('type','website');
+            OpenGraph::addImage($paquete->first()->imagen, ['height' => 280, 'width' => 420]);
+        
         }
         return view('page.detail', compact('paquete', 'dificultad', 'paquete_destinos','url'));
     }
@@ -492,6 +517,12 @@ class HomepageController extends Controller
         SEOMeta::setDescription('Tours destacados y Los mejores Destinos en Perú. ¡GotoPeru! Realiza Operaciones Turísticas en los  Atractivos mas Icónicos del Perú.');
         SEOMeta::setCanonical('https://gotoperu.com.mx/destination');
         
+        OpenGraph::setDescription('Tours destacados y Los mejores Destinos en Perú. ¡GotoPeru! Realiza Operaciones Turísticas en los  Atractivos mas Icónicos del Perú.');
+        OpenGraph::setTitle('Tours, Destinos Turísticos en Perú 2021/2022 | GoToPeru');
+        OpenGraph::setUrl('https://gotoperu.com.mx/destination');
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage('http://gotoperu.com.mx/images/destinos-y-paquetes-en-peru.jpg' , ['height' => 741, 'width' => 810]);
+
         $destino = TDestino::all()->sortBy('nombre');
         return view('page.destinations', compact('destino'));
 
@@ -520,10 +551,22 @@ class HomepageController extends Controller
             SEOMeta::setTitle($seo->first()->titulo);
             SEOMeta::setDescription($seo->first()->descripcion);
             SEOMeta::setCanonical($seo->first()->url);
+
+            OpenGraph::setDescription($seo->first()->descripcion);
+            OpenGraph::setTitle($seo->first()->titulo);
+            OpenGraph::setUrl($seo->first()->url);
+            OpenGraph::addProperty('type', $seo->first()->tipo);
+            OpenGraph::addImage($seo->first()->imagen, ['height' => $seo->first()->imagen_height, 'width' => $seo->first()->imagen_width]);
         }else{
             SEOMeta::setTitle($destino->first()->nombre);
             SEOMeta::setDescription("");
             SEOMeta::setCanonical("https://gotoperu.com.mx/destination/".$url);
+
+            OpenGraph::setDescription("");
+            OpenGraph::setTitle($destino->first()->nombre);
+            OpenGraph::setUrl("https://gotoperu.com.mx/destination/".$url);
+            OpenGraph::addProperty('type','website');
+            OpenGraph::addImage($destino->first()->imagen, ['height' => 900, 'width' => 800]);
         }
 
         return view('page.destinations-show', compact('paquetes_de', 'destino', 'paquete', 'paquete_destinos', 'ubicacion', 'destinos_all'));
@@ -532,9 +575,19 @@ class HomepageController extends Controller
     public function sobre_nosotros(){
         $team = TTeam::all();
         //seo
-        SEOMeta::setTitle("Agencia de Viajes y Turismo a Machu Picchu Desde México | GoToPeru");
-        SEOMeta::setDescription("En GoToPeru⛱ Somos una Agencia de Viajes y Especialistas en Paquetes Turísticos en Perú.");
-        SEOMeta::setCanonical("https://gotoperu.com.mx/sobre-nosotros");
+        $titulo="Agencia de Viajes y Turismo a Machu Picchu Desde México | GoToPeru";
+        $descripcion="En GoToPeru⛱ Somos una Agencia de Viajes y Especialistas en Paquetes Turísticos en Perú.";
+        $url="https://gotoperu.com.mx/sobre-nosotros";
+        
+        SEOMeta::setTitle($titulo);
+        SEOMeta::setDescription($descripcion);
+        SEOMeta::setCanonical($url);
+
+        OpenGraph::setDescription($descripcion);
+        OpenGraph::setTitle($titulo);
+        OpenGraph::setUrl($url);
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage('http://gotoperu.com.mx/images/destinos-y-paquetes-en-peru.jpg' , ['height' => 741, 'width' => 810]);
 
         return view('page.about', compact('team'));
     }
@@ -546,9 +599,19 @@ class HomepageController extends Controller
     }
     public function responsabilidad(){
         //seo
-        SEOMeta::setTitle("Responsabilidad Social | GotoPeru 2021/2022");
-        SEOMeta::setDescription("En GotoPeru estamos Comprometidos con la Responsabilidad Social y Parte de Nuestra Actividad Turística nos Identifica Con Nuestra Gente en Cusco y Peru.");
-        SEOMeta::setCanonical("https://gotoperu.com.mx/responsabilidad-social");
+        $titulo="Responsabilidad Social | GotoPeru 2021/2022";
+        $descripcion="En GotoPeru estamos Comprometidos con la Responsabilidad Social y Parte de Nuestra Actividad Turística nos Identifica Con Nuestra Gente en Cusco y Peru.";
+        $url="https://gotoperu.com.mx/responsabilidad-social";
+
+        SEOMeta::setTitle($titulo);
+        SEOMeta::setDescription($descripcion);
+        SEOMeta::setCanonical($url);
+
+        OpenGraph::setDescription($descripcion);
+        OpenGraph::setTitle($titulo);
+        OpenGraph::setUrl($url);
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addImage('http://gotoperu.com.mx/images/destinos-y-paquetes-en-peru.jpg' , ['height' => 741, 'width' => 810]);
 
         return view('page.responsabilidad');
     }

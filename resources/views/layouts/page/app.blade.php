@@ -10,6 +10,7 @@
     <!-- Title y meta descripcion-->
 
     {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
 
     <link href="{{asset('icons/favicon.ico')}}" rel="icon" type="image/x-icon">
     <!-- Styles -->

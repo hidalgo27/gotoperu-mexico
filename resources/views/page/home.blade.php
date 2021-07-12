@@ -525,7 +525,7 @@
                 </div>
                 <div class="row align-items-center pt-md-0 pb-5">
                     <div class="col-12 col-md-6">
-                        <img src="{{asset('images/destinos y paquetes en peru.jpg')}}" alt="" class="w-100" loading="lazy">
+                        <img src="{{asset('images/destinos-y-paquetes-en-peru.jpg')}}" alt="" class="w-100" loading="lazy">
                     </div>
                     <div class="col-12 col-md-6 px-lg-5 px-2">
                         <h3 class="display-4 pb-lg-5 pb-2 px-lg-5 px-1 text-g-yellow font-weight-bolder">Perú, Paquetes turisticos 2022</h3>
