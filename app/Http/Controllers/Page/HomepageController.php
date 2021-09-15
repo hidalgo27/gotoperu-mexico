@@ -11,6 +11,10 @@ use App\TPaqueteDestino;
 use App\TPaqueteDificultad;
 use App\TTeam;
 use App\TTour;
+use Artesaos\SEOTools\Facades\JsonLd;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\TwitterCard;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
@@ -25,6 +29,24 @@ class HomepageController extends Controller
 {
     protected $urlGeneral="https://blog.gotoperu.com.mx";
     public function index(){
+
+        SEOMeta::setTitle('Viajes a Perú 2021 y Tours Todo Incluido a Machu Picchu');
+        SEOMeta::setDescription('This is my page description');
+        SEOMeta::setCanonical('https://codecasts.com.br/lesson');
+
+        OpenGraph::setDescription('This is my page description');
+        OpenGraph::setTitle('Home');
+        OpenGraph::setUrl('http://current.url.com');
+        OpenGraph::addProperty('type', 'articles');
+
+        TwitterCard::setTitle('Homepage');
+        TwitterCard::setSite('@LuizVinicius73');
+
+        JsonLd::setTitle('Homepage');
+        JsonLd::setDescription('This is my page description');
+        JsonLd::addImage('https://codecasts.com.br/img/logo.jpg');
+
+
         $paquete = TPaquete::with('paquetes_destinos.destinos','paquetes_categoria.categoria', 'precio_paquetes')->get();
         $tours = TTour::with('tours_destinos.destinos')->get();
 
@@ -474,6 +496,24 @@ class HomepageController extends Controller
 
 
     public function destination_show($url){
+
+
+        SEOMeta::setTitle($url);
+        SEOMeta::setDescription('This is my page description');
+        SEOMeta::setCanonical('https://codecasts.com.br/lesson');
+
+        OpenGraph::setDescription('This is my page <br>description</b>');
+        OpenGraph::setTitle('Home');
+        OpenGraph::setUrl('http://current.url.com');
+        OpenGraph::addProperty('type', 'articles');
+
+        TwitterCard::setTitle('Homepage');
+        TwitterCard::setSite('@LuizVinicius73');
+
+        JsonLd::setTitle('Homepage');
+        JsonLd::setDescription('This is my page description');
+        JsonLd::addImage('https://codecasts.com.br/img/logo.jpg');
+
         $destino = TDestino::where('url', $url)->get();
         $paquete = TPaquete::with('paquetes_destinos', 'precio_paquetes', 'paquetes_categoria.categoria')->get();
         $paquetes_de = TPaqueteDestino::with(['destinos'=>function($query) use ($url) { $query->where('url', $url);}])->get();

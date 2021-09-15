@@ -7,7 +7,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Viajes a Perú 2021 y Tours Todo Incluido a Machu Picchu</title>
+{{--    <title>Viajes a Perú 2021 y Tours Todo Incluido a Machu Picchu</title>--}}
+
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
+    {!! JsonLd::generate() !!}
+
+
 	<meta name="description" content="Encuentra Tu Paquete Turístico Todo Incluido y Reserva Tu Próximo Viaje en Perú 2021/2022 Desde México ¡ Reservas Online GoTo Perú !"/>
     <link href="{{asset('icons/favicon.ico')}}" rel="icon" type="image/x-icon">
     <!-- Styles -->
@@ -65,7 +72,7 @@
                                         <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="" width="40" class="w-" loading="lazy"> </a>
                                     </div>
                                     <div class="social-info">
-                                        <a href="tel:51986223877">+51 986 223877</a>
+                                        <a href="tel:51960106076">+51 960 106 076</a>
                                     </div>
                                 </li>
                             </ul>
@@ -97,7 +104,7 @@
             <div class="row justify-content-end">
                 <div class="col-auto">
                     <div class="bg-dark rounded px-3 mx-3 shadow clearfix float-right">
-                        <a href="https://api.whatsapp.com/send?phone=51986223877" target="_blank" class="font-weight-bold text-white stretched-link">
+                        <a href="https://api.whatsapp.com/send?phone=51960106076" target="_blank" class="font-weight-bold text-white stretched-link">
                             Escríbenos por WhatsApp
                             <img src="{{asset('images/icons/whatsapp-i.png')}}" class="py-1" alt="logo whatsapp" width="50" data-toggle="tooltip" data-placement="top" title="Perú" loading="lazy">
                         </a>
@@ -259,7 +266,7 @@
     <!-- end olark code -->
 
 
-    
+
 
 
     <!-- Start of HubSpot Embed Code -->
