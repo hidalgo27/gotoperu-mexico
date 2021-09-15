@@ -6,7 +6,7 @@
         {{--                <source src="{{asset('media/Secuencia 06.mp4')}}" type="video/mp4">--}}
         {{--            </video>--}}
         <div class="homepage-video">
-            <img src="{{asset('images/packages/slider/AV612-1.jpg')}}" alt="" loading="lazy">
+            <img src="{{asset('images/packages/slider/AV612-1.jpg')}}" alt="Tours y Paquetes Turísticos" loading="lazy">
         </div>
         <div class="container h-100">
             <div class="row d-flex h-100 text-center align-items-center">
@@ -14,7 +14,7 @@
                     <h1 class="font-weight-lighter h2 mt-5">PAQUETES DE VIAJE A PERÚ</h1>
                     <div>
                         <div class="tl-1"></div>
-                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100" loading="lazy"></div>
+                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="logo" class="w-100" loading="lazy"></div>
                         <div class="tl-3"></div>
                     </div>
                     {{--                    <div class="mt-4">--}}
@@ -44,7 +44,7 @@
         <div class="container">
             <div class="row my-5">
                 <div class="col text-center">
-                    <h2 class="font-weight-bold display-4 text-g-yellow">Paquetes de Viaje <strong class="text-g-green">Destacados</strong></h2>
+                    <h2 class="font-weight-bold display-4 text-g-yellow">Paquetes Turísticos Destacados <strong class="text-g-green">a Machu Picchu</strong></h2>
                     <p class="lead">Nuestros paquetes más populares En Perú, Estos paquetes pueden ser usados como referencia para personalizar tu viaje. En GOTOPERU Nos especializamos en la elaboración de experiencias personalizadas basadas en sus preferencias; invitamos a revisar estos programas para tener una idea de los destinos más importantes, por ejemplo, Machu Picchu, Lake Titicaca, Nazca y el Amazonas.</p>
                 </div>
             </div>
@@ -56,7 +56,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center my-4">
                 <div class="col-6 col-md-2">
-                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100" loading="lazy">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="logo" class="w-100" loading="lazy">
                 </div>
             </div>
             <div class="row justify-content-center">

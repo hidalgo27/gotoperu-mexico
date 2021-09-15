@@ -29,7 +29,7 @@
   width: 300px;
   object-fit: cover;
 }
-.blog .img-card:hover img{
+.blog .img-card:hover img, .desImg img:hover{
   transform:scale(1.1);
 }
 .blog img:hover{
@@ -75,3 +75,40 @@
   background-image: linear-gradient(to right top, #7f8429, #998f24, #b79920, #d7a11f, #f9a825);
 }
 
+.conta-place {
+  display: flex;
+  width: 100%;
+  padding: 1% 0.5%;
+  box-sizing: border-box;
+  height: 400px;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 0.5%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 1.5;
+  margin:5% 5%;
+}
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}

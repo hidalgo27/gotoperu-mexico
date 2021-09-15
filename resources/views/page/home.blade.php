@@ -17,7 +17,7 @@
                         <a href="{{asset('doc/PROMPERU-INFORMA-PER-31MAY21.pdf')}}" target="_blank" style="color: #59d8d8" class="h4 font-weight-bold">Update Covid-19</a>
                     </div>
                 </div>
-                    <h1 class="font-weight-lighter h2 mt-5">Top en Recomendaciones y Testimonios, sede central en Cusco</h1>
+                    <h1 class="font-weight-lighter h2 mt-5">Top Paquetes Turísticos y los Mejores Viajes a Machu Picchu en Perú</h1>
                     <a href="#consulte" class="btn btn-outline-g-yellow btn-lg h2 font-weight-normal mt-3">Diseña tu Viaje</a>
                     {{--                        <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>--}}
                 </div>
@@ -50,8 +50,8 @@
                 {{--                        <img src="{{asset('images/about.jpg')}}" alt="" class="w-100 rounded img-lazy" loading="lazy">--}}
                 {{--                    </div>--}}
                 <div class="col text-center">
-                    <h1 class="font-weight-bold display-4 text-g-yellow">Paquetes de <strong class="text-g-green">viajes en Perú</strong></h1>
-                    <p class="lead font-weight-normal text-muted">Expertos operadores de viajes locales. Nuestros guías, conductores y representantes estarán muy contentos en compartir lo mejor de nuestro Perú. Tenemos 10 años de experiencia diseñando viajes inolvidable a la tierra de los Incas! Incluyendo Socios Globales como Expedia, Travelocity, Tripadvisor, que nos reconocen como Operador Top en Perú. Cotize el dia de hoy un viaje inolvidable para conocer MachuPicchu !</p>
+                    <h2 class="font-weight-bold display-4 text-g-yellow">Estilo de viajes y<br><strong class="text-g-green"> Paquetes a Machu Picchu 2021</strong></h2>
+                    <p class="lead font-weight-normal text-muted">Expertos operadores en los destinos más representativos en el sur del Perú, diseñamos viajes y paquetes turísticos en Cusco, Machu Picchu en grupos, y en parajes para dos personas y servicios todo incluido. En GotoPeru compartimos lo mejor de nuestra herencia ¡nuestra cultura!, realiza tu próximo viaje de aventura para conocer la emblemática ciudadela de Machu Picchu.</p>
 {{--                    <div class="row align-items-center">--}}
 {{--                        <div class="col-12 text-center">--}}
 {{--                            <h6 class="text-secondary">--}}
@@ -66,14 +66,27 @@
             </div>
         </div>
     </section>
-
     <search-package></search-package>
-
-    <section class="position-relative my-5">
+    <section class="position-relative">
+        <div class="offer-banner">
+            <div class=" container-fluid">
+            <div class="row align-items-center py-5">
+                <div class="col-12 col-md-6 px-lg-5 px-2">
+                    <h3 class=" display-4 pb-4 px-lg-4 px-1 text-g-green font-weight-bold text-center">Paquetes a <span class=" text-g-yellow">Machu Picchu</span>, Cusco</h3>
+                    <p class="px-lg-5 px-2 lead font-weight-bold text-muted">Disfruta de la ciudad perdida de los Incas, con nuestros paquetes turísticos a Machu Picchu y tour en Cusco, Le aseguramos atractivos turísticos de ensueño único en el Mundo y para muchos viajeros uno de los mejores destinos únicos en Perú.</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="{{asset('images/Paquetes-turisticos-a-Machu-Picchu.png')}}" alt="" class="w-100" loading="lazy">
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="position-relative mb-5">
         <div class="offer py-5">
             <div class="container">
                 <div class="col text-center">
-                    <h2 class="h1 font-weight-bold text-white">Porque escoger Gotoperu</h2>
+                    <h3 class="h1 font-weight-bold text-white">Porque escoger Gotoperu</h3>
                 </div>
                 <div class="row mt-5">
                     <div class="col-6 mb-3 col-sm-4 mb-md-0 col-md-2 text-center">
@@ -119,8 +132,8 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <h2 class="font-weight-bold">Conoce a nuestros epecialiastas en viajes</h2>
-                    <p class="lead font-weight-normal">Nuestro equipo está integrado por expertos profesionales en cada área, desde un experto team de consejeros de viajes hasta los mejores guías locales en cada destino que operamos, lo que garantiza un conocimiento total de los destinos que conforman nuestra programación; deseando transmitir esos conocimientos a todos aquellos posibles viajeros, que confían en nosotros esos importantes momentos de sus vidas: como son sus viajes. ¡Bienvenidos al mágico e histórico Perú!</p>
+                    <h3 class="font-weight-bold">Conoce a nuestros epecialiastas en viajes</h3>
+                    <p class="lead font-weight-normal">Nuestro equipo está integrado por expertos profesionales en cada área de Goto Peru agencia de viajes, desde un experto team de consejeros de viajes hasta los mejores guías locales en cada destino que operamos en tus próximas vacaciones en perú, lo que garantiza un conocimiento total de los destinos que conforman nuestra programación; deseando transmitir esos conocimientos a todos aquellos posibles viajeros, que confían en nosotros esos importantes momentos de sus vidas: como son sus viajes. ¡Bienvenidos al mágico e histórico Perú!</p>
                 </div>
             </div>
             <div class="row">
@@ -175,7 +188,7 @@
             <div class="container">
                 <div class="row align-items-center pt-5 pt-md-0">
                     <div class="col-12 col-md-6">
-                        <h2 class="h5">NOSOTROS SOMOS</h2>
+                        <h3 class="h5">NOSOTROS SOMOS</h3>
                         <h4 class="font-weight-bold h1">GOTOPERU</h4>
                         <p>El compromiso de GOTOPERU es ofrecer una experiencia personalizada y de calidad que cumpla las expectativas de nuestros clientes . El modelo de Gestión de GOTOPERU está basado en la mejora continua y sus principales actuaciones son: Difundir las riquezas de nuestro país el Peru, sus costumbres, gastronomía, su patrimonio natural y cultural, ayudando a fomentar un turismo sostenible.</p>
                         <ul class="pl-3">
@@ -202,7 +215,7 @@
         <div class="container">
             <div class="row py-4">
                 <div class="col text-center">
-                    <h2 class="font-weight-bold display-5 text-g-green">Testimonios de nuestros pasajeros</h2>
+                    <h3 class="font-weight-bold display-5 text-g-green">Testimonios de nuestros pasajeros</h3>
                 </div>
             </div>
             <div class="row">
@@ -331,7 +344,7 @@
         <div class="container">
             <div class="row pb-4">
                 <div class="col text-center">
-                    <h2 class="font-weight-bold">¿Buscas un estilo de viaje?</h2>
+                    <h3 class="font-weight-bold">¿Buscas un estilo de viaje?</h3>
                 </div>
             </div>
             <div class="row">
@@ -427,24 +440,69 @@
                     <h2 class="font-weight-bold">Destinos recomendados</h2>
                 </div>
             </div>
-            <div class="row">
-                @foreach($destino as $destinos)
-                <div class="col-12 col-md-4">
-                    <div class="home-banner-destinations">
-                        <figure class="cc-imagewrapper">
-                            <a href="{{route('destination_show_path', $destinos->url)}}" class="text-center">
-                                <img src="{{$destinos->imagen}}" alt="" class="w-100" loading="lazy">
-                            </a>
-                            <figcaption>
-                                <small class="d-block">{{$destinos->pais}}</small>
-                                {{$destinos->nombre}}
-                            </figcaption>
-                        </figure>
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        @foreach($destino as $destinos)
+                            @if(($loop->index%3)==0)
+                                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                                    <div class="row">
+                                        <div class="col-12 col-md-4">
+                                            <div class="home-banner-destinations">
+                                                <figure class="cc-imagewrapper">
+                                                    <a href="{{route('destination_show_path', $destinos->url)}}" class="text-center">
+                                                        <img src="{{$destinos->imagen}}" alt="" class="w-100" loading="lazy">
+                                                    </a>
+                                                    <figcaption>
+                                                        <small class="d-block">{{$destinos->pais}}</small>
+                                                        {{$destinos->nombre}}
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        @if(($loop->index+1) < $loop->count)
+                                        <div class="col-12 col-md-4">
+                                            <div class="home-banner-destinations">
+                                                <figure class="cc-imagewrapper">
+                                                    <a href="{{route('destination_show_path', $destino[$loop->index+1]->url)}}" class="text-center">
+                                                        <img src="{{$destino[$loop->index+1]->imagen}}" alt="" class="w-100" loading="lazy">
+                                                    </a>
+                                                    <figcaption>
+                                                        <small class="d-block">{{$destino[$loop->index+1]->pais}}</small>
+                                                        {{$destino[$loop->index+1]->nombre}}
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        @endif
+                                        @if(($loop->index+2) < $loop->count)
+                                        <div class="col-12 col-md-4">
+                                            <div class="home-banner-destinations">
+                                                <figure class="cc-imagewrapper">
+                                                    <a href="{{route('destination_show_path', $destino[$loop->index+2]->url)}}" class="text-center">
+                                                        <img src="{{$destino[$loop->index+2]->imagen}}" alt="" class="w-100" loading="lazy">
+                                                    </a>
+                                                    <figcaption>
+                                                        <small class="d-block">{{$destino[$loop->index+2]->pais}}</small>
+                                                        {{$destino[$loop->index+2]->nombre}}
+                                                    </figcaption>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        @endif
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
+                    <a class="carousel-control-prev" data-target="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <i class="fas fa-arrow-left fa-2x text-g-yellow" aria-hidden="true"></i>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next"  data-target="#carouselExampleCaptions" role="button" data-slide="next">
+                            <i class="fas fa-arrow-right fa-2x text-g-yellow" aria-hidden="true"></i>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
                 </div>
-                @endforeach
-
-            </div>
 
             <div class="row">
                 <div class="col text-center">
@@ -453,12 +511,35 @@
             </div>
         </div>
     </section>
-
+    <section class="position-relative">
+        <div class="offer">
+            <div class=" container-fluid">
+                <div class="row align-items-center pt-md-0">
+                    <div class="col-12 col-md-6 px-lg-5 px-2">
+                        <h3 class=" display-4 pb-lg-5 pb-2 px-lg-5 px-1 text-g-yellow font-weight-bolder">Paquetes de viajes a Montaña de Colores</h3>
+                        <p class="px-lg-5 px-2 lead font-weight-bold text-white">Conoce los atractivos turísticos en Cusco y disfruta diferentes excursiones en grupos, privado o en familia con paquetes de viaje a Montaña 7 Colores, tour a Machu Picchu y más.</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="{{asset('images/montaña-7-colores.jpg')}}" alt="" class="w-100" loading="lazy">
+                    </div>
+                </div>
+                <div class="row align-items-center pt-md-0 pb-5">
+                    <div class="col-12 col-md-6">
+                        <img src="{{asset('images/destinos-y-paquetes-en-peru.jpg')}}" alt="" class="w-100" loading="lazy">
+                    </div>
+                    <div class="col-12 col-md-6 px-lg-5 px-2">
+                        <h3 class="display-4 pb-lg-5 pb-2 px-lg-5 px-1 text-g-yellow font-weight-bolder">Perú, Paquetes turisticos 2022</h3>
+                        <p class="px-lg-5 px-2 lead font-weight-bold text-white">Paquetes turisticos en Peru y descubre con nosotros las ciudades emblemáticas del país, Lima, Arequipa, Ica, Puno y Cusco, todos los destinos ideales para tus próximas vacaciones en Perú con un sin fin de actividades para realizar en cada lugar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="py-5 bg-white">
         <div class="container">
                 <div class="row pb-4">
                     <div class="col text-center">
-                        <h2 class="font-weight-bold text-g-green pb-2">Nuestro blog</h2>
+                        <h3 class="h2 font-weight-bold text-g-green pb-2">Nuestro blog</h3>
                         <p class="lead font-weight-bold text-muted">Entérate de las últimas noticias e información de Cusco y Perú</p>
                     </div>
                 </div>

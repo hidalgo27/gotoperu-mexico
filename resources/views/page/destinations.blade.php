@@ -87,7 +87,7 @@
                     <div class="swiper-container swiper-container-gallery">
                         <div class="swiper-wrapper">
                             @foreach($destinos->destino_imagen as $imagen_destinos)
-                            <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen_destinos->nombre}}"><img src="{{$imagen_destinos->nombre}}" class="w-100" loading="lazy"></a>
+                        <a class="venobox swiper-slide" data-gall="myGallery" href="{{$imagen_destinos->nombre}}"><img src="{{$imagen_destinos->nombre}}" alt="{{$imagen_destinos->alt}}"class="w-100" loading="lazy"></a>
                             @endforeach
                         </div>
                         <!-- Add Pagination -->

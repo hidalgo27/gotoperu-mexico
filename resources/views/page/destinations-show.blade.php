@@ -18,7 +18,7 @@
                     <h1 class="font-weight-lighter h2 mt-5">DESTINOS EN {{strtoupper($destinos->nombre)}}</h1>
                     <div>
                         <div class="tl-1"></div>
-                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="" class="w-100" loading="lazy"></div>
+                        <div class="tl-2"><img src="{{asset('images/logo-andes-ave-white.png')}}" alt="logo" class="w-100" loading="lazy"></div>
                         <div class="tl-3"></div>
                     </div>
                     {{--                    <div class="mt-4">--}}
@@ -65,7 +65,7 @@
                                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex mb-3">
                                         <div class="card w-100 shadow-sm">
                                             <div class="header-img-packages position-relative">
-                                                <a href="{{route('detail_path', $paquetes->url)}}"><img class="card-img-top" src="{{$paquetes->imagen}}" alt="" loading="lazy"></a>
+                                                <a href="{{route('detail_path', $paquetes->url)}}"><img class="card-img-top" src="{{$paquetes->imagen}}" alt="{{$paquetes->titulo}}" loading="lazy"></a>
                                                 <div class="position-absolute-bottom bg-rgba-dark-3 px-3 py-2">
                                                     <h5 class="text-white m-0">{{$paquetes->titulo}}</h5>
                                                     <small class="text-white">
@@ -128,6 +128,7 @@
 {{--                    </div>--}}
 
 
+                        @if($destinos->historia!=null)
                         <div class="row pt-4" id="historia">
                             <div class="col-12">
                                 <h3 class="font-weight-bold text-g-green">Historia de {{$destinos->nombre}}</h3>
@@ -137,7 +138,9 @@
                                 {!! $destinos->historia !!}
                             </div>
                         </div>
+                        @endif
 
+                    @if($destinos->donde_ir!=null)
                     <div class="row pt-4" id="como_llegar">
                         <div class="col-12">
                             <h3 class="font-weight-bold text-g-green">Como Llegar a {{$destinos->nombre}}</h3>
@@ -147,6 +150,7 @@
                             {!! $destinos->donde_ir !!}
                         </div>
                     </div>
+                    @endif
 
 {{--                    <div class="row pt-4" id="geografia">--}}
 {{--                        <div class="col-12">--}}
@@ -158,6 +162,7 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
 
+                    @if($destinos->atracciones!=null)
                     <div class="row pt-4" id="atracciones">
                         <div class="col-12">
                             <h3 class="font-weight-bold text-g-green">Lugares para Conocer en {{$destinos->nombre}}</h3>
@@ -166,8 +171,21 @@
                         <div class="col-12">
                             {!! $destinos->atracciones !!}
                         </div>
+                        <div class="conta-place">
+                            @foreach($destinos->destino_imagen as $imagen)
+                                @if($loop->index>0 and $loop->index<5)
+                                
+                                    <div class="box">
+                                        <img src="{{$imagen->nombre}}" loading="lazy" alt="{{$imagen->alt}}">
+                                        <span>{{$imagen->alt}}</span>
+                                    </div>
+                                @endif
+                            @endforeach
+                        </div>
                     </div>
+                    @endif
 
+                    @if($destinos->entretenimiento!=null)
                     <div class="row pt-4" id="entretenimiento">
                         <div class="col-12">
                             <h3 class="font-weight-bold text-g-green">Entretenimiento en la ciudad de {{$destinos->nombre}}</h3>
@@ -177,7 +195,9 @@
                             {!! $destinos->entretenimiento !!}
                         </div>
                     </div>
+                    @endif
 
+                    @if($destinos->gastronomia!=null)
                     <div class="row pt-4" id="gastronomia">
                         <div class="col-12">
                             <h3 class="font-weight-bold text-g-green">Gastronomía en {{$destinos->nombre}}</h3>
@@ -185,9 +205,22 @@
                         </div>
                         <div class="col-12">
                             {!! $destinos->gastronomia !!}
+                        
+                            <div class="row">
+                                @foreach($destinos->destino_imagen as $imagen)
+                                    @if($loop->index>4 and $loop->index<9)
+                                        <div class="col-lg-3 col-sm-6">  
+                                            <img src="{{$imagen->nombre}}" loading="lazy" class=" img-thumbnail" alt="{{$imagen->alt}}">
+                                            <div class="text-center d-block small pt-1 text-g-dark-light font-weight-bold">{{$imagen->alt}}</div>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
                         </div>
                     </div>
+                    @endif
 
+                    @if($destinos->fiestas!=null)
                     <div class="row pt-4" id="festividades">
                         <div class="col-12">
                             <h3 class="font-weight-bold text-g-green">Festividades en {{$destinos->nombre}}</h3>
@@ -197,6 +230,7 @@
                             {!! $destinos->fiestas !!}
                         </div>
                     </div>
+                    @endif
 
                         <div class="row pt-4" id="maps">
                             <div class="col-12">
@@ -287,7 +321,7 @@
 
                         <div>
                             <div class="tl-1"></div>
-                            <div class="tl-2"><img src="{{asset('images/logo-ave-grey.png')}}" alt="" class="w-100" loading="lazy"></div>
+                            <div class="tl-2"><img src="{{asset('images/logo-ave-grey.png')}}" alt="Logo" class="w-100" loading="lazy"></div>
                             <div class="tl-3"></div>
                         </div>
 
@@ -296,7 +330,7 @@
                                 <ul class="list-group list-group-flush">
                                     @foreach($destinos_all as $destinos_alls)
                                     <a href="{{$destinos_alls->url}}" class="list-group-item font-weight-bold text-secondary">
-                                        <img src="{{$destinos_alls->imagen}}" alt="" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{$destinos_alls->nombre}}" loading="lazy">
+                                        <img src="{{$destinos_alls->imagen}}" alt="{{$destinos_alls->nombre}}" width="40" height="40" class="rounded-circle" data-toggle="tooltip" data-placement="top" title="{{$destinos_alls->nombre}}" loading="lazy">
                                         <span class="pl-3">{{$destinos_alls->nombre}}</span>
                                     </a>
                                     @endforeach
@@ -458,7 +492,6 @@
             //     prevEl: '.swiper-button-prev',
             // },
         });
-
         var swiper = new Swiper('.swiper-container-detail', {
             direction: 'vertical',
             slidesPerView: 'auto',
@@ -468,7 +501,6 @@
             },
             mousewheel: true,
         });
-
         function view_itinerary() {
             $('#box-resumen').addClass('d-none');
             $('#box-detail').removeClass('invisible');
@@ -480,18 +512,14 @@
             // $('.box-detail').show();
             view_itinerary_resumen
         }
-
         function view_itinerary_resumen() {
             $('#box-resumen').removeClass('d-none');
             $('#box-detail').addClass('invisible');
             $('.align-items-resumen').addClass('align-items-center');
         }
-
-
         function initMap() {
             var lat1 = parseFloat("{{$ubicacion3[0]}}");
             var lng1 = parseFloat("{{$ubicacion3[1]}}");
-
             var uluru = {lat: lat1, lng: lng1};
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 6,
@@ -502,7 +530,6 @@
                 map: map
             });
         }
-
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
     </script>
 @endpush

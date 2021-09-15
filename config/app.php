@@ -229,11 +229,17 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'GoogleMaps' => GoogleMaps\Facade\GoogleMapsFacade::class,
-        'SEOMeta'       => Artesaos\SEOTools\Facades\SEOMeta::class,
-        'OpenGraph'     => Artesaos\SEOTools\Facades\OpenGraph::class,
-        'Twitter'       => Artesaos\SEOTools\Facades\TwitterCard::class,
-        'JsonLd'        => Artesaos\SEOTools\Facades\JsonLd::class,
-        'JsonLdMulti'   => Artesaos\SEOTools\Facades\JsonLdMulti::class,
+
+        'aliases' => [
+            'SEOMeta'       => Artesaos\SEOTools\Facades\SEOMeta::class,
+            'OpenGraph'     => Artesaos\SEOTools\Facades\OpenGraph::class,
+            'Twitter'       => Artesaos\SEOTools\Facades\TwitterCard::class,
+            'JsonLd'        => Artesaos\SEOTools\Facades\JsonLd::class,
+            'JsonLdMulti'   => Artesaos\SEOTools\Facades\JsonLdMulti::class,
+            // or
+            'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+            // ...
+        ],
 
     ],
 
