@@ -224,7 +224,7 @@ class HomepageController extends Controller
     public function formulario_diseno(Request $request)
     {
 
-        $from = 'info@gotoperu.com.mx';
+        $from = 'mexico@gotoperu.com';
 
         $category_all = '';
         if ($request->category_d){
@@ -305,7 +305,7 @@ class HomepageController extends Controller
                     $messaje->to($email, $nombre)
                         ->subject('GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                        ->from('mexico@gotoperu.com', 'GotoPeru');
                 });
                 Mail::send(['html' => 'notifications.page.admin-form-contact'], [
                     'category_all' => $category_all,
@@ -324,7 +324,7 @@ class HomepageController extends Controller
                         ->subject('GotoPeru')
 //                    ->cc($from2, 'GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                        ->from('mexico@gotoperu.com', 'GotoPeru');
                 });
 
                 return 'Thank you.';
@@ -339,7 +339,7 @@ class HomepageController extends Controller
     public function formulario_detail(Request $request)
     {
 
-        $from = 'info@gotoperu.com.mx';
+        $from = 'mexico@gotoperu.com';
 
         $category_all = '';
         if ($request->category_d){
@@ -415,7 +415,7 @@ class HomepageController extends Controller
                     $messaje->to($email, $nombre)
                         ->subject('GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                        ->from('mexico@gotoperu.com', 'GotoPeru');
                 });
                 Mail::send(['html' => 'notifications.page.admin-form-contact-detail'], [
                     'category_all' => $category_all,
@@ -434,7 +434,7 @@ class HomepageController extends Controller
                         ->subject('GotoPeru')
 //                    ->cc($from2, 'GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                        ->from('mexico@gotoperu.com', 'GotoPeru');
                 });
 
                 return 'Thank you.';
