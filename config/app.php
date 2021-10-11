@@ -229,6 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'GoogleMaps' => GoogleMaps\Facade\GoogleMapsFacade::class,
+
         'aliases' => [
             'SEOMeta'       => Artesaos\SEOTools\Facades\SEOMeta::class,
             'OpenGraph'     => Artesaos\SEOTools\Facades\OpenGraph::class,
