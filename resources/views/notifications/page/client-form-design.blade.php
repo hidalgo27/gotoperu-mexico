@@ -39,10 +39,10 @@
     }
     @media screen and (min-width: 431px) {
       .col-sml {
-        max-width: 27% !important;
+        max-width: 35% !important;
       }
       .col-lge {
-        max-width: 73% !important;
+        max-width: 65% !important;
       }
       .col-md{
           max-width: 50% !important;
@@ -133,7 +133,7 @@
             </tr>
             <tr>
               <td style="padding:35px 30px 11px 30px;font-size:0;background-color:#404040;border-bottom:1px solid #f0f0f5;border-color:rgba(201,201,207,.35);">
-                <div class="col-sml" style="display:inline-block;width:100%;max-width:200px;vertical-align:top;padding-bottom:10px;font-family:Arial,sans-serif;font-size:13px;line-height:22px;color:#363636;">
+                <div class="col-sml" style="display:inline-block;width:100%;max-width:270px;vertical-align:top;padding-bottom:10px;font-family:Arial,sans-serif;font-size:13px;line-height:22px;color:#363636;">
                   <p style="margin:0 0 5px 0;color:#ffffff">
                     <img src="{{asset('images/phone-call.png')}}" width="15" height="15" alt="celular" style="display:inline-block;color:#cccccc;padding:0 5px">
                     +51 960 106 076
@@ -148,7 +148,7 @@
                   </p>
                 </div>
                 
-                <div class="col-lge" style="TEXT-ALIGN:CENTER;display:inline-block;width:100%;max-width:490px;vertical-align:top;padding-bottom:20px;font-family:Arial,sans-serif;font-size:12px;line-height:22px;color:#363636;">
+                <div class="col-lge" style="TEXT-ALIGN:CENTER;display:inline-block;width:100%;max-width:400px;vertical-align:top;padding-bottom:20px;font-family:Arial,sans-serif;font-size:12px;line-height:22px;color:#363636;">
                   <p style="margin-top:0;margin-bottom:3px;padding:0;color:#ffffff">SÍGUENOS</p>
                   <p style="margin:0 0 8px 0;">
                     <a href="https://www.facebook.com/GOTOPERUcom/" style="text-decoration:none;">

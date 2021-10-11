@@ -9,7 +9,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
+Route::get('/prueba',  function () {
+    return view('notifications.page.client-form-design');
+});*/
 Route::get('/formularioZoom',  function () {
     return view('page.formularioZoom');
 });
