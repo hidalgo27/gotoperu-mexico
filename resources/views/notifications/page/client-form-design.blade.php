@@ -52,10 +52,10 @@
 </head>
 <body style="margin:0;padding:0;word-spacing:normal;background-color:#939297;">
   <div role="article" aria-roledescription="email" lang="en" style="text-size-adjust:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;background-color:#F8F6F5;">
-    <table role="presentation" style="border-spacing:0!important;width:80%;margin:0 auto;border:none;border-spacing:0;">
+    <table role="presentation" style="width:80%;margin:0 auto;border:none;" cellspacing="0">
       <tr>
         <td align="center" style="padding:0;">
-          <table role="presentation" style="border-spacing:0!important;width:90%%;margin:0 auto;max-width:600px;border:none;border-spacing:0;text-align:left;font-family:Arial,sans-serif;font-size:16px;line-height:22px;color:#363636;">
+          <table role="presentation" cellspacing="0" style="width:90%%;margin:0 auto;max-width:600px;border:none;text-align:left;font-family:Arial,sans-serif;font-size:16px;line-height:22px;color:#363636;">
             <tr>
               <td style="padding:40px 30px 30px 30px;text-align:center;font-size:24px;font-weight:bold;">
                 <a href="https://gotoperu.com.mx/" target="_blank" style="text-decoration:none;"><img src="{{asset('images/logo-gotoperu-ave.png')}}" width="165" alt="Logo Gotoperu" style="width:80%;max-width:165px;height:auto;border:none;text-decoration:none;color:#ffffff;"></a>
@@ -124,8 +124,7 @@
                   <span style="color:#464646;font-weight: normal;font-size:14px">Comuníquese con nosotros en cualquier momento a través de whatsapp, email, zoom.</span>
                 </p>
               </td>
-            </tr>
-            
+            </tr>        
             <tr>
               <td style="padding:20px 30px 20px 30px;font-size:0;color:#ffffff;background-color:#7F8429;text-align:center">
                 <p style="font-size:17px;font-weight: normal;">Programas de viaje más populares</p>

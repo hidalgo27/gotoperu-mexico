@@ -738,7 +738,7 @@ class HomepageController extends Controller
     }
 
     public function zoom(Request $request){
-        $from = 'mexico@gotoperu.com';
+        $from = 'tania.vanessa609@gmail.com';
         $nombre=$request->t_nombre;
         $celular = $request->t_celular;
         $email=$request->t_email;
@@ -749,7 +749,7 @@ class HomepageController extends Controller
                 $messaje->to($email, $nombre)
                     ->subject('GotoPeru')
                     /*->attach('ruta')*/
-                    ->from('mexico@gotoperu.com', 'GotoPeru');
+                    ->from('tania.vanessa609@gmail.com', 'GotoPeru');
             });
             Mail::send(['html' => 'notifications.page.contact-zoom'], [
                 'nombre'=>$nombre,
@@ -762,7 +762,7 @@ class HomepageController extends Controller
                         ->subject('GotoPeru - Cita Zoom')
 //                    ->cc($from2, 'GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                        ->from('tania.vanessa609@gmail.com', 'GotoPeru');
                 });
 
             return redirect('/formularioZoom')->with('status', 'Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.');;
