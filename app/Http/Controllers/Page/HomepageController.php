@@ -223,7 +223,7 @@ class HomepageController extends Controller
     public function formulario_diseno(Request $request)
     {
 
-        $from = 'info@gotoperu.com.mx';
+        $from = 'mexico@gotoperu.com';
 
         $category_all = '';
         if ($request->category_d){
@@ -304,7 +304,7 @@ class HomepageController extends Controller
                     $messaje->to($email, $nombre)
                         ->subject('GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                        ->from('mexico@gotoperu.com', 'GotoPeru');
                 });
                 Mail::send(['html' => 'notifications.page.admin-form-contact'], [
                     'category_all' => $category_all,
@@ -323,7 +323,7 @@ class HomepageController extends Controller
                         ->subject('GotoPeru')
 //                    ->cc($from2, 'GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                        ->from('mexico@gotoperu.com', 'GotoPeru');
                 });
 
                 return 'Thank you.';
@@ -338,7 +338,7 @@ class HomepageController extends Controller
     public function formulario_detail(Request $request)
     {
 
-        $from = 'info@gotoperu.com.mx';
+        $from = 'mexico@gotoperu.com';
 
         $category_all = '';
         if ($request->category_d){
@@ -414,7 +414,7 @@ class HomepageController extends Controller
                     $messaje->to($email, $nombre)
                         ->subject('GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                        ->from('mexico@gotoperu.com', 'GotoPeru');
                 });
                 Mail::send(['html' => 'notifications.page.admin-form-contact-detail'], [
                     'category_all' => $category_all,
@@ -433,7 +433,7 @@ class HomepageController extends Controller
                         ->subject('GotoPeru')
 //                    ->cc($from2, 'GotoPeru')
                         /*->attach('ruta')*/
-                        ->from('info@gotoperu.com.mx', 'GotoPeru');
+                        ->from('mexico@gotoperu.com', 'GotoPeru');
                 });
 
                 return 'Thank you.';
@@ -716,6 +716,41 @@ class HomepageController extends Controller
         $response = $request->getBody();
         $post = json_decode($response, true);
         return $post;
+    }
+
+    public function zoom(Request $request){
+        $from = 'mexico@gotoperu.com';
+        $nombre=$request->t_nombre;
+        $celular = $request->t_celular;
+        $email=$request->t_email;
+        $fecha=$request->t_fecha;
+        $hora=$request->t_hora;
+        try {
+            Mail::send(['html' => 'notifications.page.client-form-design'], ['nombre' => $nombre], function ($messaje) use ($email, $nombre) {
+                $messaje->to($email, $nombre)
+                    ->subject('GotoPeru')
+                    /*->attach('ruta')*/
+                    ->from('mexico@gotoperu.com', 'GotoPeru');
+            });
+            Mail::send(['html' => 'notifications.page.contact-zoom'], [
+                'nombre'=>$nombre,
+                'email' => $email,
+                'celular'=>$celular,
+                'fecha' =>$fecha,
+                'hora'=>$hora],
+                function ($messaje) use ($from) {
+                    $messaje->to($from, 'GotoPeru')
+                        ->subject('GotoPeru - Cita Zoom')
+//                    ->cc($from2, 'GotoPeru')
+                        /*->attach('ruta')*/
+                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                });
+
+            return redirect('/formularioZoom')->with('status', 'Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.');;
+        }
+        catch (Exception $e){
+            return $e;
+        }
     }
 
 }

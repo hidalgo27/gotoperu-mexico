@@ -10,9 +10,13 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/formularioZoom',  function () {
+    return view('page.formularioZoom');
+});
+Route::post('/formularioZoom', [
+    'uses' => 'Page\HomepageController@zoom',
+    'as' => 'zoom_path',
+]);
 
 Auth::routes();
 
