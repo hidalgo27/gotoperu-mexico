@@ -737,4 +737,39 @@ class HomepageController extends Controller
         return $post;
     }
 
+    public function zoom(Request $request){
+        $from = 'mexico@gotoperu.com';
+        $nombre=$request->t_nombre;
+        $celular = $request->t_celular;
+        $email=$request->t_email;
+        $fecha=$request->t_fecha;
+        $hora=$request->t_hora;
+        try {
+            Mail::send(['html' => 'notifications.page.client-form-design'], ['nombre' => $nombre], function ($messaje) use ($email, $nombre) {
+                $messaje->to($email, $nombre)
+                    ->subject('GotoPeru')
+                    /*->attach('ruta')*/
+                    ->from('mexico@gotoperu.com', 'GotoPeru');
+            });
+            Mail::send(['html' => 'notifications.page.contact-zoom'], [
+                'nombre'=>$nombre,
+                'email' => $email,
+                'celular'=>$celular,
+                'fecha' =>$fecha,
+                'hora'=>$hora],
+                function ($messaje) use ($from) {
+                    $messaje->to($from, 'GotoPeru')
+                        ->subject('GotoPeru - Cita Zoom')
+//                    ->cc($from2, 'GotoPeru')
+                        /*->attach('ruta')*/
+                        ->from('mexico@gotoperu.com', 'GotoPeru');
+                });
+
+            return redirect('/formularioZoom')->with('status', 'Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.');;
+        }
+        catch (Exception $e){
+            return $e;
+        }
+    }
+
 }

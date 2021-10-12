@@ -55,9 +55,9 @@
 {{--                    <div class="row align-items-center">--}}
 {{--                        <div class="col-12 text-center">--}}
 {{--                            <h6 class="text-secondary">--}}
-{{--                                <img src="{{asset('images/logo-andes-bc.png')}}" alt="" width="120" loading="lazy">--}}
+{{--                                <img src="{{asset('images/logo-andes-bc.png')}}" alt="logo" width="120" loading="lazy">--}}
 {{--                                <span class="mt-1">é a divisão de</span>--}}
-{{--                                <img src="{{asset('images/logo-gotoperu.png')}}" alt="" width="100" loading="lazy">--}}
+{{--                                <img src="{{asset('images/logo-gotoperu.png')}}" alt="logo" width="100" loading="lazy">--}}
 {{--                            </h6>--}}
 
 {{--                        </div>--}}
@@ -139,7 +139,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="{{asset('images/team/franklin.jpg')}}" loading="lazy">
+                        <img src="{{asset('images/team/franklin.jpg')}}" alt="equipo Gotoperu" loading="lazy">
                         <div class="box-content">
                             <h3 class="title">Franklin</h3>
                             <span class="post">Guia Senior</span>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="{{asset('images/team/katy.jpg')}}" loading="lazy">
+                        <img src="{{asset('images/team/katy.jpg')}}" alt="equipo Gotoperu" loading="lazy">
                         <div class="box-content">
                             <h3 class="title">Katy</h3>
                             <span class="post">Guia</span>
@@ -163,7 +163,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="{{asset('images/team/da.jpg')}}" loading="lazy">
+                        <img src="{{asset('images/team/da.jpg')}}" alt="equipo Gotoperu" loading="lazy">
                         <div class="box-content">
                             <h3 class="title">Daniel</h3>
                             <span class="post">Travel Advisor</span>
@@ -204,7 +204,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <img src="{{asset('images/gotoperu-banner-rgba.png')}}" alt="" class="w-100" loading="lazy">
+                        <img src="{{asset('images/gotoperu-banner-rgba.png')}}" alt="Equipo Gotoperu" class="w-100" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -222,7 +222,7 @@
                 <div class="col-12 mb-4 mb-md-0 col-md">
                     <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/iWqyeyUVruE">
                         <div class="position-relative">
-                            <img src="{{asset('images/video-testimonial/1.jpg')}}" alt="" class="w-100" loading="lazy">
+                            <img src="{{asset('images/video-testimonial/1.jpg')}}" alt="Nuestros pasajeros" class="w-100" loading="lazy">
                             <div class="position-absolute-bottom text-white p-3 icon-play">
                                 <i class="fas fa-play fa-2x"></i>
                             </div>
@@ -232,7 +232,7 @@
                 <div class="col-12 mb-4 mb-md-0 col-md">
                     <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/tbET_aKa0Zg">
                         <div class="position-relative">
-                            <img src="{{asset('images/video-testimonial/2.jpg')}}" alt="" class="w-100" loading="lazy">
+                            <img src="{{asset('images/video-testimonial/2.jpg')}}" alt="Nuestros pasajeros" class="w-100" loading="lazy">
                             <div class="position-absolute-bottom text-white p-3 icon-play">
                                 <i class="fas fa-play fa-2x"></i>
                             </div>
@@ -242,7 +242,7 @@
                 <div class="col-12 mb-4 mb-md-0 col-md">
                     <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://youtu.be/NSA_ij7rxuI">
                         <div class="position-relative">
-                            <img src="{{asset('images/video-testimonial/3.jpg')}}" alt="" class="w-100" loading="lazy">
+                            <img src="{{asset('images/video-testimonial/3.jpg')}}" alt="Nuestros pasajeros" class="w-100" loading="lazy">
                             <div class="position-absolute-bottom text-white p-3 icon-play">
                                 <i class="fas fa-play fa-2x"></i>
                             </div>
@@ -261,7 +261,7 @@
                     <div class="row justify-content-center">
                         <div class="col-6">
                             <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d15202262-Reviews-Gotoperu-Cusco_Cusco_Region.html" target="_blank">
-                                <img src="{{asset('images/icons/tripadvisor.png')}}" alt="" class="w-100" loading="lazy">
+                                <img src="{{asset('images/icons/tripadvisor.png')}}" alt="Tripadvisor" class="w-100" loading="lazy">
                             </a>
                         </div>
                     </div>
@@ -282,7 +282,7 @@
                     <div class="row justify-content-center">
                         <div class="col-6">
                             <a href="https://www.yelp.com/biz/gotoperu-washington?osq=gotoperu.com" target="_blank">
-                                <img src="{{asset('images/icons/yelp.png')}}" alt="" class="w-100" loading="lazy">
+                                <img src="{{asset('images/icons/yelp.png')}}" alt="Yelp" class="w-100" loading="lazy">
                             </a>
                         </div>
                     </div>
@@ -303,7 +303,7 @@
                     <div class="row justify-content-center">
                         <div class="col-6">
                             <a href="https://www.trustpilot.com/review/gotoperu.com" target="_blank">
-                                <img src="{{asset('images/icons/trust.png')}}" alt="" class="w-100" loading="lazy">
+                                <img src="{{asset('images/icons/trust.png')}}" alt="TrustPilot" class="w-100" loading="lazy">
                             </a>
                         </div>
                     </div>
@@ -351,7 +351,7 @@
                 @foreach($categoria as $categorias)
                     <div class="col-12 col-md-4">
                         <div class="transperent_block">
-                            <img src="{{$categorias->imagen}}" class="img-responsive" alt="" loading="lazy">
+                            <img src="{{$categorias->imagen}}" class="img-responsive" alt="{{$categorias->nombre}}" loading="lazy">
                             <div class="black_hover_block">
                                 <div class="blur"></div>
                                 <div class="black_hover_block_text">
@@ -450,7 +450,7 @@
                                             <div class="home-banner-destinations">
                                                 <figure class="cc-imagewrapper">
                                                     <a href="{{route('destination_show_path', $destinos->url)}}" class="text-center">
-                                                        <img src="{{$destinos->imagen}}" alt="" class="w-100" loading="lazy">
+                                                        <img src="{{$destinos->imagen}}" alt="{{$destinos->nombre}}" class="w-100" loading="lazy">
                                                     </a>
                                                     <figcaption>
                                                         <small class="d-block">{{$destinos->pais}}</small>
@@ -464,7 +464,7 @@
                                             <div class="home-banner-destinations">
                                                 <figure class="cc-imagewrapper">
                                                     <a href="{{route('destination_show_path', $destino[$loop->index+1]->url)}}" class="text-center">
-                                                        <img src="{{$destino[$loop->index+1]->imagen}}" alt="" class="w-100" loading="lazy">
+                                                        <img src="{{$destino[$loop->index+1]->imagen}}" alt="{{$destino[$loop->index+1]->nombre}}" class="w-100" loading="lazy">
                                                     </a>
                                                     <figcaption>
                                                         <small class="d-block">{{$destino[$loop->index+1]->pais}}</small>
@@ -479,7 +479,7 @@
                                             <div class="home-banner-destinations">
                                                 <figure class="cc-imagewrapper">
                                                     <a href="{{route('destination_show_path', $destino[$loop->index+2]->url)}}" class="text-center">
-                                                        <img src="{{$destino[$loop->index+2]->imagen}}" alt="" class="w-100" loading="lazy">
+                                                        <img src="{{$destino[$loop->index+2]->imagen}}" alt="{{$destino[$loop->index+2]->nombre}}" class="w-100" loading="lazy">
                                                     </a>
                                                     <figcaption>
                                                         <small class="d-block">{{$destino[$loop->index+2]->pais}}</small>
@@ -511,6 +511,7 @@
             </div>
         </div>
     </section>
+
 {{--    <section class="position-relative">--}}
 {{--        <div class="offer">--}}
 {{--            <div class=" container-fluid">--}}
@@ -535,6 +536,7 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </section>--}}
+
     <section class="py-5 bg-white">
         <div class="container">
                 <div class="row pb-4">
@@ -632,7 +634,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-6 col-md-2">
-                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="" class="w-100" loading="lazy">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="logo" class="w-100" loading="lazy">
                 </div>
             </div>
             <div class="row justify-content-center">
