@@ -95,7 +95,7 @@
                   <p style="font-size:11px;line-height:14px;color:#6c757d">Reunión Inmediata<br>Horario 09:00a.m 18:00p.m.</p>
                 </div>
                 <div class="" style="display:inline-block;width:100%;max-width:105px;vertical-align:top;padding-bottom:20px;font-family:Arial,sans-serif;font-size:16px;line-height:15px;color:#363636;">
-                  <a href="https://api.whatsapp.com/send?phone=51960106076" target="_blank"><img src="{{asset('images/whatsapp.png')}}" alt="whatsaap" width="64" style="margin:0 auto;display:block;border:none;text-decoration:none;color:#363636; padding:0 10px;"></a>
+                  <a href="https://api.whatsapp.com/send?phone=51960680005" target="_blank"><img src="{{asset('images/whatsapp.png')}}" alt="whatsaap" width="64" style="margin:0 auto;display:block;border:none;text-decoration:none;color:#363636; padding:0 10px;"></a>
                 </div>
                 <!--
                 <div class="" style="display:inline-block;width:100%;max-width:105px;vertical-align:top;padding-bottom:20px;font-family:Arial,sans-serif;font-size:16px;line-height:15px;color:#363636;">
@@ -136,7 +136,7 @@
                 <div class="col-sml" style="display:inline-block;width:100%;max-width:270px;vertical-align:top;padding-bottom:10px;font-family:Arial,sans-serif;font-size:13px;line-height:22px;color:#363636;">
                   <p style="margin:0 0 5px 0;color:#ffffff">
                     <img src="{{asset('images/phone-call.png')}}" width="15" height="15" alt="celular" style="display:inline-block;color:#cccccc;padding:0 5px">
-                    +51 960 106 076
+                    +51 960 680 005
                   </p>
                   <p style="margin:0 0 5px 0;color:#ffffff">
                     <img src="{{asset('images/email.png')}}" width="15" height="15" alt="email" style="display:inline-block;color:#cccccc;padding:0 5px">
