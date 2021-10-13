@@ -67,21 +67,21 @@
         </div>
     </section>
     <search-package></search-package>
-    <section class="position-relative">
-        <div class="offer-banner">
-            <div class=" container-fluid">
-            <div class="row align-items-center py-5">
-                <div class="col-12 col-md-6 px-lg-5 px-2">
-                    <h3 class=" display-4 pb-4 px-lg-4 px-1 text-g-green font-weight-bold text-center">Paquetes a <span class=" text-g-yellow">Machu Picchu</span>, Cusco</h3>
-                    <p class="px-lg-5 px-2 lead font-weight-bold text-muted">Disfruta de la ciudad perdida de los Incas, con nuestros paquetes turísticos a Machu Picchu y tour en Cusco, Le aseguramos atractivos turísticos de ensueño único en el Mundo y para muchos viajeros uno de los mejores destinos únicos en Perú.</p>
-                </div>
-                <div class="col-12 col-md-6">
-                    <img src="{{asset('images/Paquetes-turisticos-a-Machu-Picchu.png')}}" alt="Paquete turístico a Machu Picchu" class="w-100" loading="lazy">
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="position-relative">--}}
+{{--        <div class="offer-banner">--}}
+{{--            <div class=" container-fluid">--}}
+{{--            <div class="row align-items-center py-5">--}}
+{{--                <div class="col-12 col-md-6 px-lg-5 px-2">--}}
+{{--                    <h3 class=" display-4 pb-4 px-lg-4 px-1 text-g-green font-weight-bold text-center">Paquetes a <span class=" text-g-yellow">Machu Picchu</span>, Cusco</h3>--}}
+{{--                    <p class="px-lg-5 px-2 lead font-weight-bold text-muted">Disfruta de la ciudad perdida de los Incas, con nuestros paquetes turísticos a Machu Picchu y tour en Cusco, Le aseguramos atractivos turísticos de ensueño único en el Mundo y para muchos viajeros uno de los mejores destinos únicos en Perú.</p>--}}
+{{--                </div>--}}
+{{--                <div class="col-12 col-md-6">--}}
+{{--                    <img src="{{asset('images/Paquetes-turisticos-a-Machu-Picchu.png')}}" alt="" class="w-100" loading="lazy">--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <section class="position-relative mb-5">
         <div class="offer py-5">
             <div class="container">
@@ -511,30 +511,32 @@
             </div>
         </div>
     </section>
-    <section class="position-relative">
-        <div class="offer">
-            <div class=" container-fluid">
-                <div class="row align-items-center pt-md-0">
-                    <div class="col-12 col-md-6 px-lg-5 px-2">
-                        <h3 class=" display-4 pb-lg-5 pb-2 px-lg-5 px-1 text-g-yellow font-weight-bolder">Paquetes de viajes a Montaña de Colores</h3>
-                        <p class="px-lg-5 px-2 lead font-weight-bold text-white">Conoce los atractivos turísticos en Cusco y disfruta diferentes excursiones en grupos, privado o en familia con paquetes de viaje a Montaña 7 Colores, tour a Machu Picchu y más.</p>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="{{asset('images/montaña-7-colores.jpg')}}" alt="Paquetes a Montaña de 7 Colores" class="w-100" loading="lazy">
-                    </div>
-                </div>
-                <div class="row align-items-center pt-md-0 pb-5">
-                    <div class="col-12 col-md-6">
-                        <img src="{{asset('images/destinos-y-paquetes-en-peru.jpg')}}" alt="Paquetes turísticos a Peru" class="w-100" loading="lazy">
-                    </div>
-                    <div class="col-12 col-md-6 px-lg-5 px-2">
-                        <h3 class="display-4 pb-lg-5 pb-2 px-lg-5 px-1 text-g-yellow font-weight-bolder">Perú, Paquetes turisticos 2022</h3>
-                        <p class="px-lg-5 px-2 lead font-weight-bold text-white">Paquetes turisticos en Peru y descubre con nosotros las ciudades emblemáticas del país, Lima, Arequipa, Ica, Puno y Cusco, todos los destinos ideales para tus próximas vacaciones en Perú con un sin fin de actividades para realizar en cada lugar</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+{{--    <section class="position-relative">--}}
+{{--        <div class="offer">--}}
+{{--            <div class=" container-fluid">--}}
+{{--                <div class="row align-items-center pt-md-0">--}}
+{{--                    <div class="col-12 col-md-6 px-lg-5 px-2">--}}
+{{--                        <h3 class=" display-4 pb-lg-5 pb-2 px-lg-5 px-1 text-g-yellow font-weight-bolder">Paquetes de viajes a Montaña de Colores</h3>--}}
+{{--                        <p class="px-lg-5 px-2 lead font-weight-bold text-white">Conoce los atractivos turísticos en Cusco y disfruta diferentes excursiones en grupos, privado o en familia con paquetes de viaje a Montaña 7 Colores, tour a Machu Picchu y más.</p>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-12 col-md-6">--}}
+{{--                        <img src="{{asset('images/montaña-7-colores.jpg')}}" alt="" class="w-100" loading="lazy">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="row align-items-center pt-md-0 pb-5">--}}
+{{--                    <div class="col-12 col-md-6">--}}
+{{--                        <img src="{{asset('images/destinos-y-paquetes-en-peru.jpg')}}" alt="" class="w-100" loading="lazy">--}}
+{{--                    </div>--}}
+{{--                    <div class="col-12 col-md-6 px-lg-5 px-2">--}}
+{{--                        <h3 class="display-4 pb-lg-5 pb-2 px-lg-5 px-1 text-g-yellow font-weight-bolder">Perú, Paquetes turisticos 2022</h3>--}}
+{{--                        <p class="px-lg-5 px-2 lead font-weight-bold text-white">Paquetes turisticos en Peru y descubre con nosotros las ciudades emblemáticas del país, Lima, Arequipa, Ica, Puno y Cusco, todos los destinos ideales para tus próximas vacaciones en Perú con un sin fin de actividades para realizar en cada lugar</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
+
     <section class="py-5 bg-white">
         <div class="container">
                 <div class="row pb-4">
