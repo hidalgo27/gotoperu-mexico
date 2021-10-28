@@ -11,6 +11,7 @@
 
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
+    {!! JsonLd::generate() !!}
 
     <link href="{{asset('icons/favicon.ico')}}" rel="icon" type="image/x-icon">
     <!-- Styles -->
