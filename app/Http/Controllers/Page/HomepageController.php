@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Response;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\JsonLd;
 //use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
@@ -467,30 +468,35 @@ class HomepageController extends Controller
         $paquete = TPaquete::where('url', $url)->get();
         $dificultad = TPaqueteDificultad::all();
         $paquete_destinos = TPaqueteDestino::with('destinos')->get();
-        //seo
+        //SEO
         $seo=TSeo::where('estado','1')->where('id_t',$paquete->first()->id)->get();
         //seo etiquetas
         if($seo->count()>0){
             SEOMeta::setTitle($seo->first()->titulo);
             SEOMeta::setDescription($seo->first()->descripcion);
             SEOMeta::setCanonical($seo->first()->url);
+            if($seo->first()->keywords){
+                SEOMeta::addKeyword([$seo->first()->keywords]);
+            }
 
             OpenGraph::setDescription($seo->first()->descripcion);
             OpenGraph::setTitle($seo->first()->titulo);
             OpenGraph::setUrl($seo->first()->url);
-            OpenGraph::addProperty('type', $seo->first()->tipo);
+            OpenGraph::addProperty('type', $seo->first()->og_tipo);
+            OpenGraph::addProperty('locale', $seo->first()->localizacion);
+            OpenGraph::setSiteName($seo->first()->nombre_sitio);
             OpenGraph::addImage($seo->first()->imagen, ['height' => $seo->first()->imagen_height, 'width' => $seo->first()->imagen_width]);
+            
+            if($seo->first()->microdata){
+                JsonLd::setTitle($seo->first()->microdata);
+            }
         }else{
             SEOMeta::setTitle($paquete->first()->titulo);
-            SEOMeta::setDescription("");
             SEOMeta::setCanonical("https://gotoperu.com.mx/paquetes/".$url);
 
-            OpenGraph::setDescription("");
             OpenGraph::setTitle($paquete->first()->titulo);
             OpenGraph::setUrl("https://gotoperu.com.mx/paquetes/".$url);
-            OpenGraph::addProperty('type','website');
             OpenGraph::addImage($paquete->first()->imagen, ['height' => 280, 'width' => 420]);
-
         }
         return view('page.detail', compact('paquete', 'dificultad', 'paquete_destinos','url'));
     }
@@ -509,7 +515,32 @@ class HomepageController extends Controller
         }
 
         $all_category = TCategoria::all();
+        //SEO
+        $seo=TSeo::where('estado','3')->where('id_t',$categoria->first()->id)->get();
+        //seo etiquetas
+        if($seo->count()>0){
+            SEOMeta::setTitle($seo->first()->titulo);
+            SEOMeta::setDescription($seo->first()->descripcion);
+            SEOMeta::setCanonical($seo->first()->url);
+            if($seo->first()->keywords){
+                SEOMeta::addKeyword([$seo->first()->keywords]);
+            }
 
+            OpenGraph::setDescription($seo->first()->descripcion);
+            OpenGraph::setTitle($seo->first()->titulo);
+            OpenGraph::setUrl($seo->first()->url);
+            OpenGraph::addProperty('type', $seo->first()->og_tipo);
+            OpenGraph::addProperty('locale', $seo->first()->localizacion);
+            OpenGraph::setSiteName($seo->first()->nombre_sitio);
+            OpenGraph::addImage($seo->first()->imagen, ['height' => $seo->first()->imagen_height, 'width' => $seo->first()->imagen_width]);
+            
+            if($seo->first()->microdata){
+                JsonLd::setTitle($seo->first()->microdata);
+            }
+        }else{
+            SEOMeta::setTitle("Paquetes o Tours ".$categoria->first()->nombre);
+            SEOMeta::setCanonical("https://gotoperu.com.mx/category/".$url);
+        }
         return view('page.packages-category-show', compact('categoria', 'categoria_all', 'all_category'));
 
     }
@@ -535,23 +566,6 @@ class HomepageController extends Controller
 
     public function destination_show($url){
 
-
-        SEOMeta::setTitle($url);
-        SEOMeta::setDescription('This is my page description');
-        SEOMeta::setCanonical('https://codecasts.com.br/lesson');
-
-        OpenGraph::setDescription('This is my page <br>description</b>');
-        OpenGraph::setTitle('Home');
-        OpenGraph::setUrl('http://current.url.com');
-        OpenGraph::addProperty('type', 'articles');
-
-        TwitterCard::setTitle('Homepage');
-        TwitterCard::setSite('@LuizVinicius73');
-
-        JsonLd::setTitle('Homepage');
-        JsonLd::setDescription('This is my page description');
-        JsonLd::addImage('https://codecasts.com.br/img/logo.jpg');
-
         $destino = TDestino::where('url', $url)->get();
         $paquete = TPaquete::with('paquetes_destinos', 'precio_paquetes', 'paquetes_categoria.categoria')->get();
         $paquetes_de = TPaqueteDestino::with(['destinos'=>function($query) use ($url) { $query->where('url', $url);}])->get();
@@ -566,28 +580,33 @@ class HomepageController extends Controller
 
 //        dd($ubicacion);
 
-        //seo
+        //SEO
         $seo=TSeo::where('estado','2')->where('id_t',$destino->first()->id)->get();
         //seo etiquetas
         if($seo->count()>0){
             SEOMeta::setTitle($seo->first()->titulo);
             SEOMeta::setDescription($seo->first()->descripcion);
             SEOMeta::setCanonical($seo->first()->url);
+            if($seo->first()->keywords){
+                SEOMeta::addKeyword([$seo->first()->keywords]);
+            }
 
             OpenGraph::setDescription($seo->first()->descripcion);
             OpenGraph::setTitle($seo->first()->titulo);
             OpenGraph::setUrl($seo->first()->url);
             OpenGraph::addProperty('type', $seo->first()->tipo);
+            OpenGraph::setSiteName($seo->first()->nombre_sitio);
             OpenGraph::addImage($seo->first()->imagen, ['height' => $seo->first()->imagen_height, 'width' => $seo->first()->imagen_width]);
+        
+            if($seo->first()->microdata){
+                JsonLd::setTitle($seo->first()->microdata);
+            }
         }else{
             SEOMeta::setTitle($destino->first()->nombre);
-            SEOMeta::setDescription("");
             SEOMeta::setCanonical("https://gotoperu.com.mx/destination/".$url);
 
-            OpenGraph::setDescription("");
             OpenGraph::setTitle($destino->first()->nombre);
             OpenGraph::setUrl("https://gotoperu.com.mx/destination/".$url);
-            OpenGraph::addProperty('type','website');
             OpenGraph::addImage($destino->first()->imagen, ['height' => 900, 'width' => 800]);
         }
 
@@ -652,7 +671,6 @@ class HomepageController extends Controller
     public function blog(){
         //seo
         SEOMeta::setTitle("Blog");
-        SEOMeta::setDescription("");
         SEOMeta::setCanonical("https://gotoperu.com.mx/blog");
 
         $posts=TBlog_post::with(['user','categoria','imagenes'])->paginate(5);
@@ -671,8 +689,7 @@ class HomepageController extends Controller
     }
     public function blog_categoria($categoria){
         //seo
-        SEOMeta::setTitle($categoria);
-        SEOMeta::setDescription("");
+        SEOMeta::setTitle("Artículos de ".$categoria);
         SEOMeta::setCanonical("https://gotoperu.com.mx/blog/categoria/".$categoria);
 
         $categoria_aux=TBlog_categoria::where('nombre',$categoria)->first();
@@ -696,21 +713,36 @@ class HomepageController extends Controller
         $post = TBlog_post::where('url',$url)
             ->with(['user','categoria','imagenes'])
             ->first();
-
-        $seo=TSeo::where('estado',0)->where('id_t',$post->id)->first();
-        if($seo!=null){
-            if($seo->titulo!=null){
-                SEOMeta::setTitle($seo->titulo);}
-            else{
-                SEOMeta::setTitle($post->titulo);
+        //SEO
+        $seo=TSeo::where('estado','0')->where('id_t',$post->id)->get();
+        //seo etiquetas
+        if($seo->count()>0){
+            SEOMeta::setTitle($seo->first()->titulo);
+            SEOMeta::setDescription($seo->first()->descripcion);
+            SEOMeta::setCanonical($seo->first()->url);
+            if($seo->first()->keywords){
+                SEOMeta::addKeyword([$seo->first()->keywords]);
             }
-            if($seo->descripcion!=null){
-                SEOMeta::setDescription($seo->descripcion);
+
+            OpenGraph::setDescription($seo->first()->descripcion);
+            OpenGraph::setTitle($seo->first()->titulo);
+            OpenGraph::setUrl($seo->first()->url);
+            OpenGraph::addProperty('type', $seo->first()->og_tipo);
+            OpenGraph::addProperty('locale', $seo->first()->localizacion);
+            OpenGraph::setSiteName($seo->first()->nombre_sitio);
+            OpenGraph::addImage($seo->first()->imagen, ['height' => $seo->first()->imagen_height, 'width' => $seo->first()->imagen_width]);
+            
+            if($seo->first()->microdata){
+                JsonLd::setTitle($seo->first()->microdata);
             }
         }else{
             SEOMeta::setTitle($post->titulo);
+            SEOMeta::setCanonical("https://gotoperu.com.mx/paquetes/".$url);
+
+            OpenGraph::setTitle($post->titulo);
+            OpenGraph::setUrl("https://gotoperu.com.mx/blog/".$url);
+            OpenGraph::addImage($post->imagen_miniatura, ['height' => 280, 'width' => 420]);
         }
-        SEOMeta::setCanonical("https://gotoperu.com.mx/blog/".$url);
 
         $categorias_aux = TBlog_categoria::get(); 
         $categorias = collect();
