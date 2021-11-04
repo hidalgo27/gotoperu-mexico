@@ -99,6 +99,16 @@
   transition: .5s;
 }
 
+.banner-about{
+  background:linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),  url('/images/FOTOGRAMA-74.jpg');
+  background-attachment:fixed;
+  background-size:cover;
+}
+.blur{
+  -webkit-filter:blur(1.8px);
+  filter:blur(1.8px);
+}
+
 .box > span {
   font-size: 12px;
   display: block;

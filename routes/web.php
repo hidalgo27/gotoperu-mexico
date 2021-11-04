@@ -115,6 +115,30 @@ Route::get('/responsabilidad-social', [
     'as' => 'responsabilidad_path',
 ]);
 
+//por que reservar con nosotros
+Route::get('/por-que-reservar-con-nosotros', [
+    'uses' => 'Page\HomepageController@reservarConNosotros',
+    'as' => 'reservarConNosotros_path',
+]);
+
+//viaja con cofianza
+Route::get('/viaja-con-confianza', [
+    'uses' => 'Page\HomepageController@viajeConfianza',
+    'as' => 'viajeConfianza_path',
+]);
+
+//condiciones de reserva
+Route::get('/condiciones-de-reserva', [
+    'uses' => 'Page\HomepageController@condiciones',
+    'as' => 'condiciones_path',
+]);
+
+//preguntas mas frecuentes
+Route::get('/preguntas-mas-frecuentes', [
+    'uses' => 'Page\HomepageController@preguntas',
+    'as' => 'preguntas_path',
+]);
+
 //auth/callback
 Route::get('/auth/callback', [
     'uses' => 'Page\HomepageController@callback',
