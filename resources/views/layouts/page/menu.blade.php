@@ -69,6 +69,16 @@
 {{--                <li><a href="#">Sport</a></li>--}}
 {{--            </ul>--}}
         </li>
+        <li class="nav-item">
+            <a href="#">INFORMACIÓN DE VIAJE</a>
+            <ul>
+                <li><a href="{{route('reservarConNosotros_path')}}">¿Por qué reservar con nosotros?</a></li>
+                <li><a href="{{route('viajeConfianza_path')}}">Viaje con confianza</a></li>
+                <li><a href="{{route('condiciones_path')}}">Condiciones de reserva</a></li>
+                <li><a href="{{route('preguntas_path')}}">Preguntas frecuentes</a></li>
+                <li><a href="{{route('blog_path')}}">Blog</a></li>
+            </ul>
+        </li>
         <li><a href="{{route('sobre_nosotros_path')}}">SOBRE NOSOTROS</a></li>
         <li><a href="{{route('responsabilidad_path')}}">RESPONSABILIDAD SOCIAL</a></li>
     </ul>

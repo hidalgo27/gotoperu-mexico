@@ -12,6 +12,7 @@ use App\TPaqueteDificultad;
 use App\TTeam;
 use App\TTour;
 use App\TSeo;
+use App\Faq;
 use App\TBlog_post;
 use App\TBlog_categoria;
 use Illuminate\Http\Request;
@@ -655,6 +656,23 @@ class HomepageController extends Controller
         OpenGraph::addImage('http://gotoperu.com.mx/images/destinos-y-paquetes-en-peru.jpg' , ['height' => 741, 'width' => 810]);
 
         return view('page.responsabilidad');
+    }
+    public function reservarConNosotros(){
+        SEOMeta::setTitle("¿Por qué reservar con nosotros? - GOTOPERU");
+        return view('page.reservarConNosotros');
+    }
+    public function viajeConfianza(){
+        SEOMeta::setTitle("Viaje con confianza - GOTOPERU");
+        return view('page.viajeConfianza');
+    }
+    public function condiciones(){
+        SEOMeta::setTitle("Términos y condiciones de reserva - GOTOPERU");
+        return view('page.condiciones');
+    }
+    public function preguntas(){
+        SEOMeta::setTitle("Preguntas frecuentes - GOTOPERU");
+        $faqs=Faq::get();
+        return view('page.preguntas',compact('faqs'));
     }
 
     public function callback(Request $request){
