@@ -43,23 +43,35 @@
 
     <section class="py-5 bg-white">
         <div class="container">
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col text-center">
-                    <h1 class="text-g-yellow font-weight-bold text-center display-4">Porque nos <span class="text-g-green">Importa</span></h1>
-                    <p class="h2 text-secondary">Retribuimos a nuestras comunidades</p>
-                    {{--<p class="h4"></p>--}}
+                    <h2 class="h1 text-g-green font-weight-bold text-center">Porque nos importa<br><span class=" font-weight-bold h3 text-g-yellow">Retribuimos a nuestras comunidades</span></h2>
                 </div>
             </div>
+            <div class="row mx-auto">
+                <div class="col-md-4 card border-0">
+                    <div class="row card-body ">
+                        <div class="col my-auto">
+                            <img src="{{asset('images/chahua.jpg')}}" class="img-fluid shadow">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 card border-top-0 border-left-0">
+                    <div class="row card-body">
+                        <div class="col my-auto">
+                            <p class="lead">El equipo de GOTOPERU se identifica con los niños de la comunidad de Chaullacohca - Cusco, ubicada a 15,000 alimentaciones (4500 mts) a 2 horas al noroeste de cusco. Tenemos muy en claro nuestra responsabilidad social con los niños de esta comunidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-2 bg-white">
+        <div class="container">
             <div class="row">
                 <div class="col">
-                    {{--<blockquote class="blockquote text-center alert-primary py-3">--}}
-                    {{--<p class="mb-0">En GOTOPERU creemos en la excelencia, seguridad, atención personalizada y calidad de los servicios, es nuestro compromiso para con nuestros pasajeros. Por eso, nos esforzamos en satisfacer las necesidades de nuestros clientes al máximo.</p>--}}
-                    {{--<footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>--}}
-                    {{--</blockquote>--}}
-                    <p class="lead text-center"><b>Chaullacota se ubica a 15,000 alimentaciones (4500 mts) 2 horas al noroeste de cusco.</b></p>
-                    <div class="alert alert-primary" role="alert">
-                        <p class="lead text-center"><b>El equipo de GOTOPERU se identifica con los niños de la comunidad de chaullacohca - Cusco. Tenemos en claro nuestra responsabilidad social con los niños de la comunidad de Chaullacohca-Cusco.</b></p>
-                    </div>
+                    
                     <p class="lead"><b>En GOTOPERU estamos comprometidos a hacer negocios de una manera que realmente le devuelva a nuestras comunidades parte de nuestras ganancias especialmente a comunidades  ubicadas en lugares remotos. Nuestra planificación y ejecución de uno de nuestros viajes implica una larga cadena de suministro: desde guías y operadores locales hasta proveedores de transporte, hoteles y restaurantes, interactuamos con muchas organizaciones en diferentes lugares, pero también sabemos que algunas comunidades especialmente ubicadas arriba de los Andes a más de 15,000 pies que debido al difícil acceso, no reciben la asistencia que merecen, es por eso que organizamos periódicamente viajes a comunidades tan lejanas para traerles especialmente suéteres y juguetes para niños.</b></p>
 
                 </div>

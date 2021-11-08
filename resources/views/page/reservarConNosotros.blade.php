@@ -53,7 +53,7 @@
                                 <img src="{{asset('images/trustworthy.png')}}" width="65">
                             </div>
                             <div class=" col-9 my-auto ">
-                                <h5 class=" font-weight-bolder text-g-yellow">RESERVA CON CONFIANZA</h5>
+                                <h5 class=" font-weight-bolder text-g-dark-light">RESERVA CON CONFIANZA</h5>
                             </div>
                         </div>
                         <hr class="pt-2">
@@ -71,7 +71,7 @@
                                 <img src="{{asset('images/location.png')}}" width="65">
                             </div>
                             <div class=" col-9 my-auto ">
-                                <h5 class=" font-weight-bolder text-g-green">EXPERTOS EN VIAJES LOCALES DE CONFIANZA</h5>
+                                <h5 class=" font-weight-bolder  text-g-dark-light">EXPERTOS EN VIAJES LOCALES DE CONFIANZA</h5>
                             </div>
                         </div>
                         <hr class="pt-2">
@@ -92,7 +92,7 @@
                                 <img src="{{asset('images/review.png')}}" width="65">
                             </div>
                             <div class=" col-9 my-auto ">
-                                <h5 class=" font-weight-bolder text-g-green">EXCELENTES TESTIMONIOS</h5>
+                                <h5 class=" font-weight-bolder  text-g-dark-light">EXCELENTES TESTIMONIOS</h5>
                             </div>
                         </div>
                         <hr class="pt-2">
@@ -110,7 +110,7 @@
                                 <img src="{{asset('images/photographer.png')}}" width="65">
                             </div>
                             <div class=" col-9 my-auto ">
-                                <h5 class=" font-weight-bolder text-g-yellow">EXPERIENCIA SIN ESTRÉS</h5>
+                                <h5 class=" font-weight-bolder  text-g-dark-light">EXPERIENCIA SIN ESTRÉS</h5>
                             </div>
                         </div>
                         <hr class="pt-2">
@@ -131,7 +131,7 @@
                                 <img src="{{asset('images/appreciation.png')}}" width="65">
                             </div>
                             <div class=" col-9 my-auto ">
-                                <h5 class=" font-weight-bolder text-g-yellow">ESTÁS EN BUENAS MANOS</h5>
+                                <h5 class=" font-weight-bolder  text-g-dark-light">ESTÁS EN BUENAS MANOS</h5>
                             </div>
                         </div>
                         <hr class="pt-2">
@@ -149,7 +149,7 @@
                                 <img src="{{asset('images/hotel.png')}}" width="65">
                             </div>
                             <div class=" col-9 my-auto ">
-                                <h5 class=" font-weight-bolder text-g-green">HOTELES CUIDADOSAMENTE SELECCIONADOSS</h5>
+                                <h5 class=" font-weight-bolder  text-g-dark-light">HOTELES CUIDADOSAMENTE SELECCIONADOSS</h5>
                             </div>
                         </div>
                         <hr class="pt-2">
@@ -217,86 +217,42 @@
             <div class="row py-3">
                 <div class=" pt-5">
                     <h4 class="text-g-green font-weight-bolder pb-3">¿QUÉ DICEN NUESTROS CLIENTES?</h4>
-                    <p>Descubra lo que nuestros increíbles clientes pensaron sobre su experiencia con GOTOPERU.</p>
+                    <p class="lead">Nuestros clientes satisfechos son nuestra mejor carta de presentación, te invitamos a ver algunos de los testimonios</p>
                 </div>
             </div>
             <div class="row pb-5">
-                <div class="col">
-                    <div class="row justify-content-center">
-                            <div class="col-6 mb-3 col-sm-4 mb-md-0 col-md-4 text-center">
-                                <div class="row justify-content-center">
-                                    <div class="col-6">
-                                        <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d15202262-Reviews-Gotoperu-Cusco_Cusco_Region.html" target="_blank">
-                                            <img src="{{asset('images/icons/tripadvisor.png')}}" alt="Tripadvisor" class="w-100" loading="lazy">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col text-truncate">
-                                        <i class="fa fa-quote-left"></i>
-                                        <span class="small">Nuestro Guía Franklin fue un experto no pudimos pedir un guía mejor, pudimos aprender mucho de la cultura e historia Inca!</span>
-                                        <i class="fa fa-quote-right"></i>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <small class="text-g-yellow font-weight-bold">Jhon X2 feb 2019, USA</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 mb-3 col-sm-4 mb-md-0 col-md-4 text-center">
-                                <div class="row justify-content-center">
-                                    <div class="col-6">
-                                        <a href="https://www.yelp.com/biz/gotoperu-washington?osq=gotoperu.com" target="_blank">
-                                            <img src="{{asset('images/icons/yelp.png')}}" alt="Yelp" class="w-100" loading="lazy">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col text-truncate">
-                                        <i class="fa fa-quote-left"></i>
-                                        <span class="small">Mi experiencia con la Agencia fue perfecta, yo la recomendaría para cualquier.</span>
-                                        <i class="fa fa-quote-right"></i>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <small class="text-g-yellow font-weight-bold">Boon C. Jan 2019 Tampa, FL</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 mb-3 col-sm-4 mb-md-0 col-md-4 text-center">
-                                <div class="row justify-content-center">
-                                    <div class="col-6">
-                                        <a href="https://www.trustpilot.com/review/gotoperu.com" target="_blank">
-                                            <img src="{{asset('images/icons/trust.png')}}" alt="TrustPilot" class="w-100" loading="lazy">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col text-truncate">
-                                        <i class="fa fa-quote-left"></i>
-                                        <span class="small">No dude en recomendar GoToPeru para ayudar a diseñar su viaje. Martin como representante de primera línea</span>
-                                        <i class="fa fa-quote-right"></i>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <small class="text-g-yellow font-weight-bold">jeanette Pan feb 2019, USA</small>
-                                    </div>
-                                </div>
+                <div class="col-12 mb-4 mb-md-0 col-md">
+                    <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=K148e9ocQ-4&list=PLEye0Mu52p3l-qV5MDmiLO0QiWOlQrLTB&index=8">
+                        <div class="position-relative">
+                            <img src="{{asset('images/test_mex.jpg')}}" alt="Nuestros pasajeros" class="w-100" loading="lazy">
+                            <div class="position-absolute-top bg-g-yellow text-white text-center font-weight-bold p-1">México</div>
+                            <div class="position-absolute-bottom text-white p-3 icon-play">
+                                <i class="fas fa-play fa-2x"></i>
                             </div>
                         </div>
-                        <div class="row mt-4">
-                            <div class="col text-center">
-                                <a href="https://www.tripadvisor.com/ShowTopic-g294311-i818-k5867868-Has_anyone_booked_a_tour_with_GOTOPERU_www_gotoperu_org-Peru.html" target="_blank" class="btn btn-outline-g-green font-weight-bold btn-sm">TripAdvisor 1</a>
-                                <a href="https://www.tripadvisor.com/ShowTopic-g294311-i818-k6509104-Gotoperu_Travel_Agency-Peru.html" target="_blank" class="btn btn-outline-g-green font-weight-bold btn-sm">TripAdvisor 2</a>
-                                <a href="https://www.tripadvisor.com/ShowTopic-g294311-i818-k5657518-GOTOPERU_online_tour_operator-Peru.html" target="_blank" class="btn btn-outline-g-green font-weight-bold btn-sm">TripAdvisor 3</a>
-                                <a href="https://www.tripadvisor.com/ShowTopic-g294311-i818-k6934201-Trip_Report_Two_glorious_weeks_in_Peru_with_GOTOPERU_ORG-Peru.html" target="_blank" class="btn btn-outline-g-green font-weight-bold btn-sm">TripAdvisor 4</a>
-                                <a href="https://www.tripadvisor.co.za/ShowTopic-g294311-i818-k7362487-o10-GotoPeru_or_David_Expeditions-Peru.html" target="_blank" class="btn btn-outline-g-green font-weight-bold btn-sm">TripAdvisor 5</a>
+                    </a>
+                </div>
+                <div class="col-12 mb-4 mb-md-0 col-md">
+                    <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=kbvhgHWBtAk&list=PLEye0Mu52p3l-qV5MDmiLO0QiWOlQrLTB&index=2">
+                        <div class="position-relative">
+                            <img src="{{asset('images/test_col.jpg')}}" alt="Nuestros pasajeros" class="w-100" loading="lazy">
+                            <div class="position-absolute-top bg-g-yellow text-white text-center font-weight-bold p-1">Colombia</div>
+                            <div class="position-absolute-bottom text-white p-3 icon-play">
+                                <i class="fas fa-play fa-2x"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+                <div class="col-12 mb-4 mb-md-0 col-md">
+                    <a class="venobox" data-gall="myGallery" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=krIJlvw13ZU&list=PLEye0Mu52p3l-qV5MDmiLO0QiWOlQrLTB&index=10">
+                        <div class="position-relative">
+                            <img src="{{asset('images/test_chi.jpg')}}" alt="Nuestros pasajeros" class="w-100" loading="lazy">
+                            <div class="position-absolute-top bg-g-yellow text-white text-center font-weight-bold p-1">Chile</div>
+                            <div class="position-absolute-bottom text-white p-3 icon-play">
+                                <i class="fas fa-play fa-2x"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

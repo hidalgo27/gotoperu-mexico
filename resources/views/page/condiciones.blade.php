@@ -47,53 +47,101 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="accordion " id="accordionExample">
-                        <div class="card border-g-green">
-                            <div class="card-header p-1 border-g-green" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left text-g-green font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    CONDICIONES DE RESERVA
-                                    </button>
-                                </h2>
-                            </div>
-                        
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <p><span class="text-g-dark-light font-weight-bold">GOTOPERU</span> es el sitio de reservas online cuyo nombre comercial es <b class="text-g-dark-light">GOTOPERU GROUP SAC.</b> 
-                                    </P>
-                                    <ul>
-                                        <li>Sede registrada en Avenida El Sol N° 449 - Cusco - Cusco.</li>
-                                        <li>Número de registro 000873-005733 del Ministerio de Comercio Exterior y Turismo del Perú (MINCETUR.</li>
-                                        <li>Autorización Fiscal de Perú RUC: 205619753.</li>
-                                    </ul>
-                                    <p>Cualquier reserva realizada por un cliente, ya sea a través del sitio web de la empresa o de otro modo, se considerará como una oferta del cliente para comprar el paquete o arreglo de viaje correspondiente sujeto a estas condiciones de reserva. Al enviar una reserva, nos garantiza y nos confirma que cumple con estos acuerdos. Ningún contrato entre el cliente y GOTOPERU entrará en vigor hasta que GOTOPERU reciba el pago del depósito inicial y emita un Recibo de Pago. El cliente que realiza la reserva acepta estas condiciones en nombre de todos los miembros de su grupo de viaje y es responsable del saldo de pago del grupo en su totalidad.</p>
-                                    <p>Los servicios de reserva con GOTOPERU solo están disponibles para personas mayores de 18 años. Además, las personas menores de 18 años en un tour de GOTOPERU deben estar acompañadas por un adulto.</p>
-                                    <p>Nuestra empresa está totalmente autorizada por el gobierno Peruano. Así mismo somos miembros de varias asociaciones de la industria de viajes en Perú.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card border-g-green">
-                            <div class="card-header p-1 border-g-green" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed text-g-green font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    PAGOS
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <p>GOTOPERU acepta las principales tarjetas de crédito y débito para las reservas realizadas al menos 10 días antes de la fecha del viaje, también aceptamos transferencias bancarias.</p>
-                                    <p>Aceptamos pagos de Visa, Visa Electron, MasterCard, Maestro, JCB, Discover, UnionPay, Diners y American Express. Si desea pagar mediante transferencia bancaria, seleccione "Transferencia bancaria" como método de pago en el proceso de reserva, y GOTOPERU le enviará nuestros datos bancarios. Tenga en cuenta que las transferencias bancarias no son posibles para las reservas realizadas con menos de 10 días de la fecha del viaje.</p>
-                                    <h6 class="text-g-yellow font-weight-bold">PROCESO DE PAGO</h6>
-                                    <p>GOTOPERU requerirá un pago de depósito inicial, dependiendo del programa podría ser 20%, 30%, 50% o el monto total al momento de la reserva, dependiendo de cuándo se realiza la reserva, su destino, número de viajeros y qué tipo de paquete turístico se reserva.</p>
-                                    <p>Una vez recibido el pago, su asesor de viajes le enviará un recibo de pago.</p>
-                                    <h6 class="text-g-yellow font-weight-bold">PAGO RETRAZADO</h6>
-                                    <p>GOTOPERU se reserva el derecho de tratar los casos de pago retrasado como una cancelación de la reserva, pudiendo la empresa retirar su confirmación de servicios. Tenga en cuenta que esto se aplica si no se ha llegado a un acuerdo para pagar el saldo restante.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class=" bg-light border border-g-green px-3 py-2 shadow">
+                        <h5 class="h6 text-g-green font-weight-bold">DESCRIPCION GENERAL</h5>
                     </div>
-                </div>      
+                    <div class="px-3 py-4 border-left border-right border-g-green">
+                        <p><span class="text-g-yellow font-weight-bold">GOTOPERU</span> es el sitio de reservas online cuyo nombre comercial es GOTOPERU GROUP SAC.
+                        </P> 
+                        <ul>
+                            <li>Sede registrada en Avenida El Sol N° 449 - Cusco - Cusco.</li>
+                            <li>Número de registro 000873-005733 del Ministerio de Comercio Exterior y Turismo del Perú (MINCETUR.</li>
+                            <li>Autorización Fiscal de Perú RUC: 205619753.</li>
+                        </ul>        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class=" bg-light border border-g-green px-3 py-2 shadow">
+                        <h5 class="h6 text-g-green font-weight-bold">CONDICIONES DE RESERVA</h5>
+                    </div>
+                    <div class="px-3 py-4 border-left border-right border-g-green">
+                        <p>Cualquier reserva realizada por un cliente, ya sea a través del sitio web de la empresa o de otro modo, se considerará como una oferta del cliente para comprar el paquete o arreglo de viaje correspondiente sujeto a las siguientes condiciones de reserva: <p>
+                        <ul>
+                            <li>Al enviar una reserva, nos garantiza y nos confirma que cumple con estos acuerdos.</li>
+                            <li>Ningún contrato entre el cliente y GOTOPERU entrará en vigor hasta que GOTOPERU reciba el pago del depósito inicial dependiendo del programa podría ser del 20%, 30%, 50% del mondo o el monto total y se emita un Recibo de Pago.</li>
+                            <li>Los pagos de reservas deben realizarse al menos 10 días antes de la fecha del viaje</li>
+                            <li>El cliente que realiza la reserva acepta estas condiciones en nombre de todos los miembros de su grupo de viaje y es responsable del saldo de pago del grupo en su totalidad.</li>
+                            <li>La reserva de cualquier paquete de viaje solo podrá ser realizada por personas mayores de 18 años. Además, las personas menores de 18 años en un tour de GOTOPERU deben estar acompañadas por un adulto.</p>
+                        </ul>
+                        <p>Nuestra empresa está totalmente autorizada por el gobierno Peruano. Así mismo somos miembros de varias asociaciones de la industria de viajes en Perú.</p>
+                                
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col ">
+                    <div class=" bg-light border border-g-green px-3 py-2 shadow">
+                        <h5 class="h6 text-g-green font-weight-bold">PROCESO DE RESERVA</h5>
+                    </div>
+                    <div class="px-3 py-4 border-left border-right border-g-green">
+                        <p>Para proceder con la reserva se debe: </p>
+                        <ol>
+                            <li class="text-g-dark-light font-weight-bold mb-3 ">
+                                <h6 class="font-weight-bold">Enviar datos personales</h6>
+                                <p class=" text-dark font-weight-normal">La persona que realizó la reserva tiene que mandar los datos personales requeridos de todos los miembros que realizarán el viaje.</p>
+                                <div class="col-md-6">
+                                    <ul class="bg-light small text-dark py-3">
+                                        <li>Nombres:</li>
+                                        <li>Apellidos:</li>
+                                        <li>Fecha de nacimiento:</li>
+                                        <li>Nacionalidad:</li>
+                                        <li>Número de pasaporte:</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="text-g-dark-light font-weight-bold">
+                                <h6 class="font-weight-bold">Realizar pago</h6>
+                                <p class="text-dark font-weight-normal">Para la opción de pago el cliente elegirá entre 3 métodos de pago:</p>
+                                <ul>
+                                    <li>
+                                        <span class="text-dark font-weight-bold">Tarjeta de crédito o débito</span><br>
+                                        <span class="text-dark font-weight-normal">Con esta opción recibirá un link de pago seguro para pago online, esta opción tiene un cargo de procesamiento de 2.9%.</span>
+                                        <div class="text-center mt-2">
+                                            <img src="{{asset('images/Visa_Logo.png')}}" width="64">
+                                            <img src="{{asset('images/Mastercard.png')}}"  width="64">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="text-dark font-weight-bold">Transferencia bancaria</span><br>
+                                        <span class="text-dark font-weight-normal">con esta opción recibirá un Invoice PDF con nuestros datos bancarios.</span>
+                                        <div class="text-center mt-2">
+                                            <img src="{{asset('images/bcp.png')}}" width="80">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="text-dark font-weight-bold">Vía Western Union o MoneyGram</span><br>
+                                        <div class="text-center mt-2">
+                                            <img src="{{asset('images/Western-Union-logo.png')}}" width="120">
+                                            <img src="{{asset('images/logo-MoneyGram.png')}}" width="120">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>    
+                     </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col ">
+                    <div class=" bg-light border border-g-green px-3 py-2 shadow">
+                        <h5 class="h6 text-g-green font-weight-bold">PAGOS RETRAZADOS</h5>
+                    </div>
+                    <div class="px-3 py-4 border-left border-right border-bottom border-g-green">
+                        <p>GOTOPERU se reserva el derecho de tratar los casos de pago retrasado como una cancelación de la reserva, pudiendo la empresa retirar su confirmación de servicios. Tenga en cuenta que esto se aplica si no se ha llegado a un acuerdo para pagar el saldo restante.</p>      
+                    </div>
+                </div>
             </div>
         </div>
     </section>
