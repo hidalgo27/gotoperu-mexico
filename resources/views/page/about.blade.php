@@ -13,7 +13,7 @@
         <div class="container h-100">
             <div class="row d-flex h-100 text-center align-items-center">
                 <div class="col w-100 text-white mt-5">
-                    <h1 class="font-weight-lighter h2 mt-5">NUESTRO EQUIPO GOTOPERU</h1>
+                    <h1 class="font-weight-lighter h2 mt-5">GOTOPERU TUS EXPERTOS EN VIAJES LOCALES EN PERÚ</h1>
                     {{--                        <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>--}}
                 </div>
             </div>
@@ -40,45 +40,88 @@
 
     <section class="py-5 bg-white">
         <div class="container">
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col text-center">
-                    <h1 class="text-g-yellow font-weight-bold display-4 text-center">Quiénes Somos y <span class="text-g-green">por qué Amamos Viajar</span></h1>
-                    {{--<p class="h2 text-secondary pt-3">USTED TENDRÁ UNA EXPERIENCIA INIMAGINABLE</p>--}}
-                    {{--<p class="h4"></p>--}}
+                    <h2 class="h1 text-g-green font-weight-bold text-center">¿Quiénes somos?</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <p class="mb-0 lead text-secondary text-center"><b>En GOTOPERU creemos en la excelencia, seguridad, atención personalizada y calidad de los servicios, es nuestro compromiso con nuestros pasajeros. Por eso, nos esforzamos en satisfacer las necesidades de nuestros clientes al máximo.</b></p>
-                </div>
-
-            </div>
-
-            <div class="row mt-5 align-items-center">
-
-                <div class="col-6">
-                    <div class="bg-light shadow-sm p-4 border-left border-g-green">
-                        <h5 class="font-weight-bold text-secondary">NUESTRO COMPROMISO</h5>
-                        <p class="align-middle">No dejar escapar la oportunidad de que nuestros turistas descubran los encantos de Perú y vivir una aventura inolvidable.</p>
+                <div class="col-md-6 card border-0">
+                    <div class="row card-body">
+                        <div class="col ">
+                            <p>GOTOPERU es una agencia de viajes especializada que atiende a los viajeros que desean una experiencia original, auténtica e inolvidable en la tierra de los Incas.</p>
+                            <p>Desde MachuPicchu hasta aventuras fuera de lo común en el Amazonas, Valle Sagrado, lago Titicaca, Lima, Arequipa y muchos más. Ofrecemos paquetes de viaje a Perú hechos a medida de acuerdo a sus intereses y necesidades.</p>
+                            <p>Desde que se estableció GOTOPERU en 2009, hemos tenido el placer de dar la bienvenida a decenas de miles de viajeros felices de más de 50 países. Esperamos poder darle la bienvenida y presentarle el Perú mágico, biodiverso e histórico.</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-6">
-                    <div class="bg-light shadow-sm p-4 border-left border-g-yellow">
-                        <h5 class="font-weight-bold text-secondary">MISIÓN</h5>
-                        <p class="align-middle">Ofrecer a nuestros clientes los mejores recursos peruanos para una aventura inolvidable.</p>
+                <div class="col-md-6 card border-0">
+                    <div class="row card-body ">
+                        <div class="col my-auto">
+                            <img src="{{asset('images/placebg.jpg')}}" class="img-fluid shadow">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section>
+        <div class=" container-fluid">
+            <div class="row">
+                <div class="col-md-6 card border-0 bg-g-yellow rounded-0 px-3">
+                    <div class="row card-body">
+                        <div class="col">
+                            <h5 class=" text-white font-weight-bold">NUESTROS VALORES</h5>
+                            <p class=" text-white small" >En GOTOPERU, nos guiamos por un conjunto de valores fundamentales: calidad, pasión, confianza y servicio personalizado, y garantizamos que estos sellos se cumplirán todos los días durante sus vacaciones en Perú.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 card">
+                    <div class="row card-body border-0 bg-g-green rouded-0 ">
+                        <div class="row px-3">
+                            <div class="col-md-6 text-center">
+                                <h5 class="text-white font-weight-bold">COMPROMISO</h5>
+                                <p class="text-white small">No dejar escapar la oportunidad de que nuestros turistas descubran los encantos de Perú y vivir una aventura inolvidable.</p>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <h5 class="text-white font-weight-bold">MISIÓN</h5>
+                                <p class="text-white small">Ofrecer a nuestros clientes los mejores recursos peruanos para una aventura inolvidable.</p>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="position-relative py-5">
+            <div class="offer-banner">
+                <div class="container mt-3">
+                    <div class="row align-items-center pt-5 pt-md-0">
+                        <div class="col-12 col-md-6">
+                            <img src="{{asset('images/gotoperu-banner-rgba.png')}}" alt="" class="w-100" loading="lazy">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h4 class="text-center font-weight-bold h1 text-g-green">GOTO<span class="text-g-yellow">PERU</span></h4>
+                            <p>Garantizamos una experiencia personalizada y de calidad que cumpla las expectativas de nuestros clientes. El modelo de Gestión de GOTOPERU está basado en la mejora continua y sus principales actuaciones son: Difundir las riquezas de nuestro país el Peru, sus costumbres, gastronomía, su patrimonio natural y cultural, ayudando a fomentar un turismo sostenible.</p>
+                            <ul class="pl-3">
+                                <li>Cede Central: Cusco, Perú</li>
+                                <li>Company: 25 miembros</li>
+                                <li>Fundado: 2009</li>
+                                <li>Oficinas: Lima, Perú / New York, Usa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     <section class="py-5 position-relative">
         <div class="offer-banner">
             <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h2 class="font-weight-bold">Conoce a nuestro equipo</h2>
+                <div class="row mb-2">
+                    <div class="col text-center">
+                        <h2 class="h1 font-weight-bold text-g-green">Nuestro equipo</h2>
                     </div>
                 </div>
 
@@ -115,24 +158,17 @@
         </div>
     </section>
 
-    <section class="position-relative">
-        <div class="offer-banner">
-            <div class="container">
-                <div class="row align-items-center pt-5 pt-md-0">
-                    <div class="col-12 col-md-6">
-                        <h2 class="h5">NOSOTROS SOMOS</h2>
-                        <h4 class="font-weight-bold h1">GOTOPERU</h4>
-                        <p>El compromiso de GOTOPERU es ofrecer una experiencia personalizada y de calidad que cumpla las expectativas de nuestros clientes. El modelo de Gestión de GOTOPERU está basado en la mejora continua y sus principales actuaciones son: Difundir las riquezas de nuestro país el Peru, sus costumbres, gastronomía, su patrimonio natural y cultural, ayudando a fomentar un turismo sostenible.</p>
-                        <ul class="pl-3">
-                            <li>Cede Central: Cusco, Perú</li>
-                            <li>Company: 25 miembros</li>
-                            <li>Fundado: 2009</li>
-                            <li>Oficinas: Lima, Perú / New York, Usa</li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="{{asset('images/gotoperu-banner-rgba.png')}}" alt="" class="w-100" loading="lazy">
-                    </div>
+    <section id="consulte" class="pt-5">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-2">
+                    <img src="{{asset('images/logo-gotoperu-black.png')}}" alt="logo" class="w-100" loading="lazy">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-7">
+                    <h5 class="font-weight-bold text-center">CONSULTA DE VIAJES</h5>
+                    <form-inquire></form-inquire>
                 </div>
             </div>
         </div>
