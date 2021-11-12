@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="col">
                     <div class=" bg-light border border-g-green px-3 py-2 shadow">
-                        <h5 class="h6 text-g-green font-weight-bold">DESCRIPCION GENERAL</h5>
+                        <h5 class="h6 text-g-green font-weight-bold">DESCRIPCIÓN GENERAL</h5>
                     </div>
                     <div class="px-3 py-4 border-left border-right border-g-green">
                         <p><span class="text-g-yellow font-weight-bold">GOTOPERU</span> es el sitio de reservas online cuyo nombre comercial es GOTOPERU GROUP SAC.

@@ -122,3 +122,12 @@
   width: 100%;
   height: 100%;
 }
+.expedia-color{
+  color: #00355F;
+}
+.tripadvisor-color{
+  color: #00af87;
+}
+.bg-rgba-dark-6{
+  background: rgba(0,0,0,.6)!important;
+}

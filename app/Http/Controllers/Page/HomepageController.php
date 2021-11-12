@@ -12,6 +12,8 @@ use App\TPaqueteDificultad;
 use App\TTeam;
 use App\TTour;
 use App\TSeo;
+use App\THotel;
+use App\THotelDestino;
 use App\Faq;
 use App\TBlog_post;
 use App\TBlog_categoria;
@@ -673,6 +675,25 @@ class HomepageController extends Controller
         SEOMeta::setTitle("Preguntas frecuentes - GOTOPERU");
         $faqs=Faq::get();
         return view('page.preguntas',compact('faqs'));
+    }
+    public function hotel(){
+        SEOMeta::setTitle("Hoteles - GOTOPERU");
+        $destino_hoteles=THotelDestino::with(['hotel','destinos'])->get();
+        $destinos = collect();
+        foreach ($destino_hoteles as $des) { 
+            if(!$destinos->where('iddestino', $des->iddestinos)->first()){
+                $destinos->push(['iddestino'=>$des->iddestinos,'imagen'=>$des['destinos']->imagen,'nombre'=>$des['destinos']->nombre,'url'=>$des['destinos']->url]);
+            }
+        }
+        $destinos=$destinos->sortBy('nombre');
+        return view('page.hotel',compact('destinos'));
+    }
+    public function hotelDestino($url){
+        $destino_hoteles_2=THotelDestino::with(['hotel','destinos'])->get()->where('destinos.url',$url)->where('hotel.estrellas',2);
+        $destino_hoteles_3=THotelDestino::with(['hotel','destinos'])->get()->where('destinos.url',$url)->where('hotel.estrellas',3);
+        $destino_hoteles_4=THotelDestino::with(['hotel','destinos'])->get()->where('destinos.url',$url)->where('hotel.estrellas',4);
+        $destino_hoteles_5=THotelDestino::with(['hotel','destinos'])->get()->where('destinos.url',$url)->where('hotel.estrellas',5);
+        return view('page.hotelDestino',compact('destino_hoteles_2','destino_hoteles_3','destino_hoteles_4','destino_hoteles_5'));
     }
 
     public function callback(Request $request){
