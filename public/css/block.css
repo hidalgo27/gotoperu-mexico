@@ -129,5 +129,11 @@
   color: #00af87;
 }
 .bg-rgba-dark-6{
-  background: rgba(0,0,0,.6)!important;
+  background: rgba(0,0,0,.5)!important;
 }
+.cont:hover .trans {
+  transition:all .5s ease-in-out;
+  -webkit-transform:scale(1.1);
+  transform:scale(1.1);
+}
+.cont {overflow:hidden;}

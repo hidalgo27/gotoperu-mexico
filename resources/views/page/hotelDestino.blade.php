@@ -8,12 +8,12 @@
         {{--            </video>--}}
         <div class="homepage-video">
             {{--                <iframe title="GotoPeru background video" src="https://player.vimeo.com/video/361847703?background=1" width="100%" height="100" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>--}}
-            <img src="{{$destino_hoteles_2->first()['destinos']->destino_imagen->first()->nombre}}" alt="" loading="lazy">
+            <img src="{{$destino->destino_imagen->first()->nombre}}" alt="" loading="lazy">
         </div>
         <div class="container h-100">
             <div class="row d-flex h-100 text-center align-items-center">
                 <div class="col w-100 text-white mt-5">
-                    <h1 class="font-weight-lighter h2 mt-5 text-uppercase">HOTELES EN {{$destino_hoteles_2->first()['destinos']->nombre}}</h1>
+                    <h1 class="font-weight-lighter h2 mt-5 text-uppercase">HOTELES EN {{$destino->nombre}}</h1>
                     {{--                        <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>--}}
                 </div>
             </div>
@@ -44,10 +44,10 @@
                 <div class="col">
                     <div id="myGroup">
                         <div class=" text-center my-5">
-                            <button class="btn btn-g-yellow text-white font-weight-bold mx-2" data-toggle="collapse" data-target="#dos-estrellas">2 Estrellas </button>
-                            <button class="btn btn-g-yellow text-white font-weight-bold mx-2" data-toggle="collapse" data-target="#tres-estrellas">3 Estrellas</button>
-                            <button class="btn btn-g-yellow text-white font-weight-bold mx-2" data-toggle="collapse" data-target="#cuatro-estrellas">4 Estrellas</button>
-                            <button class="btn btn-g-yellow text-white font-weight-bold mx-2" data-toggle="collapse" data-target="#cinco-estrellas">5 Estrellas</button>
+                            <button class="btn btn-g-yellow text-white font-weight-bold mx-2 mb-3" data-toggle="collapse" data-target="#dos-estrellas">2 Estrellas </button>
+                            <button class="btn btn-g-yellow text-white font-weight-bold mx-2 mb-3" data-toggle="collapse" data-target="#tres-estrellas">3 Estrellas</button>
+                            <button class="btn btn-g-yellow text-white font-weight-bold mx-2 mb-3" data-toggle="collapse" data-target="#cuatro-estrellas">4 Estrellas</button>
+                            <button class="btn btn-g-yellow text-white font-weight-bold mx-2 mb-3" data-toggle="collapse" data-target="#cinco-estrellas">5 Estrellas</button>
                         </div>
                         <div class="accordion-group">
                             <div class="collapse show" id="dos-estrellas"  data-parent="#myGroup">
@@ -59,7 +59,7 @@
                                         <div class="col-md-7 card border-0 shadow">
                                             <div class="my-auto mx-3">
                                                 <a href="{{$dest_hotel['hotel']->url}}" target="_Blank"><h4 class=" h5 font-weight-bold text-dark">{{$dest_hotel['hotel']->nombre}}</h4></a>
-                                                <div class="row py-2 px-3 justify-content-between">
+                                                <div class="row py-1 px-3 justify-content-between">
                                                     <div class="p text-g-dark-light">
                                                         <i class="fa fa-map-marker"></i>
                                                         {{$dest_hotel['hotel']->direccion}}
@@ -70,8 +70,11 @@
                                                         @endfor
                                                     </div>
                                                 </div>
+                                                <div class=" mt-2">
+                                                    {!!$dest_hotel['hotel']->descripcion!!}
+                                                </div>
                                                 @if ($dest_hotel['hotel']->servicios != "")
-                                                <div class="small bg-light py-2 my-2">
+                                                <div class="small bg-light py-2">
                                                     @foreach(explode(',', $dest_hotel['hotel']->servicios) as $servicio) 
                                                         @if($servicio=="Internet")
                                                             <span class="px-2"><img src={{asset('images/s-wifi.svg')}} width="30"> {{$servicio}}</span>
@@ -94,19 +97,12 @@
                                                     @endforeach
                                                 </div>
                                                 @endif
-                                                <div class=" py-2">
-                                                    {!!$dest_hotel['hotel']->descripcion!!}
-                                                </div>
-                                                
                                                 <div class=" pt-3 row justify-content-around">
-                                                    @if($dest_hotel['hotel']->url_expedia)
-                                                        <a href="{{$dest_hotel['hotel']->url_expedia}}" target="_Blank" class="expedia-color font-weight-bold">Expedia <i class=" fa fa-long-arrow-alt-right"></i></a>
+                                                    @if($dest_hotel['hotel']->expedia)
+                                                        <span class="expedia-color font-weight-bold">Expedia: {{$dest_hotel['hotel']->expedia}}</span>
                                                     @endif
-                                                    @if($dest_hotel['hotel']->url_tripadvisor)
-                                                        <a href="{{$dest_hotel['hotel']->url_tripadvisor}}" target="_Blank" class="tripadvisor-color font-weight-bold">Tripadvisor <i class=" fa fa-long-arrow-alt-right"></i></a>
-                                                    @endif
-                                                    @if($dest_hotel['hotel']->url)
-                                                        <a href="{{$dest_hotel['hotel']->url}}" target="_Blank" class="text-g-green font-weight-bold">Ver hotel <i class=" fa fa-long-arrow-alt-right"></i></a>
+                                                    @if($dest_hotel['hotel']->tripadvisor)
+                                                        <span class="tripadvisor-color font-weight-bold">Tripadvisor: {{ $dest_hotel['hotel']->tripadvisor}}</span>
                                                     @endif
                                                 </div>
                                             </div>
@@ -123,7 +119,7 @@
                                         <div class="col-md-7 card border-0 shadow">
                                             <div class="my-auto mx-3">
                                                 <a href="{{$dest_hotel['hotel']->url}}" target="_Blank"><h4 class=" h5 font-weight-bold text-dark">{{$dest_hotel['hotel']->nombre}}</h4></a>
-                                                <div class="row py-2 px-3 justify-content-between">
+                                                <div class="row py-1 px-3 justify-content-between">
                                                     <div class="p text-g-dark-light">
                                                         <i class="fa fa-map-marker"></i>
                                                         {{$dest_hotel['hotel']->direccion}}
@@ -134,8 +130,11 @@
                                                         @endfor
                                                     </div>
                                                 </div>
+                                                <div class=" mt-2">
+                                                    {!!$dest_hotel['hotel']->descripcion!!}
+                                                </div>
                                                 @if ($dest_hotel['hotel']->servicios != "")
-                                                <div class="small bg-light py-2 my-2">
+                                                <div class="small bg-light py-2">
                                                     @foreach(explode(',', $dest_hotel['hotel']->servicios) as $servicio) 
                                                         @if($servicio=="Internet")
                                                             <span class="px-2"><img src={{asset('images/s-wifi.svg')}} width="30"> {{$servicio}}</span>
@@ -158,19 +157,12 @@
                                                     @endforeach
                                                 </div>
                                                 @endif
-                                                <div class=" py-2">
-                                                    {!!$dest_hotel['hotel']->descripcion!!}
-                                                </div>
-                                                
                                                 <div class=" pt-3 row justify-content-around">
-                                                    @if($dest_hotel['hotel']->url_expedia)
-                                                        <a href="{{$dest_hotel['hotel']->url_expedia}}" target="_Blank" class="expedia-color font-weight-bold">Expedia <i class=" fa fa-long-arrow-alt-right"></i></a>
+                                                    @if($dest_hotel['hotel']->expedia)
+                                                        <span class="expedia-color font-weight-bold">Expedia: {{$dest_hotel['hotel']->expedia}}</span>
                                                     @endif
-                                                    @if($dest_hotel['hotel']->url_tripadvisor)
-                                                        <a href="{{$dest_hotel['hotel']->url_tripadvisor}}" target="_Blank" class="tripadvisor-color font-weight-bold">Tripadvisor <i class=" fa fa-long-arrow-alt-right"></i></a>
-                                                    @endif
-                                                    @if($dest_hotel['hotel']->url)
-                                                        <a href="{{$dest_hotel['hotel']->url}}" target="_Blank" class="text-g-green font-weight-bold">Ver hotel <i class=" fa fa-long-arrow-alt-right"></i></a>
+                                                    @if($dest_hotel['hotel']->tripadvisor)
+                                                        <span class="tripadvisor-color font-weight-bold">Tripadvisor: {{ $dest_hotel['hotel']->tripadvisor}}</span>
                                                     @endif
                                                 </div>
                                             </div>
@@ -187,7 +179,7 @@
                                         <div class="col-md-7 card border-0 shadow">
                                             <div class="my-auto mx-3">
                                                 <a href="{{$dest_hotel['hotel']->url}}" target="_Blank"><h4 class=" h5 font-weight-bold text-dark">{{$dest_hotel['hotel']->nombre}}</h4></a>
-                                                <div class="row py-2 px-3 justify-content-between">
+                                                <div class="row py-1 px-3 justify-content-between">
                                                     <div class="p text-g-dark-light">
                                                         <i class="fa fa-map-marker"></i>
                                                         {{$dest_hotel['hotel']->direccion}}
@@ -198,8 +190,11 @@
                                                         @endfor
                                                     </div>
                                                 </div>
+                                                <div class=" mt-2">
+                                                    {!!$dest_hotel['hotel']->descripcion!!}
+                                                </div>
                                                 @if ($dest_hotel['hotel']->servicios != "")
-                                                <div class="small bg-light py-2 my-2">
+                                                <div class="small bg-light py-2">
                                                     @foreach(explode(',', $dest_hotel['hotel']->servicios) as $servicio) 
                                                         @if($servicio=="Internet")
                                                             <span class="px-2"><img src={{asset('images/s-wifi.svg')}} width="30"> {{$servicio}}</span>
@@ -222,19 +217,12 @@
                                                     @endforeach
                                                 </div>
                                                 @endif
-                                                <div class=" py-2">
-                                                    {!!$dest_hotel['hotel']->descripcion!!}
-                                                </div>
-                                                
                                                 <div class=" pt-3 row justify-content-around">
-                                                    @if($dest_hotel['hotel']->url_expedia)
-                                                        <a href="{{$dest_hotel['hotel']->url_expedia}}" target="_Blank" class="expedia-color font-weight-bold">Expedia <i class=" fa fa-long-arrow-alt-right"></i></a>
+                                                    @if($dest_hotel['hotel']->expedia)
+                                                        <span class="expedia-color font-weight-bold">Expedia: {{$dest_hotel['hotel']->expedia}}</span>
                                                     @endif
-                                                    @if($dest_hotel['hotel']->url_tripadvisor)
-                                                        <a href="{{$dest_hotel['hotel']->url_tripadvisor}}" target="_Blank" class="tripadvisor-color font-weight-bold">Tripadvisor <i class=" fa fa-long-arrow-alt-right"></i></a>
-                                                    @endif
-                                                    @if($dest_hotel['hotel']->url)
-                                                        <a href="{{$dest_hotel['hotel']->url}}" target="_Blank" class="text-g-green font-weight-bold">Ver hotel <i class=" fa fa-long-arrow-alt-right"></i></a>
+                                                    @if($dest_hotel['hotel']->tripadvisor)
+                                                        <span class="tripadvisor-color font-weight-bold">Tripadvisor: {{ $dest_hotel['hotel']->tripadvisor}}</span>
                                                     @endif
                                                 </div>
                                             </div>
@@ -251,7 +239,7 @@
                                         <div class="col-md-7 card border-0 shadow">
                                             <div class="my-auto mx-3">
                                                 <a href="{{$dest_hotel['hotel']->url}}" target="_Blank"><h4 class=" h5 font-weight-bold text-dark">{{$dest_hotel['hotel']->nombre}}</h4></a>
-                                                <div class="row py-2 px-3 justify-content-between">
+                                                <div class="row py-1 px-3 justify-content-between">
                                                     <div class="p text-g-dark-light">
                                                         <i class="fa fa-map-marker"></i>
                                                         {{$dest_hotel['hotel']->direccion}}
@@ -262,8 +250,11 @@
                                                         @endfor
                                                     </div>
                                                 </div>
+                                                <div class=" mt-2">
+                                                    {!!$dest_hotel['hotel']->descripcion!!}
+                                                </div>
                                                 @if ($dest_hotel['hotel']->servicios != "")
-                                                <div class="small bg-light py-2 my-2">
+                                                <div class="small bg-light py-2">
                                                     @foreach(explode(',', $dest_hotel['hotel']->servicios) as $servicio) 
                                                         @if($servicio=="Internet")
                                                             <span class="px-2"><img src={{asset('images/s-wifi.svg')}} width="30"> {{$servicio}}</span>
@@ -286,19 +277,12 @@
                                                     @endforeach
                                                 </div>
                                                 @endif
-                                                <div class=" py-2">
-                                                    {!!$dest_hotel['hotel']->descripcion!!}
-                                                </div>
-                                                
                                                 <div class=" pt-3 row justify-content-around">
-                                                    @if($dest_hotel['hotel']->url_expedia)
-                                                        <a href="{{$dest_hotel['hotel']->url_expedia}}" target="_Blank" class="expedia-color font-weight-bold">Expedia <i class=" fa fa-long-arrow-alt-right"></i></a>
+                                                    @if($dest_hotel['hotel']->expedia)
+                                                        <span class="expedia-color font-weight-bold">Expedia: {{$dest_hotel['hotel']->expedia}}</span>
                                                     @endif
-                                                    @if($dest_hotel['hotel']->url_tripadvisor)
-                                                        <a href="{{$dest_hotel['hotel']->url_tripadvisor}}" target="_Blank" class="tripadvisor-color font-weight-bold">Tripadvisor <i class=" fa fa-long-arrow-alt-right"></i></a>
-                                                    @endif
-                                                    @if($dest_hotel['hotel']->url)
-                                                        <a href="{{$dest_hotel['hotel']->url}}" target="_Blank" class="text-g-green font-weight-bold">Ver hotel <i class=" fa fa-long-arrow-alt-right"></i></a>
+                                                    @if($dest_hotel['hotel']->tripadvisor)
+                                                        <span class="tripadvisor-color font-weight-bold">Tripadvisor: {{ $dest_hotel['hotel']->tripadvisor}}</span>
                                                     @endif
                                                 </div>
                                             </div>

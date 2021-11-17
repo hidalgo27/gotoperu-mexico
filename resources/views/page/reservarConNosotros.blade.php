@@ -49,10 +49,10 @@
                 <div class=" col-md-6 card border-0 ">
                     <div class="mx-3 p-3 border border-g-yellow shadow card-body ">
                         <div class="row">
-                            <div class=" col-3 my-auto text-center">
-                                <img src="{{asset('images/trustworthy.png')}}" width="65">
+                            <div class=" col-2 my-auto text-center">
+                                <img src="{{asset('images/trustworthy.png')}}" width="40">
                             </div>
-                            <div class=" col-9 my-auto ">
+                            <div class=" col-10 my-auto ">
                                 <h5 class=" font-weight-bolder text-g-dark-light">RESERVA CON CONFIANZA</h5>
                             </div>
                         </div>
@@ -66,11 +66,11 @@
                 </div>
                 <div class=" col-md-6 card border-0">
                     <div class="mx-3 p-3 border border-g-green shadow card-body">
-                        <div class="row row-eq-height">
-                            <div class=" col-3 my-auto text-center">
-                                <img src="{{asset('images/location.png')}}" width="65">
+                        <div class="row">
+                            <div class=" col-2 my-auto text-center">
+                                <img src="{{asset('images/location.png')}}" width="40">
                             </div>
-                            <div class=" col-9 my-auto ">
+                            <div class=" col-10 my-auto ">
                                 <h5 class=" font-weight-bolder  text-g-dark-light">EXPERTOS EN VIAJES LOCALES DE CONFIANZA</h5>
                             </div>
                         </div>
@@ -83,15 +83,14 @@
                     </div>
                 </div>
             </div>
-
             <div class="row mt-5">
                 <div class=" col-md-6 card border-0">
                     <div class="mx-3 p-3 border border-g-green shadow card-body">
                         <div class="row">
-                            <div class=" col-3 my-auto text-center">
-                                <img src="{{asset('images/review.png')}}" width="65">
+                            <div class=" col-2 my-auto text-center">
+                                <img src="{{asset('images/review.png')}}" width="40">
                             </div>
-                            <div class=" col-9 my-auto ">
+                            <div class=" col-10 my-auto ">
                                 <h5 class=" font-weight-bolder  text-g-dark-light">EXCELENTES TESTIMONIOS</h5>
                             </div>
                         </div>
@@ -105,11 +104,11 @@
                 </div>
                 <div class=" col-md-6 card border-0">
                     <div class="mx-3 p-3 border border-g-yellow shadow card-body">
-                        <div class="row row-eq-height">
-                            <div class=" col-3 my-auto text-center">
-                                <img src="{{asset('images/photographer.png')}}" width="65">
+                        <div class="row ">
+                            <div class=" col-2 my-auto text-center">
+                                <img src="{{asset('images/photographer.png')}}" width="40">
                             </div>
-                            <div class=" col-9 my-auto ">
+                            <div class=" col-10 my-auto ">
                                 <h5 class=" font-weight-bolder  text-g-dark-light">EXPERIENCIA SIN ESTRÉS</h5>
                             </div>
                         </div>
@@ -127,10 +126,10 @@
                 <div class=" col-md-6 card border-0">
                     <div class="mx-3 p-3 border border-g-yellow shadow card-body">
                         <div class="row">
-                            <div class=" col-3 my-auto text-center">
-                                <img src="{{asset('images/appreciation.png')}}" width="65">
+                            <div class=" col-2 my-auto text-center">
+                                <img src="{{asset('images/appreciation.png')}}" width="40">
                             </div>
-                            <div class=" col-9 my-auto ">
+                            <div class=" col-10 my-auto ">
                                 <h5 class=" font-weight-bolder  text-g-dark-light">ESTÁS EN BUENAS MANOS</h5>
                             </div>
                         </div>
@@ -144,11 +143,11 @@
                 </div>
                 <div class=" col-md-6 card border-0">
                     <div class="mx-3 p-3 border border-g-green shadow card-body">
-                        <div class="row row-eq-height">
-                            <div class=" col-3 my-auto text-center">
-                                <img src="{{asset('images/hotel.png')}}" width="65">
+                        <div class="row">
+                            <div class=" col-2 my-auto text-center">
+                                <img src="{{asset('images/hotel.png')}}" width="40">
                             </div>
-                            <div class=" col-9 my-auto ">
+                            <div class=" col-10 my-auto ">
                                 <h5 class=" font-weight-bolder  text-g-dark-light">HOTELES CUIDADOSAMENTE SELECCIONADOSS</h5>
                             </div>
                         </div>

@@ -664,20 +664,20 @@ class HomepageController extends Controller
         return view('page.reservarConNosotros');
     }
     public function viajeConfianza(){
-        SEOMeta::setTitle("Viaje con confianza - GOTOPERU");
+        SEOMeta::setTitle("Viaje con confianza | GOTOPERU");
         return view('page.viajeConfianza');
     }
     public function condiciones(){
-        SEOMeta::setTitle("Términos y condiciones de reserva - GOTOPERU");
+        SEOMeta::setTitle("Términos y condiciones de reserva | GOTOPERU");
         return view('page.condiciones');
     }
     public function preguntas(){
-        SEOMeta::setTitle("Preguntas frecuentes - GOTOPERU");
+        SEOMeta::setTitle("Preguntas frecuentes | GOTOPERU");
         $faqs=Faq::get();
         return view('page.preguntas',compact('faqs'));
     }
     public function hotel(){
-        SEOMeta::setTitle("Hoteles - GOTOPERU");
+        SEOMeta::setTitle("Hoteles | GOTOPERU");
         $destino_hoteles=THotelDestino::with(['hotel','destinos'])->get();
         $destinos = collect();
         foreach ($destino_hoteles as $des) { 
@@ -689,11 +689,12 @@ class HomepageController extends Controller
         return view('page.hotel',compact('destinos'));
     }
     public function hotelDestino($url){
+        $destino=THotelDestino::with(['hotel','destinos'])->get()->where('destinos.url',$url)->first()['destinos'];
         $destino_hoteles_2=THotelDestino::with(['hotel','destinos'])->get()->where('destinos.url',$url)->where('hotel.estrellas',2);
         $destino_hoteles_3=THotelDestino::with(['hotel','destinos'])->get()->where('destinos.url',$url)->where('hotel.estrellas',3);
         $destino_hoteles_4=THotelDestino::with(['hotel','destinos'])->get()->where('destinos.url',$url)->where('hotel.estrellas',4);
         $destino_hoteles_5=THotelDestino::with(['hotel','destinos'])->get()->where('destinos.url',$url)->where('hotel.estrellas',5);
-        return view('page.hotelDestino',compact('destino_hoteles_2','destino_hoteles_3','destino_hoteles_4','destino_hoteles_5'));
+        return view('page.hotelDestino',compact('destino','destino_hoteles_2','destino_hoteles_3','destino_hoteles_4','destino_hoteles_5'));
     }
 
     public function callback(Request $request){

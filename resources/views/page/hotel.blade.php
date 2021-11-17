@@ -40,16 +40,18 @@
 
     <section class=" bg-white py-5">
         <div class="container">
-            <div class="row my-5">
+            <div class="row mb-5 mt-2">
                 <div class="col">
                     <p class=" lead text-center">Te damos a conocer los hoteles en las regiones más visitadas de Perú</p>
                 </div>
             </div>
             <div class="row mb-5">
             @foreach ($destinos as $destino)
-                <div class="col-4 mb-5">
-                    <div class=" position-relative ">
-                        <img src="{{$destino['imagen']}}" class=" img-fluid shadow">
+                <div class="col-md-4 mb-5">
+                    <div class=" position-relative cont">
+                        <a href="{{route('hotel_path')}}/{{$destino['url']}}">
+                            <img src="{{$destino['imagen']}}" class=" img-fluid shadow trans">
+                        </a>
                         <div class=" position-absolute-bottom bg-rgba-dark-6 pt-3 pb-2 px-3 justify-content-between">
                             <span class="h6 text-uppercase font-weight-bold text-white">{{$destino['nombre']}}</span><br>
                             <a href="{{route('hotel_path')}}/{{$destino['url']}}" class="text-g-yellow">Ver hoteles <i class="fa fa-long-arrow-alt-right"></i></a>

@@ -13,7 +13,7 @@
         <div class="container h-100">
             <div class="row d-flex h-100 text-center align-items-center">
                 <div class="col w-100 text-white mt-5">
-                    <h1 class="font-weight-lighter h2 mt-5">GOTOPERU TUS EXPERTOS EN VIAJES LOCALES EN PERÚ</h1>
+                    <h1 class="font-weight-lighter h2 mt-5">GOTOPERU TUS EXPERTOS EN VIAJES LOCALES A PERÚ</h1>
                     {{--                        <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>--}}
                 </div>
             </div>
@@ -46,16 +46,15 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 card border-0">
+                <div class="col-lg-6 card border-0">
                     <div class="row card-body">
-                        <div class="col ">
-                            <p>GOTOPERU es una agencia de viajes especializada que atiende a los viajeros que desean una experiencia original, auténtica e inolvidable en la tierra de los Incas.</p>
-                            <p>Desde MachuPicchu hasta aventuras fuera de lo común en el Amazonas, Valle Sagrado, lago Titicaca, Lima, Arequipa y muchos más. Ofrecemos paquetes de viaje a Perú hechos a medida de acuerdo a sus intereses y necesidades.</p>
+                        <div class="col text-justify">
+                            <p>GOTOPERU es una agencia de viajes que atiende a los viajeros que desean una experiencia original, auténtica e inolvidable en la tierra de los Incas. Ofrecemos paquetes de viaje a Perú, hechos a medida de acuerdo a sus intereses y necesidades, desde MachuPicchu hasta aventuras fuera de lo común en el Amazonas, Valle Sagrado, lago Titicaca, Lima, Arequipa y muchos más.</p>
                             <p>Desde que se estableció GOTOPERU en 2009, hemos tenido el placer de dar la bienvenida a decenas de miles de viajeros felices de más de 50 países. Esperamos poder darle la bienvenida y presentarle el Perú mágico, biodiverso e histórico.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 card border-0">
+                <div class="col-lg-6 card border-0">
                     <div class="row card-body ">
                         <div class="col my-auto">
                             <img src="{{asset('images/placebg.jpg')}}" class="img-fluid shadow">
