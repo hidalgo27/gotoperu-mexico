@@ -137,3 +137,6 @@
   transform:scale(1.1);
 }
 .cont {overflow:hidden;}
+.menu>ul>li>ul.normal-sub>li a:hover{
+  color:#7f8429!important;
+}
