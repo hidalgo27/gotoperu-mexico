@@ -69,7 +69,7 @@
                                         <a href=""> <img src="{{asset('images/icons/pe.svg')}}" alt="" width="40" class="w-" loading="lazy"> </a>
                                     </div>
                                     <div class="social-info">
-                                        <a href="tel:12024911478">+51 960 680 005</a>
+                                        <a href="tel:51960680005">+51 960 680 005</a>
                                     </div>
                                 </li>
                             </ul>
@@ -101,7 +101,7 @@
             <div class="row justify-content-end">
                 <div class="col-auto">
                     <div class="bg-dark rounded px-3 mx-3 shadow clearfix float-right">
-                        <a href="https://api.whatsapp.com/send?phone=12024911478" target="_blank" class="font-weight-bold text-white stretched-link">
+                        <a href="https://api.whatsapp.com/send?phone=51960680005" target="_blank" class="font-weight-bold text-white stretched-link">
                             Escríbenos por WhatsApp
                             <img src="{{asset('images/icons/whatsapp-i.png')}}" class="py-1" alt="logo whatsapp" width="50" data-toggle="tooltip" data-placement="top" title="Perú" loading="lazy">
                         </a>
@@ -162,7 +162,7 @@
                         <a href="{{route('sobre_nosotros_path')}}" class="text-white">Nosotros</a>
                     </div>
                     <div class="col">
-                        <a href="https://api.whatsapp.com/send?phone=12024911478" target="_blank" class="text-white">Contáctanos</a>
+                        <a href="https://api.whatsapp.com/send?phone=51960680005" target="_blank" class="text-white">Contáctanos</a>
                     </div>
                     <div class="col">
                         <a href="" class="text-white">Políticas del Sitio</a>
