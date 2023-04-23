@@ -286,6 +286,12 @@ class HomepageController extends Controller
             $telefono = $request->el_telefono;
         }
 
+        $country = '';
+        if ($request->country){
+            $country = $request->country;
+        }
+
+
         $comentario = '';
         if ($request->el_textarea){
             $comentario = $request->el_textarea;
@@ -322,6 +328,8 @@ class HomepageController extends Controller
                     'fecha' => $fecha,
                     'telefono' => $telefono,
                     'comentario' => $comentario,
+
+                    'country' => $country
 
                 ], function ($messaje) use ($from) {
                     $messaje->to($from, 'GotoPeru')
@@ -486,7 +494,7 @@ class HomepageController extends Controller
             OpenGraph::addProperty('locale', $seo->first()->localizacion);
             OpenGraph::setSiteName($seo->first()->nombre_sitio);
             OpenGraph::addImage($seo->first()->imagen, ['height' => $seo->first()->imagen_height, 'width' => $seo->first()->imagen_width]);
-            
+
             if($seo->first()->microdata){
                 JsonLd::setTitle($seo->first()->microdata);
             }
@@ -533,7 +541,7 @@ class HomepageController extends Controller
             OpenGraph::addProperty('locale', $seo->first()->localizacion);
             OpenGraph::setSiteName($seo->first()->nombre_sitio);
             OpenGraph::addImage($seo->first()->imagen, ['height' => $seo->first()->imagen_height, 'width' => $seo->first()->imagen_width]);
-            
+
             if($seo->first()->microdata){
                 JsonLd::setTitle($seo->first()->microdata);
             }
@@ -597,7 +605,7 @@ class HomepageController extends Controller
             OpenGraph::addProperty('type', $seo->first()->tipo);
             OpenGraph::setSiteName($seo->first()->nombre_sitio);
             OpenGraph::addImage($seo->first()->imagen, ['height' => $seo->first()->imagen_height, 'width' => $seo->first()->imagen_width]);
-        
+
             if($seo->first()->microdata){
                 JsonLd::setTitle($seo->first()->microdata);
             }
@@ -674,10 +682,10 @@ class HomepageController extends Controller
         SEOMeta::setCanonical("https://gotoperu.com.mx/blog");
 
         $posts=TBlog_post::with(['user','categoria','imagenes'])->paginate(5);
-        $categorias_aux = TBlog_categoria::get(); 
+        $categorias_aux = TBlog_categoria::get();
         $categorias = collect();
-        foreach ($categorias_aux as $cat) { 
-            $idCat = $cat->id; 
+        foreach ($categorias_aux as $cat) {
+            $idCat = $cat->id;
             $consulta = TBlog_post::where('categoria_id',$idCat)->count();
             $categorias->push([$cat->nombre,$consulta]);
         }
@@ -695,11 +703,11 @@ class HomepageController extends Controller
         $categoria_aux=TBlog_categoria::where('nombre',$categoria)->first();
         $posts = TBlog_post::with(['user', 'imagenes', 'categoria'])
             ->where('categoria_id',$categoria_aux->id)->paginate(5);
-        
-        $categorias_aux = TBlog_categoria::get(); 
+
+        $categorias_aux = TBlog_categoria::get();
         $categorias = collect();
-        foreach ($categorias_aux as $cat) { 
-            $idCat = $cat->id; 
+        foreach ($categorias_aux as $cat) {
+            $idCat = $cat->id;
             $consulta = TBlog_post::where('categoria_id',$idCat)->count();
             $categorias->push([$cat->nombre,$consulta]);
         }
@@ -731,7 +739,7 @@ class HomepageController extends Controller
             OpenGraph::addProperty('locale', $seo->first()->localizacion);
             OpenGraph::setSiteName($seo->first()->nombre_sitio);
             OpenGraph::addImage($seo->first()->imagen, ['height' => $seo->first()->imagen_height, 'width' => $seo->first()->imagen_width]);
-            
+
             if($seo->first()->microdata){
                 JsonLd::setTitle($seo->first()->microdata);
             }
@@ -744,10 +752,10 @@ class HomepageController extends Controller
             OpenGraph::addImage($post->imagen_miniatura, ['height' => 280, 'width' => 420]);
         }
 
-        $categorias_aux = TBlog_categoria::get(); 
+        $categorias_aux = TBlog_categoria::get();
         $categorias = collect();
-        foreach ($categorias_aux as $cat) { 
-            $idCat = $cat->id; 
+        foreach ($categorias_aux as $cat) {
+            $idCat = $cat->id;
             $consulta = TBlog_post::where('categoria_id',$idCat)->count();
             $categorias->push([$cat->nombre,$consulta]);
         }
@@ -763,10 +771,10 @@ class HomepageController extends Controller
             ->take(3)
             ->with(['user','categoria','imagenes'])
             ->get();
-        
+
         return view('page.blogDetail', compact('post','categorias','recentPosts','postsRelacionados','seo'));
     }
-    
+
     public function zoom(Request $request){
         $from = 'mexico@gotoperu.com';
         $nombre=$request->t_nombre;
