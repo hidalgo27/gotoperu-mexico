@@ -136,7 +136,7 @@
                 <div class="col-sml" style="display:inline-block;width:100%;max-width:270px;vertical-align:top;padding-bottom:10px;font-family:Arial,sans-serif;font-size:13px;line-height:22px;color:#363636;">
                   <p style="margin:0 0 5px 0;color:#ffffff">
                     <img src="{{asset('images/phone-call.png')}}" width="15" height="15" alt="celular" style="display:inline-block;color:#cccccc;padding:0 5px">
-                    +51 960 680 005
+                    +51 933 358 040
                   </p>
                   <p style="margin:0 0 5px 0;color:#ffffff">
                     <img src="{{asset('images/email.png')}}" width="15" height="15" alt="email" style="display:inline-block;color:#cccccc;padding:0 5px">
