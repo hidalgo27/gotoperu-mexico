@@ -71,11 +71,11 @@
                     <a href="https://gotoperu.com.mx/" target="_blank" style="color:#6c757d;text-decoration:none">- gotoperu.com.mx</a>
                   </p>
                 </div>
-                
+
                 <div class="col-lge" style="display:inline-block;width:100%;max-width:490px;vertical-align:middle;padding-bottom:20px;font-family:Arial,sans-serif;font-size:16px;line-height:22px;color:#363636;">
                   <img src="{{asset('images/goto-equipo.jpg')}}" alt="gotoperu" width="530px" style="width:90%;height:auto;display:block;border:none;text-decoration:none;color:#363636; padding:0 20px;">
                 </div>
-                
+
               </td>
             </tr>
             <tr>
@@ -95,7 +95,7 @@
                   <p style="font-size:11px;line-height:14px;color:#6c757d">Reunión Inmediata<br>Horario 09:00a.m 18:00p.m.</p>
                 </div>
                 <div class="" style="display:inline-block;width:100%;max-width:105px;vertical-align:top;padding-bottom:20px;font-family:Arial,sans-serif;font-size:16px;line-height:15px;color:#363636;">
-                  <a href="https://api.whatsapp.com/send?phone=51960680005" target="_blank"><img src="{{asset('images/whatsapp.png')}}" alt="whatsaap" width="64" style="margin:0 auto;display:block;border:none;text-decoration:none;color:#363636; padding:0 10px;"></a>
+                  <a href="https://api.whatsapp.com/send?phone=51933358040" target="_blank"><img src="{{asset('images/whatsapp.png')}}" alt="whatsaap" width="64" style="margin:0 auto;display:block;border:none;text-decoration:none;color:#363636; padding:0 10px;"></a>
                 </div>
                 <!--
                 <div class="" style="display:inline-block;width:100%;max-width:105px;vertical-align:top;padding-bottom:20px;font-family:Arial,sans-serif;font-size:16px;line-height:15px;color:#363636;">
@@ -124,7 +124,7 @@
                   <span style="color:#464646;font-weight: normal;font-size:14px">Comuníquese con nosotros en cualquier momento a través de whatsapp, email, zoom.</span>
                 </p>
               </td>
-            </tr>        
+            </tr>
             <tr>
               <td style="padding:20px 30px 20px 30px;font-size:0;color:#ffffff;background-color:#7F8429;text-align:center">
                 <p style="font-size:17px;font-weight: normal;">Programas de viaje más populares</p>
@@ -147,13 +147,13 @@
                     Av. El Sol 449, Oficina 301.
                   </p>
                 </div>
-                
+
                 <div class="col-lge" style="TEXT-ALIGN:CENTER;display:inline-block;width:100%;max-width:400px;vertical-align:top;padding-bottom:20px;font-family:Arial,sans-serif;font-size:12px;line-height:22px;color:#363636;">
                   <p style="margin-top:0;margin-bottom:3px;padding:0;color:#ffffff">SÍGUENOS</p>
                   <p style="margin:0 0 8px 0;">
                     <a href="https://www.facebook.com/GOTOPERUcom/" style="text-decoration:none;">
                       <img src="{{asset('images/logo-de-facebook.png')}}" width="18" height="18" alt="facebook" style="display:inline-block;color:#cccccc;padding:5px">
-                    </a> 
+                    </a>
                     <a href="https://www.instagram.com/go.to.peru/" style="text-decoration:none;">
                       <img src="{{asset('images/instagram.png')}}" width="18" height="18" alt="instagram" style="display:inline-block;color:#cccccc;padding:5px">
                     </a>
