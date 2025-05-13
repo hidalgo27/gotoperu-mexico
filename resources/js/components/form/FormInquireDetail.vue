@@ -142,7 +142,7 @@
                         </div>
                     </div>
                     <div class="col px-3">
-                        <vue-tel-input v-model="el_telefono"></vue-tel-input>
+                        <vue-tel-input v-model="el_telefono" v-on:country-changed="countryChanged"></vue-tel-input>
                     </div>
                 </div>
 
@@ -279,6 +279,9 @@
                 el_telefono: '',
                 el_textarea: '',
 
+                country: "",
+                country_code: "",
+
                 pickerOptions: {
                     disabledDate(time) {
                         return time.getTime() > Date.now();
@@ -314,6 +317,13 @@
             }
         },
         methods: {
+            countryChanged(country) {
+                this.country = country.name.replace(/\s*\(.*?\)\s*/g, '').trim()
+                this.country_code = `${country.iso2.toUpperCase()} +${country.dialCode}`;
+                console.log(country)
+                console.log("country code: "+this.country_code)
+                console.log("country: "+this.country)
+            },
             selectCategoryForm: function (categoriaForm, checked) {
                 if (checked){
                     this.categoriasSeleccionadosForm.push(categoriaForm);
@@ -325,15 +335,20 @@
                 }
 
             },
-            selectNumeroPasajerosForm: function (pasajerosForm, checked) {
-                if (checked){
-                    this.pasajerosSeleccionadosForm.push(pasajerosForm);
-                    console.log(pasajerosForm);
-                }else{
-                    let index = this.pasajerosSeleccionadosForm.indexOf(pasajerosForm);
-                    this.$delete(this.pasajerosSeleccionadosForm, index);
-                    console.log(index);
-                }
+            // selectNumeroPasajerosForm: function (pasajerosForm, checked) {
+            //     if (checked){
+            //         this.pasajerosSeleccionadosForm.push(pasajerosForm);
+            //         console.log(pasajerosForm);
+            //     }else{
+            //         let index = this.pasajerosSeleccionadosForm.indexOf(pasajerosForm);
+            //         this.$delete(this.pasajerosSeleccionadosForm, index);
+            //         console.log(index);
+            //     }
+            // },
+            selectNumeroPasajerosForm: function (pasajerosForm) {
+                // Sobrescribe directamente con el valor del radio seleccionado
+                this.pasajerosSeleccionadosForm = pasajerosForm;
+                console.log(pasajerosForm);
             },
             selectDuracionForm: function (duracionForm, checked) {
                 if (checked){
@@ -365,6 +380,8 @@
                     el_fecha: this.el_fecha,
                     el_telefono: this.el_telefono,
                     el_textarea: this.el_textarea,
+                    country: this.country,
+                    country_code: this.country_code
                 };
 
                 const self = this;

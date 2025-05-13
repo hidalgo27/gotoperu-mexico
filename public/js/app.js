@@ -4582,6 +4582,7 @@ __webpack_require__.r(__webpack_exports__);
       el_telefono: '',
       el_textarea: '',
       country: "",
+      country_code: "",
       pickerOptions: {
         disabledDate: function disabledDate(time) {
           return time.getTime() > Date.now();
@@ -4618,7 +4619,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     countryChanged: function countryChanged(country) {
-      this.country = country.name + '(' + country.dialCode + ')';
+      this.country = country.name.replace(/\s*\(.*?\)\s*/g, '').trim();
+      this.country_code = "".concat(country.iso2.toUpperCase(), " +").concat(country.dialCode);
+      console.log(country);
+      console.log("country code: " + this.country_code);
+      console.log("country: " + this.country);
     },
     selectDestino: function selectDestino(destinoForm, checked) {
       if (checked) {
@@ -4642,15 +4647,20 @@ __webpack_require__.r(__webpack_exports__);
       // console.log(this.categoriasSeleccionadosForm);
     },
 
-    selectNumeroPasajerosForm: function selectNumeroPasajerosForm(pasajerosForm, checked) {
-      if (checked) {
-        this.pasajerosSeleccionadosForm.push(pasajerosForm);
-        console.log(pasajerosForm);
-      } else {
-        var index = this.pasajerosSeleccionadosForm.indexOf(pasajerosForm);
-        this.$delete(this.pasajerosSeleccionadosForm, index);
-        console.log(index);
-      }
+    // selectNumeroPasajerosForm: function (pasajerosForm, checked) {
+    //     if (checked){
+    //         this.pasajerosSeleccionadosForm.push(pasajerosForm);
+    //         console.log(pasajerosForm);
+    //     }else{
+    //         let index = this.pasajerosSeleccionadosForm.indexOf(pasajerosForm);
+    //         this.$delete(this.pasajerosSeleccionadosForm, index);
+    //         console.log(index);
+    //     }
+    // },
+    selectNumeroPasajerosForm: function selectNumeroPasajerosForm(pasajerosForm) {
+      // Sobrescribe directamente con el valor del radio seleccionado
+      this.pasajerosSeleccionadosForm = pasajerosForm;
+      console.log(pasajerosForm);
     },
     selectDuracionForm: function selectDuracionForm(duracionForm, checked) {
       if (checked) {
@@ -4678,9 +4688,10 @@ __webpack_require__.r(__webpack_exports__);
         el_nombre: this.el_nombre,
         el_email: this.el_email,
         el_fecha: this.el_fecha,
-        el_telefono: this.el_telefono,
+        el_telefono: this.el_telefono.replace(/\s+/g, ''),
         el_textarea: this.el_textarea,
-        country: this.country
+        country: this.country,
+        country_code: this.country_code
       };
       var self = this;
       this.loadingdesign = true;
@@ -4783,6 +4794,8 @@ __webpack_require__.r(__webpack_exports__);
       el_fecha: '',
       el_telefono: '',
       el_textarea: '',
+      country: "",
+      country_code: "",
       pickerOptions: {
         disabledDate: function disabledDate(time) {
           return time.getTime() > Date.now();
@@ -4817,6 +4830,13 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    countryChanged: function countryChanged(country) {
+      this.country = country.name.replace(/\s*\(.*?\)\s*/g, '').trim();
+      this.country_code = "".concat(country.iso2.toUpperCase(), " +").concat(country.dialCode);
+      console.log(country);
+      console.log("country code: " + this.country_code);
+      console.log("country: " + this.country);
+    },
     selectCategoryForm: function selectCategoryForm(categoriaForm, checked) {
       if (checked) {
         this.categoriasSeleccionadosForm.push(categoriaForm);
@@ -4827,15 +4847,20 @@ __webpack_require__.r(__webpack_exports__);
         console.log(index);
       }
     },
-    selectNumeroPasajerosForm: function selectNumeroPasajerosForm(pasajerosForm, checked) {
-      if (checked) {
-        this.pasajerosSeleccionadosForm.push(pasajerosForm);
-        console.log(pasajerosForm);
-      } else {
-        var index = this.pasajerosSeleccionadosForm.indexOf(pasajerosForm);
-        this.$delete(this.pasajerosSeleccionadosForm, index);
-        console.log(index);
-      }
+    // selectNumeroPasajerosForm: function (pasajerosForm, checked) {
+    //     if (checked){
+    //         this.pasajerosSeleccionadosForm.push(pasajerosForm);
+    //         console.log(pasajerosForm);
+    //     }else{
+    //         let index = this.pasajerosSeleccionadosForm.indexOf(pasajerosForm);
+    //         this.$delete(this.pasajerosSeleccionadosForm, index);
+    //         console.log(index);
+    //     }
+    // },
+    selectNumeroPasajerosForm: function selectNumeroPasajerosForm(pasajerosForm) {
+      // Sobrescribe directamente con el valor del radio seleccionado
+      this.pasajerosSeleccionadosForm = pasajerosForm;
+      console.log(pasajerosForm);
     },
     selectDuracionForm: function selectDuracionForm(duracionForm, checked) {
       if (checked) {
@@ -4864,7 +4889,9 @@ __webpack_require__.r(__webpack_exports__);
         el_email: this.el_email,
         el_fecha: this.el_fecha,
         el_telefono: this.el_telefono,
-        el_textarea: this.el_textarea
+        el_textarea: this.el_textarea,
+        country: this.country,
+        country_code: this.country_code
       };
       var self = this;
       this.loadingdesign = true;
@@ -6182,6 +6209,9 @@ var render = function render() {
   })])]), _vm._v(" "), _c("div", {
     staticClass: "col px-3"
   }, [_c("vue-tel-input", {
+    on: {
+      "country-changed": _vm.countryChanged
+    },
     model: {
       value: _vm.el_telefono,
       callback: function callback($$v) {
@@ -6557,14 +6587,15 @@ var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "col-auto text-center pr-1 form-search checkbox"
+    staticClass: "col-auto text-center pr-1 form-search radio"
   }, [_c("input", {
     attrs: {
-      type: "checkbox",
-      id: "np_" + _vm.numeroPasajerosForm.value
+      type: "radio",
+      id: "np_" + _vm.numeroPasajerosForm.value,
+      name: "travellers"
     },
     domProps: {
-      value: _vm.numeroPasajerosForm.pasajerosSeleccionadosForm
+      value: _vm.numeroPasajerosForm.value
     },
     on: {
       change: _vm.onchangepasajeros
@@ -6574,7 +6605,7 @@ var render = function render() {
     attrs: {
       "for": "np_" + _vm.numeroPasajerosForm.value
     }
-  }, [_vm._v("\n        " + _vm._s(_vm.numeroPasajerosForm.value) + " "), _c("i", {
+  }, [_vm._v("\n        " + _vm._s(_vm.numeroPasajerosForm.value) + "\n        "), _c("i", {
     attrs: {
       "data-feather": "user",
       "stroke-width": "1"

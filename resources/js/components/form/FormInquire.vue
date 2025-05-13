@@ -325,6 +325,7 @@
                 el_textarea: '',
 
                 country: "",
+                country_code: "",
 
                 pickerOptions: {
                     disabledDate(time) {
@@ -359,12 +360,16 @@
 
                 loadingdesign: false,
                 btnviewdesign: true,
-                formshow: true
+                formshow: true,
             }
         },
         methods: {
             countryChanged(country) {
-                this.country = country.name+'('+country.dialCode+')'
+                this.country = country.name.replace(/\s*\(.*?\)\s*/g, '').trim()
+                this.country_code = `${country.iso2.toUpperCase()} +${country.dialCode}`;
+                console.log(country)
+                console.log("country code: "+this.country_code)
+                console.log("country: "+this.country)
             },
             selectDestino: function (destinoForm, checked) {
                 if (checked){
@@ -387,15 +392,20 @@
                 }
                 // console.log(this.categoriasSeleccionadosForm);
             },
-            selectNumeroPasajerosForm: function (pasajerosForm, checked) {
-                if (checked){
-                    this.pasajerosSeleccionadosForm.push(pasajerosForm);
-                    console.log(pasajerosForm);
-                }else{
-                    let index = this.pasajerosSeleccionadosForm.indexOf(pasajerosForm);
-                    this.$delete(this.pasajerosSeleccionadosForm, index);
-                    console.log(index);
-                }
+            // selectNumeroPasajerosForm: function (pasajerosForm, checked) {
+            //     if (checked){
+            //         this.pasajerosSeleccionadosForm.push(pasajerosForm);
+            //         console.log(pasajerosForm);
+            //     }else{
+            //         let index = this.pasajerosSeleccionadosForm.indexOf(pasajerosForm);
+            //         this.$delete(this.pasajerosSeleccionadosForm, index);
+            //         console.log(index);
+            //     }
+            // },
+            selectNumeroPasajerosForm: function (pasajerosForm) {
+                // Sobrescribe directamente con el valor del radio seleccionado
+                this.pasajerosSeleccionadosForm = pasajerosForm;
+                console.log(pasajerosForm);
             },
             selectDuracionForm: function (duracionForm, checked) {
                 if (checked){
@@ -425,9 +435,10 @@
                     el_nombre: this.el_nombre,
                     el_email: this.el_email,
                     el_fecha: this.el_fecha,
-                    el_telefono: this.el_telefono,
+                    el_telefono: this.el_telefono.replace(/\s+/g, ''),
                     el_textarea: this.el_textarea,
-                    country: this.country
+                    country: this.country,
+                    country_code: this.country_code
                 };
                 const self = this;
                 this.loadingdesign = true;
