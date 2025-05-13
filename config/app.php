@@ -168,7 +168,6 @@ return [
 
         GoogleMaps\ServiceProvider\GoogleMapsServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
-        Jenssegers\Agent\AgentServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -231,7 +230,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'GoogleMaps' => GoogleMaps\Facade\GoogleMapsFacade::class,
-        'Agent' => Jenssegers\Agent\Facades\Agent::class,
 
         'aliases' => [
             'SEOMeta'       => Artesaos\SEOTools\Facades\SEOMeta::class,
