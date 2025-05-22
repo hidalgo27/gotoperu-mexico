@@ -4941,7 +4941,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     onchangeCategoryForm: function onchangeCategoryForm(ev) {
       // console.log(ev);
-      this.$emit('checked', this.categoriaForm.nombre, ev.target.checked);
+      this.$emit('checked', this.categoriaForm.estrellas, ev.target.checked);
     }
   }
 });
@@ -6103,23 +6103,7 @@ var render = function render() {
         checked: _vm.selectNumeroPasajerosForm
       }
     })];
-  }), _vm._v(" "), _vm._m(4)], 2)])]), _vm._v(" "), _vm._m(5), _vm._v(" "), _c("div", {
-    staticClass: "row align-items-center no-gutters border"
-  }, [_vm._m(6), _vm._v(" "), _c("div", {
-    staticClass: "col px-3"
-  }, [_c("div", {
-    staticClass: "row mt-2 no-gutters"
-  }, [_vm._l(_vm.durations_form, function (duracionForm) {
-    return [_c("duracion-form", {
-      attrs: {
-        duracionForm: duracionForm,
-        duracionSeleccionadosForm: _vm.duracionSeleccionadosForm
-      },
-      on: {
-        checked: _vm.selectDuracionForm
-      }
-    })];
-  }), _vm._v(" "), _vm._m(7)], 2)])])]), _vm._v(" "), _c("transition", {
+  }), _vm._v(" "), _vm._m(4)], 2)])])]), _vm._v(" "), _c("transition", {
     attrs: {
       name: "fade"
     }
@@ -6259,7 +6243,7 @@ var render = function render() {
         _vm.tap_form_show = !_vm.tap_form_show;
       }
     }
-  }, [_vm._v("\n                Siguiente >>\n            ")]) : _c("button", {
+  }, [_vm._v("\n                    Siguiente >>\n                ")]) : _c("button", {
     staticClass: "btn btn-secondary btn mx-3 text-white font-weight-normal",
     attrs: {
       type: "button"
@@ -6269,7 +6253,7 @@ var render = function render() {
         _vm.tap_form_show = !_vm.tap_form_show;
       }
     }
-  }, [_vm._v("\n                < Atrás\n            ")]), _vm._v(" "), _vm.tap_form_show === false ? _c("button", {
+  }, [_vm._v("\n                    < Atrás\n                ")]), _vm._v(" "), _vm.tap_form_show === false ? _c("button", {
     directives: [{
       name: "show",
       rawName: "v-show",
@@ -6280,7 +6264,7 @@ var render = function render() {
     attrs: {
       type: "submit"
     }
-  }, [_vm._v("\n                Enviar\n            ")]) : _vm._e(), _vm._v(" "), _c("transition", {
+  }, [_vm._v("\n                    Enviar\n                ")]) : _vm._e(), _vm._v(" "), _c("transition", {
     attrs: {
       name: "fade"
     }
@@ -6297,7 +6281,7 @@ var render = function render() {
     }
   }, [_c("i", {
     staticClass: "fas fa-circle-notch fa-spin"
-  })])])], 1)])], 1) : _vm._e(), _vm._v(" "), _vm._m(8), _vm._v(" "), !_vm.formshow ? _c("div", {
+  })])])], 1)])], 1) : _vm._e(), _vm._v(" "), _vm._m(5), _vm._v(" "), !_vm.formshow ? _c("div", {
     staticClass: "row mt-4"
   }, [_c("div", {
     staticClass: "col"
@@ -6305,7 +6289,7 @@ var render = function render() {
     staticClass: "alert alert-success"
   }, [_c("div", {
     staticClass: "row align-items-center"
-  }, [_vm._m(9), _vm._v(" "), _c("div", {
+  }, [_vm._m(6), _vm._v(" "), _c("div", {
     staticClass: "col text-center"
   }, [_c("h4", {
     staticClass: "font-weight-bold"
@@ -6325,7 +6309,7 @@ var render = function render() {
       "data-feather": "rotate-ccw",
       "stroke-width": "1"
     }
-  })])]), _vm._v(" "), _vm._m(10)])])])]) : _vm._e()]);
+  })])]), _vm._v(" "), _vm._m(7)])])])]) : _vm._e()]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -6370,40 +6354,6 @@ var staticRenderFns = [function () {
     staticClass: "py-4 text-white"
   }, [_c("i", {
     staticClass: "fas fa-users"
-  })])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "col-2"
-  }, [_c("div", {
-    staticClass: "input-group input-group-sm"
-  }, [_c("input", {
-    staticClass: "form-control font-weight-bold",
-    attrs: {
-      type: "text",
-      placeholder: "Especifica"
-    }
-  })])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "row mt-4"
-  }, [_c("div", {
-    staticClass: "col text-center"
-  }, [_c("h5", {
-    staticClass: "font-weight-bold"
-  }, [_vm._v("DURACIÓN DE VIAJE")])])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "col-2 text-center rounded-left bg-secondary"
-  }, [_c("div", {
-    staticClass: "py-4 text-white"
-  }, [_c("i", {
-    staticClass: "far fa-clock"
   })])]);
 }, function () {
   var _vm = this,

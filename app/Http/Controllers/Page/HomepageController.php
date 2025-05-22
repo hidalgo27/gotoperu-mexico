@@ -354,7 +354,7 @@ class HomepageController extends Controller
             "product_id" => 12,
             "package"=>'',
             "hotel_category" => array_values($request->category_d),
-            "destinations" => [],
+            "destinations" => array_values($request->destino_d),
             "passengers" => $request->pasajeros_d,
             "duration" => array_values($request->duracion_d),
             "travel_date"=>$formattedDate,
@@ -531,7 +531,7 @@ class HomepageController extends Controller
             "category_d" => $request->category_d,
             "destino_d" => [], // Aquí puedes agregar los destinos si los tienes
             "pasajeros_d" => $request->pasajeros_d,
-            "duracion_d" => $request->duracion_d,
+            "duracion_d" => [],
             "el_nombre" => $request->el_nombre,
             "el_email" => $request->el_email,
             "el_fecha" => $formattedDate, // O puedes usar $this->travel_day si es relevante
@@ -553,7 +553,7 @@ class HomepageController extends Controller
             "hotel_category" => array_values($request->category_d),
             "destinations" => [],
             "passengers" => $request->pasajeros_d,
-            "duration" => array_values($request->duracion_d),
+            "duration" => [],
             "travel_date"=>$formattedDate,
             "country"=>$request->country,
             "country_code"=>$request->country_code,

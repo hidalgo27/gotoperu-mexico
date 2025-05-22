@@ -56,33 +56,33 @@
             </div>
 
 
-            <div class="row mt-4">
-                <div class="col text-center">
-                    <h5 class="font-weight-bold">DURACIÓN DE VIAJE</h5>
-                </div>
-            </div>
+<!--            <div class="row mt-4">-->
+<!--                <div class="col text-center">-->
+<!--                    <h5 class="font-weight-bold">DURACIÓN DE VIAJE</h5>-->
+<!--                </div>-->
+<!--            </div>-->
 
-            <div class="row align-items-center no-gutters border">
-                <div class="col-2 text-center rounded-left bg-secondary">
-                    <div class="py-4 text-white">
-                        <i class="far fa-clock"></i>
-                    </div>
-                </div>
-                <div class="col px-3">
-                    <div class="row mt-2 no-gutters">
+<!--            <div class="row align-items-center no-gutters border">-->
+<!--                <div class="col-2 text-center rounded-left bg-secondary">-->
+<!--                    <div class="py-4 text-white">-->
+<!--                        <i class="far fa-clock"></i>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col px-3">-->
+<!--                    <div class="row mt-2 no-gutters">-->
 
-                        <template v-for="duracionForm in durations_form">
-                            <duracion-form v-bind:duracionForm="duracionForm" v-bind:duracionSeleccionadosForm="duracionSeleccionadosForm" v-on:checked="selectDuracionForm"></duracion-form>
-                        </template>
+<!--                        <template v-for="duracionForm in durations_form">-->
+<!--                            <duracion-form v-bind:duracionForm="duracionForm" v-bind:duracionSeleccionadosForm="duracionSeleccionadosForm" v-on:checked="selectDuracionForm"></duracion-form>-->
+<!--                        </template>-->
 
-                        <div class="col-2">
-                            <div class="input-group input-group-sm">
-                                <input type="text" class="form-control font-weight-bold" placeholder="Especifica">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!--                        <div class="col-2">-->
+<!--                            <div class="input-group input-group-sm">-->
+<!--                                <input type="text" class="form-control font-weight-bold" placeholder="Especifica">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
         </div>
 
