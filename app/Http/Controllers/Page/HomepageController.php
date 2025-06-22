@@ -320,7 +320,7 @@ class HomepageController extends Controller
 
         try {
             $travelDay = Carbon::parse($request->el_fecha);
-            $formattedDate = $travelDay->format('Y-m-d H:i:s');
+            $formattedDate = $travelDay->format('Y-m-d');
             $inquireDate = Carbon::now('America/Lima')->format('Y-m-d H:i:s');
         } catch (\Exception $e) {
             return response()->json(['error' => 'Fecha inválida.'], 400);
@@ -515,7 +515,7 @@ class HomepageController extends Controller
 
         try {
             $travelDay = Carbon::parse($request->el_fecha);
-            $formattedDate = $travelDay->format('Y-m-d H:i:s');
+            $formattedDate = $travelDay->format('Y-m-d');
             $inquireDate = Carbon::now('America/Lima')->format('Y-m-d H:i:s');
         } catch (\Exception $e) {
             return response()->json(['error' => 'Fecha inválida.'], 400);
