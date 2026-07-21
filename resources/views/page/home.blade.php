@@ -626,7 +626,10 @@
 {{--    </section>--}}
 
     <div class="container">
-        <div class="elfsight-app-de637865-6596-4396-8bba-ef0f7b50bc9e"></div>
+{{--        <div class="elfsight-app-de637865-6596-4396-8bba-ef0f7b50bc9e"></div>--}}
+        <!-- Elfsight Reviews from Tripadvisor | gotoperu -->
+
+        <div class="elfsight-app-45e6b553-4db1-4009-9a37-a98b273413ec" data-elfsight-app-lazy></div>
     </div>
 
     <section id="consulte" class="pt-5">
